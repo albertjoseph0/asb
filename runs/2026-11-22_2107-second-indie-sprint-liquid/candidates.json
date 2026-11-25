@@ -1,0 +1,116 @@
+[
+  {
+    "deliberate_trade_offs": [
+      "Refuses to bundle a creator discovery marketplace, influencer payout escrow, or gifting CRM\u2014unlike Insense ($400-$800/mo + 7-20% take rate) and SARAL ($960-$1,200/mo + 1% Partnership Ads GMV)\u2014so agencies keep sourcing talent wherever they already do with zero percentage take-rate tax.",
+      "Provides zero legal counsel, DMCA defense, or contractual indemnification (DP10 guardrail); tracks live ad spend against user-entered contract dates and platform code expiries strictly as an operational alerting and renewal desk, leaving legal contract terms to the agency and brand.",
+      "Does not compete with one-time asset onboarding tools like Leadsie ($59-$299/mo) or swipe-file creative analytics tools like Foreplay ($59-$175/mo) and Motion ($999/mo); tracks only post-launch usage clocks, active spend, permission health, and renewal workflows on Meta and TikTok.",
+      "Skips YouTube, Snapchat, Pinterest, and enterprise ERP procurement (no SOC 2 custom security questionnaires, no annual invoicing under 25 ad accounts) to keep setup self-serve via OAuth and credit card."
+    ],
+    "id": "IDEA-1",
+    "indie_feasibility": "Buildable in 6-8 weeks by 1-2 technical founders using official OAuth integrations to Meta Marketing API (active ads, daily spend/ROAS, Partnership Ads Advertisable Content / permission status endpoints) and TikTok Marketing API (active Spark Ads spend and auth_code status/expiry tracking), paired with a renewal intake link portal and Slack/email/webhook alerts. DP8 verified: sits cleanly above manual date ledgers (RightsRoster $16-$64/mo, zero live ad sync) and one-time onboarding links (Leadsie $59-$299/mo) while undercutting Insense ($400-$800/mo + 7-20% fee), Cruva ($599/mo TikTok-only), SARAL ($960-$1,200/mo + 1% GMV), Motion ($999/mo), and demo-gated Superfiliate/Archive. DP9 verified: ~25,000-50,000+ reachable English-market boutique paid-social agencies and $1M-$25M DTC brands running paid UGC, Lucrative $2,148-$4,188/yr, Liquid = 1.0. DP11 verified: persistent OAuth ad-spend state + multi-party renewal links resist DIY scripts. Founder-fit assumption [UNVETTED]: assumes founder can pass Meta/TikTok Marketing API App Review (3-6 week review hurdle) and handle agency OAuth support without dedicated CSMs.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Hiring a full-time agency creator-operations coordinator ($55k-$75k/yr), paying perpetual all-channel buyouts upfront (70%-100%+ extra fee on every unproven creative), or migrating into an all-in-one marketplace suite like Insense/SARAL/Superfiliate with GMV take rates.",
+      "obviated_below": "Manual Airtable/Google Sheets usage-date formulas, weekly manual cross-checks across 5-40 client Meta/TikTok Ads Manager accounts, panic-chasing talent for expired Spark codes after Error 4025 strikes, and manual Slack nudges from media buyers to account managers.",
+      "promise_one_up": "Keep top-ROAS Spark Ads and Meta Partnership Ads spending uninterrupted across renewal cycles while turning expiring winners into predictable agency renewal retainers and stopping silent post-expiry ghost spend.",
+      "your_level": "Sync live Meta and TikTok Ads Manager active spend, Spark auth-code expiries, and Partnership permission states against 30/60/90-day talent usage clocks\u2014triggering 14-day pre-expiry renewal ROI briefs, fresh-code collection links, and instant ghost-spend/permission-drop alerts."
+    },
+    "one_liner": "Live Meta & TikTok Ads Manager spend-vs-usage-rights watchdog and 14-day Spark/Partnership code renewal desk for paid-social agencies and scaling DTC growth teams.",
+    "price": "$179/mo (Brand: up to 5 ad accounts, 75 active licensed assets) or $349/mo (Agency: up to 25 client ad accounts, 300 active assets); month-to-month credit card, zero % GMV take rates.",
+    "pricing_strategy": "More for More",
+    "signal_ids": [
+      "SIG-6",
+      "SIG-7",
+      "SIG-8",
+      "SIG-9",
+      "SIG-10"
+    ],
+    "specific_buyer": "Media-buying directors and account leads at boutique paid-social/performance-creative agencies managing 5-40 client ad accounts, plus in-house paid-social leads at $1M-$25M Shopify/TikTok-Shop DTC brands running at least 15 active Meta Partnership Ads or TikTok Spark Ads per month.",
+    "specific_problem": "Paid-social teams scaling past 15 licensed UGC assets suffer two recurring operational failures that existing floor tools ignore: (1) TikTok Spark Ads Error 4025 hard-kills winning ads overnight when 7/30/60/365-day auth codes expire (dead codes cannot be reactivated, forcing ad rebuilds that reset learning phases), and Meta permission drops (#4289001 / revoked Partnership Ads Hub links) halt delivery without alerting the media buyer; (2) Meta never pauses active ads when 30/60/90-day contractual usage windows end (even deactivating a Meta content code leaves live ads spending), triggering Meta Ad Library audits and $5k-$25k+ retroactive fee demands while account managers miss the 14-day pre-expiry window to renew high-ROAS winners. Floor tools are purely manual ledgers (RightsRoster $16-$64/mo), one-time access links (Leadsie $59-$299/mo), or swipe/analytics apps (Foreplay $59-$175/mo), while ceiling tools charge $400-$1,200+/mo plus 1%-20% take rates or demo-gate single-brand suites.",
+    "title": "Live Ad-Spend vs. Usage-Rights Watchdog & 14-Day Spark/Partnership Renewal Desk"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Deliberately does NOT replace Jobber, Housecall Pro, or QuickBooks Online\u2014no dispatch drag-and-drop calendar, GPS fleet tracking, inventory warehouse, or payroll\u2014so shops keep their sub-$400/mo internal stack and avoid ServiceTitan's $5k-$50k onboarding and 12-36 month exit-fee lock-in.",
+      "Refuses to require or resell ServiceChannel's $500/mo + $1,000 setup + 3-year provider REST API contract or CorrigoPro Direct's custom SOW fee (SIG-4/SIG-5); operates via multi-portal dispatch/remittance email ingestion, open Jobber/QBO APIs, and technician SMS/web closeout packets.",
+      "Never attempts to spoof or bypass mandatory client-portal GPS/IVR check-ins (which even $350/mo Konexall cannot bypass); instead enforces a pre-departure confirmation step reminding techs to complete the portal check-in and capturing backup proof when basement/big-box cell signal drops.",
+      "Excludes residential B2C trade shops, general construction GCs with AIA progress billing, and 50+ tech commercial mechanical contractors who legitimately require full BuildOps/ServiceTitan ERP suites."
+    ],
+    "id": "IDEA-2",
+    "indie_feasibility": "Buildable in 6-8 weeks by 1-2 technical founders: inbound multi-portal email parser (ServiceChannel, CorrigoPro, Officetrax, Verisae, FMX dispatch, NTE-approval, and remittance emails), open API sync to Jobber (Connect+ tier) and QuickBooks Online (plus CSV/webhook bridge for Housecall Pro Essentials), offline-capable mobile web link texted to technicians for field-proof and 60-second on-site NTE proposal generation, and a pre-upload invoice NTE/PO/rate-card validator + aging tracker. DP8 verified: sits above generic photo apps (CompanyCam $79-$299/mo + $29-$34/user, zero WO/NTE/QBO portal logic) and brittle Zapier/Make email scripts ($9-$20+/mo), and dramatically below ServiceTitan ($245-$500+/tech/mo + 12-36 mo lock-in), BuildOps (quote-only, ~10+ tech min), Simpro ($280-$600/user/mo + Konexall $350/mo), and ServiceChannel direct API ($500/mo + $1k setup + 3-yr term). DP9 verified: 30,000-60,000+ US 2-to-25-tech commercial service contractors (within ~195,000+ NAICS 238220/238210 employer establishments), Lucrative $1,788-$2,988/yr, Liquid = 1.0. DP10/DP11 verified: daily multi-party dispatch-to-tech-to-billing operational workflow with no indemnity liability. Founder-fit assumption [UNVETTED]: assumes founder can support parser template updates across 5 portal email formats and onboard non-technical office coordinators via Loom/live chat.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Migrating the entire shop onto ServiceTitan ($245-$500+/tech/mo + 12-36 mo lock-in) or BuildOps, hiring an additional full-time commercial billing coordinator ($45k-$60k/yr), or dropping retail/QSR portal accounts altogether.",
+      "obviated_below": "Copy-pasting work order numbers, store addresses, and NTE limits from portal emails into Jobber/QuickBooks, chasing technicians by phone for missing before/after photos or store-manager signatures, and making unpaid return truck rolls while waiting on office-drafted NTE proposals.",
+      "promise_one_up": "Collect commercial portal invoices on first submission without 30-60 day rejection floats, win same-visit NTE increase approvals before techs leave the roof, and protect ServiceChannel Contractor Scorecard rankings without ripping out QuickBooks or Jobber.",
+      "your_level": "Parse multi-portal commercial work-order emails into Jobber/QuickBooks, gate technician job closeout with offline-capable field-proof and 60-second on-site NTE proposal packets, and preflight-check every draft invoice against active NTE caps, POs, and rate cards before portal submission."
+    },
+    "one_liner": "Zero-API-toll commercial work-order intake, technician field-proof/NTE-proposal packet builder, and invoice preflight desk for QuickBooks and Jobber trade shops servicing retail CMMS portals.",
+    "price": "$149/mo (up to 6 technicians / 120 portal work orders/mo) or $249/mo (up to 20 technicians / 400 work orders/mo); month-to-month credit card, zero setup fee.",
+    "pricing_strategy": "Less for Less",
+    "signal_ids": [
+      "SIG-1",
+      "SIG-2",
+      "SIG-3",
+      "SIG-4",
+      "SIG-5"
+    ],
+    "specific_buyer": "Owners, dispatchers, and billing coordinators at 2-to-25-technician commercial HVAC, refrigeration, plumbing, electrical, kitchen-equipment, and door/dock repair contractors running QuickBooks Online, Jobber, or Housecall Pro internally while taking recurring work orders across 3-8 client CMMS portals (ServiceChannel, CorrigoPro, Officetrax, Verisae, FMX).",
+    "specific_problem": "Independent commercial trade shops spend roughly one-third of admin overhead manually re-keying work orders, NTE caps, POs, and invoices between client CMMS portals and QuickBooks/Jobber, while suffering 30-60 day cash-flow freezes and automated ServiceChannel Contractor Scorecard downgrades whenever techs leave a site missing portal-specific check-in confirmation, before/after photos, asset tags, or store signatures. Worse, repairs exceeding tight $250-$1,000 initial NTE caps stall on-site or force unpaid return trips waiting on office-drafted NTE proposals, and any $0.01 NTE/PO/rate-card mismatch auto-rejects the invoice. ServiceChannel's Nov 9, 2026 provider REST API toll ($500/mo + $1,000 setup + 3-year contract) and CorrigoPro Direct's custom SOW gate price small shops out of native API middleware unless they swallow ServiceTitan/BuildOps rip-and-replace contracts.",
+    "title": "Zero-API-Toll Commercial Work-Order Intake, Field-Proof & On-Site NTE Closeout Desk for QuickBooks/Jobber Trade Shops"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Deliberately bypasses Lightspeed, CDK, and legacy DMS Third-Party Access (3PA) contracts and monthly per-store data taxes (SIG-12); reads unit specs strictly from the dealer's public website VDP URLs and intercepts leads via standard ADF/XML email forwarding so a yard goes live in 15 minutes on a credit card.",
+      "Excludes consumer passenger-car dealerships, powersports shops, full dealership website hosting, outbound cold-dialing, and Voice AI call centers\u2014unlike Supreme Dealer ($279-$599/mo auto/RV/marine), DealerAI ($599-$1,900/mo), and Podium ($399-$599/mo)\u2014focusing purely on commercial iron spec, freight-lane, and trade-in qualification.",
+      "Provides ballpark lowboy/step-deck mileage and lane ranges rather than binding freight-broker quotes or commercial credit pulls (DP10 guardrail), preventing rate-quote liability and lending compliance drag while still filtering out non-serious long-haul tire-kickers.",
+      "Does not bundle Facebook Marketplace personal-profile Chrome auto-posting bots (unlike TurboSell $39-$199/mo or AutoLander $39-$117/mo), avoiding Meta account-ban support burdens while still accepting forwarded inquiry emails and web-form clicks."
+    ],
+    "id": "IDEA-3",
+    "indie_feasibility": "Buildable in 5-7 weeks by 1-2 technical founders: ADF/XML inbound email parser for Sandhills (MachineryTrader, TruckPaper, TractorHouse) and Trader Interactive (EquipmentTrader, CommercialTruckTrader) + web forms, scheduled public VDP spec indexer (hours, wet kits, GVWR, axles, attachments, yard zip), Twilio/Telnyx A2P 10DLC 2-way SMS + email qualification engine grounded strictly in the matched unit's published VDP specs, regional heavy-haul mileage/rate-band calculator, and instant SMS/email hot-buyer dossier handoff to the assigned sales rep. DP8 verified: floor tools are FB Chrome auto-posters (TurboSell $39-$199/mo, AutoLander $39-$117/mo, CarSocial $49-$99/mo) or non-inventory horizontal SMS bots (SurFox AI $49-$597/mo, Leadferno $150/mo); ceiling tools focus on consumer auto/RV/marine or require $279-$1,900+/mo + DMS setup (Supreme Dealer $279-$599/mo, Kenect $330/mo annual, Podium $399-$599/mo, DealerAI $599-$1,900/mo, Lahzo custom quote). DP9 verified: ~24,000 US heavy equipment, commercial truck, and commercial trailer rooftops (~35,000-43,000 if expanded to independent marine/RV dealers), Lucrative $2,028-$3,588/yr, Liquid = 1.0. DP11 verified: live 2-way SMS qualification state + unit spec indexing + rep routing cannot be replaced by a static CSV script. Founder-fit assumption [UNVETTED]: assumes founder can streamline A2P 10DLC brand/campaign registration per dealership during self-serve onboarding (typically 3-7 business day carrier approval).",
+    "needs_stack_sketch": {
+      "alternatives_above": "Hiring a full-time dealership BDC coordinator ($45k-$65k/yr + commission), signing a $400-$1,900/mo multi-module BDC/AI suite (Podium, DealerAI, Lahzo) plus DMS 3PA data fees, or buying even more Sandhills/Trader Interactive spotlight slots to compensate for slow lead conversion.",
+      "obviated_below": "Generic 'a rep will call in 24-48 hours' auto-responders, sales reps manually looking up engine hours/GVWR/wet-kit specs on their own website after hours, and burning 15-minute phone calls on unscreened tire-kickers who lack financing or underestimate $4,000 lowboy delivery costs.",
+      "promise_one_up": "Convert high-intent contractor and fleet buyers before rival dealers wake up\u2014maximizing realized gross profit per $1,500-$3,000/mo Sandhills and EquipmentTrader ad budget while handing reps only pre-qualified, ready-to-buy calls.",
+      "your_level": "Intercept incoming ADF/XML marketplace lead emails with zero DMS 3PA integration, text/email buyers within 60 seconds using exact specs from the dealer's live VDP page, collect jobsite zip (with ballpark lowboy freight range), financing readiness, and trade-in serials/hours, and route a structured buyer brief to the sales rep."
+    },
+    "one_liner": "Zero-3PA ADF/XML spec-grounded SMS/email lead qualifier with ballpark lowboy freight and trade-in intake for independent heavy equipment, commercial truck, and trailer dealers.",
+    "price": "$169/mo per yard (up to 400 qualified leads/mo, SMS included) or $299/mo multi-yard (up to 3 yards / 1,200 leads/mo); month-to-month credit card, zero DMS setup fee.",
+    "pricing_strategy": "Less for Less",
+    "signal_ids": [
+      "SIG-11",
+      "SIG-12",
+      "SIG-13",
+      "SIG-15"
+    ],
+    "specific_buyer": "Sales managers and dealer principals at independent commercial heavy equipment, semi-truck, vocational truck, and commercial trailer dealerships and machinery brokers (15-300 active units in stock, no dedicated BDC desk) listing $25,000-$500,000+ inventory on MachineryTrader, TruckPaper, TractorHouse, EquipmentTrader, and CommercialTruckTrader.",
+    "specific_problem": "Independent equipment, truck, and trailer dealers pay $1,000-$3,000+/mo to Sandhills Global and Trader Interactive for leads, yet contractors and fleet managers cross-shop 3-4 yards after hours and ghost any dealer replying the next afternoon. Unlike passenger cars, closing $25k-$500k commercial iron requires immediate unit-specific answers (engine hours, wet kits, undercarriage wear, GVWR, axle/transmission specs, maintenance logs) plus verifying financing readiness, trade-in specs, and out-of-state lowboy transport feasibility. Meanwhile, sales reps burn hours chasing tire-kickers and 'Is this available?' clicks because vertical BDC suites (DealerAI $599-$1,900/mo, Podium $399-$599/mo, Lahzo custom quote) and legacy DMS connectors (Lightspeed 3PA setup + monthly per-store data fees) price out independent yards.",
+    "title": "Zero-3PA ADF/XML Spec-Grounded Lead Qualifier & Freight/Trade-In Intake for Commercial Equipment, Truck & Trailer Dealers"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Deliberately avoids building a full DMS, dealership website CMS, or CRM pipeline\u2014unlike Lightspeed DMS ($450-$3,000+/mo + 3PA fees), Dealer Spike ($549-$1,149/mo + $1,000 setup + 12-mo auto-renew), and YachtOne ($500-$850/mo)\u2014serving purely as an independent syndication pre-validator, silent-drop watchdog, and cross-portal ROI ledger.",
+      "Does NOT rely on fragile high-volume scraping of Cloudflare-gated portal search pages as its primary check; instead pre-validates outbound XML/CSV feeds against BoatWizard, TraderTraxx, and Sandhills taxonomy/HIN/VIN/status rules, ingests portal import-error emails, and correlates live ADF/XML lead arrivals per unit to flag zero-lead anomalies and stalled FTP drops.",
+      "Refuses to automate Facebook Marketplace personal-profile Chrome posting (leaving that to $39-$99/mo Chrome extensions) and skips franchise new-car OEM dealer groups that use enterprise DMS feeds like vAuto/Homenet.",
+      "Targets multi-portal dealers paying at least $1,000/mo across two or more paid marketplaces; explicitly disqualifies single-portal hobbyist brokers listing fewer than 20 units who will not pay $149/mo to audit syndication health."
+    ],
+    "id": "IDEA-4",
+    "indie_feasibility": "Buildable in 6-8 weeks by 1-2 technical founders: outbound inventory feed ingestor (accepts dealer website XML/sitemap or DMS CSV/FTP export without Lightspeed 3PA contracts), portal-specific taxonomy and validation rule engine (BoatWizard, TraderTraxx, Sandhills make/model/body-type, mandatory HIN/VIN/serial, price, photo count, and Pending-vs-Sold status mapping), automated ingestion of portal import-error report emails, and an ADF/XML lead-email attribution ledger linking every inquiry back to stock# and marketplace to detect silent zero-lead blackouts and compute cost-per-lead by portal. DP8 verified: zero standalone <$150/mo multi-portal feed pre-validator + cross-portal lead-ROI tools exist (floor tools are FB Chrome posters $39-$117/mo or EU CRM BrokerForBoat EUR 19-99/mo); ceiling tools bundle full DMS/website stacks at $450-$3,000+/mo (Dealer Spike $549-$1,149/mo + $1k setup + 12-mo lock-in, Lightspeed DMS + 3PA, YachtOne $500-$850/mo) or enterprise feed optimizers ($500-$2,000+/mo), while native BoatWizard/TraderTraxx/Sandhills logs sit in separate silos with zero cross-portal ROI comparison. DP9 verified: ~35,000-43,000 US marine, RV, heavy equipment, and commercial truck rooftops (plus Canada/UK/Australia), Lucrative $1,788-$2,988/yr, Liquid = 1.0. DP10/DP11 verified: ongoing multi-portal schema normalization + automated preflight + persistent lead-to-unit ROI ledger avoids thin CSV-diff commoditization and carries zero compliance indemnity risk. Founder-fit assumption [UNVETTED]: assumes founder can acquire real sample XML/CSV feed schemas and import-error logs from 5-10 dealers during customer discovery before codifying portal rules.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Paying Dealer Spike ($549-$1,149/mo + 12-mo auto-renew) or enterprise feed managers ($500-$2,000+/mo), assigning a lot manager to manually log into BoatWizard, TraderTraxx, and Sandhills error tabs every week, or blindly absorbing 75%-100% Boats Group and Sandhills renewal hikes with zero per-portal ROI data.",
+      "obviated_below": "Manually hunting through siloed BoatWizard/TraderTraxx ingestion logs weeks after leads dry up, discovering unmapped make/model strings or blank HIN/VIN fields after a paid unit sat invisible for 30 days, and building ad-hoc Excel sheets to guess which marketplace actually delivers buyers.",
+      "promise_one_up": "Ensure every paid high-ticket unit stays live, accurately priced, and searchable across every marketplace\u2014and arm the dealer with unit-level cost-per-lead ROI to cut wasted listing spend or push back against 75%-100% portal rate hikes.",
+      "your_level": "Pre-validate outbound inventory feeds against BoatWizard, TraderTraxx, and Sandhills taxonomy/HIN/status rules before submission, catch silent FTP/cron drops and import rejections via automated report monitoring, and join every ADF/XML lead back to exact unit and portal spend."
+    },
+    "one_liner": "Multi-portal inventory feed pre-validator, silent-drop monitor, and per-marketplace ADF lead-ROI ledger for independent marine, RV, heavy equipment, and commercial truck dealers.",
+    "price": "$149/mo (up to 150 active units across 3 portals) or $249/mo (up to 500 units across 6 portals); month-to-month credit card, zero setup fee.",
+    "pricing_strategy": "Less for Less",
+    "signal_ids": [
+      "SIG-11",
+      "SIG-12",
+      "SIG-13",
+      "SIG-14"
+    ],
+    "specific_buyer": "Inventory managers, marketing managers, and dealer principals at independent marine/yacht brokerages, RV dealers, heavy equipment dealers, and commercial truck dealers (25-500 active units in stock, no enterprise dealer-group IT team) paying $1,000-$5,000+/mo across two or more paid marketplaces (BoatWizard/BoatTrader/YachtWorld, TraderTraxx/RVTrader/EquipmentTrader, Sandhills/MachineryTrader/TruckPaper).",
+    "specific_problem": "Following Boats Group's 75%-100% rate hikes (up to $65k+/yr) and $1,000-$3,000+/mo Sandhills and Trader Interactive contracts, independent dealers cannot afford paid units vanishing from search filters\u2014yet strict portal taxonomies, blank HIN/VIN/price fields, 'Pending' mapped as 'Sold', and stalled FTP/cron jobs silently drop or misclassify listings for weeks inside BoatWizard and TraderTraxx. Dealers discover blackouts only after lead volume collapses, troubleshoot siloed portal error logs manually, and lack any independent cross-portal ledger showing true cost-per-lead and days-on-lot per marketplace when deciding which portal tiers to cut or renew.",
+    "title": "Multi-Portal Inventory Feed Pre-Validator, Silent-Drop Watchdog & Portal-ROI Ledger for Specialty Vehicle & Equipment Dealers"
+  }
+]

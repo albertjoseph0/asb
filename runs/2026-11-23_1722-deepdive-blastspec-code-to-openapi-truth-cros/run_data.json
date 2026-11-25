@@ -1,0 +1,190 @@
+{
+  "run_id": "2026-11-23_1722-deepdive-blastspec-code-to-openapi-truth-cros",
+  "run_type": "deep_dive",
+  "ambition": "indie",
+  "survivors": [],
+  "killed": [
+    {
+      "id": "IDEA-1",
+      "title": "BlastSpec \u2014 Code-to-OpenAPI Truth & Cross-Repo SDK Blast-Radius CI Gate",
+      "slug": "idea-1-blastspec-deepdive",
+      "stage": "Deep Dive \u2014 Rude Q&A + Dalio Panel",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Global active SaaS companies total ~30,800-31,500 (https://ascendixtech.com). Per Postman State of the API (https://www.postman.com), ~25% are fully API-first (~7,800) and ~57% hybrid (~17,500). Applying DP14 behavioral filters \u2014 2-30 engineers, REST/OpenAPI in the 4 supported stacks (FastAPI, Express/Hono/Next.js, Go, Rails), AND multi-repo/external partner/generated SDK consumers (excluding single-monorepo tRPC/Next.js teams) \u2014 narrows qualified buyers to ~5k-20k globally (including non-SaaS API startups). 100,000 exceeds 3x the entire global SaaS universe, while 1,000 is too low; 10,000 is the honest power of ten.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Triangulated developer discussions on Reddit/HN and active commercial adoption of oasdiff (https://oasdiff.com/pricing), SpecShield (https://specshield.io/pricing), CodeRifts (https://coderifts.com), and PactFlow (https://pactflow.io/pricing) confirm that preventing OpenAPI drift and breaking API changes in CI is recognized standard practice among API-first teams shipping SDKs/partner APIs (ruling out evangelist-only 0.1). Not 1.0 because many 2-15 eng teams still rely on manual PR review or view free schema diffing as 90% good enough and do not prioritize cross-repo AST call-site mapping.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Primary pricing pages confirm 2-30 eng teams allocate ~$1,000/yr ($89-$120/mo) when paying for API contract/breaking-change CI gates: SpecShield Team is $89/mo or $900/yr (https://specshield.io/pricing), PactFlow Team starts at $99/mo (https://pactflow.io/pricing), oasdiff Pro is $100/mo (https://oasdiff.com/pricing), and Bump.sh Pro is $50-$120+/mo (https://bump.sh), matching BlastSpec's $99-$249/mo ($1,188-$2,988/yr) sticker. $10,000/yr is refuted by all SMB peer pricing; $100/yr is too low for paid B2B team CI tooling.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Cannot refute 0.1 in favor of 1.0 (DP15): by Nov 2026, all three cited market shocks \u2014 Optic archived Jan 12, 2026 (https://github.com/opticdev/optic), Postman Free capped to 1 user Mar 1, 2026 (https://www.postman.com), and Stainless acquired May 18, 2026 (https://www.stainless.com) \u2014 are 6-10 months past, so acute migrations largely already occurred. Across the remaining market, CI contract gating is set-and-forget (priority #7 until a production outage or annual infra review), and paid rivals (Speakeasy, Redocly, PactFlow) skew to annual billing or bundled workflows.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Requires installing a third-party GitHub/GitLab App with read-only Contents access across all private API provider repos AND up to 15+ private downstream consumer repos. While 2-10 eng startups can buy from indies (ruling out 0), 11-30 eng B2B API-first SaaS teams undergoing SOC 2 reviews heavily scrutinize non-human GitHub App identities reading private source code (https://delve.co; https://github.com) \u2014 why oasdiff Enterprise specifically sells local execution so specs never leave GitHub (https://oasdiff.com/pricing). An unvetted solo founder without SOC 2 Type II or a self-hosted runner faces structural trust friction, so 0.1 cannot be refuted in favor of 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Challenge from below fails to justify 0.5 (DP8 sandwich). Floor ($0): FastAPI (app.openapi()), Hono (@hono/zod-openapi), Go (swaggo), and Rails (rswag) already export OpenAPI from code in a 5-line CI step piped into free OSS oasdiff (784+ rules, https://oasdiff.com/pricing) or pb33f/openapi-changes (https://github.com/pb33f/openapi-changes), plus CodeRifts (https://coderifts.com) already offers cross-repo blast-radius risk scoring and GitHub App merge gates at $0 in public beta. Same-price peers ($89-$100/mo): SpecShield (https://specshield.io/pricing, $89/mo Team) already markets as the Optic replacement with consumer registry, BDCT, can-i-deploy gate, IDE plugins, and MCP server; PactFlow Team ($99/mo, https://pactflow.io/pricing), oasdiff Pro ($100/mo), and Bump.sh ($50-$120/mo with docs, https://bump.sh) occupy the exact slot. Ceiling: Greptile (~$30/dev/mo, https://greptile.com) already traces cross-repo breaking changes via semantic graphs alongside general PR bugs, while Speakeasy (https://www.speakeasy.com) and Fern (https://buildwithfern.com) actually replace Stainless's SDK generation (which BlastSpec refuses).",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "API breaking-change CI gating addresses a continuous per-PR operational problem, supporting recurring monthly/annual SaaS subscriptions across oasdiff Pro (https://oasdiff.com/pricing), SpecShield (https://specshield.io/pricing), PactFlow (https://pactflow.io/pricing), and Bump.sh (https://bump.sh) \u2014 ruling out one-off 0.1. Cannot clear 1.0 (strong lock-in) because removing a read-only GitHub App CI gate takes under a minute and faces ongoing churn risk from noisy AST false positives and native AI PR reviewers (Greptile/CodeRabbit).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 2500.0,
+        "score": 0.004,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Carried over unchanged from Scenario A (10,000): retaining the 2-30 eng multi-repo/partner/SDK API-first SaaS buyer across the 4 stacks avoids a DP14-prohibited collapse into a 1,000-account micro-niche (e.g., narrowing solely to untyped Express/Rails drops Plausible to 1,000 and lowers total score to 0.002-0.010). Grounded in ~31,000 global SaaS companies (https://ascendixtech.com) and Postman State of the API ~25% fully / ~57% hybrid API-first rates (https://www.postman.com).",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Carried over unchanged from Scenario A (0.5): preventing OpenAPI drift and accidental breaking changes in CI is recognized standard practice among API-first teams shipping SDKs/partner APIs (triangulated across Reddit/HN discussions and active tools https://oasdiff.com/pricing, https://specshield.io/pricing, https://coderifts.com, https://pactflow.io/pricing), though not universal (1.0).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Carried over unchanged from Scenario A ($1,000/yr): repricing to $79/mo flat org license ($948/yr) sits directly inside the verified ~$1,000/yr allocated SMB budget tier anchored by SpecShield Team ($89/mo or $900/yr, https://specshield.io/pricing), PactFlow Team ($99/mo, https://pactflow.io/pricing), and oasdiff Pro ($100/mo, https://oasdiff.com/pricing).",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Carried over unchanged from Scenario A (0.1): switching to a $79/mo local CI binary removes security friction, but does not make 2-30 eng SaaS teams always-in-market for a paid breaking-change gate. By Nov 2026, Optic's archival (Jan 12, 2026, https://github.com/opticdev/optic), Postman's 1-user Free cap (Mar 1, 2026, https://www.postman.com), and Stainless's Anthropic acquisition (May 18, 2026, https://www.stainless.com) are 6-10 months past (DP15), leaving episodic post-outage or annual CI-tooling refresh cycles (priority #7).",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "CHANGED from Scenario A (0.1 -> 0.5). Replacing the cloud-hosted GitHub/GitLab App (which requires org-wide private source-code read access on an unvetted solo founder's servers) with a 100% zero-code-egress, source-available local GitHub Action / GitLab CI binary eliminates the third-party vendor source-code subprocessor and SOC 2 non-human-identity review blocker (https://delve.co; https://github.com), matching the local-execution trust model oasdiff sells to security-conscious teams (https://oasdiff.com/pricing). Developer teams at 2-30 eng SaaS startups routinely adopt auditable local CI binaries without enterprise vendor vetting, refuting 0.1.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Carried over at 0.1 \u2014 and further weakened by targeted verification. A core pitch claim fails fact-checking: free OSS oasdiff (https://oasdiff.com/pricing) ALREADY flags SDK-breaking operationId modifications in CI, as do Speakeasy, Fern, SpecShield, and pb33f/openapi-changes (https://github.com/pb33f/openapi-changes). Zero-annotation code-to-OpenAPI tooling also already exists for $0 in Next.js (https://github.com/tazo90/next-openapi-gen) and Rails (https://github.com/interagent/committee), alongside native FastAPI app.openapi(), Hono zod-openapi, and Go swaggo. For cross-repo blast radius, CodeRifts (https://coderifts.com) is $0 in public beta, SpecShield (https://specshield.io/pricing) offers consumer registry + BDCT + MCP at $89/mo, PactFlow Team (https://pactflow.io/pricing) is $99/mo, and Greptile (https://greptile.com) maps cross-repo breaking changes via semantic repo graphs. Dropping price to $79/mo local-only creates no material differentiation sufficient to clear 0.5 (DP8).",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Carried over unchanged from Scenario A (0.5): per-PR breaking-change gating remains a recurring operational problem supporting recurring SaaS subscriptions across oasdiff Pro (https://oasdiff.com/pricing), SpecShield (https://specshield.io/pricing), PactFlow (https://pactflow.io/pricing), and Bump.sh (https://bump.sh), with low switching cost (removing one CI workflow step) preventing 1.0 lock-in.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 12500.0,
+        "score": 0.02,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Downgraded from 10,000 to 1,000 (conceded by Advocate under DP14). Starting from ~31,000 global SaaS companies (https://ascendixtech.com) and filtering sequentially for 2-30 engineers (~65%), REST/OpenAPI excluding GraphQL/gRPC/tRPC/Hono RPC/monorepos (~35%), multi-repo private consumers or external SDKs (~25-30%), running FastAPI/Express/Hono/Next.js/Go/Rails without already eliminating drift for $0 via FastAPI app.openapi() + git diff, Go Huma/Swaggo, @hono/zod-openapi, next-openapi-gen (https://github.com/tazo90/next-openapi-gen), or Rails committee (https://github.com/interagent/committee) (~35-40%), and willing to pay for a standalone CI binary collapses the qualified behavioral market to the ~1,000 Fermi bucket.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5: API-first engineering teams shipping SDKs and multi-service REST APIs recognize OpenAPI drift and breaking changes as real operational risks, evidenced by active adoption of oasdiff, apidrifter, Schemathesis, SpecShield, and PactFlow, though not universal (1.0).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Unchanged at $1,000/yr: live pricing pages verify an allocated ~$900-$1,200/yr SMB dev-tool budget tier across SpecShield Team ($89/mo or $75/mo annual, https://specshield.io/pricing), PactFlow Team ($99/mo, https://pactflow.io/pricing), and oasdiff Pro ($100/mo, https://oasdiff.com/pricing), though BlastSpec cannot capture this budget at $79/mo against superior incumbents.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1 (upgraded believability from 0.4 to 0.7 on verified timelines and migration outcomes). By Nov 2026, Optic's Jan 12, 2026 archival (https://github.com/opticdev/optic), Postman's March 2026 Free cap (https://www.postman.com), and Anthropic's May 18, 2026 Stainless acquisition (https://www.stainless.com) are 6-10 months stale (DP15), and displaced Stainless users needed SDK code generation (migrating to Speakeasy https://www.speakeasy.com, Postman-acquired Fern https://buildwithfern.com, or Kiota), not a standalone CI linter. Buying remains episodic post-outage or annual tooling refresh.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Reverted from 0.5 back to 0.1 (conceded by Advocate). GitHub Actions' default GITHUB_TOKEN is strictly single-repo scoped (https://docs.github.com/en/actions/security-for-github-actions/security-guides/automatic-token-authentication). Cross-repo call-site scanning inside a local CI runner still requires injecting an org-wide PAT or GitHub App private key alongside an unvetted solo founder's binary \u2014 recreating the exact CI secret-exfiltration vector exploited in CVE-2025-30066 (tj-actions/changed-files, >23,000 repos exposed, https://www.cve.org/CVERecord?id=CVE-2025-30066). SOC 2-bound 10-30 eng teams will not audit thousands of lines of source-available multi-language AST code on every release SHA bump or trust an unvetted solo maintainer with org-wide secrets and merge-blocking CI gates.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Pinned at 0.1 (confirmed & worsened by primary verification). $0 oasdiff (https://oasdiff.com/pricing, https://github.com/oasdiff/oasdiff-action) already catches SDK-breaking operationId removals/modifications inline in PRs; $0 apidrifter (https://apidrifter.com) detects live code-to-OpenAPI drift across FastAPI, Express, and Hono with an MCP server; $0 Schemathesis (https://github.com/schemathesis/schemathesis) fuzz-tests live routes; SpecShield Team ($89/mo or $75/mo annual, https://specshield.io/pricing) undercuts BlastSpec's $79/mo annual price while shipping consumer registries, BDCT, and can-i-deploy gates; CodeRifts (https://coderifts.com) ships multi-protocol contract authorization with a $0 tier; Bump.sh ($50-$120/mo flat, https://bump.sh), PactFlow Team ($99/mo, https://pactflow.io/pricing), and oasdiff Pro ($100/mo) crowd the ceiling; and CodeRabbit Multi-Repo Analysis (https://www.coderabbit.ai) + Greptile (https://www.greptile.com, 500 free monthly credits for startups <=20 employees) bundle cross-repo breaking-change checks into general PR review.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5: preventing breaking API changes on every PR is a recurring operational need supporting subscription billing for incumbents (SpecShield, PactFlow, oasdiff Pro, Bump.sh), while near-zero switching cost (deleting one 8-line GitHub Actions workflow step) prevents 1.0 durability.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 250.0,
+        "score": 0.0004,
+        "evidence_believability_index": 0.743,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "panel": {
+        "votes": {
+          "scorer": -1.0,
+          "attacker": -1.0,
+          "consequence_ev": -1.0
+        },
+        "weights": {
+          "scorer": 0.3,
+          "attacker": 0.4,
+          "consequence_ev": 0.3
+        },
+        "panel_weighted_score": -1.0,
+        "disagreement_flag": false
+      },
+      "ev_metrics": {
+        "p_viable_pct": 4.0,
+        "target_arr_usd": 150000.0,
+        "validation_hours": 15.0,
+        "expected_arr_usd": 6000.0,
+        "ev_per_validation_hour": 400.0
+      },
+      "reason": "BAD_IDEA \u2014 KILL BLASTSPEC OUTRIGHT (BOTH SCENARIO A AND SCENARIO B). Rude Q&A exposed four fatal, irreconcilable defects and forced concessions on both softest Problem Score criteria (Plausible 10,000 -> 1,000; Eager-Identity 0.5 -> 0.1), collapsing the deterministic Problem Score from 0.02 to 0.0004 (1,000 \u00d7 0.5 \u00d7 1,000 \u00d7 0.1 \u00d7 0.1 \u00d7 0.1 \u00d7 0.5 \u00f7 625,000) \u2014 2,500x below the 1.0 viability bar: (1) Scenario B's 'zero-egress local CI binary' is mechanically self-defeating because GitHub Actions' single-repo GITHUB_TOKEN forces injecting an org-wide PAT or GitHub App private key into a runner executing an unvetted solo founder's binary (recreating CVE-2025-30066 supply-chain risk) while remaining physically unable to inspect external partner repos; (2) primary verification falsifies core differentiation ($0 oasdiff already detects api-operation-id-removed, $0 apidrifter checks live code-to-OpenAPI drift across FastAPI/Express/Hono with an MCP server, SpecShield Team at $75/mo annual undercuts BlastSpec's $79/mo with strictly more features, and CodeRabbit/Greptile bundle multi-repo breaking-change checks into general PR review with 500 free monthly startup credits); (3) native $0 spec sync in FastAPI, Go, Hono, and Next.js collapses the addressable market into the 1,000 bucket while 4-language static AST maintenance creates an immediate false-positive churn trap for a solo founder; and (4) the Jan-May 2026 Optic/Postman/Stainless catalyst is 6-10 months stale and mismatched to a non-SDK CI linter. Abandon completely; do not build or spend validation cycles attempting to rescue it."
+    }
+  ]
+}

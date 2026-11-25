@@ -1,0 +1,190 @@
+{
+  "run_id": "2026-11-24_1846-deepdive-liquidguard-a11y-productized-code-le",
+  "run_type": "deep_dive",
+  "ambition": "indie",
+  "survivors": [],
+  "killed": [
+    {
+      "id": "IDEA-1",
+      "title": "LiquidGuard A11y \u2014 Productized Code-Level WCAG 2.2 AA Remediation & Monthly Regression-PR Guard for Shopify & WooCommerce Stores",
+      "slug": "idea-1-liquidguard-a11y",
+      "stage": "Deep Dive \u2014 Rude Q&A + Dalio Panel",
+      "best_scenario_label": "Scenario A",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 100000,
+            "justification": "Store Leads tracks ~3.2M-3.3M live Shopify stores (~1.25M-1.35M US, ~1M EMEA) and ~4.1M-4.3M WooCommerce stores (~500k US, ~30% Europe); applying the 2%-5% >$250k GMV bracket yields ~40k-65k US Shopify, ~15k-25k US WooCommerce, plus ~10k-20k EU stores remaining after removing EU EAA Directive 2019/882 microenterprises (<10 employees and <=EUR 2M turnover). Filtering for standard OS 2.0/block themes (~70%-85%) and WebAIM Million 2025-2026 WCAG failure rates (94.8%-95.9% of top homepages; 75.1 avg errors on Shopify) yields ~55k-95k qualified stores\u2014making 10k too low by ~6x-9x and 1M too high by ~10x, so 100k is the honest power of ten.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.1,
+            "justification": "Thought-leaders, agencies, and sued merchants actively care after 5,100+ 2025 ADA digital filings (~70% ecommerce), the 2025 FTC $1M accessiBe order, and June 2025 EAA enforcement, ruling out 0.01. However, code-level WCAG remediation is far from industry standard practice (0.5) among $250k-$5M stores: WebAIM Million 2026 shows 95.9% of homepages still fail WCAG (75.1 avg errors on Shopify), BuiltWith shows accessiBe on only ~1,975 of ~82k-85k Shopify Plus stores (~2.3%), and r/shopify threads repeatedly ask whether smaller stores can ignore ADA or fix basics DIY until a demand letter arrives.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "When $250k-$5M stores (10k-150k monthly visits) allocate budget to accessibility, live competitor pricing demonstrates $1,000-$5,000/yr spend: accessiBe Growth/Scale runs $179-$479/mo ($2,148-$3,990/yr), UserWay Pro Plus $149-$349/mo ($1,190-$2,490+/yr), Accessible Web RAMP Pro $299/mo ($3,588/yr), and Shopify micro-agency remediation runs $800-$5,000 upfront plus $100-$500/mo retainers ($1,200-$6,000/yr), benchmarked against $10k-$30k total ADA settlement costs. Sticker price ($5,038 Year-1 / $3,588 recurring) sits squarely in the $1k power-of-ten band, though $250k-$500k stores often resist >$1,500/yr while $1M-$5M stores support it.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Despite low technical switching friction on a duplicate staging theme branch, the pitch conflates easy onboarding with buying liquidity. For $250k-$5M stores, accessibility is a priority-7 episodic compliance or redesign decision triggered by demand letters (~3%-5%/yr hit rate), annual overlay renewals (accessiBe/UserWay annual billing), or theme overhauls\u2014not an always-on purchase (1.0). Furthermore, per DP24, Q4 BFCM/holiday code freezes (mid-Oct through Dec) pause non-revenue theme PR merges across ecommerce. Category decision frequency is annual/episodic (0.1), better than multi-year platform lock-in (0.01) but clearly below 1.0.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Themes-only Collaborator access avoids PII/PCI custody (DP22-clean), staged PRs plus recorded NVDA/VoiceOver videos are inspectable, and SMB merchants do not require Fortune 500 SOC 2 procurement. However, WCAG 2.2 AA compliance is a high-stakes credence good tied to $10k-$30k ADA/EAA legal risk where automated tools catch only 25%-35% of errors and buyers/counsel screen for IAAP WAS/CPACC certifications, assistive-tech user testers, and prior legal-defense history; merging LLM-assisted patches into revenue-critical PDP/cart Liquid templates also carries conversion-breakage risk. An unvetted solo founder explicitly disclaiming legal indemnity faces real structural trust friction (0.1) rather than buyer indifference (0.5).",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Per DP8 and DP20, auditing both the floor and ceiling shows this exact mid-tier wedge is already occupied: below sit no-overlay code-line auditors Perceivable ($29/mo Shopify app giving exact theme file/line fixes plus EU statements) and Equalize Digital ($190/yr WooCommerce plugin plus done-for-you services); right alongside sit flat-rate starter code fixers (AccessoraX $399-$499, HalfAccessible $500 audits plus IAAP-certified remediation) and Shopify accessibility agencies already selling $800-$5,000 standard Liquid sprints plus $100-$500/mo staging-theme monitoring/fix retainers; above sits TestParty ($1k-$5k/mo) owning the automated CI + code-PR + human QA category. Moreover, Liquid theme PRs cannot patch remote JS from the 15-30 third-party apps causing most ongoing regressions, leaving no incumbent-uncopyable differentiation (0.1).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.1,
+            "justification": "Although active stores drift via new banners, product photos, and third-party apps (45% of 2025 federal ADA cases hit repeat defendants), permanent Liquid/PHP fixes remain in the merchant's theme after cancellation, leaving zero technical lock-in. With a front-loaded $1,450 cleanup sprint solving core template debt, month-to-month cancel-anytime terms, and $299/mo P&L visibility\u2014combined with agency benchmarks documenting high churn ('what am I paying for?' fatigue) on standalone SMB accessibility retainers\u2014$250k-$2M stores have strong incentive to fix-and-cancel after 1-3 months. Without retention data proving <4%/mo churn, the honest score is 0.1 (one-off project economics with repeat/referral upside) rather than durable recurring SaaS (0.5).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 1000.0,
+        "score": 0.0016,
+        "evidence_believability_index": 0.571,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Changed from Scenario A (100,000 -> 10,000). Dropping WooCommerce (~25k-35k), dropping sub-$1M stores (~60%-70% of the $250k-$5M band), and filtering strictly to $1M-$5M US/EU Shopify OS 2.0 stores that EITHER currently run an overlay widget (BuiltWith tracks accessiBe on ~1,975 of ~82k-85k Shopify Plus stores, with UserWay/AudioEye adding several thousand $1M-$5M standard-theme stores) OR exceed EU EAA microenterprise thresholds (>EUR 2M turnover / >=10 employees, ~5k-10k EU Shopify OS 2.0 stores) leaves ~10k-20k qualified stores, shifting Plausible down one power of ten to 10,000 (per DP14).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Changed from Scenario A (0.1 -> 0.5). Every merchant in this narrowed segment has already demonstrated awareness by paying for an accessibility overlay (accessiBe/UserWay/AudioEye) or falling directly under mandatory non-exempt EU EAA enforcement (>EUR 2M / >=10 employees post-June 28, 2025). It stops at 0.5 rather than 1.0 because a substantial fraction of active overlay buyers still believe their widget protects them until educated on the 2025 FTC $1M accessiBe order and ADA lawsuit data.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Unchanged from Scenario A ($1,000). Narrowing to $1M-$5M Shopify stores eliminates the budget-constrained $250k-$500k tier, aligning more cleanly with demonstrated $2,148-$3,990/yr accessiBe Growth/Scale spend and $1,200-$6,000/yr Shopify agency retainers. Repricing to $1,950 upfront rip-and-replace sprint + $299/mo ($5,538 Year-1 / $3,588/yr recurring) stays squarely in the $1k power-of-ten band\u2014it cannot jump to $10k without colliding directly with TestParty's $12k-$60k/yr floor and collapsing the core pricing thesis.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged from Scenario A (0.1). Even among overlay-installed and EU EAA-mandated stores, buying remains episodic/annual rather than always-in-market: accessiBe ($490-$3,990/yr) and UserWay ($490-$2,490/yr) heavily lock users into prepaid annual plans creating annual renewal gates, EAA compliance reviews follow annual audit cycles, and Q4 BFCM ecommerce code freezes (mid-Oct through Dec, DP24) halt non-revenue Liquid theme PR merges.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Unchanged from Scenario A (0.1). Narrowing upmarket to $1M-$5M stores ($3k-$14k/day GMV) migrating off a discredited vendor (accessiBe) or complying with mandatory EU EAA enforcement intensifies scrutiny of vendor credentials: buyers and ADA counsel filter for IAAP WAS/CPACC certifications, assistive-tech user testers, and prior legal-defense history, and fear conversion regressions from LLM-assisted Liquid PRs merged into live PDP/cart flows. An unvetted solo founder disclaiming legal indemnity still faces structural trust friction.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Unchanged from Scenario A (0.1), and further confirmed by Shopify App Store floor checks (DP8/DP20/DP23): native non-overlay apps already patch Shopify theme source code directly\u2014including Patrol (ADA Code Level Fixes), Adafix, TrueFix/EnableAll, Perceivable ($29/mo theme file/line auditor), and Fudge (automated Shopify code-fix operator). Above, TestParty ($1k-$5k/mo) explicitly runs dedicated accessiBe-to-Liquid-PR migrations on duplicate staging themes; alongside sit IAAP-certified Shopify agencies offering $800-$5,000 sprints plus $100-$500/mo retainers. Theme PRs also remain unable to remediate remote JS from 15-30 third-party Shopify apps per store.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.1,
+            "justification": "Unchanged from Scenario A (0.1). Although $1M-$5M overlay switchers already pay monthly accessibility fees and face active store drift (45% repeat-defendant share in 2025 federal ADA cases), unlike an overlay widget that vanishes upon cancellation, permanent Liquid theme fixes stay live forever once the $1,950 initial rip-and-replace sprint completes. Month-to-month cancel-anytime terms at $299/mo leave zero technical lock-in and carry documented SMB accessibility retainer fatigue ('what am I paying for?' churn); without real retention data proving <4%/mo churn, 0.1 remains the honest score (note: even at 0.5, total score only reaches 0.0040).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 500.0,
+        "score": 0.0008,
+        "evidence_believability_index": 0.571,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "CONCEDED (100,000 -> 10,000). Applying LiquidGuard's actual behavioral and technical filters (DP14) collapses the ~55k-95k raw pool: >30% of WordPress/WooCommerce sites run Elementor plus other visual page builders (cutting clean Astra/GeneratePress block themes by >50%); 25%-30% of Shopify stores (and a larger share of $1M-$5M stores) run custom/heavily modified themes; <5% of Shopify merchants use GitHub PR workflows; >50% of the $250k-$5M bracket sits in the budget-constrained $250k-$750k tail; and EU EAA Directive 2019/882 exempts microenterprises (<10 staff and <=EUR 2M). Qualified addressable stores collapse to ~10,000-25,000 \u2014 squarely the 10,000 band.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.1,
+            "justification": "5,100+ 2025 ADA filings, the FTC $1M accessiBe order, and June 2025 EU EAA enforcement keep awareness above 0.01 among agencies and sued stores, but WebAIM Million 2026 (95.9% homepage failures; 75.1 avg errors on Shopify) and <3% accessiBe usage on Shopify Plus prove $250k-$5M merchants treat WCAG remediation as a passive, priority-7 issue until a demand letter arrives.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 100,
+            "justification": "CONCEDED ($1,000 -> $100). Live Shopify App Store and market pricing compresses clearing price from both ends: Perceivable ($290/yr), Equalize Digital ($0-$190/yr), AccessoraX/HalfAccessible entry tiers ($399-$500), and one-time Storetasker theme cleanups ($750-$2,500) cap the floor, while TestParty Pro ($599/mo / $6,469/yr) sits barely 22% above LiquidGuard's $5,038 Year-1 price with full compliance certificates. With >50% of the $250k-$5M bracket in the $250k-$750k tail and 30-to-60-day retainer churn, realized annual value per customer for an uncredentialed, non-indemnified theme-only fixer clears in the $300-$900/yr range \u2014 the $100 power-of-ten band.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Technical ease of duplicating a staging theme does not equal buying liquidity. Accessibility for $250k-$5M stores is an episodic/annual decision triggered by demand letters, annual overlay renewals, or rare theme overhauls, and is frozen across ecommerce during Q4 BFCM code freezes (mid-Oct through Dec, DP24). Liquid is 0.1, not 1.0.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Verified ADA Title III settlement terms (accessible.org, halfaccessible.com) routinely require an independent, credentialed accessibility expert (IAAP CPACC/WAS), testing by people with disabilities using screen readers, and a formal Letter of Conformance acceptable to opposing counsel. An unvetted solo founder explicitly disclaiming legal indemnity is disqualified by defense counsel at the exact moment a demand letter forces spending, while editing live PDP/cart Liquid templates carries severe uninsured conversion-breakage risk.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Live 2026 verification confirms zero unserved gap: Perceivable ($29/mo or $290/yr on Shopify App Store) gives exact theme file/line WCAG fixes plus EU accessibility statements; Equalize Digital ($0-$190/yr) covers WooCommerce; TaskHusky ($89-$250/task), Storetasker ($750-$2,500 one-time), AccessoraX (5-7 day sprints), and HalfAccessible ($500-$2,000 flat manual audits) handle code fixes; Deque's official Axe Accessibility Claude Code plugin + Playwright MCP automate scan->remediate->verify PRs for $20/mo; and TestParty Pro already starts at $599/mo ($6,469/yr) on the Shopify App Store. Worse, Liquid theme PRs cannot fix remote 3rd-party app scripts (Klaviyo, Judge.me, Recharge) or sandboxed Checkout Extensibility, and editing core OS 2.0 Liquid files breaks automatic Shopify theme updates.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.1,
+            "justification": "Once initial theme edits ship, the merchant owns the code with zero technical lock-in. Month-to-month cancel-anytime terms at $299/mo invite 30-to-60-day fix-and-cancel churn once initial fear fades (consistent with documented SMB accessibility retainer fatigue), while ongoing regression sources (3rd-party apps and vendor OS 2.0 theme updates) are either unpatchable from Liquid or margin-destroying manual re-ports. Real economics are one-off agency project work (0.1), not recurring SaaS (0.5).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 10.0,
+        "score": 0.0,
+        "evidence_believability_index": 0.614,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "panel": {
+        "votes": {
+          "scorer": -1.0,
+          "attacker": -1.0,
+          "consequence_ev": -1.0
+        },
+        "weights": {
+          "scorer": 0.3,
+          "attacker": 0.4,
+          "consequence_ev": 0.3
+        },
+        "panel_weighted_score": -1.0,
+        "disagreement_flag": false
+      },
+      "ev_metrics": {
+        "p_viable_pct": 4.0,
+        "target_arr_usd": 250000.0,
+        "validation_hours": 20.0,
+        "expected_arr_usd": 10000.0,
+        "ev_per_validation_hour": 500.0
+      },
+      "reason": "UNANIMOUS KILL (BAD_IDEA) \u2014 Revised deterministic Problem Score collapses 100x from 0.0016 to 0.000016 (10,000 * 0.1 * 100 * 0.1 * 0.1 * 0.1 * 0.1 / 625,000; 62,500x below the 1.0 viability floor) after the Advocate independently verified all live 2026 evidence and conceded both Plausible (100,000 -> 10,000) and Lucrative ($1,000 -> $100). Four compounding structural defects are fatal rather than fixable via positioning: (1) complete floor-to-ceiling colonization from $290/yr Perceivable, $0-$190/yr Equalize Digital, $20/mo Deque Axe Claude Code plugin + Playwright MCP, and $750-$2,500 one-time Storetasker devs up to TestParty's $599/mo Shopify App Store Pro tier; (2) architectural impossibility \u2014 Liquid theme PRs cannot patch unaccessible 3rd-party app widgets (Klaviyo, Judge.me, Recharge) or sandboxed Checkout Extensibility, while core OS 2.0 Liquid edits break automatic theme updates and target a GitHub PR workflow <5% of Shopify merchants use; (3) credence-good disqualification \u2014 ADA settlements require independent IAAP CPACC/WAS experts and disabled-user testing, disqualifying an unvetted solo founder disclaiming legal indemnity; and (4) non-lock-in fix-and-cancel retainer churn turning the product into an underpriced, uninsured freelance agency treadmill. Do not build or pursue."
+    }
+  ]
+}

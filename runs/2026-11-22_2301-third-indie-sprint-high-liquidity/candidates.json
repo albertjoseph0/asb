@@ -1,0 +1,146 @@
+[
+  {
+    "deliberate_trade_offs": [
+      "No payment processing, checkout tax collection, or Merchant of Record (MoR) liability: integrates exclusively via official webhooks from Stripe, Stripe Managed Payments, Paddle, Polar, Dodo, and PayPal so installed software keys never break when a vendor switches payment rails (whereas Polar and Dodo bundle MoR processing with lock-in).",
+      "No enterprise on-premise air-gapped server installations, floating FlexLM/RLM hardware dongles, or custom legal procurement: targets self-serve cloud and cryptographic offline-verifiable license files only (ceding Fortune 500 CAD/EDA contracts to LicenseSpring and Keygen Enterprise at $2,999+/mo).",
+      "No affiliate marketplace, creator storefront theme builder, or email newsletter suite: focuses strictly on license validation, device activation caps, multi-rail entitlement sync, and signed binary/plugin update feeds (Sparkle, Electron, WordPress, CLI) rather than competing with Gumroad or Shopify storefronts."
+    ],
+    "id": "IDEA-1",
+    "indie_feasibility": "1-2 technical founders can ship an MVP in 4-6 weeks using Cloudflare Workers/Edge KV (sub-50ms global license validation), Postgres for audit state, S3/R2 for signed release binaries, and official Stripe/Paddle/Polar/PayPal webhook adapters plus a Lemon Squeezy CSV importer and /v1/licenses/validate drop-in proxy. Low support burden because buyers are technical developers who read API docs and inspect webhook logs. 100% ToS-clean, zero money-transmission or tax-remittance liability, high natural retention once shipped app binaries call your custom validation domain. [UNVETTED] Founder-fit assumes comfort running high-availability read-heavy edge validation endpoints (99.95%+ uptime with cryptographic offline fallback) and developer-documentation marketing.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Hiring an engineer to build and maintain a custom Cloudflare Worker + D1 licensing backend, or accepting permanent lock-in to a single Merchant of Record (Polar, Dodo, Paddle) or Gumroad's 10% + $0.50 fee.",
+      "obviated_below": "Hand-rolling webhook listeners for Stripe/PayPal/Paddle, writing custom Lemon Squeezy /v1/licenses/validate shim servers, managing S3 signed download URLs and Sparkle/WordPress update XML feeds, and debugging broken customer activations after a processor switch.",
+      "promise_one_up": "Switch payment processors or migrate off Lemon Squeezy before March 31, 2027 without pushing an emergency app update or breaking a single paying customer's license key.",
+      "your_level": "Issue, validate, revoke, and fulfill processor-agnostic software license keys and signed app/plugin releases across multiple payment rails from one custom validation domain."
+    },
+    "one_liner": "Processor-agnostic software license key, device-entitlement, and signed-release control plane with a drop-in Lemon Squeezy validation endpoint so desktop apps and plugins survive payment-rail switches without breaking installed keys.",
+    "price": "$49/mo (up to 10,000 active licensed devices, unlimited products, custom validation domain included, 0% GMV fee) and $129/mo (up to 50,000 active devices, team seat management, signed release CDN)",
+    "pricing_strategy": "More for Less",
+    "signal_ids": [
+      "SIG-14"
+    ],
+    "specific_buyer": "Software founders and 1-10 engineer dev shops selling paid macOS/Windows/Linux desktop apps, WordPress/Figma/Obsidian/VS Code plugins, or commercial CLI tools via license keys\u2014particularly vendors migrating off Lemon Squeezy before its March 31, 2027 shutdown or routing checkouts across Stripe, Paddle, Polar, and PayPal.",
+    "specific_problem": "Lemon Squeezy's non-extendable March 31, 2027 shutdown strands installed license keys because Stripe Managed Payments omits native license keys, hosted release delivery, PayPal subscription migration, and sellers outside ~37 countries, while billing buyers as LINK.COM. Migrating to another bundled MoR (Polar, Dodo, Creem) repeats single-vendor lock-in, whereas standalone Keygen.sh charges $99/mo for only 1,000 active licensed users (5 products), $299/mo for 10,000 ALUs, plus $995/yr for a custom domain and provides no Lemon Squeezy drop-in compatibility or multi-MoR webhook sync. Post-filter TAM exceeds 100,000 paid desktop-app/plugin/CLI vendors at $588-$1,548/yr ($58.8M-$154.8M+; Liquid = 1.0).",
+    "title": "Keybridge \u2014 Processor-Agnostic License Key, Entitlement & Signed-Release Control Plane"
+  },
+  {
+    "deliberate_trade_offs": [
+      "No chargeback insurance, financial indemnity, or checkout fraud-guarantee underwriting: avoids catastrophic-liability transfer (DP10) and percentage-of-GMV pricing (ceding full-store fraud guarantees to Signifyd and NoFraud at 1%-1.5% of total store GMV).",
+      "No automated Ethoca/Verifi RDR bank-alert auto-refunds: refuses to charge $19-$30 per bank alert or silently refund shipped orders without merchant approval (avoiding Disputifier's unintended mass-refund failures and Chargeblast's triple-meter billing), instead intercepting friendly-fraud INR claims upstream on the storefront before the buyer calls their bank.",
+      "Physical tracked-parcel goods only (no digital downloads, coaching/infoproducts, or untracked drop-shipped mailers): requires carrier GPS scan coordinates, delivery photos, and shipping/billing address telemetry to deter refund fishers and assemble Compelling Evidence 3.0 packets."
+    ],
+    "id": "IDEA-2",
+    "indie_feasibility": "1-2 technical founders can build this as a ToS-clean Shopify App Store app + WooCommerce/Stripe plugin using official Shopify Orders/Flow APIs, EasyPost/ShipEngine/UPS/FedEx/USPS tracking & proof-of-delivery photo APIs, Google Street View Static API, and deterministic PDF assembly for Stripe/Shopify dispute uploads. Low support overhead because merchants configure cooling-period and attestation thresholds once and receive automated alerts only on escalated claims. Zero underwriting balance-sheet risk and zero A2P SMS/WhatsApp compliance friction (uses storefront order-lookup links and transactional email). [UNVETTED] Founder-fit assumes willingness to master Shopify App Store distribution and Visa VAMP / Compelling Evidence 3.0 card-network documentation.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Paying Chargeflow 25% of recovered orders plus alert fees, absorbing $19-$30 RDR auto-refunds plus lost inventory, paying NoFraud/Signifyd 1%-1.5% of total GMV, or manually investigating every missing-package ticket via support staff.",
+      "obviated_below": "Manually pulling carrier GPS coordinates and porch-drop photos, cross-checking Google Street View, emailing 24-hour neighbor-trace cooling instructions, chasing signed non-receipt forms, tagging repeat refund fishers in Shopify Flow, and hand-building annotated PDFs for bank representment.",
+      "promise_one_up": "Stay safely under Visa VAMP's 1.5% combined dispute ceiling and avoid Shopify Payments' 10% rolling reserves without surrendering 20%-25% of recovered revenue or auto-refunding honest deliveries.",
+      "your_level": "Deflect friendly-fraud Item-Not-Received claims on the storefront before buyers file bank disputes, and compile flat-fee carrier-proof Compelling Evidence 3.0 packets for disputes that still occur."
+    },
+    "one_liner": "Storefront-side Item-Not-Received friendly-fraud deflection gate and $0-commission carrier-GPS chargeback evidence compiler built to keep physical-goods merchants below Visa VAMP's 1.5% dispute cliff.",
+    "price": "$129/mo flat (up to 1,500 monthly orders) and $249/mo flat (up to 10,000 monthly orders); $0 alert fees and 0% commission on won chargebacks",
+    "pricing_strategy": "More for Less",
+    "signal_ids": [
+      "SIG-10"
+    ],
+    "specific_buyer": "Operations owners and founders of direct-to-consumer physical-goods Shopify and WooCommerce/Stripe stores generating $250k-$10M annual GMV ($75+ average order value) who ship tracked parcels and must stay below Visa VAMP's 1.5% combined dispute threshold (effective April 1, 2026) and Shopify Payments' 1.5% rolling-reserve limit.",
+    "specific_problem": "Effective April 1, 2026, Visa VAMP cut the merchant 'Excessive' ceiling from 2.2% to 1.5% combined (TC40 fraud + TC15 disputes) / TC05 settled transactions; winning representment does not remove a dispute from VAMP, and Shopify Protect gives zero coverage for Item-Not-Received (INR) or Not-as-Described claims. Incumbents (Chargeflow at 25%, Disputifier at 20% + $17-$30/alert, Chargeblast at $19-$29/alert + sub + recovery fee) carry a structural business-model conflict: they monetize post-bank alerts and recovery cuts rather than preventing buyers from calling their card issuer. No micro-SaaS floor pairs a storefront-side 24-hour neighbor-trace cooling gate, carrier GPS/photo + Street View proof display, and signed non-receipt attestation (deterring 40%-50% of casual refund fishers pre-bank) with flat-fee Compelling Evidence 3.0 PDF compilation. Post-filter TAM exceeds 100,000 physical-goods DTC stores at $1,548-$2,988/yr ($154.8M-$298.8M+; Liquid = 1.0).",
+    "title": "VampShield \u2014 Pre-Bank INR Friendly-Fraud Deflection Gate & Flat-Fee Chargeback Evidence Compiler"
+  },
+  {
+    "deliberate_trade_offs": [
+      "PostgreSQL/Supabase with Prisma or Drizzle only (no MySQL, MongoDB, Oracle, or Snowflake): enables deep execution-time RLS tenant-isolation testing, lock-timeout simulation, and Prisma/Drizzle schema-to-live-DB drift inspection rather than shallow multi-dialect regex linting.",
+      "Deterministic CI test runner and local CLI credential proxy\u2014not a hosted production database proxy or SOC 2 compliance auditor: stays completely out of production query latency paths and carries zero security-indemnity liability (DP10-clean), ceding production DB firewalling and enterprise RBAC portals to Bytebase and Teleport.",
+      "Flat per-repository pricing instead of per-developer or per-AI-agent seat pricing: gives up enterprise seat expansion upside to directly beat Atlas Pro ($9/dev/mo counting CI and AI agents) and Bytebase ($20/user/mo) for agent-heavy 2-30 engineer teams."
+    ],
+    "id": "IDEA-3",
+    "indie_feasibility": "1-2 technical founders can build the GitHub/GitLab Action runner (spinning up disposable Postgres/Supabase Docker containers per PR to execute declarative YAML/TS cross-tenant assertions and EXPLAIN/lock analyzers), the schema-drift diff engine, and a small Go/Rust local CLI wrapper around DATABASE_URL that blocks destructive DDL or --shadow-database-url targeting prod host fingerprints in 5-7 weeks. Support is minimal and technical (GitHub issues, deterministic reproduction logs). 100% ToS-clean, zero production data hosting required (runs on customer CI runners or ephemeral zero-retention schema-only sandboxes). [UNVETTED] Founder-fit assumes strong PostgreSQL internals (RLS, lock modes, pg_catalog) and Prisma/Drizzle fluency.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Manually reviewing every AI-generated SQL migration line-by-line, forbidding coding agents from touching migrations, hand-writing pgTAP SQL suites, or paying for Atlas Pro seats plus uncapped Supabase Branching.",
+      "obviated_below": "Scrubbing production .env files out of Claude Code/Cursor worktrees by hand, writing brittle pgTAP boilerplate per table, debugging 'column does not exist' deploys after agents run prisma migrate resolve --applied, and manually auditing dashboard SQL edits for RLS drift.",
+      "promise_one_up": "Let engineers merge Claude Code and Cursor database migrations at full velocity without wiping production data or leaking cross-tenant customer rows.",
+      "your_level": "Run ephemeral PR cross-tenant Postgres/Supabase RLS assertions, Prisma/Drizzle drift checks, and a local AI-agent production-URL killswitch on every migration."
+    },
+    "one_liner": "Ephemeral Postgres PR runner for declarative cross-tenant RLS isolation tests and Prisma/Drizzle drift checks, paired with a local DATABASE_URL killswitch that blocks AI coding agents from wiping production.",
+    "price": "$79/mo flat per repository (unlimited human devs and AI agents, 500 ephemeral PR runs/mo) and $179/mo (up to 5 repositories, 2,000 PR runs/mo)",
+    "pricing_strategy": "More for Less",
+    "signal_ids": [
+      "SIG-1"
+    ],
+    "specific_buyer": "CTOs and Staff or Lead Engineers at 2-30 engineer B2B SaaS companies running PostgreSQL or Supabase with Prisma or Drizzle whose teams author or modify database migrations with autonomous CLI/IDE coding agents (Claude Code, Cursor, Codex).",
+    "specific_problem": "Atlas moved PostgreSQL lock/rewrite linting behind paid per-seat Atlas Pro ($9/dev/mo counting humans, CI, and AI agents), Bytebase charges $20/user/mo, and Supabase Branching bills ~$9.70/mo per branch outside spend caps. Meanwhile, free floor linters (Squawk, npx safegres, supabase-rls-guard, Atlas Community) only parse static SQL text\u2014they cannot detect inverted AI-written Supabase RLS logic (USING (auth.uid() != id)), ORM-to-live-DB drift from dashboard edits or prisma migrate resolve --applied bypasses, or Claude Code wiping production via prisma migrate diff --shadow-database-url \"$PROD\". Post-filter TAM exceeds 100,000 Postgres/Supabase + Prisma/Drizzle SaaS teams using AI coding agents at $948-$2,148/yr ($94.8M-$214.8M+; Liquid = 1.0).",
+    "title": "PolicyGate \u2014 Ephemeral Postgres PR RLS-Assertion Runner & Local AI-Agent DB Killswitch"
+  },
+  {
+    "deliberate_trade_offs": [
+      "No hosted SDK code-generation runtime, API docs portal hosting, or Postman-style manual API client UI: focuses strictly on code-to-OpenAPI truth extraction and cross-repo consumer/SDK blast-radius gating (ceding docs hosting to Scalar/Redocly, local clients to Bruno, and managed SDK generation to Speakeasy/Fern).",
+      "Four high-volume backend frameworks first (FastAPI, TypeScript Express/Hono/Next.js, Go net/http/Gin/Chi, and Rails) rather than arbitrary polyglot enterprise middleware (SOAP, gRPC, legacy Java ESBs): guarantees accurate route-AST + test-fixture extraction without multi-year parser bloat.",
+      "Requires GitHub/GitLab read-only repo access across indexed consumer repositories instead of zero-context single-YAML diffing: accepts slightly deeper 5-minute GitHub App install permissions so PR checks can pinpoint exact breaking file-and-line call sites in downstream services and SDKs\u2014something YAML-only tools (oasdiff, SpecShield) structurally cannot do."
+    ],
+    "id": "IDEA-4",
+    "indie_feasibility": "1-2 technical founders can build the static AST route extractors + runtime HTTP test-recorder middleware for 4 frameworks, OpenAPI breaking/SDK-signature diff engine (including non-wire operationId/component renames), cross-repo call-site dependency graph indexer, and stainless.yml config importer in 6-8 weeks. Runs asynchronously on PR webhooks with low compute costs and zero production API traffic proxying (no 24/7 inference-proxy on-call liability). 100% ToS-clean via official GitHub/GitLab Apps. [UNVETTED] Founder-fit assumes compiler/AST engineering strength and credibility selling to backend engineering leads.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Running heavy Pact contract-testing brokers, paying for SwaggerHub/Stoplight or Postman Team enterprise seats ($19/user/mo+), maintaining brittle custom AST + lockfile CI scripts, or discovering breaking API changes from angry customer support tickets.",
+      "obviated_below": "Manually syncing openapi.yaml after every AI-generated PR, grepping downstream frontend/mobile/SDK repositories for renamed operationIds or changed JSON fields, and scrambling to replace archived Optic pipelines and wound-down Stainless configs.",
+      "promise_one_up": "Merge AI-accelerated backend PRs without silently breaking downstream frontend apps, partner webhooks, or generated client SDKs in production.",
+      "your_level": "Verify actual backend route code against OpenAPI specs on every PR and map exact downstream repo and SDK consumer call-site blast radius before merge."
+    },
+    "one_liner": "GitHub/GitLab CI gate that catches code-to-OpenAPI drift in AI-generated PRs and maps exact breaking call-sites across downstream repos and generated client SDKs\u2014filling the post-Optic and Stainless vacuum.",
+    "price": "$99/mo flat per GitHub/GitLab org (up to 5 API services and 15 indexed consumer repos, unlimited developer seats) and $249/mo (up to 20 API services, unlimited consumer repos, stainless.yml migration importer)",
+    "pricing_strategy": "More for More",
+    "signal_ids": [
+      "SIG-4"
+    ],
+    "specific_buyer": "Engineering leads and backend maintainers at 2-30 engineer API-first SaaS companies shipping REST/OpenAPI APIs (FastAPI, Express/Hono/Next.js, Go, or Rails) consumed by multiple internal repos, external partner integrations, or generated TypeScript/Python/Go client SDKs.",
+    "specific_problem": "Optic Labs archived on Jan 12, 2026, Stainless closed hosted SDK signups after Anthropic's May 18, 2026 acquisition, and Postman restricted its Free tier to 1 user in March 2026 ($19/user/mo Team floor). Free/low-cost spec diff tools (oasdiff, SpecShield, Redocly CLI) only compare YAML-to-YAML files\u2014they completely miss AI-coded PRs that modify backend routes without updating openapi.yaml, miss non-wire operationId/component renames that break generated SDKs, and cannot map downstream consumer call-site blast radius across repos without custom AST scripts or heavy Pact brokers. Post-filter TAM exceeds 100,000 2-30 engineer API-first SaaS teams at $1,188-$2,988/yr ($118.8M+; Liquid = 1.0).",
+    "title": "BlastSpec \u2014 Code-to-OpenAPI Truth & Cross-Repo SDK Blast-Radius CI Gate"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Standalone submittal layer, not a full Applicant Tracking System (ATS), CRM, or email sequencer: refuses to replace Bullhorn, Loxo, Crelate, or spreadsheets so agencies can adopt it in 10 minutes without painful database migrations or $85-$199/user/mo annual ATS contracts.",
+      "No biometric facial recognition, government-ID KYC storage, or legal 'deepfake-free' warranty: avoids BIPA/GDPR biometric compliance traps and strict-liability warranties (DP10) by instead recording an unedited 60-second live recruiter-candidate vetting clip paired with spoken-answer vs. resume claim discrepancy flags and recruiter-verified portfolio checks.",
+      "Zero hiring-manager login, password, or double-email verification gate: trades heavy multi-role enterprise client-portal dashboards (Candidately, Bullhorn portals) for single-click expiring magic links that busy hiring managers actually open on mobile and desktop while logging cryptographic view/approval timestamps."
+    ],
+    "id": "IDEA-5",
+    "indie_feasibility": "1-2 technical founders can build the web app in 4-6 weeks using WebRTC/Cloudflare Stream (60-second unedited clip capture with timestamp watermark), structured resume parsing + transcript cross-check, passwordless magic-link submittal cards with Cal.com/Calendly/Google Calendar interview booking, and SHA-256 timestamped Right-to-Represent + client-view PDF audit receipts. Month-to-month self-serve Stripe billing with zero enterprise VMS procurement required. 100% ToS-clean and zero A2P SMS/WhatsApp compliance friction (delivers magic links via recruiter's existing email/Slack/LinkedIn). [UNVETTED] Founder-fit assumes interest in outbound/community distribution to boutique recruiting owners (r/RecruitmentAgencies, agency owner communities).",
+    "needs_stack_sketch": {
+      "alternatives_above": "Paying $85-$199/user/mo on prepaid annual contracts for Loxo, Recruiterflow, or Crelate client portals, stitching separate TurboCheck/Verif_Hire + Loom + PDF email chains, or losing $15k-$40k placement fees to stalled hiring managers and duplicate-submittal disputes.",
+      "obviated_below": "Formatting branded PDF candidate dossiers by hand, attaching separate screen-recording video links, chasing hiring managers through 2-week email black holes, and digging through sent-mail screenshots to prove candidate ownership in fee disputes.",
+      "promise_one_up": "Get hiring managers to book candidate interviews 3x faster and protect $15k-$40k placement fees from duplicate-submittal disputes without switching your ATS.",
+      "your_level": "Send no-login verified candidate submittal cards combining a 60-second live vetting clip, competency scorecard, 1-click interview booking, and cryptographic fee-ownership timestamps."
+    },
+    "one_liner": "ATS-agnostic, no-login candidate submittal card pairing a 60-second live recruiter-candidate vetting clip with 1-click hiring-manager interview booking and cryptographic submittal-ownership proof for boutique search firms.",
+    "price": "$99/mo flat per agency (up to 5 recruiters, month-to-month, unlimited submittals) and $179/mo (up to 15 recruiters, custom submittal domain)",
+    "pricing_strategy": "More for Less",
+    "signal_ids": [
+      "SIG-15"
+    ],
+    "specific_buyer": "Managing partners and desk-owning recruiters at 1-10 recruiter boutique technical, finance, and executive search agencies placing salaried or contract roles on $10k-$40k contingency or retained fees who currently email static PDF resumes or spreadsheets to hiring managers.",
+    "specific_problem": "AI-generated keyword-stuffed resumes, real-time AI interview copilots, and proxy/deepfake remote candidates have broken hiring manager trust in static PDF submittals, causing multi-week feedback black holes and 'is this candidate real?' skepticism. Meanwhile, Loxo eliminated monthly billing ($149-$199/user/mo annual prepaid), Recruiterflow ($119/user/mo) and Crelate ($85/user/mo) require annual per-seat ATS migrations, and Candidately relies on Bullhorn coupling plus double-email client verification without native live vetting clips. Post-filter TAM covers 15,000-30,000 active 1-10 recruiter boutique search agencies across US/UK/EU/CA/AU at $1,188-$2,148/yr ($17.8M-$64.4M; Liquid = 1.0).",
+    "title": "ProofSlate \u2014 ATS-Agnostic Verified Candidate Submittal Card & Fee-Ownership Ledger"
+  },
+  {
+    "deliberate_trade_offs": [
+      "WooCommerce + Stripe (and WooCommerce Subscriptions) revenue-state integrity only\u2014no generic WordPress backups, uptime pings, malware scanning, or plugin auto-updates: leaves $2/site infrastructure chores to WP Umbrella and ManageWP while owning the high-stakes payment-reconciliation and staging-charge-block layer they ignore.",
+      "No revenue analytics, cohort charts, or customer email marketing dashboards: refuses to compete with Metorik ($25-$150+/mo) on reporting and instead fixes the upstream webhook desyncs and Action Scheduler stalls that make Metorik show 'Pending' on paid Stripe orders.",
+      "Deterministic API state reconciliation and pre-execution staging blocks\u2014never blind auto-refunds or payment gateway replacement: requires merchant-approved reconciliation policies so store owners retain complete control over order state transitions and subscription retries (DP10-clean)."
+    ],
+    "id": "IDEA-6",
+    "indie_feasibility": "1-2 technical founders can build a lightweight WordPress MU-plugin + external SaaS reconciliation worker in 4-6 weeks using official Stripe REST APIs (PaymentIntents, Invoices, Subscriptions, Webhook endpoints) and WooCommerce REST/Action Scheduler hooks. External worker polls Stripe settlement truth against WooCommerce order/subscription status on a rolling window, detects wp_actionscheduler_actions stalls and failed renewal spikes, and enforces an environment-fingerprint Staging Live-Charge Killswitch the moment a production DB is cloned to a non-production domain. Low support load once connected; multi-store agency tier ($149-$299/mo) unlocks concentrated B2B distribution through WooCommerce care-plan agencies. 100% ToS-clean. [UNVETTED] Founder-fit assumes WordPress/WooCommerce PHP hook familiarity and Stripe API expertise.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Paying WooCommerce agencies $150-$300/hr to untangle broken webhooks after angry customers complain, writing and babysitting custom PHP/cron reconciliation scripts and wp-config.php staging hacks, or eating silent subscription churn and double-billing refunds.",
+      "obviated_below": "Manually cross-referencing Stripe webhook logs against WooCommerce 'Pending Payment' orders after Cloudflare/WAF/WP Rocket caching drops /wc-api/ POSTs, inspecting wp_actionscheduler_actions tables for stalled renewals, and remembering to disable Action Scheduler every time production is cloned to staging.",
+      "promise_one_up": "Eliminate silent lost subscription renewals, 'paid in Stripe / pending in WooCommerce' support fires, and accidental live customer billing from staging clones across every WooCommerce store you operate.",
+      "your_level": "Continuously reconcile live Stripe settlement truth against WooCommerce orders and subscriptions, watch Action Scheduler renewal queues, and block live Stripe charges on staging clones automatically."
+    },
+    "one_liner": "Continuous Stripe-to-WooCommerce payment-state reconciler, Action Scheduler renewal watchdog, and automatic staging live-charge killswitch for high-volume WooCommerce stores and maintenance agencies.",
+    "price": "$49/mo single store (up to 5,000 monthly orders/renewals), $149/mo agency plan (up to 15 client WooCommerce stores), and $299/mo agency scale tier (up to 50 client stores)",
+    "pricing_strategy": "More for More",
+    "signal_ids": [
+      "SIG-13"
+    ],
+    "specific_buyer": "Technical owners of $250k-$10M GMV WooCommerce + Stripe / WooCommerce Subscriptions stores and 2-25 staff WordPress/WooCommerce maintenance agencies managing 10+ client e-commerce stores on monthly care retainers.",
+    "specific_problem": "Aggressive Cloudflare/WAF/WP Rocket caching layers silently intercept Stripe POST webhooks (/wc-api/) and return cached 200 HTML, leaving customers charged in Stripe while WooCommerce orders stay 'Pending Payment'; simultaneously, Action Scheduler queues stall under WP-Cron or retry storms and drop subscription renewals, and cloning production to staging accidentally fires live renewal charges against real customer cards. No micro-SaaS floor or vertical ceiling reconciles live Stripe settlement truth against WooCommerce state: WP Umbrella ($1.99/site) only checks generic uptime/backups, Metorik ($25-$150+/mo) passively mirrors broken WooCommerce status, RenewScope is a free manual read-only diagnostic, and agencies charge $150-$300/hr to debug incidents after revenue is lost. Post-filter TAM combines 17,800+ $100k+ WooCommerce Checkout stores, ~40,000 WooCommerce Subscriptions installs, and 10,000+ multi-store WooCommerce agencies (~20,000-35,000 qualified accounts at ~$1,000/yr blended = $20M-$35M+; Liquid = 1.0).",
+    "title": "StripeSyncGuard \u2014 WooCommerce + Stripe Payment-State Reconciler & Staging Killswitch"
+  }
+]

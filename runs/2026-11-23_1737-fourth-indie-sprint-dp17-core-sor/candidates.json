@@ -1,0 +1,105 @@
+[
+  {
+    "deliberate_trade_offs": [
+      "Deliberately ships ZERO native iOS or Android consumer app \u2014 trades away mobile app-store discovery so Apple can never levy its 30% In-App Purchase cut on member signups.",
+      "No built-in marketplace, recommendation algorithm, or social feed \u2014 serves only established podcasters and YouTube/Discord hosts who already bring their own audience.",
+      "BYO Stripe Standard account only (no Merchant of Record tax intermediation and no internal payout holding) \u2014 shifts sales-tax filing to Stripe Tax while eliminating platform payout freezes, FX skimming, and KYC underwriting delays.",
+      "No native video transcoding or hosting (embeds unlisted YouTube/Vimeo/Bunny streams) \u2014 keeps unit infrastructure costs flat at $79/mo instead of charging percentage rev-share."
+    ],
+    "id": "IDEA-1",
+    "indie_feasibility": "High for 1-2 engineers: standard web app built on Stripe Connect Standard (creator owns their Stripe account and chargebacks directly \u2014 zero money-transmitter/MoR liability), signed per-member private podcast RSS XML served over Cloudflare R2 ($0 egress), and a deterministic Discord OAuth + reconciliation worker. Self-serve signup with a guided Patreon CSV/RSS migration wizard; zero enterprise procurement or HIPAA/regulatory overhead. [UNVETTED founder-fit assumption: assumes the founder is comfortable supporting creator payout/Stripe-webhook edge cases and marketing directly inside podcasting, YouTube, and Discord communities.]",
+    "needs_stack_sketch": {
+      "alternatives_above": "Selling direct podcast ad sponsorships, launching physical merch lines, signing exclusive Spotify/network deals, or running a standalone Substack/Ghost media publication.",
+      "obviated_below": "Wiring Stripe webhooks manually to Zapier, juggling separate private-RSS hosts (Transistor/Supercast) plus flaky Patreon-Discord bots, and posting scripts begging fans not to subscribe through the iOS app.",
+      "promise_one_up": "Keep 97% of recurring member revenue (saving $2,000-$25,000+/yr vs. Patreon's 10% + Apple's 30% iOS cut) while every paying fan gets instant private-podcast RSS and accurate Discord roles.",
+      "your_level": "Run a web-only, 0%-commission patronage ledger with automated per-member private podcast RSS feeds and deterministic Discord role sync on your own Stripe account."
+    },
+    "one_liner": "Flat $79/mo, 0%-commission web-only patronage ledger with revocable private podcast RSS and deterministic Discord role sync \u2014 permanently exempt from Patreon's 10% fee and Apple's 30% iOS tax.",
+    "price": "$79/mo flat (up to 5,000 paying members; $149/mo above 5,000; 0% platform commission, BYO Stripe)",
+    "pricing_strategy": "More for Less",
+    "signal_ids": [
+      "SIG-6",
+      "SIG-10"
+    ],
+    "specific_buyer": "Independent podcasters, YouTube video essayists, and paid-Discord hosts with 200+ paying monthly members ($1,000-$25,000+/mo recurring patronage) currently paying Patreon's 10% fee plus Apple's Nov 2026 30% iOS IAP cut, Memberful's $49/mo + 4.9% fee, Fourthwall's 5% membership fee, or Supercast's $0.59/subscriber/mo fee.",
+    "specific_problem": "Once a podcaster or Discord host crosses 200-500 paying members, percentage take-rates and Apple's Nov 1, 2026 mandatory iOS IAP migration take $2,000-$25,000+/yr (10% Patreon + 30% Apple iOS or ~43% iOS price hikes, 4.9% Memberful, 5% Fourthwall, or $0.59/sub Supercast), while budget 0%-fee tip jars (Ko-fi Gold at $6-$12/mo) lack revocable private podcast RSS hosting, reliable multi-tier Discord role reconciliation, and Patreon tier migration. Incumbents cannot copy flat $79/mo 0%-fee web-only billing without destroying 80-95% of their take-rate revenue and abandoning their consumer apps.",
+    "title": "PatronRail \u2014 Web-Only, 0%-Commission Patronage, Private Podcast RSS & Discord Sync Ledger"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Built strictly for single-location independent venues and caterers (<100 events/yr) \u2014 explicitly omits multi-property hotel group rollups, enterprise sales-rep commission quotas, and Salesforce/Oracle PMS connectors.",
+      "Zero built-in consumer venue marketplace or lead-generation directory \u2014 refuses to charge 15-20% booking commissions like Peerspace/Tagvenue or threaten account bans over repeat direct clients.",
+      "No interactive 2D/3D CAD drag-and-drop floor-plan renderer \u2014 replaces complex CAD editors with static room-layout PDFs attached to the BEO so setup takes 15 minutes instead of multi-week onboarding.",
+      "Month-to-month self-serve billing only \u2014 rejects Tripleseat's 1-year auto-renewing contracts and quote-walled sales demos."
+    ],
+    "id": "IDEA-2",
+    "indie_feasibility": "High for 1-2 engineers: focused relational CRUD system (room-hold conflict calendar, structured menu/F&B-minimum/gratuity calculator, e-sign proposal + BYO Stripe/Square deposit link, and live mobile/PDF kitchen BEO view synced from the same event record). Zero A2P 10DLC SMS dependency (relies on email threads and shareable web/PDF BEO links), zero mandatory POS hardware integrations on Day 1, and low support load once templates are imported. [UNVETTED founder-fit assumption: assumes the founder can reach independent restaurant/brewery/catering owners via hospitality communities, local venue outreach, and Tripleseat/Peerspace-alternative search intent.]",
+    "needs_stack_sketch": {
+      "alternatives_above": "Hiring a dedicated full-time private-events coordinator, outsourcing bookings to Peerspace/Tagvenue at 15-20% commission, or buying full hospitality hotel suites (Tripleseat/Event Temple).",
+      "obviated_below": "Re-keying guest counts and allergies across Gmail threads, Google Docs BEOs, spreadsheets, and Square invoices \u2014 and suffering double-booked private rooms or kitchen prep mistakes on event night.",
+      "promise_one_up": "Close more high-margin private buyouts and execute mistake-free kitchen service without paying $4,500/yr in Tripleseat contracts or losing 15-20% per party to Peerspace.",
+      "your_level": "Manage private-event inquiries, conflict-free room holds, F&B minimum proposals/deposits, and auto-synced mobile kitchen BEOs in one $69/mo system-of-record."
+    },
+    "one_liner": "Flat $69/mo, month-to-month, 0%-commission private-dining and catering inquiry-to-BEO system-of-record for single-location venues replacing $199-$375/mo contracts and 15-20% Peerspace cuts.",
+    "price": "$69/mo flat per venue (month-to-month, unlimited staff & active events, 0% booking commission, BYO Stripe/Square/ACH)",
+    "pricing_strategy": "Less for Less",
+    "signal_ids": [
+      "SIG-14"
+    ],
+    "specific_buyer": "Owner-operators and event managers of single-location independent restaurants with private dining rooms, craft breweries/wineries with rental spaces, boutique off-premise caterers, and small event venues running 15-100 private events/year (1-10 staff) who refuse Tripleseat's $375+/mo annual lock-in, Perfect Venue's $199-$339/mo floor, or Peerspace's 15-20% commissions.",
+    "specific_problem": "Low-to-mid-volume hospitality venues face a verified pricing chasm: Tripleseat ($375+/mo, 1-year auto-renewing contract) and Perfect Venue ($199-$339/mo) are priced for high-volume restaurant groups, Peerspace/Tagvenue take 15-20% of every booking and penalize off-platform repeats, while <$60/mo freelance CRMs (HoneyBook/Dubsado) lack room-hold conflict calendars, F&B minimum/gratuity math, and auto-synced kitchen Banquet Event Orders (BEOs). Operators fall back to Gmail + Google Docs BEOs + spreadsheets, dropping leads and triggering costly kitchen/room errors.",
+    "title": "BanquetBook \u2014 $69/mo Zero-Commission Private-Dining & Boutique-Venue Inquiry-to-BEO System"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Zero consumer marketplace directory or aggregator app \u2014 refuses Mindbody's and Vagaro's 5-20% marketplace/promo model that actively cross-promotes rival studios down the street to your existing members.",
+      "Capped strictly for single-location 1-10 instructor boutique studios \u2014 deliberately excludes multi-location franchise royalty accounting, retail barcode POS hardware, and spa commission inventory suites.",
+      "Email, calendar-invite (.ics), and web-pass notifications by default (plus one-tap personal-phone SMS links) \u2014 avoids U.S. A2P 10DLC SMS carrier vetting failures and per-text credit upsells.",
+      "Supports class-pack credit forfeiture for late cancels AND offline Zelle/Venmo/cash credit logging alongside BYO Stripe \u2014 protects spot capacity without forcing mandatory credit-card-on-file capture on hesitant local clients."
+    ],
+    "id": "IDEA-3",
+    "indie_feasibility": "High for 1-2 engineers: clean relational ledger covering recurring class schedules, reformer/mat spot caps, automated FIFO waitlists, expiring class-pack & membership credit balances, Stripe Checkout/Subscriptions, instructor class-count payroll CSV export, and a guided Mindbody/Vagaro CSV member-credit importer. Mobile-first web booking (no Apple/Google app-store maintenance), zero proprietary POS terminals, zero A2P SMS carrier compliance bottlenecks. [UNVETTED founder-fit assumption: assumes the founder is comfortable serving non-technical boutique studio owners during initial Mindbody CSV data migration and onboarding.]",
+    "needs_stack_sketch": {
+      "alternatives_above": "Paying $150-$600+/mo for Mindbody/WellnessLiving/Momence/StudioGrowth annual contracts, or paying ClassPass/marketplace commissions to fill empty spots.",
+      "obviated_below": "Juggling generic schedulers (Cal.com/Square) plus manual spreadsheets to track expiring 10-class packs, waitlist bumps, late-cancel penalties, and monthly instructor class payouts.",
+      "promise_one_up": "Keep classes full with automatic waitlists and late-cancel credit protection while saving $1,200-$4,000+/yr and keeping 100% ownership of your student list without marketplace poaching.",
+      "your_level": "Run single-location class scheduling, spot-capped waitlists, class-pack credit ledgers, and instructor payout sheets for 1-5 instructors at a flat $59/mo month-to-month."
+    },
+    "one_liner": "Flat $59/mo, contract-free class-pack, waitlist, and instructor-payout system-of-record for 2-5 instructor Pilates, yoga, and movement studios escaping $120-$600/mo Mindbody/Momence/OfferingTree cliffs.",
+    "price": "$59/mo flat per studio (up to 5 instructors; $89/mo for 6-10 instructors; month-to-month, 0% marketplace/booking fees, BYO Stripe or offline credit ledger)",
+    "pricing_strategy": "More for Less",
+    "signal_ids": [
+      "SIG-3",
+      "SIG-5"
+    ],
+    "specific_buyer": "Owner-operators of single-location independent Pilates, yoga, barre, aerial, and small-group movement studios employing 2-5 instructors currently paying $120-$600+/mo on Mindbody (12-24 mo contracts + 20% app fee), WellnessLiving/Momence ($199/mo multi-staff + 3.9% card fees), OfferingTree ($120-$180/mo for 3-6 staff), StudioGrowth ($159-$350/mo), or Vagaro's add-on + 5-20% booking-fee stack.",
+    "specific_problem": "Every vertical studio incumbent hits 2-5 instructor studios with a steep multi-staff pricing cliff ($120-$350+/mo), annual auto-renewing lock-in contracts, 3.9% processing markups, or 5-20% marketplace fees that steer local students to nearby competitors \u2014 whereas <$50/mo generic schedulers (Setmore, Cal.com, Square Free) cannot enforce reformer/mat spot caps, expiring class-pack credit ledgers, automated waitlist promotions, late-cancel credit forfeiture, or instructor class-count payouts. Incumbents cannot drop 2-5 instructor studios to $59/mo flat month-to-month with 0% commission without collapsing their sales-led ARPU and marketplace business model.",
+    "title": "MatLedger \u2014 $59/mo Contract-Free Class-Pack & Waitlist Ops for 2-5 Instructor Movement Studios"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Voice-first and thumb-operated mobile workflow only \u2014 deliberately rejects 2010-era multi-tab desktop office-dispatcher boards, complex inventory/warehouse ERP modules, and multi-branch franchise reporting.",
+      "Flat $59/mo for up to 5 crew members / 3 vans \u2014 refuses the per-user and per-van expansion pricing (Jobber $139-$299/mo, MoeGo $198/mo for 2 vans, QuoteIQ $99.99-$199.99/mo) that punishes solos for hiring their first helper.",
+      "Personal-device one-tap SMS/iMessage ETA & review links instead of carrier-gated A2P 10DLC automated texting \u2014 trades bulk SMS blast campaigns for zero $35/mo texting add-ons and zero silent carrier drops.",
+      "Payment-rail agnostic (logs Zelle, Venmo, cash, check, or BYO Stripe tap/link with 0% platform markup) \u2014 refuses captive merchant processing lock-in and 21-day payout holds."
+    ],
+    "id": "IDEA-4",
+    "indie_feasibility": "High for 1-2 engineers: mobile-first PWA/native-shell app backed by standard speech-to-structured-JSON extraction (low token cost per 10-second memo), zip-radius / drive-time availability clustering (Mapbox/OSRM distance matrix), recurring per-vehicle/pet photo-and-condition ledger, one-tap native `sms:` ETA links, and BYO Stripe/Zelle/Venmo payment recording. Self-serve signup, zero A2P 10DLC compliance overhead, zero enterprise sales. [UNVETTED founder-fit assumption: assumes the founder can acquire mobile field operators via trade Facebook groups, YouTube detailing/grooming channels, and Reddit communities without field-sales reps.]",
+    "needs_stack_sketch": {
+      "alternatives_above": "Paying $100-$239/mo for Jobber/MoeGo/Urable/OrbisX multi-user plans, hiring a part-time office dispatcher, or expanding into a fixed brick-and-mortar shop bay.",
+      "obviated_below": "Typing job notes into desktop CRM forms at 9 PM after working in driveways all day, losing 90 minutes/day driving between unclustered Square/Google Calendar bookings, and forgetting gate codes, paint/coat condition notes, or 6-week maintenance rebooks.",
+      "promise_one_up": "Fit 1-2 extra billable driveway jobs per van every day with zero evening admin typing while saving $600-$1,800/yr in 2-user/2-van CRM cliffs and 3% card-processing cuts.",
+      "your_level": "Run voice-logged job/condition history, zip-clustered self-booking, and one-tap personal-phone ETA dispatch for 1-3 service vans at a flat $59/mo."
+    },
+    "one_liner": "Flat $59/mo voice-first, zip-clustered field ops and recurring vehicle/pet condition ledger for 1-5 person mobile driveway crews escaping $100-$239/mo 2-user/2-van CRM cliffs.",
+    "price": "$59/mo flat per business (up to 5 crew members / 3 vans; 0% payment lock-in supporting Zelle, Venmo, cash, or BYO Stripe)",
+    "pricing_strategy": "More for Less",
+    "signal_ids": [
+      "SIG-4",
+      "SIG-5"
+    ],
+    "specific_buyer": "Owner-operators of 1-5 person mobile driveway service crews \u2014 specifically mobile auto detailers, mobile pet groomers, and mobile mechanics running 1-3 service vans/trucks \u2014 who hit $100-$239/mo 2-user/2-van cliffs on Jobber ($139-$299/mo), MoeGo ($198/mo for 2 vans), Urable ($110+$35/mo texting), OrbisX ($100/mo), or QuoteIQ ($99.99-$199.99/mo), or hack together Google Calendar + Apple Notes + Zelle.",
+    "specific_problem": "The moment a solo mobile detailer, pet groomer, or mechanic hires a first helper or adds a second van, incumbents hit them with a 2x-4x pricing cliff ($100-$239/mo) plus $35/mo A2P texting add-ons and 2.9%-3.4% card fees \u2014 all inside desktop-first forms built for office dispatchers rather than technicians with wet or gloved hands in a driveway. Meanwhile, generic <$50/mo calendars (Square/Setmore/Acuity) book appointments 40 miles apart and drop recurring vehicle/pet condition photos, gate codes, and maintenance rebooks. Incumbents cannot adopt flat $59/mo 5-crew pricing with zero payment lock-in without gutting their per-seat/per-van expansion revenue and merchant take-rates.",
+    "title": "VanVoice \u2014 Voice-First, Route-Clustered Field Ops for 1-5 Person Mobile Driveway Crews"
+  }
+]

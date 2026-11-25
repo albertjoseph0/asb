@@ -1,0 +1,6 @@
+# Dalio Deep-Dive Decision Memo — CanopyBid Pro — Cross-Platform Browser & iPad 2D Horticulture CAD, Regional Plant Palettes & Live Takeoff Proposal Studio
+
+- **Outcome:** `KILLED`
+- **Independent Panel:** Scorer `1.0` (0.30) · Attacker `-1.0` (0.40) · Consequence/EV `-1.0` (0.30) → Weighted `-0.4` (Split: `True`)
+- **Expected ARR:** `$35,000` (`P=14.0%`)
+- **Kill Trigger:** KILL immediately if ANY of the following occur during the 25-hour test: (1) Fewer than 4 of 12 buyers (and fewer than 2 of 6 design-build estimators) commit in writing to >=$69/mo annual ($828/yr) for a strictly 2D-only studio after side-by-side comparison with PRO Landscape+ ($900/yr w/ 3D + iPad Companion) and Sow Pro+ ($99.99/yr); OR (2) >=50% of design-build estimators report 3D/photo-overlay visuals are required to close $25k-$75k homeowner bids while >=60% of solo planting designers cap WTP at <=$350/yr (confirming the TAM-vs-ARPU scissors collapse to ASB Problem Score <=0.2); OR (3) Legal OEM multi-region botanical data + photo redistribution licensing across US/CA + UK/EU/AU costs >$25,000/yr fixed upfront or is denied to an early-stage solo SaaS; OR (4) >=70% of willing buyers refuse to adopt or pay until the next Nov-Feb winter off-season (confirming severe Liquid = 0.1 cash-flow starvation).

@@ -1,0 +1,190 @@
+{
+  "run_id": "2026-11-23_1722-deepdive-policygate-ephemeral-postgres-pr-rls",
+  "run_type": "deep_dive",
+  "ambition": "indie",
+  "survivors": [],
+  "killed": [
+    {
+      "id": "IDEA-1",
+      "title": "PolicyGate \u2014 Ephemeral Postgres PR RLS-Assertion Runner & Local AI-Agent DB Killswitch",
+      "slug": "idea-1-policygate-deepdive",
+      "stage": "Deep Dive \u2014 Rude Q&A + Dalio Panel",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Global active SaaS companies total ~30,800-42,000 (~17,000 US) and verified corporate Supabase accounts total ~11,000-19,000 (including 1,000+ YC startups), alongside high Prisma (~50-55M npm/mo) and Drizzle (~41-48M npm/mo) usage. Applying DP14 behavioral filters\u20142-30 engineer B2B SaaS x Postgres/Supabase x Prisma/Drizzle (many Supabase teams use supabase-js directly) x active Postgres RLS (most non-Supabase Prisma teams use app-layer tenant filters) x autonomous coding agents writing migrations\u2014yields roughly 4,000-7,500 qualified teams globally. That snaps in log10 to 10,000 (100,000 exceeds the entire global SaaS company universe; 1,000 is too low given Supabase's 11k-19k corporate base plus non-Supabase Drizzle/Prisma RLS shops).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.1,
+            "justification": "Triangulated across HN, Reddit, Prisma, and Supabase reports: viral incidents of Claude Code wiping production via prisma migrate diff --shadow-database-url and AI 'vibe-coded' Supabase RLS leaks have created sharp awareness among vocal security-minded practitioners (0.1). However, challenge from below blocks 0.5 ('industry standard practice'): developer threads confirm automated cross-tenant PR RLS assertion suites remain widely neglected in favor of manual checks or native Supabase Security Advisor alerts, and many experienced devs treat local AI DB safety as basic .env hygiene rather than a paid software category.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Sticker pricing ($79/mo = $948/yr for 1 repo; $179/mo = $2,148/yr for 5 repos) aligns with demonstrated annual team budgets for Postgres CI migration, branching, and RLS tooling: Atlas Pro ($9/dev/mo = $1,080/yr for 10 devs) plus Atlas Pipelines ($59/mo project + $39/mo DB), Bytebase Pro (~$20/user/mo = $2,400/yr for 10 devs), PostgresAI DBLab SE ($744/yr), Supabase Pro + active branches ($600-$1,200/yr), MigrationPilot Org ($499/yr), and Vibe App Scanner ($348/yr). Next value down ($100/yr) is wrong for B2B SaaS teams allocating budget to this line; next value up ($10,000/yr) is unsupported at SMB team sizes.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Despite low contractual switching friction and CTO credit-card authority at $79/mo, preventative CI migration and RLS tooling is an episodic priority (0.1) triggered mainly by a production scare, SOC 2 audit prep, or vendor billing shock\u2014not an always-on purchase. Under challenge from below, 1.0 ('always in the market, easy to switch') is unproved because busy startup teams defer preventative DB security behind product shipping and already have bundled GitHub Actions/Supabase CLI workflows.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Unvetted solo/small-team indie founder faces real structural trust friction (0.1) selling a closed-source hosted PR runner (500 metered runs/mo), live-DB drift inspector (requiring live schema access), and local DATABASE_URL CLI interceptor to security-conscious 2-30 engineer B2B SaaS CTOs. Staying out of production data-proxy paths avoids a 0.0 hard block (DP10), but next value up (0.5, 'indifferent, no red flags') is not supported without open-source client/runner auditability, SOC 2, or established founder trust.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Refutes the pitch's 'no free RLS/AI alternatives' premise across 6+ live tools (DP8, DP11): free OSS pgrls already runs 60+ RLS lint rules, pytest PR isolation tests, and Z3 SMT formal proofs; rlsautotest auto-generates pgTAP RLS suites; MigrationPilot offers 112 Postgres migration rules, GitHub Action, and MCP server free under MIT ($499/yr Org); Supabase ships free supabase test db (pgTAP) + Security Advisor; Prisma v6.15+ built in native AI-agent destructive-command guardrails; and Claude Code PreToolUse hooks block prod URLs in 20 lines of free bash. Paid comparables also undercut $79/mo (Vibe App Scanner $29/mo, PostgresAI DBLab SE $62/mo, Neon $1.50/branch-mo, Atlas Pro $45/mo for 5 devs; Supabase Branching is $0.01344/branch-hr, pennies for ephemeral PR runs). Next value up (0.5) fails because no core capability escapes free/cheaper substitutes.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Schema migrations and RLS policy changes recur throughout a B2B SaaS product's life, making a PR CI check a genuinely recurring problem (0.5) rather than a one-off purchase (0.1). However, retention carries high churn risk because PolicyGate has no system-of-record lock-in (blocking 1.0), the AI-agent killswitch wedge is already being absorbed natively by Prisma v6.15+ and Claude Code hooks (DP11, DP15), and teams can migrate checks to free pgTAP/pgrls/MigrationPilot scripts at any time.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 500.0,
+        "score": 0.0008,
+        "evidence_believability_index": 0.529,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Changed from 10,000 to 1,000. Dropping the Prisma/Drizzle and AI-agent filters opens the pool to supabase-js and non-TS backends, but narrowing strictly to 5-30 engineer multi-tenant B2B SaaS companies running PostgreSQL/Supabase with active RLS AND actively maintaining or preparing for SOC 2 Type II on Vanta/Drata cuts the ~11,000-19,000 verified Supabase companies (mostly early startups/builders; Team compliance tier is $599/mo) plus non-Supabase Postgres RLS shops down to roughly 1,500-3,000 qualified accounts globally. Under DP14, log10(2,500) = 3.40 snaps honestly to 1,000 rather than 10,000.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Improved from 0.1 to 0.5. For multi-tenant Supabase/Postgres B2B SaaS CTOs actively pursuing SOC 2 Type II, auditor requirements are explicit: Supabase's platform SOC 2 covers infrastructure only, while auditors require customer-supplied evidence of tenant data segregation (automated cross-tenant isolation tests, proof RLS is enabled on every table, and manual pen testing). Within this narrowed buyer segment, proving RLS tenant isolation is an industry-standard audit requirement (0.5), making 0.1 wrong for this niche.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Unchanged at 1,000. Repricing to $199/mo ($2,388/yr) targets compliance budgets rather than linter budgets, but log10($2,388) = 3.38 still snaps to $1,000/yr (midpoint to $10,000 is $3,162/yr). Pushing price to $500+/mo ($6k-$10k/yr) is indefensible because SOC 2 auditors explicitly reject automated scanners as substitutes for $6,000-$25,000 manual RLS penetration tests, while paid compliance/RLS comparables sit at $348/yr (Vibe App Scanner), $499/yr (MigrationPilot Org), and $588-$1,788/yr (Kihtey).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1. Narrowing to SOC 2 Type II teams concentrates urgency around audit prep, but SOC 2 audits and compliance vendor reviews are explicitly annual decisions (0.1), not always-on continuous shopping (1.0), violating DP9 when combined with a 1,000-company niche.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Improved from 0.1 to 0.5. Dropping the closed-source local DATABASE_URL interceptor, hosted PR runner, and live-DB drift connector\u2014and open-sourcing the MIT GitHub Action so it runs 100% inside the customer's own CI with zero database credentials or customer rows leaving their environment\u2014removes the supply-chain and credential-exfiltration red flags. Because PolicyGate only emits signed CI test artifacts for Vanta/Drata rather than acting as an accredited CPA auditor or pen-test firm (avoiding DP10 liability transfer), small SaaS CTOs are indifferent with no identity red flags (0.5).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1. Vanta and Drata lack native RLS-logic inspection (a genuine gap), but free MIT SupaShield already runs Supabase RLS and storage tests in CI and emits JSON artifacts teams upload to Vanta/Drata as custom evidence, MigrationPilot Org ($499/yr) sells verifiable Postgres migration compliance audit trails, Kihtey ($49-$149/mo) and Vibe App Scanner ($29/mo) already offer paid Supabase RLS scanning, and free OSS pgrls (29 GitHub stars) and rlsautotest (26 stars) show minimal organic demand even at $0. Crucially, SOC 2 auditors still require a third-party manual pen test ($6k-$25k) for logical multi-tenant isolation, leaving a paid Vanta evidence wrapper easily replaced by a 20-line GitHub Action calling Vanta's API (DP8, DP11).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5. SOC 2 Type II requires continuous observation across annual audit periods, keeping the underlying evidence need recurring (0.5), but Vanta/Drata own the compliance system of record rather than PolicyGate (blocking 1.0) and teams can swap in free SupaShield/pgTAP CI uploads at renewal.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 1250.0,
+        "score": 0.002,
+        "evidence_believability_index": 0.529,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Conceded at 1,000 (minimum legal ASB scale). Restricting to 5\u201330 engineer multi-tenant B2B SaaS teams running PostgreSQL/Supabase with active RLS AND actively maintaining SOC 2 Type II on Vanta/Drata yields ~1,500\u20133,000 qualified accounts globally (snapping to 1,000 under DP14). Vanta's ~$23,000+/yr Professional tier gate on Custom Tests further shrinks buyers who can even use automated custom-test ingestion to potentially a few hundred accounts.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Held at 0.5 with explicit caveat. Multi-tenant Supabase/Postgres CTOs pursuing SOC 2 Type II are explicitly aware that Supabase's platform SOC 2 excludes application RLS logic and that auditors require tenant-segregation evidence (0.5 for the underlying audit requirement). However, as the Advocate noted, CTOs are NOT self-aware of needing a standalone paid CI RLS evidence wrapper (which could push mechanism-level self_aware to 0.1 and score to 0.000016); even at 0.5, the deterministic score collapses to 0.00008.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Conceded at 1,000. $199/mo ($2,388/yr) snaps to $1,000/yr in log10. Reaching $10,000/yr is blocked because AICPA auditors reject automated scanners as substitutes for mandatory $6,000\u2013$25,000 third-party manual penetration tests, while paid Supabase/Postgres compliance comparables price far lower ($29\u2013$49/mo Vibe App Scanner, $499/yr MigrationPilot Org, $49\u2013$149/mo SOC-2-compliant Kihtey).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Conceded at 0.1. SOC 2 Type II compliance tool selection and renewals are tied to annual audit cycles (0.1), creating severe pipeline starvation inside a 1,000-account niche (DP9).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Downgraded from 0.5 to 0.1 and conceded. While open-sourcing the MIT GitHub Action removes credential egress, selling SOC 2 compliance evidence as an unvetted, non-SOC-2 solo indie founder creates a Third-Party Risk Management (TPRM) Catch-22: CTOs must document a formal non-SOC-2 vendor risk exception for their auditor when Kihtey ($49\u2013$149/mo) is already SOC 2 compliant and GitHub/Vanta/Drata are already approved subprocessors. AICPA auditors also give zero independent attestation weight to an unknown indie vendor signing output from a customer-controlled runner (DP10).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Conceded at 0.1. PolicyGate is sandwiched between a 100% free native/OSS stack (`supabase db lint` running splinter rules 0013/0024 + `supabase test db` + `basejump/supabase-test-helpers` + MIT SupaShield running transaction-rolled-back CRUD RLS tests with JWT roles + existing Vitest/Jest/Pytest integration suites) and cheaper paid alternatives (Vibe App Scanner $29\u2013$49/mo, MigrationPilot Org $499/yr static DDL compliance trails, and SOC-2-compliant Kihtey $49\u2013$149/mo). Free OSS `pgrls` (29 stars) and `rlsautotest` (26 stars) confirm minimal standalone demand even at $0 (DP8).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.1,
+            "justification": "Downgraded from 0.5 to 0.1 and conceded. Annual SOC 2 recurrence does not translate to PolicyGate retention when 100% of the RLS test engine is MIT open-source ($0) and the $2,388/yr paywall covers only JSON signing + Vanta/Drata webhook uploads (DP11). Once teams see auditors accept native GitHub Actions run logs + branch protections + annual pen tests\u2014or spend 15 minutes scripting a Vanta Documents API upload around the free MIT Action\u2014PolicyGate faces severe Cycle-1 churn.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 50.0,
+        "score": 0.0001,
+        "evidence_believability_index": 0.571,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "panel": {
+        "votes": {
+          "scorer": -1.0,
+          "attacker": -1.0,
+          "consequence_ev": -1.0
+        },
+        "weights": {
+          "scorer": 0.3,
+          "attacker": 0.4,
+          "consequence_ev": 0.3
+        },
+        "panel_weighted_score": -1.0,
+        "disagreement_flag": false
+      },
+      "ev_metrics": {
+        "p_viable_pct": 4.0,
+        "target_arr_usd": 120000.0,
+        "validation_hours": 12.0,
+        "expected_arr_usd": 4800.0,
+        "ev_per_validation_hour": 400.0
+      },
+      "reason": "KILL POLICYGATE (BOTH SCENARIO A AND SCENARIO B) \u2014 Final deterministic Problem Score = 0.00008 (12,500x below the 1.0 indie viability floor; EBI = 0.571, Bottleneck Believability = 0.4). The Advocate conceded completely in Round 1 with zero wishful defenses remaining. Scenario A's local AI-agent DB killswitch is already dead via free native absorption (Prisma v6.15+ AI Safety Checkpoints and Claude Code PreToolUse hooks). Scenario B's $199/mo ($2,388/yr) SOC 2 RLS evidence wrapper collapses across six simultaneous weak links: (1) micro-niche TAM of ~1,500\u20133,000 accounts (`Plausible = 1,000`) shrunk further by Vanta gating Custom Tests behind ~$23,000+/yr Professional/Enterprise plans (DP14); (2) annual compliance buying (`Liquid = 0.1`, DP9); (3) fatal TPRM Catch-22 where an unvetted, non-SOC-2 solo founder creates an auditor vendor-risk exception while rival Kihtey is already SOC 2 compliant at $49\u2013$149/mo (`Eager-Identity: 0.5 -> 0.1`, DP10); (4) overwhelming free/cheaper competition (`supabase db lint`/splinter + `supabase test db` + `basejump/supabase-test-helpers` + MIT SupaShield at $0, Vibe App Scanner $29\u2013$49/mo, MigrationPilot Org $499/yr, Kihtey $49\u2013$149/mo) and near-zero OSS pull (`pgrls` 29 stars, `rlsautotest` 26 stars) (`Eager-Comparative = 0.1`, DP8); (5) near-zero renewal switching cost from open-sourcing 100% of the MIT runner while charging $2,388/yr for a trivial JSON signer + webhook (`Enduring: 0.5 -> 0.1`, DP11); and (6) auditor refusal to substitute automated scans for $6,000\u2013$25,000 manual pen tests (`Lucrative = $1,000`). PolicyGate belongs permanently in `KILLED-IDEAS.md`."
+    }
+  ]
+}

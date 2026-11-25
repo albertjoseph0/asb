@@ -1,0 +1,367 @@
+{
+  "run_id": "2026-11-24_1951-eighth-indie-sprint-autonomous-core",
+  "run_type": "discovery",
+  "ambition": "indie",
+  "lenses": [
+    {
+      "domain": "Mac/Browser-Native Interactive Scenario, Software-Simulation & SCORM/xAPI Authoring for Independent Instructional Designers, L&D Freelancers & Small Training Teams",
+      "search_hypothesis": "Verify primary live 2026 pricing, OS constraints, and feature gates for Articulate 360 ($1,449\u2013$1,749/author/yr annual-only; Storyline 360 remains Windows-only desktop forcing Mac users onto Parallels/VMware), Adobe Captivate ($34\u2013$40/mo desktop), Evolve by Intellum ($49/mo billed annually), BranchTrack ($999/yr), Mindsmith (~$800/yr), Parta (~$600/yr), Chameleon Creator, Coassemble, Coursebox ($25/mo), Genially ($15/mo), ActivePresenter, and DIY Twine+Pipwerks/H5P workflows. Mine r/instructionaldesign, r/elearning, and freelance ID forums for firsthand pain around the verified 'Rise vs. Storyline divide': sub-$50 web tools only build linear scrolling AI-text cards or gate SCORM behind enterprise tiers, leaving no fast, Mac/browser-native, monthly-billable core authoring studio for interactive branching scenarios, state/variable triggers, clickable software simulations, open/portable source ownership, and clean SCORM 1.2/2004/xAPI export. Synthesize exactly 1 standalone single-buyer core product with an incumbent-uncopyable structural wedge that passes DP8/DP20/DP23/DP26 primary-doc verification.",
+      "why_indie_friendly": "Verified 100k\u20131M non-dev TAM: BLS tracks 450,000+ US training & development specialists (8\u201311% growth), including 150k\u2013200k active US instructional designers and 400k+ globally, plus hundreds of thousands of SMB L&D managers and boutique training studios (58% of mid-to-large companies hire freelance IDs). Buyers swipe personal/team credit cards year-round on a per-course basis (Liquid = 1.0) with zero LMS rip-and-replace because standard SCORM/xAPI/HTML5 packages drop into any client LMS. Buyer owns 100% of input data (course scripts, screenshots, media, quiz logic) with zero regulated PII/HIPAA/tax/legal-indemnity barriers (DP10/DP22). Real allocated budgets ($400\u2013$1,749/yr) and continuous multi-course authoring/revision sustain Enduring >= 0.5\u20131.0. Structural wedge incumbents will not copy: Articulate cannot unbundle annual $1,749/yr Windows-Storyline hostage licensing or grant non-expiring portable source ownership without cannibalizing its core corporate seat ARR, while sub-$50 AI microlearning tools structurally lack visual state-machine/branching/simulation precision."
+    },
+    {
+      "domain": "Mac/iPad/Browser-Native 2D Scaled Planting Plans, Regional Plant Palettes & Automatic Material-Takeoff Proposals for Independent Residential Landscape Designers & Design-Build Contractors",
+      "search_hypothesis": "Verify primary live 2026 pricing, OS support, and takeoff/plant-library limits for DynaScape Design ($1,599\u2013$2,199/yr Windows-only CAD; Creator $95/mo), Realtime Landscaping Pro/Architect ($279\u2013$599 Windows-only desktop), PRO Landscape+ ($900/yr), Vectorworks Landmark ($1,530+/yr), VizTerra/Structure Studios ($84\u2013$197/mo), SketchUp Pro ($399\u2013$559/yr), PlantMaster ($35/mo or $300/yr plant lists/presentations only, no scaled 2D drafting), iScape (iPad AR photo overlay, no scaled plans/takeoffs), Morpholio Trace (iPad sketching, no plant database/auto-counts), Rayon (interior-focused 2D, sparse regional horticulture/hardscape takeoffs), Garden Planner ($48 DIY), and SmartDraw. Mine r/landscapedesign, r/landscapearchitecture, and independent design-build forums for firsthand pain among Mac/iPad-using solo designers and 1\u20135 person design-build firms trapped between 2000s Windows-only CAD dinosaurs and fragmented two-tool hacks (e.g., SketchUp/Morpholio + PlantMaster + Excel) to turn a scaled 2D site plan into an automated plant schedule, mulch/paver/edging quantity takeoff, and visual client bid. Synthesize exactly 1 standalone single-buyer core product with an incumbent-uncopyable structural wedge verified against primary 2026 docs.",
+      "why_indie_friendly": "Verified 100k\u20131M non-dev TAM: US Census/NALP/IBISWorld report ~692k\u2013696k US landscaping businesses (117,969 employer firms + 516,500 solo operators; 176k+ active commercial listings) in a $188.8B US / $354B\u2013$376B global industry (1M+ businesses across US/CA/UK/AU/EU). Standalone per-project pre-construction/design core workbench adopted fresh on the next residential yard design/bid with zero Jobber/QuickBooks SOR migration (Liquid = 1.0) and year-round demand across Northern winter design/planning season, Sunbelt states, and inverted Southern-hemisphere markets (no industry-wide seasonal freeze per DP24). Buyer owns 100% of input data (property surveys/aerial underlays, site dimensions, local nursery/hardscape unit prices) with zero regulated PII/HIPAA/tax/legal-indemnity barriers (DP10/DP22). Real allocated budgets ($300\u2013$2,199/yr) and 15\u2013100+ projects/yr reusing saved regional plant palettes and cost books sustain Enduring >= 0.5\u20131.0. Structural wedge: legacy Windows CAD incumbents (DynaScape, Realtime) cannot ship a fast browser/iPad-native visual drafting-to-auto-takeoff tool without rewriting decades-old codebases, while sub-$50 AR/sketching/diagramming tools structurally lack scaled horticultural geometry + automated material takeoff math."
+    },
+    {
+      "domain": "Browser-Native Retail Planogram, Shelf-Space Allocation & Store-Reset Visual Merchandising for Independent CPG Brands, Food/Beverage Brokers & Multi-Store Independent Retailers",
+      "search_hypothesis": "Verify primary live 2026 pricing, OS constraints, and export capabilities for Blue Yonder Space Planning (enterprise quote, Windows legacy), Nielsen Spaceman, DotActiv ($160\u2013$380+/mo, $2,000\u2013$4,500/yr), PlanoHero ($199/mo Lite minimum), zVisuel PlanogramBuilder ($500+/user/mo Windows-based), Quant Retail, Leafio, ShelfLogic (upfront legacy Windows license; ProView $15\u2013$49/mo viewer-only), EasyPlanogram/GoPlanogram, and generic SmartDraw/Visio/Canva/PowerPoint workarounds. Mine r/retail, r/planograms, independent CPG founder communities (food/beverage/beauty/pet/specialty), and convenience/independent grocery operator forums to verify: (a) how often independent CPG brands/brokers and 1\u201310 store specialty/convenience retailers actually need PDF/visual shelf planograms + facing/margin-per-linear-foot/case-pack math + store-crew reset sheets versus when enterprise retailers strictly demand proprietary Blue Yonder .psa files, and (b) exact willingness to pay ($29\u2013$99/mo self-serve) for a zero-ERP-setup browser workspace. Synthesize exactly 1 standalone single-buyer core product with an incumbent-uncopyable structural wedge verified on primary 2026 docs.",
+      "why_indie_friendly": "Verified 100k\u20131M non-dev TAM: 150,000+ US convenience store locations (heavily independent/small-chain), 21,500+ US independent grocery storefronts (NGA, $255B+), hundreds of thousands of independent specialty retail stores (liquor, pet, pharmacy, hardware, natural/gift), plus hundreds of thousands of emerging independent CPG brands and brokers pitching retail shelf space inside a $5.47T global CPG market (North America ~35%). Floor sweep confirmed ZERO true professional planogram creation suites under $50/mo \u2014 incumbents start at $160\u2013$500+/mo (DotActiv, PlanoHero, PlanogramBuilder) or $10k+/yr enterprise Windows installs (Blue Yonder), forcing smaller brands and retailers into error-prone PowerPoint/Canva manual PNG resizing with no millimeter/inch fixture physics, facing/depth capacity, or linear-foot margin math. Standalone, single-buyer, per-pitch/per-reset core operational workbench adopted year-round with zero POS/ERP integration or rip-and-replace (Liquid = 1.0). Buyer owns 100% of input data (SKU packshots, product dimensions, fixture sizes, wholesale/retail pricing, optional anonymized CSV velocity) with zero regulated PII/HIPAA/tax/legal-indemnity barriers (DP10/DP22). Recurring quarterly/seasonal aisle resets, new SKU launches, and buyer pitch decks sustain Enduring >= 0.5\u20131.0. Structural wedge: enterprise category-management vendors are trapped by $2k\u2013$50k/yr annual contracts, Windows desktop codebases, and multi-month ERP/POS onboarding built for 500-store chains, leaving self-serve single-card visual planogramming structurally unserved."
+    }
+  ],
+  "signals_count": 12,
+  "candidates_count": 3,
+  "worker_errors": [],
+  "survivors": [],
+  "killed": [
+    {
+      "id": "IDEA-1",
+      "title": "BranchSim Studio: Mac/Browser Interactive Branching, One-Pass Software Simulation & Open-SCORM Authoring",
+      "slug": "idea-1-branchsim-studio-mac-browser-int",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario A",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Raw BLS headcount (458.3k-472.5k U.S. Training & Development Specialists + 248.7k Instructional Coordinators) heavily overstates SCORM software buyers because most are classroom facilitators, HR generalists, or K-12 curriculum staff (DP14). Grounding top-down on Articulate's primary global footprint\u2014125,000+ total organizations across 187 countries at ~40-45% primary-tool market share (Devlin Peck / ODU surveys)\u2014implies ~280,000-310,000 total SCORM-authoring buying entities (organizations + independent freelancers) globally across ALL operating systems, ALL company sizes, and ALL course types. Applying Scenario A's stacked filters: (1) solo freelancers or 1-5 person teams (~70% -> ~210k), (2) Mac-using (~30-35% -> ~65k-75k), (3) actually building interactive branching scenarios or clickable software simulations rather than linear slide/Rise modules (~40% -> ~26k-30k), and (4) contracts not mandating Articulate .story source handoff (~65-75% -> ~17,000-23,000 qualified buying units globally; adding non-Articulate SaaS customer-ed/higher-ed Mac teams yields ~20,000-30,000). On the log10 scale (geometric midpoint 31,622), ~19k-25k rounds strictly to 10,000; claiming 100,000 would require nearly every Mac SCORM entity on Earth\u2014including Fortune 500 enterprises and linear-only authors\u2014to qualify.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Among instructional designers and small training teams who deliver SCORM modules, authoring-tool selection, Articulate 360's price/Windows-only Mac friction, and software-simulation workflows are industry-standard, actively debated pain points across r/instructionaldesign, G2/Capterra reviews, Devlin Peck surveys, and Articulate's own support communities (clearly above 0.1 thought-leader-only awareness). It stops at 0.5 rather than 1.0 because a large share of Mac IDs treat Rise 360, Parallels+Storyline, Camtasia, or Captivate/ActivePresenter as acceptable defaults rather than actively shopping for a local-first branching+simulation studio.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 100,
+            "justification": "Live primary pricing shows a split market: enterprise-anchored incumbents charge $970-$1,749/yr upfront (Articulate 360 Personal $1,449/yr, Teams $1,749/yr; iSpring Suite $970-$1,290/yr; BranchTrack Pro $999/yr), while Mac-native and browser-native budget rivals cluster at $200-$600/yr (Adobe Captivate $33.99-$39.99/mo = $408-$480/yr; ActivePresenter Pro $499 one-time perpetual \u2248 $166-$250/yr amortized; FinchLearn $29-$49/mo = $348-$588/yr; Mindsmith $39-$65/mo = $468-$780/yr; LMSable $29/mo = $348/yr). BranchSim adopts a Less-for-Less price of $49/mo pause-anytime ($468/yr annual; $99/mo 3-seat team). Because solo buyers literally cannot pay $1,000/yr at $49/mo (max $588/yr with zero pauses; realistic ~$250-$400/yr when pausing between contracts while retaining offline editing), median realized annual net revenue per buyer sits around ~$300-$450/yr\u2014matching Jason Cohen's canonical $100 calibration anchors (WP Engine $300-$1,200+/yr = $100; ConvertKit $348-$948+/yr = $100) rather than $1,000.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "While delivering standalone SCORM ZIPs into an existing LMS avoids legacy-course migration (ruling out 0.01 system-of-record lock-in), Scenario A's core pull\u2014escaping Articulate 360 ($1,449-$1,749/yr upfront annual-only) or Adobe Captivate ($33.99-$39.99/mo annual commitment)\u2014targets buyers locked into non-refundable annual subscriptions and annual small-team software budgets, compounded by authoring-tool learning curves and reusable course templates. A freelancer who already paid $1,449 upfront for Articulate 360 (or $499 perpetual for ActivePresenter Pro) will rarely pay an additional $49/mo mid-year until renewal, leaving only ~10-15% of the qualified market (annual renewals plus fresh-project adopters lacking a simulation tool) actively in-market in a given cycle. That maps squarely to annual-decision liquidity (0.1) rather than always-in-market (1.0).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "A solo/2-person technical founder faces no structural PII/HIPAA/SOC2 barrier because BranchSim is a standalone single-buyer authoring studio storing zero learner records and emitting standard static HTML5 SCORM/xAPI ZIPs uploaded into the buyer's existing LMS. Freelance IDs and 1-5 person SMB/SaaS training teams routinely buy tools from small/indie vendors on credit cards (evidenced by active adoption of ActivePresenter, BranchTrack, FinchLearn, and LMSable, plus r/instructionaldesign threads confirming freelancers self-fund authoring software). Local-first portable JSON + offline SCORM explicitly mitigates indie vendor-longevity fear. Note one real sub-segment friction: higher-ed and regulated corporate clients increasingly audit SCORM output for WCAG 2.1/2.2 AA compliance (and university procurement sometimes demands a VPAT/ACR), which prevents 1.0 pull and trims the higher-ed slice, but leaves freelance IDs and small SaaS/SMB teams squarely at normal indie credit-card swipe (0.5).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Primary documentation refutes two load-bearing competitor disqualifiers in the pitch (DP26) and reveals that existing sub-$60/mo and perpetual native-Mac tools already cover >=80% of the core wedge. First, Atomi ActivePresenter 10 Pro ($499 ONE-TIME perpetual license, $249 EDU, native macOS, 4.6-4.7/5 on G2/Capterra) already delivers (a) a visual graph-based Scenario Editor with Trace Logic for branching, (b) one-pass Smart Capture generating Demo/Tutorial/Practice/Test graded software simulations across BOTH web and native desktop apps (superior to a Chrome-only extension), (c) local-first source ownership forever with zero recurring fees, (d) offline standalone SCORM 1.2/2004/xAPI/cmi5 exports, and (e) 1-click cloud publishing to uPresenter ($0-$5/mo) for web review/commenting. Second, Adobe Captivate v12/v13 ($33.99-$39.99/mo, native macOS) DOES have native cloud web Review links (verified directly on helpx.adobe.com/captivate/using/create-and-manage-reviews.html\u2014contradicting the brief's claim that it lacks web Review links) alongside industry-leading one-pass Show/Guide/Try/Test software simulations, variables, and SCORM export. Third, on the browser-native open-format side, FinchLearn ($0/$29/$49/mo) already ships an Open Course Format (.ocf) with zero subscription lock-in, offline SCORM/xAPI, branching paths, and .story import; LMSable ($0/$29/mo) ships browser visual branching + SCORM 1.2; and Recourse (recoursehq.com) converts Chrome/screen captures into graded Demo/Practice/Evaluate SCORM simulations. BranchSim's remaining delta\u2014a cleaner browser UI plus a live variable-state debugger overlay inside Review links\u2014is a UX polish bundle rather than an uncopyable structural trade-off incumbents refuse to make (unlike ConvertKit vs. list-centric Mailchimp). Because ActivePresenter 10 Pro + Captivate + FinchLearn already solve the exact core wedge at equal or lower total cost, Eager-Comparative = 0.1.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Course creation and software-training updates are an ongoing, recurring operational workflow for active freelance IDs and 1-5 person SaaS/corporate training teams (product UIs, onboarding, and client deliverables change continuously), which rules out 0.1 (one-off purchase with rare repeats). However, BranchSim deliberately eliminates system-of-record lock-in (local-first portable JSON + offline SCORM exports + explicit 'pause/cancel anytime and still edit forever'), which structurally precludes 1.0 lock-in and introduces meaningful episodic pause-churn among solo freelancers between contracts. Calibrated against ConvertKit (0.5), recurring revenue from a recurring workflow with moderate churn earns 0.5.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 1250.0,
+        "score": 0.002,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Narrowing from broad Mac IDs to B2B SaaS Customer Education teams that maintain formal graded SCORM/xAPI software simulations across frequent web-app UI releases sharply shrinks the qualified buyer pool. Primary/secondary market benchmarks show the top three dedicated SaaS customer-education LMS platforms\u2014Skilljar (hundreds of customers), Thought Industries (hundreds), and WorkRamp (~300+)\u2014combine for roughly 1,000-1,500 organizations globally, while LearnWorlds' 11,000+ customer base is predominantly SMB edupreneurs rather than B2B SaaS academies. Adding fast-shipping B2B SaaS companies running formal SCORM software simulations inside Docebo, TalentLMS, Absorb, or custom academies brings the global qualified pool to roughly 2,000-3,000 teams\u2014strictly closer to 1,000 than 10,000 on the log10 Fermi scale (midpoint 3,162).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Keeping product training synchronized with rapid SaaS UI releases is a well-documented, actively discussed bottleneck across Thought Industries, Skilljar, WorkRamp, Gainsight, and Recourse customer-education materials (clearly industry-standard awareness at 0.5). It remains 0.5 rather than 1.0 because many lean SaaS academies still default to quick Loom videos or written help docs rather than maintaining formal graded SCORM software simulations, and 'Tutorials-as-Code' / Playwright-replayed SCORM simulation is still an emerging workflow category.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Live primary pricing proves B2B SaaS Customer Education teams already allocate $2,000-$10,000+/yr for authoring and interactive product simulation tools: Articulate 360 Teams is $1,749/seat/yr ($3,498-$8,745/yr for 2-5 seats), Supademo Business/Growth is $199-$350/mo ($2,388-$4,200/yr), Storylane Growth is $500-$625/mo ($6,000-$7,500/yr), and Whatfix Mirror/Assima command $20k+ enterprise contracts. Repricing BranchSim to More-for-More flat team pricing at $249/mo ($2,988/yr, annual/quarterly team billing without solo pause-anytime churn) anchors median realized annual net revenue squarely in the $1,000 bucket (up 10x from Scenario A's $100).",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Even though bi-weekly UI releases create continuous operational pain and adding a simulation authoring layer does not require replacing the academy LMS, B2B SaaS Customer Education teams purchase on annual departmental budgets, hold existing annual authoring/demo contracts (Articulate 360 Teams $1,749/seat/yr, Supademo annual, Skilljar/WorkRamp stacks), and require cross-functional coordination with engineering/QA to hook into staging environments. Buying velocity remains anchored to annual planning and renewal windows (0.1), unchanged from Scenario A.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Moving from a standalone local-first freelancer tool (Scenario A: 0.5) upmarket into mid-market B2B SaaS Customer Education teams (Skilljar, Thought Industries, WorkRamp buyers) introduces real institutional trust barriers for an unvetted solo/2-person founder (DP22). Automated staging replay requires either CI/staging auth tokens or browser-runner access against pre-release SaaS builds, and Live-SCORM updates execute third-party hosted JavaScript inside the buyer's customer-facing academy\u2014triggering InfoSec questionnaires, SOC 2 Type II checks, and SAML/SSO procurement gates (as confirmed by Supademo and Guidde gating SSO/security on Enterprise tiers). Note: stripping hosted Live-SCORM into a purely local CLI would avoid security review only by collapsing differentiation toward DIY Playwright scripts (DP11). Consequently, Eager-Identity drops from 0.5 to 0.1.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Concentrating exclusively on auto-refreshing, Playwright/semantic-DOM-replayed graded software simulations (Demo / Practice / Certification Test-Me) for fast-shipping B2B SaaS web apps creates a genuine structural trade-off that incumbents and low-cost desktop tools do not match. ActivePresenter 10 Pro ($499 perpetual) and Adobe Captivate ($34-$40/mo) record static bitmap desktop captures that break on every sprint UI update and require manual re-recording and SCORM ZIP re-uploads. Recourse (recoursehq.com) solves LMS re-uploading via Live SCORM, but still requires manually re-capturing changed steps when the UI shifts. Supademo ($199-$350/mo Business/Growth) targets GTM product demos with light SCORM 1.2 completion tracking rather than graded Practice/Test-Me certification simulations synced to staging DOM selectors. Whatfix Mirror and Assima offer enterprise object-based cascading simulations but are quote-gated at enterprise budgets ($20k-$50k+/yr). Meanwhile, DIY Playwright 'Tutorials-as-Code' requires dedicated engineering maintenance and lacks a non-technical Practice/Test-Me SCORM grading runtime. A clear sub-segment of fast-shipping SaaS academies would buy for automated UI-drift simulation regeneration alone, legitimately earning 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "B2B SaaS products ship continuous UI updates year-round, making simulation maintenance a permanent recurring operational dependency\u2014eliminating Scenario A's freelancer pause-between-contracts churn. However, the customer academy LMS (Skilljar, Thought Industries, WorkRamp) remains the true learner system-of-record rather than BranchSim, and automated DOM-selector replay carries real maintenance/flakiness churn risk when front-end frameworks refactor. Thus Enduring remains honestly at 0.5 (recurring revenue from recurring operational pain) rather than 1.0 system-of-record lock-in.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 1250.0,
+        "score": 0.002,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.002 (EBI=0.7, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: Eager-Comparative (0.1): Primary-doc verification refutes key competitor disqualifiers\u2014ActivePresenter 10 Pro ($499 one-time perpetual, native Mac, 4.6-4.7/5) already ships a visual node-graph Scenario Editor with Trace Logic, one-pass Demo/Practice/Test software simulations, offline SCORM 1.2/2004/xAPI/cmi5, local-first ownership, and 1-click uPresenter ($0-$5/mo) cloud publishing; Adobe Captivate ($33.99-$39.99/mo, native Mac) ALREADY has cloud web Review links (helpx.adobe.com) plus one-pass multi-mode software simulations and SCORM; FinchLearn ($29-$49/mo) already occupies browser-native open-format (.ocf) zero-lock-in authoring with branching and .story import; and Recourse/LMSable cover Chrome-capture SCORM simulations and $29/mo browser branching.; Plausible (10,000): Anchoring to Articulate's primary global footprint (125,000 total organizations at ~40-45% market share -> ~300k total global SCORM-authoring buying entities across all OSes, sizes, and course types) rather than raw BLS classroom-trainer headcount (472.5k), applying Scenario A's four stacked filters (Mac ~35%, solo/1-5 person team ~70%, interactive branching/software-sim need ~40%, non-.story mandate ~65%) yields ~19,000-25,000 qualified buying units globally\u2014closer to 10,000 than 100,000 and below DP16's $10M floor at Lucrative=$100.; Liquid (0.1): Although standalone SCORM ZIP delivery avoids LMS migration, the core buyer framing ('escaping Articulate's $1,449-$1,749/yr annual subscription') targets buyers trapped inside non-refundable upfront annual contracts (Articulate, iSpring, Captivate annual) and annual team software budgets, alongside authoring-tool template/workflow inertia\u2014putting only ~10% of the pool genuinely in-market at any given time.; Lucrative (100) & Pause-Churn Drag: Less-for-Less pricing at $49/mo with explicit pause/cancel-anytime and full offline local-first editing while paused caps realistic solo net ARPU at ~$250-$468/yr (identical to the WP Engine/ConvertKit $100 anchor bucket, far short of $1,000) while structurally inviting freelancers to subscribe for 1-2 project months and pause."
+    },
+    {
+      "id": "IDEA-2",
+      "title": "CanopyBid: Horticulture-Native Mac/iPad 2D Planting Plans, Regional Plant Palettes & Live Takeoff Proposals",
+      "slug": "idea-2-canopybid-horticulture-native-ma",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario A",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Strict DP14 post-filter count lands at ~15,000-35,000 qualified buyers (order-of-magnitude bucket 10,000, rejecting the pitch's >=100,000 claim). Primary U.S. government data shows NAICS 541320 (Landscape Architectural Services) has only ~5,000-5,200 employer firms (Census SUSB) and ~23,500 total landscape architects with ~17% (~4,000) self-employed (BLS SOC 17-1012); adding unlicensed residential garden designers yields ~15,000 U.S. standalone designers across all OSes. While NAICS 561730 has ~114,000-118,000 employer firms and ~510,000-535,000 nonemployers, the pitch misapplies a Lawn & Landscape employer trade survey stat (~71% offering design/installation) across 530,000 solo nonemployers\u2014most of whom are lawn-mowing/maintenance operators (Census Economic Census notes design is <2% of total NAICS 561730 receipts). Filtering realistically to 1-5 person residential design-build contractors who actually draft scaled 2D planting plans & visual plant palettes for $5k-$75k bids (~20%-30% of employer firms + ~3% of nonemployers = ~40,000-50,000 U.S., plus ~15,000 standalone designers = ~55,000-65,000 total U.S. across all OSes), then applying the explicit Apple Silicon Mac/iPad filter (~40%-50%) leaves ~22,000-32,000 U.S. buyers (and ~20,000-35,000 even after adding CA/UK/AU once excluding hardscape/3D-first firms that reject a 2D-only tool and noting USDA hardiness zones are U.S.-specific). Squarely in the 10,000 Fermi bucket (geometric midpoint to 100,000 is 31,623; realistic post-filter U.S./English-speaking 2D-only Mac/iPad cohort sits at or below that line).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Drafting scaled 2D planting plans, plant schedules, and itemized material takeoffs is established industry-standard practice across residential landscape design and design-build bidding (0.5). Active, recurring threads on r/landscapedesign, r/LandscapeArchitecture, and professional communities explicitly document Apple Silicon Boot Camp/Parallels pain, Vectorworks cost/complexity, and Morpholio Trace's lack of automatic plant counting and schedules. Not 1.0 because many small 1-5 person landscaping contractors still quote verbally, sketch on paper, or run Windows PCs without actively seeking a Mac/iPad CAD+takeoff replacement.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Live primary pricing pages verify that dedicated professional landscape CAD + plant-schedule + takeoff software commands $695-$1,599/yr: Planting F/X ($695/yr), PRO Landscape+ ($900/yr; $90/mo), Structure Studios VizTerra ($997/yr), ArcSite Takeoff/Estimate ($1,188-$1,548/yr), DynaScape Creator ($1,214/yr; $119/mo, plus $567/yr for Color), Vectorworks Landmark ($1,530/yr), DynaScape Design ($1,599/yr), and SketchUp Pro ($399/yr) + ShootPlantPlanner (~EUR 79/mo). CanopyBid's own pricing\u2014$588/yr solo annual ($708/yr monthly) and $1,188/yr for 3-seat design-build teams\u2014sits clearly above the $316/yr base-10 geometric midpoint between $100 and $1,000 (log10(588) = 2.77 vs. 3.00). Caveat: solo Mac/iPad duct-tapers currently spend less than the pitch claimed\u2014Morpholio Trace Pro (~$25/yr on App Store, not $20-$24/mo) + PlantMaster ($250/yr) = ~$275/yr, iScape Pro = $300/yr, Sow Pro+ = $100/yr\u2014so $1,000 holds only for the filtered professional cohort (Plausible = 10,000) and requires defending against off-season monthly pauses and $100-$300/yr floor price anchoring.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Scores 0.1 (annual decision/switching window), rejecting the pitch's Liquid = 1.0 claim on three verified grounds: (1) Live Reddit threads across r/LandscapeArchitecture and r/landscapedesign document substantial CAD-switching friction\u2014rebuilding custom graphic plant symbols, title blocks, layer standards, and regional/nursery price catalogs, plus billable-hour muscle-memory slowdowns\u2014explicitly warning designers not to switch mid-project and noting new CAD licenses frequently sit unused for months during busy deadlines. (2) Incumbent software in this category (Vectorworks $1,530/yr, DynaScape Design $1,599/yr, PRO Landscape+ $900/yr, SketchUp Pro $399/yr, Land F/X $695/yr, PlantMaster $250/yr, iScape Pro $300/yr) is overwhelmingly purchased on annual cycles. (3) Per DP24, northern/temperate residential design-build shops (~60%+ of US/CA/UK) face intense spring-through-fall installation and bidding crunches, concentrating software evaluation and adoption into a once-a-year winter window. Not 0.01 because solo/micro firms have no enterprise procurement or end-consumer switching rails (homeowners only receive PDFs), enabling clean annual-cycle adoption.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Solo residential landscape designers and 1-5 person residential design-build contractors routinely purchase $25-$120/mo design and estimating tools via self-serve credit card or App Store after a free trial, with zero enterprise SOC 2, HIPAA, tax-PII, or IT procurement barriers (clears DP10 and DP22). Small/indie vendors already thrive in this exact buyer pool (Morpholio, PlantMaster, iScape, Sow, gCADPlus, Artifact Interactive's Garden Planner). Non-stamped $5k-$75k residential planting concepts carry no statutory engineering/licensing indemnity gate. Scores 0.5 (indifferent indie credit-card swipe) rather than 1.0 because an unvetted founder lacks built-in horticultural brand authority and must prove regional plant-catalog accuracy and file portability.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Scores 0.5 (not 1.0, and not 0.1 \u2014 though under severe DP8 floor-and-ceiling compression). Structural differentiation that a real sub-segment buys for alone: NO single existing sub-$60/mo tool cleanly unifies precision iPad Apple Pencil + Mac 2D vector CAD drafting with a native regional USDA botanical DB, mature-canopy spacing checks, polygon-bound cubic mulch/edging/labor takeoffs, and synced visual homeowner plant palettes. Legacy vertical CAD incumbents refuse to copy this without cannibalizing $900-$1,781/yr seats: Vectorworks Landmark ($1,530/yr) is complex desktop-only BIM; DynaScape Design ($1,599/yr) and PRO Landscape+ ($900/yr) are Windows-first desktop suites; browser-native DynaScape Creator ($119/mo or $1,214/yr, plus $48/mo / $567/yr for Color = $1,781/yr) is mouse-centric desktop web and unsupported for iPad touch/Pencil. Horizontal CAD rivals (Rayon.design $27-$38/mo; ArcSite Takeoff/Estimate $99-$129/mo) lack native regional botanical databases and horticultural rules; Morpholio Trace (~$25/yr) has zero plant DB or auto-counting; PlantMaster ($250/yr) has zero 2D CAD. HOWEVER, the floor is far tighter than the pitch disclosed: Sow Pro+ (usesow.com, $99.99/yr or $19.99/mo) ALREADY runs on web/iOS with 12,000+ USDA plants, satellite 2D bed mapping, mature-spread counts, nursery pricing, and branded client proposals (differentiated only because Sow is consumer-first with AI/satellite scaling quirks, no Apple Pencil precision CAD, and mulch calculators detached from CAD polygons); iScape Pro ($299.99/yr) runs on iPad/Apple Silicon Mac with plant DB + proposals (photo/AR rather than 2D CAD); and Morpholio + PlantMaster costs ~$275/yr, not $60+/mo. Analogous to ConvertKit vs. free Mailchimp, professional 2D-CAD-oriented Mac/iPad designers who reject consumer AI apps and heavy BIM still form a distinct sub-segment willing to buy for unified precision CAD + live horticultural BOMs (0.5), but DP8 squeeze from Sow Pro+ below and DynaScape Creator promos (~$600-$1,142/yr) above is acute.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Residential landscape designers and small design-build contractors continuously draft and bid 10-40+ homeowner planting jobs per year, creating recurring operational demand (0.5, matching recurring SaaS models at PlantMaster, Vectorworks, DynaScape, PRO Landscape+, and iScape). Reusable regional plant palettes, local nursery unit-price sheets, custom title blocks, and Phase 2 client plan revisions provide moderate workflow stickiness. Does NOT earn 1.0 because CanopyBid deliberately excludes CRM, invoicing, payments, and crew dispatch (leaving system-of-record lock-in to Jobber/LMN/QuickBooks), outputs portable PDFs/CSVs, and offers month-to-month billing that exposes it to off-season winter pauses among cold-climate soloists.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 62500.0,
+        "score": 0.1,
+        "evidence_believability_index": 0.743,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Drops 10x to 1,000 under strict DP14 behavioral filtering. Primary CSLB licensing data shows ~12,680+ active C-27 landscape contractors in California plus ~2,000-3,000 residential landscape designers; adding Nevada (SNWA-approved contractors), Arizona, Utah, Colorado, and Texas xeriscape/drought-conversion firms yields ~22,000-27,000 licensed firms across the 6 target Western/Sunbelt states (dropping Scenario A's Apple-Silicon-Mac-only filter by running browser-native on Mac, Windows, and iPad). Filtering out pure lawn-maintenance, tree, pool, and occasional (<5/yr) rebate firms who will use free DWR Excel templates or per-project drafters leaves ~10%-15% active high-frequency residential/HOA turf-conversion & MWELO-Prescriptive submitters (~2,000-3,500 firms)\u2014squarely in the 1,000 Fermi bucket (below/at the 3,162 logarithmic midpoint to 10,000).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 1.0,
+            "justification": "Genuinely rises from 0.5 to 1.0 in this narrowed niche. Every contractor and designer actively bidding Western/Sunbelt municipal turf-replacement rebates or CA MWELO Prescriptive projects hits mandatory pre-approval gates where missing square-footage math, improper hydrozoning, banned invasive species, or failing the >=50% mature canopy (pi*r^2) / 3-plants-per-100-sq-ft rule triggers immediate rejection and voids $3k-$35k rebates. Firsthand agency guidelines (LADWP, MWDOC, SoCal Water$mart, SNWA, CA DWR) and Reddit threads (r/landscaping, r/LandscapeArchitecture, r/Ceanothus) confirm universal, acute awareness of submittal red tape and rejection costs.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Unchanged bucket at $1,000, though realized annual revenue moves strongly to the top of the bucket ($1,290/yr vs. Scenario A's $588/yr). Repricing to $129/mo ($1,290/yr annual) / $249/mo 3-seat (\"More for More\") is directly supported by live market pricing: outsourcing MWELO/rebate documentation via consultants (mwelo-online.com) takes 2-5 weeks and costs $500-$2,500 per project, while pro CAD alternatives cost $695-$1,599/yr (Land F/X $695/yr + CAD, PRO Landscape+ $900/yr, Vectorworks Landmark $1,530/yr, DynaScape Design $1,599/yr), and a single approved LADWP/MWD/SNWA rebate unlocks $3,000-$35,000 for the homeowner/HOA. Cannot legitimately inflate to $10,000/yr because 1-5 person contractors will not pay $833/mo when Land F/X + AutoCAD costs ~$1,500-$2,500/yr.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Remains 0.1 (honestly not inflated to 1.0 despite improved Sunbelt seasonality). Positives from the niche shift: CA/NV/AZ/TX operate year-round without northern snow freezes, and $3k-$35k homeowner/HOA rebate pre-approvals create concrete project-triggered urgency with zero legacy-file migration for contractors currently outsourcing plans or sketching by hand. However, true Liquid = 1.0 fails three checks: (1) adopting a 2D vector CAD studio still imposes drafting learning-curve and unit-price catalog setup friction, (2) established contractors already on Land F/X ($695/yr), Vectorworks ($1,530/yr), or DynaScape ($1,599/yr) remain on annual renewal cycles with heavy template/muscle-memory lock-in, and (3) municipal rebate programs open/close on annual fiscal funding cycles (e.g., Denver Water caps), preventing steady frictionless year-round impulse adoption.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5. By explicitly restricting scope to residential/HOA turf-replacement rebate pre-approvals and CA MWELO Prescriptive plans (500-2,500 sq ft) where homeowners and C-27 contractors submit directly without requiring a licensed Landscape Architect stamp, CanopyBid avoids enterprise procurement and catastrophic professional-liability transfer (clears DP10/DP22). Small contractors and designers routinely buy $100-$150/mo vertical workflow tools via self-serve credit card once compliance math accuracy is demonstrated on a sample packet.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Sharper structural wedge within 0.5 (cannot legitimately reach 1.0). Narrowing to municipal turf-replacement rebates and CA MWELO Prescriptive submittals cleanly neutralizes Scenario A's floor squeeze: Sow Pro+ ($99.99/yr), Morpholio Trace ($25/yr) + PlantMaster ($250/yr), iScape Pro ($300/yr), Rayon, ArcSite, and DynaScape Creator all lack automated agency compliance linters (live >=50% mature canopy pi*r^2 coverage checks, >=3 plants/100 sq ft density verification, regional WUCOLS/SNWA/Utah water-use tags, banned-invasive checks, hydrozoning, and pre-formatted municipal submittal packets). Dedicated compliance tools like mwelo.com/mwelo-online.com are validation/consulting services (2-5 week turnarounds) without 2D CAD drafting. However, Eager-Comparative cannot earn 1.0 because Land F/X ($695/yr + CAD engine) already ships WUCOLS plant databases, hydrozoning, and MWELO reporting, Vectorworks Landmark ($1,530/yr) already tracks spatial coverage percentages for rebates, and California DWR provides free official Excel Water Budget Calculators.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5. Active Western/Sunbelt turf-conversion contractors and water-wise designers submit 5-40+ rebate and MWELO packages per year\u2014propelled by California AB 1572 nonfunctional-turf mandates (through 2027), MWD/LADWP $5-$7/sq ft rebates, SNWA $5/sq ft incentives, and Utah $3/sq ft programs\u2014supporting recurring SaaS retention. Capped below 1.0 because municipal rebate allocations periodically hit fiscal funding caps (e.g., Denver Water early closures) and CanopyBid remains a standalone submittal/proposal studio outputting portable PDFs rather than a full CRM/ERP system of record.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 12500.0,
+        "score": 0.02,
+        "evidence_believability_index": 0.743,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.1 (EBI=0.743, Min=0.7, NOT VIABLE (< 0.5 as scored)). Weak links: plausible (10,000): DP14 post-filter TAM collapses well below the pitch's claimed >=100,000 once mow-and-blow NAICS 561730 nonemployers (<2% Census design receipts), Windows-only contractors, and 3D/hardscape-first firms are removed, leaving ~15k-35k qualified Mac/iPad 2D planting-plan buyers.; liquid (0.1): CAD/drafting software carries real template, symbol-library, pricing-catalog, and muscle-memory switching friction documented across r/LandscapeArchitecture and r/landscapedesign, compounded by annual incumbent licenses ($250-$1,599/yr) and cold-climate spring-fall operational busy windows (DP24) that defer tool adoption to annual off-season refreshes rather than impulse per-project switching.; price-floor compression on eager_comparative (0.5) and solo lucrative ($588/yr): The pitch missed Sow Pro+ (usesow.com, $99.99/yr) which already offers a 12,000+ USDA plant DB, satellite 2D planting plans, mature-spread counts, live nursery pricing, and branded proposal PDFs, and overstated Morpholio Trace Pro pricing (~$25/yr on App Store, not $20-$24/mo), making the current Morpholio + PlantMaster duct-tape stack ~$275/yr rather than $60+/mo."
+    },
+    {
+      "id": "IDEA-3",
+      "title": "ShelfPitch: CPG Brand & Broker True-Scale Straw-Man Shelf-Set, UNFI/KeHE Margin-Stack & Buyer-Pitch Studio",
+      "slug": "idea-3-shelfpitch-cpg-brand-broker-true",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Applying DP14 (qualified behavioral TAM rather than raw ecosystem headcount): US Census 2023 County Business Patterns records 31,130 employer establishments in NAICS 311 (Food Manufacturing\u2014heavily weighted toward local bakeries, slaughterhouses, industrial mills, and co-packers rather than branded grocery CPG), 12,452 in NAICS 3121 (Beverage\u2014mostly craft breweries/wineries), and 1,096 in NAICS 325620 (Cosmetics/Toilet Prep). Industry-specific anchors for active branded retail-pitching CPG firms are much tighter: Specialty Food Association has ~3,800-4,868 member companies; Natural Products Expo West draws ~3,000-3,200 exhibiting brands; US food brokerages total ~900-1,000 corporate entities nationally (only a subset dedicated natural/specialty). While RangeMe lists 90,000-200,000+ suppliers globally (including dormant free profiles and general merchandise) and Startup CPG has 40,000+ individual community members (founders, employees, retailers, agencies), ShelfPitch's core UNFI/KeHE distributor margin math targets US/CA natural & regional grocery channels. Including asset-light co-packed emerging food, beverage, beauty, pet, and specialty brands actively pitching regional/natural chains yields ~15,000-30,000 qualified brands plus ~1,000 regional brokerages\u2014firmly in the 10,000 Fermi bucket (below the 31,623 geometric midpoint to 100,000, and clearly above 1,000).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Two distinct layers exist in buyer awareness: (1) Preparing accurate UNFI/KeHE gross-to-net margin waterfalls (to avoid double-markup and MCB/slotting erosion), 1-page sell sheets, and 8-10 slide retail buyer pitch decks is established industry standard practice (0.5), evidenced by broad adoption and active commercial tooling across RangeMe, ScalePoint CPG, Brandboom, Satellite CPG, Foodbevy, Agentworks, and Startup CPG communities. (2) However, pitching true-to-inch straw-man planograms specifically as an emerging brand sits closer to 0.1 (evangelized by POG vendors like Vision Group/Planogrammer and advanced brokers), since retail buyers generally prefer to build their own store-cluster planograms and prioritize scan velocity, supply-chain reliability, and simple unit margins over brand-submitted CAD schematics. Crediting 0.5 reflects genuine mainstream recognition of the underlying buyer-pitch and distributor-margin pain without artificially deflating Self-Aware, while the weak pull of the true-scale planogram wedge is evaluated directly in Eager-Comparative.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Live primary pricing pages demonstrate that active retail-pitching CPG brands and regional brokers already allocate ~$600-$1,400/yr to dedicated commercial pitching, discovery, line-sheet, and POG software: RangeMe Premium is $1,399/yr (Pro $2,499/yr, Starter $99/yr), ScalePoint Hub (CPG commercial OS/deal modeler/proposals) is $99/mo ($1,188/yr), CPG Canary is $99/mo ($1,188/yr), Brandboom Startup is $83-$99/mo ($996-$1,188/yr; Business $149-$179/mo), OPENCatman Pro is $99/mo ($990/yr), Nexgen POG is $599-$899/yr, and EZPOG is $499-$1,299/yr. This demonstrated annual budget sits squarely in the $1,000/yr Fermi tier (well above the $316 geometric midpoint to $100/yr, which represents DIY Canva/RangeMe Starter hobbyists rather than active UNFI/KeHE-pitching brands). Note: realized annual LTV per brand on month-to-month $79/mo would compress if brands churn after 1-2 months, which is captured separately in Enduring = 0.1.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Switching friction from Canva + Excel is near zero (no legacy ERP migration, no payment-rail or downstream production coupling). However, auditing buying cadence and calendar freezes per DP24 shows that regional grocers (Publix, H-E-B, Wegmans, Hy-Vee, Meijer) and natural chains review each category on an annual (occasionally semi-annual) rotation with 60-120 day submission lead times and Q4 holiday buyer blackouts when new-item pitches pause. Although KeHE Trend Finder runs 3x/yr and regional chains stagger review months across the calendar, the median buyer in Plausible (a single-brand emerging CPG founder in 1 category, >90% of TAM) builds or overhauls its master retail pitch deck and UNFI/KeHE margin model episodically 1-2x/yr ahead of annual category-review season or major shows (Expo West/Fancy Food), then reuses those static assets. Only the ~1,000 food brokerages pitch multi-brand portfolios continuously year-round. Anchoring to the median buyer yields 0.1 (annual/episodic buying cycle), not 1.0 (always in market).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Emerging independent CPG founders (1-10 person teams living on Shopify, Canva, and Startup CPG Slack) and boutique food brokers routinely adopt self-serve indie/startup SaaS via credit card (evidenced by self-serve tiers at ScalePoint Hub $99/mo, CPG Canary $99/mo with no-card trial, Brandboom $83-$99/mo, and OPENCatman $0/$99/mo). Buyer owns 100% of SKU/pricing inputs with no regulated PII/PHI/tax compliance, enterprise SOC 2 procurement gates, or catastrophic legal-liability transfer (DP10/DP22 clear). While an unvetted founder must prove deep accuracy on UNFI/KeHE deduction math (MCBs, OI, double markups) to earn word-of-mouth credibility in CPG communities, there is no structural trust barrier blocking trial or swipe adoption -> 0.5 (normal indie credit-card swipe; not 1.0 mission-level pull, and 0.1 would unfairly invent institutional procurement gates that do not exist here).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Audited live 2026 floor and ceiling across all three bundled primitives (DP8/DP20/DP23) reveals an acute competitive sandwich with no incumbent-uncopyable wedge compelling a meaningful sub-segment to pay $79-$149/mo for ShelfPitch alone: (1) Planogram floor: OPENCatman offers a $0 lifetime Free plan (unlimited projects, browser-based, PDF & .psa export, facing/margin analytics, MCP AI, AND a shared multi-million-SKU product library explicitly serving CPG brands/suppliers) plus $99/mo Pro; Nexgen POG is $49.92-$74.92/mo ($599-$899/yr); EZPOG is $499-$1,299/yr. Crucially, a real straw-man planogram must show competitor SKUs losing facings, which OPENCatman's shared catalog supports while ShelfPitch's buyer-upload-only model forces manual measuring/photographing of competitor boxes. (2) UNFI/KeHE margin & proposal floor/ceiling: ScalePoint CPG, Agentworks, and Foodbevy offer free interactive UNFI/KeHE margin-waterfall calculators; ScalePoint Hub ($99/mo self-serve) already provides a CPG commercial OS with category review calendars, deal modelers, proposals, and UNFI/KeHE trade-spend math; Clarity CPG tracks live UNFI/KeHE deductions, PODs, and trade spend. (3) Sell sheet & pitch deck floor/ceiling: Satellite CPG delivers live dynamic sell sheets synced to SPINS IX-ONE and real-time UNFI DC availability; Brandboom is $0/$83-$99/mo; Canva/Pitch ($0-$15/mo) provide vastly superior brand design control for CPG founders where packaging/brand aesthetic matters. (4) Primary retail buyer guidance confirms category buyers generally do NOT want CAD planograms from emerging brands (buyers own store-cluster space planning and decide on scan velocity, supply chain, and margin/marketing support). Bundling a competitor-less shelf canvas with a UNFI calculator and templated PDF export is a convenience mashup, not a ConvertKit-grade structural trade-off.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.1,
+            "justification": "Anchoring to the median buyer in Plausible (>90% single-brand emerging CPG founders with 3-8 SKUs, vs ~1,000 US food brokerages): ShelfPitch is billed month-to-month ($79/mo), intentionally zero-integration (no live UNFI/KeHE EDI, deduction auditing, store-level scan velocity, or hosted live DC-availability links like Clarity CPG or Satellite CPG), and outputs static PDF/PPTX pitch decks and sell sheets. Because regional/natural grocery category reviews occur once (occasionally twice) per year and SKU dimensions/wholesale price lists change infrequently, an emerging founder has a strong incentive to subscribe for 1-2 months ahead of Expo West or a line review, export their pitch deck and sell sheet, and cancel until next year's reset cycle. While the small multi-brand broker sub-segment ($149/mo) could retain year-round (0.5), the dominant single-brand buyer pool faces structural project-based 'export-and-cancel' churn -> 0.1 (one-off with repeats/referrals, not recurring 0.5).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 2500.0,
+        "score": 0.004,
+        "evidence_believability_index": 0.786,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Drops 10x from Scenario A (10,000 -> 1,000) by excluding single-brand emerging CPG founders and narrowing strictly to multi-brand boutique/regional CPG food, natural, and specialty brokerages plus fractional retail sales agencies representing 5-40 client brands across US/CA. RevenueBase tracks ~900-1,000 core US food broker/distributor corporate entities nationally (with dedicated natural/specialty brokerages forming a subset, supplemented by small regional/fractional CPG sales agencies), placing qualified post-filter TAM squarely in the 1,000 Fermi bucket.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Unchanged tier (0.5), though concentrated at the stronger end of 0.5 compared to Scenario A: Multi-brand CPG brokers recognize multi-client pitch assembly, UNFI/KeHE margin/MCB deal modeling, and space-to-sales category review presentations as core daily billable workflows\u2014evidenced by active broker adoption of vertical tools like Shelf Scout, Satellite CPG, Brandboom, and GoPlanogram. Does not reach 1.0 because many small regional brokerages still treat PowerPoint + Excel + SPINS charts as adequate and rarely build standalone CAD planograms without enterprise syndicated data.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Repricing to $249/mo ($2,490-$2,988/yr) for a multi-brand brokerage workspace pushes ACV ~3x higher than Scenario A, but live broker software comps confirm annual budget for pitch-deck, sell-sheet, and lightweight POG tooling stays in the $1,000/yr Fermi tier (below the $3,162 geometric midpoint to $10,000/yr): Shelf Scout is $49-$349/mo ($588-$4,188/yr), Brandboom is $83-$500/mo, GoPlanogram is $1,995/yr per user ($5,500/yr for 5 users), OPENCatman Pro is $990/yr, and ScalePoint Hub is $1,188/yr. Only syndicated scan data (SPINS/NIQ at $15k-$100k+/yr) commands $10,000+/yr budgets from brokers\u2014which a zero-data pitch studio cannot capture. Honest score remains $1,000/yr.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 1.0,
+            "justification": "Genuinely improved from Scenario A (0.1 -> 1.0): Unlike a single-brand founder constrained to 1 category's annual reset calendar and Q4 freezes, a multi-brand CPG brokerage representing 10-40 brands across disparate categories (snacks, beverages, frozen, condiments, beauty, pet) and dozens of regional grocery banners runs active buyer pitches and category-review submissions every single week year-round. Switching from ad-hoc Excel waterfalls + PowerPoint/Canva involves zero ERP migration or customer-rail disruption, enabling immediate per-pitch adoption on the broker's next client review -> 1.0.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Unchanged from Scenario A (0.5): Boutique and regional CPG brokerages (typically 2-20 person sales agencies) routinely swipe corporate credit cards for self-serve SaaS tools (Shelf Scout $49-$349/mo, Brandboom, HubSpot, OPENCatman) with no Fortune-500 SOC 2 procurement barrier, HIPAA/PII compliance gate, or catastrophic liability transfer. No mission-level pull for an unvetted solo founder -> 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Auditing the live 2026 food-broker software stack proves that narrowing to multi-brand brokerages does NOT unlock Eager-Comparative = 0.5: (1) Shelf Scout (shelfscout.ai, $49-$349/mo) is already purpose-built for food brokers and CPG sales agencies, combining multi-store retail databases, brand/client management, built-in margin/pricing logic, and automated one-page retail sell sheets. (2) Satellite CPG already serves brokers and field reps with dynamic sell sheets synced to SPINS IX-ONE specs and real-time UNFI DC availability. (3) Brandboom ($83-$500/mo) and RepSpark already handle multi-brand broker line sheets and digital showrooms. (4) For actual category-review straw-man planograms, OPENCatman ($0 Free / $99/mo Pro) and GoPlanogram ($1,995-$5,500/yr) already serve CPG broker teams\u2014and OPENCatman includes a shared multi-million-SKU competitor library, whereas ShelfPitch's zero-data/client-upload-only architecture forces brokers to manually measure and photograph competitor SKUs to build a current-vs-proposed shelf set, while lacking the SPINS/NIQ scan velocity data that grocery buyers treat as the decisive slide in broker category reviews. Score stays 0.1.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Genuinely improved from Scenario A (0.1 -> 0.5): Removing single-brand founders eliminates the 'subscribe 1-2 months before Expo West, export static PDF, cancel' churn trap. Multi-brand brokerages representing 10-40 client brands continuously onboard new brands, update client COGS/trade-spend/MCB deals, and assemble retailer-specific buyer decks and sell sheets every month across rotating regional category reviews. This sustains recurring monthly utility (0.5), though it does not reach 1.0 system-of-record lock-in because it does not process ongoing broker commissions, UNFI/KeHE deductions, or EDI orders.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 12500.0,
+        "score": 0.02,
+        "evidence_believability_index": 0.786,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.02 (EBI=0.786, Min=0.7, NOT VIABLE (< 0.5 as scored)). Weak links: eager_comparative (0.1): Even narrowed exclusively to boutique/regional CPG food & natural brokerages, the live 2026 broker tech floor already covers the exact workflow: Shelf Scout ($49-$349/mo) explicitly serves food brokers with brand/client management, multi-store retail databases, margin/pricing logic, and automated one-page sell sheets; Satellite CPG equips brokers with live dynamic sell sheets synced to SPINS IX-ONE and real-time UNFI DC availability; Brandboom ($83-$500/mo) and RepSpark handle multi-brand digital line sheets; and OPENCatman ($0 Free / $99/mo Pro) plus GoPlanogram ($1,995-$5,500/yr) provide true-scale planograms\u2014with OPENCatman supplying a multi-million-SKU competitor library that ShelfPitch's buyer-upload-only architecture lacks (fatal for broker current-vs-proposed category resets, alongside missing SPINS/NIQ scan velocity data).; plausible (1000): Narrowing out single-brand emerging founders to fix Liquid and Enduring shrinks post-filter TAM 10x to ~1,000-2,000 boutique/regional CPG food, natural, and specialty brokerages & fractional retail sales agencies across US/CA (RevenueBase tracks ~900-1,000 core US food broker/distributor corporate entities). Per DP14/DP16, Plausible = 1,000 cannot clear the $10M arithmetic floor unless Lucrative >= $10,000/yr.; lucrative (1000): Repricing to $249/mo ($2,490-$2,988/yr) per brokerage workspace increases ACV ~3x over Scenario A, but live broker pitch/sell-sheet/POG software pricing (Shelf Scout $49-$349/mo, Brandboom $149-$500/mo, GoPlanogram $1,995/yr single user / $5,500/yr 5-user, OPENCatman Pro $990/yr) clusters at ~$1,200-$3,000/yr\u2014below the $3,162 geometric midpoint to $10,000/yr. Brokers reserve $15k-$100k+/yr budgets for syndicated SPINS/NIQ scan data, not standalone pitch-deck/shelf-drawing studios. Consequently Scenario B improves 5x over Scenario A (0.02 vs 0.004) but still fails viability (< 1.0) even under optimistic differentiation."
+    }
+  ]
+}

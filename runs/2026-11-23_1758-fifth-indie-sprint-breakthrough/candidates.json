@@ -1,0 +1,105 @@
+[
+  {
+    "deliberate_trade_offs": [
+      "No Chrome-extension click recorder for non-technical HR or ops teams: every captured flow is declarative Playwright/YAML checked into Git, deliberately excluding Scribe/Tango/Guidde's non-technical buyer base.",
+      "Never hosts or replaces the customer's help center (no WYSIWYG CMS, site search, or chatbot): strictly compiles refreshed visual assets and step blocks via GitHub PRs or Zendesk/Intercom/Help Scout media APIs.",
+      "Web apps against staging or preview URLs via headless Linux Chromium only: refuses native iOS/Android or desktop binary capture to keep infrastructure deterministic and 1-2 person supportable."
+    ],
+    "id": "IDEA-1",
+    "indie_feasibility": "High for a 1-2 person technical team: core stack is a GitHub Action + containerized Linux Playwright runner with deterministic font packs, DOM-rule PII/clock freezing, selector-anchored callout SVG compositing, and a lightweight visual-diff PR review web UI (Playwright + Cloudflare R2/Workers). Self-serve PLG via GitHub Marketplace with zero enterprise procurement or custom onboarding. [UNVETTED founder-fit assumption: assumes founder enjoys developer-tooling docs, Playwright container ops, and selling to SaaS engineering leads.]",
+    "needs_stack_sketch": {
+      "alternatives_above": "Hiring a dedicated technical writer ($90k-$140k/yr), banning screenshots from help docs altogether, or absorbing extra support tickets from confused users.",
+      "obviated_below": "Manually re-recording flows in Chrome extensions (Scribe/Tango/Guidde), cropping and redacting PII in Figma, re-uploading PNGs into docs, and debugging flaky homegrown Playwright + ImageMagick Docker scripts.",
+      "promise_one_up": "Ship biweekly UI changes without stale help docs degrading onboarding or generating avoidable support tickets.",
+      "your_level": "Keep every help-center screenshot, selector-anchored UI callout, and light/dark step block synced to production UI changes via automated GitHub PRs and help-center API syncs."
+    },
+    "one_liner": "A Git-native Playwright CI pipeline that runs against staging preview URLs on every release, deterministically masks PII/clocks, draws selector-anchored callouts in light and dark mode, and opens visual-diff PRs to keep B2B SaaS help docs synced automatically.",
+    "price": "$99/mo flat per product (up to 300 auto-refreshed annotated shots, light+dark variants, unlimited seats/PRs) or $179/mo (up to 1,000 shots)",
+    "pricing_strategy": "More for Less",
+    "signal_ids": [
+      "SIG-10",
+      "SIG-13"
+    ],
+    "specific_buyer": "Engineering leads, product managers, and technical writers at 5-100 person B2B SaaS companies shipping UI changes at least biweekly whose customer help center runs on Git-backed MDX (Docusaurus, Fumadocs, Astro Starlight, Mintlify) or Zendesk/Intercom/Help Scout.",
+    "specific_problem": "Frequent UI releases silently break help-center screenshots and step guides. Sub-$60/mo rivals (Scribe $25-$35/mo, Tango $22-$30/mo, Guidde $19-$59/mo) are manual Chrome-extension recorders that force humans to re-click every workflow after each UI tweak, while free Playwright `toHaveScreenshot` lacks selector-anchored callout overlays, PII/timestamp scrubbing, article-slot mapping, and visual-diff approval queues. Flagships (LaunchBrightly $229-$499/mo, Pageloop $365-$500/mo for auto-refresh) price out bootstrapped SaaS and pull docs out of Git. Path A Liquid = 1.0: adopted fresh on the next doc PR via a single GitHub Action without migrating existing help centers (post-filter 50k-100k fast-shipping B2B SaaS products x ~$1,188/yr = $59M-$119M).",
+    "title": "DocSnap CI \u2014 Git-Native Playwright Visual Sync for B2B SaaS Help Docs"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Never builds QuickBooks/Xero two-way accounting sync, payroll, timecards, lien-waiver legal drafting, or Gantt scheduling: strictly owns the per-project room spec book, auto-triggered allowance change-order ledger, and field QR verification loop.",
+      "No mandatory native iOS/Android tracking app for subcontractors and no password-gated portals for homeowners: every external collaborator interacts via zero-login mobile web magic links and laminated jobsite wall QR cards.",
+      "No hosted A2P 10DLC SMS gateway: contractors share magic links from their own phone share-sheet (iMessage/WhatsApp/SMS) or hosted email, avoiding carrier registration friction and per-message billing (DP15)."
+    ],
+    "id": "IDEA-2",
+    "indie_feasibility": "High for a 1-2 person team: mobile-first PWA/web app with Postgres + object storage (R2/S3), printable PDF QR room-sheet generator, timestamped/IP-audited e-signature ledger, and optional Stripe checkout for per-project passes. Zero ERP integration support hell, zero carrier A2P 10DLC approval queue, zero enterprise sales. [UNVETTED founder-fit assumption: assumes founder is willing to interview and market to hands-on residential remodelers via trade forums, YouTube remodel channels, and CoConstruct sunset migration communities.]",
+    "needs_stack_sketch": {
+      "alternatives_above": "Hiring a full-time project coordinator ($55k-$75k/yr), paying $4,000-$12,000/yr for Buildertrend/Houzz Pro annual ERPs, or padding fixed-price bids by 15% to eat rework and unpaid extras.",
+      "obviated_below": "Chasing homeowners over texts and spreadsheets for 50-100 finish SKUs, manually calculating allowance overages, fighting subs to install CompanyCam on personal phones, printing outdated PDF spec sheets, and arguing over unsigned verbal extras on the final draw.",
+      "promise_one_up": "Collect 100% of mid-project upgrade revenue on time and prevent multi-thousand-dollar wrong-SKU tear-outs without forcing homeowners or rotating subs into heavy ERP portals.",
+      "your_level": "Unite each remodel's room-by-room SKU allowance book, automatic 1-click signed change orders, and zero-app jobsite wall QR install verification photos in one per-project web ledger."
+    },
+    "one_liner": "A zero-login per-project remodel ledger linking homeowner room-by-room SKU/allowance picks (auto-spawning 1-click signed change orders on overages) directly to printable jobsite wall QR cards where subs verify exact SKUs and snap pre-install photos without installing an app.",
+    "price": "$79/mo flat (up to 10 active remodels, unlimited homeowners/designers/subs) or $49 one-time single-project pass",
+    "pricing_strategy": "More for Less",
+    "signal_ids": [
+      "SIG-5",
+      "SIG-6",
+      "SIG-7",
+      "SIG-8",
+      "SIG-9"
+    ],
+    "specific_buyer": "Independent residential kitchen, bath, and whole-home remodeling contractors and small design-build firms (1-8 staff, running 4-25 fixed-price or allowance-based remodels/year) avoiding Buildertrend/Houzz Pro annual lock-in or exiting CoConstruct before its March 31, 2027 sunset.",
+    "specific_problem": "Remodel margins leak across three disconnected handoffs: homeowners pick 50-100 SKUs over texts without seeing live allowance overages, refuse to register in heavy portals to sign change orders (leaving verbal extras unenforceable on the final draw), and rotating subs refuse BYOD tracking apps (CompanyCam $79-$299/mo) and install near-match SKUs from stale PDFs, causing costly tear-outs. Every sub-$60/mo rival is trapped in one broken silo: Joist ($27-$32/mo), Changed ($29/mo), Digital Change Orders ($29/mo), and QuoteIQ ($30/mo) emit standalone CO PDFs with zero SKU/allowance ledger or field QR check; DesignFiles ($35-$75/mo) and Spoak ($35/mo) lack construction CO audit trails and rough-in verification; TaskTag ($0-$16/mo) and UploadCam ($20-$40/mo) store raw photos unlinked from approved SKUs. Path A Liquid = 1.0: adopted fresh on the next remodel without migrating QuickBooks or CoConstruct archives (US Census NAICS 236118 alone counts 135,337 employer remodelers; post-filter 100k+ allowance-based remodelers x $948/yr = $95M+).",
+    "title": "RoomSpec Ledger \u2014 Zero-Login Remodel Spec Book, Wall QR Cards & Auto-Triggered Allowance Change Orders"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Never builds an internal task board, time tracker, CRM, or recurring retainer invoicing system: sits strictly as the commercial scope firewall between live staging review and the agency's existing ClickUp, Linear, Asana, or Jira.",
+      "Zero per-seat fees, zero client-reviewer fees, and 0% platform fee on Stripe change-order deposits (directly undercutting Bonsai's 1% external Stripe surcharge).",
+      "Live web staging URLs only (Webflow, Framer, Shopify, WordPress, Next.js/React SPAs across desktop and mobile breakpoints): refuses video-frame and print PDF proofing to maintain deterministic DOM/viewport capture."
+    ],
+    "id": "IDEA-3",
+    "indie_feasibility": "High for a 1-2 person team: lightweight staging embed script + optional Chrome/Playwright deterministic viewport snapshotter for login-walled SPAs, revision-round state machine, Stripe Connect Express (0% platform fee) for optional micro-deposits, ClickUp/Linear/Asana webhooks, and SHA-256 archived PDF sign-off dossier export. Self-serve agency card swipe with low support load. [UNVETTED founder-fit assumption: assumes founder understands web agency delivery workflows, Webflow/Shopify/SPA staging quirks, and agency margin positioning.]",
+    "needs_stack_sketch": {
+      "alternatives_above": "Switching entirely to hourly time-and-materials billing (which clients resist), padding fixed quotes by 25% and losing bids, or silently eating 10-20% unpaid revision overrun out of agency profit.",
+      "obviated_below": "Policing unchecked Feedbucket/BugHerd tickets dumped into ClickUp, pasting screenshots into Notion/Google Docs, writing awkward out-of-scope emails, and spinning up heavyweight PandaDoc PDFs for $400 tweaks.",
+      "promise_one_up": "Recover 10-20% lost gross margin on fixed-fee web builds and eliminate post-launch client approval disputes without turning staging reviews into confrontational legal battles.",
+      "your_level": "Enforce fixed revision-round budgets on live staging sites, turn out-of-scope client pins into instant inline Swap / Phase-2 / Pay micro-approvals, and seal a tamper-evident pre-launch sign-off record."
+    },
+    "one_liner": "A revision-budgeted live staging proofing firewall for web agencies that captures deterministic desktop/mobile snapshots, lets PMs convert any out-of-scope client pin into an inline 1-click Swap / Phase-2 / Pay micro-change-order before syncing to ClickUp/Linear, and seals a tamper-evident pre-launch sign-off log.",
+    "price": "$69/mo flat (up to 5 active client builds, unlimited seats & client reviewers, 0% fee on Stripe deposits) or $129/mo (unlimited active builds + custom domain)",
+    "pricing_strategy": "More for More",
+    "signal_ids": [
+      "SIG-1",
+      "SIG-4"
+    ],
+    "specific_buyer": "Owners and project managers at 1-15 person web design, Webflow/Framer, Shopify, and WordPress/Next.js agencies delivering fixed-fee client builds ($5k-$50k) with contracted revision-round limits, including agencies displaced by MarkUp.io's $79-$799/mo hike and SuperOkay's Dec 1, 2026 shutdown.",
+    "specific_problem": "Existing sub-$60/mo visual feedback widgets (Ruttl $18/user, TryApprove $29, Pastel $35, Marker.io $39-$59, BugHerd $42-$50, Feedbucket $49) act as unchecked bug firehoses\u2014dumping every client pin straight into ClickUp/Jira with zero revision-round enforcement or commercial scope gating\u2014while standalone change-order tools (ScopeYes, PandaDoc $19-$49, Bonsai $19-$59 + 1% Stripe fee) live outside the staging context so PMs skip them for $350-$1,500 tweaks and eat 10-20% margin leakage plus post-launch approval reversals. Uniting deterministic responsive/SPA pin capture with an inline 3-option scope card (Swap / Phase 2 / Approve +$X) and tamper-evident breakpoint sign-off archive beats both floors structurally. Path A Liquid = 1.0: dropped onto the next client staging URL via a 1-line script with zero ClickUp/Stripe/portal migration (200k+ global digital agencies; post-filter 50k-100k fixed-fee web agencies x ~$828-$1,548/yr = $41M-$155M).",
+    "title": "ScopeGate \u2014 Revision-Budgeted Staging Proofing & Inline Micro-Change-Order Firewall for Web Agencies"
+  },
+  {
+    "deliberate_trade_offs": [
+      "No Meta or TikTok Ads Manager direct write-API publishing (unlike AdLiftr) and no ad-spend performance analytics dashboard (unlike Motion at $750/mo): avoids fragile ad-account OAuth token churn and focuses purely on pre-spend creative batch review, compliance sign-off, and clean media-buyer launch-pack export.",
+      "Built strictly for multi-variant paid-social ad sprints (Hooks x Bodies x CTAs x Aspect Ratios + ad copy + creator usage-rights expiry): deliberately excludes long-form cinema NLE timelines (Premiere/DaVinci round-trip) where Adobe-bundled Frame.io dominates.",
+      "Zero per-client-reviewer seats and strictly separated internal agency QA vs. zero-login client sign-off stages included on the base tier, refusing Frame.io's per-seat internal-comment upsell tax."
+    ],
+    "id": "IDEA-4",
+    "indie_feasibility": "High for a 1-2 person technical team: Cloudflare Stream or Mux HLS transcoding/playback keeps video infrastructure cost predictable and minimal; core product is a matrix UI with 9:16 Reels/TikTok UI safe-zone SVG overlays, frame-accurate timestamps, copy/headline + usage-rights metadata fields, internal-vs-client approval state machine, and deterministic ZIP/CSV naming-convention export. Self-serve agency subscription with zero enterprise procurement. [UNVETTED founder-fit assumption: assumes founder is comfortable marketing in DTC paid-social, UGC agency, and Meta media-buyer communities.]",
+    "needs_stack_sketch": {
+      "alternatives_above": "Paying $199-$399/mo for Filestage or $750/mo for Motion, letting unapproved claims or obscured captions burn paid ad spend, or paying account managers extra hours to reconcile Slack feedback against Drive spreadsheets.",
+      "obviated_below": "Managing 30-variant ad batches in Google Drive + Google Sheets (`v1_final_reallyfinal.mp4`), forcing clients to click 24 separate Frame.io links, manually checking TikTok/Reels button overlap, and renaming approved files by hand for media buyers.",
+      "promise_one_up": "Cut creative-sprint client approval turnaround from days to hours and hand media buyers error-free, claim-approved, safe-zone-verified ad launch packs on schedule.",
+      "your_level": "Review, safe-zone check, and client-approve multi-variant paid-social ad matrices (video cuts + ad copy + creator usage-rights) in one zero-login grid and export strictly named approved launch packs."
+    },
+    "one_liner": "A Hook x Body x CTA paid-social creative matrix review workspace where performance and UGC agencies toggle TikTok/Reels safe-zone overlays, pair each variant with ad copy and usage-rights expiry, collect zero-login matrix approvals, and export strictly named media-buyer launch packs.",
+    "price": "$89/mo flat (up to 10 active client brands, unlimited creative batches, team members & client reviewers, 500GB video hosting) or $159/mo (unlimited brands, 2TB, custom domain)",
+    "pricing_strategy": "More for More",
+    "signal_ids": [
+      "SIG-3",
+      "SIG-4"
+    ],
+    "specific_buyer": "Founders, creative strategists, and account managers at 2-20 person paid-social performance creative, UGC ad, and DTC marketing agencies shipping 15-100+ Meta and TikTok video/static ad variations per client sprint across 5-30 brand retainers.",
+    "specific_problem": "Linear video proofing tools at the $0-$25/seat floor (Frame.io free in Adobe CC / $15-$25/seat amid V4 migration backlash, Wipster $10-$25/seat, Krock $10/seat, Dropbox Replay $10-$12/seat) treat a 24-variant paid-social test (3 Hooks x 2 Bodies x 2 CTAs x 2 Aspect Ratios) as 24 flat files with no matrix-level batch approval (\"kill Hook B across all cuts\"), no Reels/TikTok UI safe-zone overlay, no paired primary ad copy/headline/creator usage-rights expiry, and internal-comment leaks on entry tiers. Organic social schedulers (Loomly/Sendible $30-$75/mo) lack frame-accurate video matrices, while Filestage ($199-$399/mo) and Motion ($750/mo) price far above indie agencies. Path A Liquid = 1.0: adopted fresh on the next client creative sprint via a zero-login batch link with zero Drive/Frame.io archive migration and zero Ads Manager OAuth lock-in (200k+ global digital agencies; post-filter 25k-50k paid-social/creative/UGC agencies x $1,068/yr = $27M-$53M).",
+    "title": "BatchSign \u2014 Paid-Social Creative Matrix Proofing, Safe-Zone Gate & Launch-Pack Handoff for UGC/Performance Agencies"
+  }
+]

@@ -1,0 +1,474 @@
+{
+  "run_id": "2026-11-25_0807-tenth-indie-sprint-calibrated-winner",
+  "run_type": "discovery",
+  "ambition": "indie",
+  "lenses": [
+    {
+      "domain": "Vimeo ($400/mo Bending Spoons Studio hike) & Wistia refugee video hosting: BYO-Bunny/Cloudflare zero-markup video control planes, 1-click library migration, course players & agency client review hubs",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Vimeo ($400/mo Bending Spoons Studio hike) & Wistia refugee video hosting: BYO-Bunny/Cloudflare zero-markup video control planes, 1-click library migration, course players & agency client review hubs",
+      "why_indie_friendly": "User-supplied domain lens"
+    },
+    {
+      "domain": "Small-agency operations fleeing Harvest Flex usage taxes & Airtable/Miro per-seat bloat: flat-workspace agency retainer burn, time-to-invoice, or client deliverable portals",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Small-agency operations fleeing Harvest Flex usage taxes & Airtable/Miro per-seat bloat: flat-workspace agency retainer burn, time-to-invoice, or client deliverable portals",
+      "why_indie_friendly": "User-supplied domain lens"
+    },
+    {
+      "domain": "Self-serve SMB, creator & e-commerce operational tools fleeing Help Scout/Intercom per-resolution fees, Mailchimp Bending Spoons takeover, or bloated legacy subscriptions via flat-rate or customer-owned architecture",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Self-serve SMB, creator & e-commerce operational tools fleeing Help Scout/Intercom per-resolution fees, Mailchimp Bending Spoons takeover, or bloated legacy subscriptions via flat-rate or customer-owned architecture",
+      "why_indie_friendly": "User-supplied domain lens"
+    }
+  ],
+  "signals_count": 13,
+  "candidates_count": 3,
+  "worker_errors": [],
+  "survivors": [],
+  "killed": [
+    {
+      "id": "IDEA-1",
+      "title": "BYO-Storage Client Video Review & Final Delivery Hub (Lens 1)",
+      "slug": "idea-1-byo-storage-client-video-review",
+      "stage": "Phase 4 \u2014 Rude Q&A + Dalio Panel",
+      "best_scenario_label": "Scenario A",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 100000,
+            "justification": "Score = 100,000 (10^5 specific buyers globally who have the problem, per DP35 without double-counting Liquid/Self-Aware/Eager). Bottom-up triangulation: US dedicated video production companies with staff number ~6,000-12,000 (100,000+ including solo/micro LLCs), US advertising/marketing agencies number ~114,000 (IBISWorld) with ~77,000 digital/creative agencies (Bridging Agency Census), Europe (EU + UK) has 100,000+ creative/marketing agencies (UK ~20.6k, Germany ~13.7k, France ~11.3k), and global digital/creative agencies total ~326,000+ (Bridging), alongside dedicated global video production houses and multi-client commercial videographers. Cross-checked against software-buyer bases: Frame.io has 4M+ total users (implying hundreds of thousands of active workspaces/teams globally) and Vimeo has 1.5M-1.7M paid self-serve subscribers. Filtering strictly to the defined buyer (2-15 person video production houses, commercial videographers with freelance teams, and video-producing marketing/creative agencies managing 5-30 external clients) yields ~150,000-350,000 organizations globally \u2014 clearly above 10,000 (too small globally) and below 1,000,000 (which would require folding in solo hobbyists/YouTubers).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Score = 0.5 (industry standard practice). Dedicated client video review and delivery tooling is ubiquitous, budgeted standard practice across commercial video shops (Frame.io 4M+ users, Vimeo 1.5M-1.7M paid subs, plus Wipster, Dropbox Replay, Filestage, WeTransfer), amplified in late 2025-2026 by acute, verifiable shocks on r/editors, r/videography, and r/vimeo: WeTransfer's Dec 22, 2025 permanent deletion of Portals & Reviews, Vimeo's Bending Spoons acquisition and forced $4,800/yr Studio migration, and Frame.io's mandatory V4 rollout backlash. Challenging 1.0 from below: 1.0 ('almost everyone cares') is too optimistic because many smaller 2-4 person shops remain content with Frame.io's Adobe CC bundle (2 users, 100GB) + Google Drive/Dropbox until they breach 2TB or 5 seats, and do not actively recognize BYO storage as a priority. 0.1 is clearly too low given mass category spend and active migration waves.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Score = 1000 ($1,000/yr coarse Fermi bucket, verified on live primary pricing pages). Demonstrated annual spend by 2-15 person boutique video agencies today is squarely $800-$4,800/yr: Frame.io Pro (5 seats) = $780-$900/yr and Team (6-15 seats) = $1,584-$4,500/yr; Vimeo Professional = $852-$1,440/yr and Studio = $4,800/yr; VoiceDeck Studio (recommended default for working agencies, 2TB) = $890/yr and Agency (5TB) = $1,990/yr; RecReview Pro (2TB) = $984/yr; Dropbox Business + Replay ($10-$12/user/mo add-on on top of paid Dropbox) = $1,200-$3,400+/yr for 4-8 seats; Filestage Starter = $2,388/yr. Even Scenario A's own 'Less for Less' price ($49/mo = $490/yr annual, $588/yr monthly, at ~90%+ gross margin with zero storage COGS) sits at 10^2.69-10^2.77 \u2014 far closer on a log-10 scale to $1,000 than $100 (geometric midpoint $316). Challenge noted: the smallest 1-2 person commercial videographers currently pay $120-$324/yr (Livid/PlayPause/Vimeo Core), and Scenario A's flat $49/mo cap limits net revenue per workspace to ~$500-$588/yr unless higher tiers are added.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Score = 0.1 (annual decision / renewal-driven switching \u2014 explicitly refuting Scenario A's claimed Liquid = 1.0). While an agency can technically pilot a review link on a single new shoot, four primary research facts rule out 1.0 ('always in market / easy per-project adoption'): (1) Vimeo's $400/mo ($4,800/yr) Studio tier is billed annually only, and Frame.io, Filestage, and Dropbox Business/Replay heavily incentivize annual contracts; (2) Reddit migration threads explicitly warn agencies leaving Vimeo that they must audit and replace all live portfolio and client website embeds before canceling to realize savings (why Livid built its L.O.V.E. migration exporter); (3) 2-15 person agencies standardize one review/delivery pipeline across staff and rotating freelancers (often tied to Adobe CC bundled Frame.io or NLE habits) rather than switching tools per shoot; and (4) BYO R2/Bunny onboarding requires setting up cloud buckets, scoped API keys, and custom domains. Not 0.01 (no multi-year enterprise procurement lock-in \u2014 agencies actively switch on annual renewal notices or platform shocks like WeTransfer's Dec 2025 shutdown).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Score = 0.5 (per DP37: indifferent / normal indie credit-card swipe, no institutional trust red flags). Target buyers are owner-operated 2-15 person boutique video production shops and creative agencies purchasing SaaS on company credit cards, explicitly conceding Hollywood post houses requiring SOC 2/studio DRM to Frame.io Enterprise. Live market traction of indie/startup video review entrants (PlayPause, VoiceDeck, Dusken, Flask, Livid, Brault) and vocal Reddit agency backlash against Bending Spoons (Vimeo/WeTransfer) and Adobe confirm small agencies readily adopt independent tools. Moreover, BYO Cloudflare R2 / Bunny Stream storage eliminates vendor file-hostage / indie bus-factor risk because the agency retains 100% direct ownership of master media files. Not 1.0 (no mission-level founder pull; founder fit is [UNVETTED]).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Score = 0.5 (earns 0.5 per DP36 WP Engine/ConvertKit calibration, NOT 1.0, and narrowly defended against 0.1). Live 2026 competitor audit proves a genuine incumbent-uncopyable structural wedge for a specific sub-segment: Frame.io V4 ($15-$25/member/mo) restricts BYO S3 ('Storage Connect') to Enterprise Prime and lacks clean website embeds; Vimeo ($400/mo Studio annual-only) has no BYO storage and severe Bending Spoons trust erosion; Iconik offers BYO S3/Wasabi ($0 storage fee) but charges $65-$120/user/mo + credits as a heavy enterprise MAM; Shade restricts BYO S3 to Enterprise. Among sub-$100 challengers, every verified rival leaves a concrete structural gap vs. the unified BYO wedge: VoiceDeck ($50/mo 1TB, $89/mo 2TB, $199/mo 5TB, $379/mo 10TB, 25GB max file cap, hard upload pause) marks up storage heavily and lacks clean embeds; PlayPause ($9-$27/mo flat workspace, Premiere/Resolve panels) uses vendor-hosted 1TB baseline storage without BYO or website embeds; Livid ($10-$24/mo annual, 2-4TB, clean embeds, timestamped comments) caps Premium at 5 seats and 3TB bandwidth ($0.06/GB = $60/TB egress overage) on vendor-hosted cloud; Brault ($12-$70/mo, $9/TB extra) is a proprietary vendor-hosted DAM without BYO file ownership or client embeds; RecReview ($49-$232/mo) charges $232/mo at 5TB with no BYO or embeds; VidPaar ($10-$62/mo) supports BYO S3 but is a developer video host/API without zero-login client review/approval. Reddit threads on r/videography and r/editors confirm tech-savvy agencies actively seek Cloudflare R2 ($0 egress) and Bunny.net workflows to escape 2TB+ walls and vendor lock-in after WeTransfer's shutdown and Vimeo's hike. Thus a clear sub-segment (5-15 person, 5-20+ TB, rotating-freelancer, lock-in-averse agencies) has a real reason to buy for this architectural trade-off alone (0.5). Crucial caveat: for smaller shops under 2-4TB and <=5 seats, PlayPause, Livid, and Brault are cheaper and more turnkey (and PlayPause includes NLE panels), which makes narrowing onto higher-TB, lock-in-averse agencies mandatory.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Score = 0.5 (recurring revenue from recurring operational problem). Boutique video production companies and creative agencies ship draft cuts, collect client sign-offs, and deliver final masters every month (Reddit agency threads report 7-15+ active jobs/month), matching the recurring subscription model across Frame.io, Vimeo, VoiceDeck, Filestage, and PlayPause \u2014 ruling out 0.1. However, 1.0 (strong system-of-record lock-in) is not earned: Scenario A's own BYO R2/Bunny architecture deliberately eliminates proprietary media-vault lock-in (making exit much easier than leaving Vimeo/Frame.io), even though custom-domain client delivery pages and active embeds create moderate stickiness. Tagged [fermi] (capped at 0.4) because actual retention dynamics of a BYO-storage portal are pre-launch structural inference.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 625000.0,
+        "score": 1.0,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.4,
+        "band": "VIABLE INDIE (>= 1.0 \u2014 can sustain an indie company)"
+      },
+      "scenario_b": null,
+      "post_rude_qa": {
+        "criteria": {
+          "plausible": {
+            "value": 100000,
+            "justification": "Score = 100,000 (10^5 specific organizations globally having the problem, per DP35 without double-counting Liquid/Self-Aware/Eager inside Plausible). Bottom-up triangulation across US dedicated video production firms (~6k-12k staffed, 100k+ micro LLCs), US creative/marketing agencies (~77k-114k), EU+UK agencies (100k+), and global digital/creative agencies (~326k+) cross-checked against Frame.io (4M+ users) and Vimeo (1.5M-1.7M paid subs) supports ~150k-350k commercial video production houses and video-producing creative agencies globally. Note: narrowing the buyer solely to technical BYO-S3 shops willing to manage R2/Bunny without Docker would collapse Plausible to <=10,000.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Score = 0.5 (established, budgeted industry-standard practice). Dedicated client video review and delivery software is widely budgeted across commercial video shops (Frame.io, Vimeo, Dropbox Replay, Filestage, Wipster), with heightened awareness in late 2025-2026 from WeTransfer's shutdown, Vimeo's Bending Spoons hike, and Frame.io V4 backlash. Not 1.0 because smaller shops remain satisfied with Adobe CC's free bundled Frame.io (2 seats, 100 GB) + Google Drive/Dropbox and do not perceive BYO object storage as a need.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Score = 1000 ($1,000/yr coarse Fermi bucket, verified on live primary pricing pages). Commercial video agencies demonstrably budget $800-$4,800/yr across Frame.io Pro/Team ($780-$4,500/yr), Vimeo Pro/Studio ($852-$4,800/yr), VoiceDeck ($890-$1,990/yr), Dropbox + Replay ($1,200-$3,400+/yr), and Filestage ($2,388/yr). IDEA-1's flat $49/mo ($490-$588/yr) sits closer on a log-10 scale to $1,000 than $100 (geometric midpoint $316), though the flat price caps expansion revenue at ~0.5x of $1,000 and cannot fund paid B2B acquisition or sales in a 14+ rival red ocean.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Score = 0.1 (annual renewal / shock-driven switching). Vimeo Studio ($4,800/yr) is billed annually only, Frame.io/Dropbox/Filestage heavily incentivize annual contracts, migrating off Vimeo requires auditing and replacing live portfolio/client embeds, multi-person agencies standardize one review tool across staff and freelancers, and BYO R2/Bunny bucket, CORS, API token, and custom domain configuration introduces heavy onboarding friction.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Score = 0.5 (per DP37 baseline for self-serve credit-card indie SaaS sold to 2-15 person boutique agencies; no institutional trust red flags because Hollywood/enterprise SOC 2 studios are explicitly conceded). Active agency adoption of indie entrants (PlayPause, HubDesk, Dusken, Livid, Brault, VoiceDeck) confirms buyers will swipe a card for independent tools, and customer-owned storage mitigates vendor bus-factor risk. Not 1.0 because founder fit and domain credibility are [UNVETTED].",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Score = 0.1 (downgraded from 0.5 and conceded in full by Advocate after independent primary-source verification; calibrated strictly to DP36). IDEA-1 does NOT deliver an incumbent-uncopyable structural trade-off that beats existing rivals on its core promise. (1) TCO Math Inversion: Frame.io V4 Pro ($13/member/mo annual, up to 5 members) bundles 2 TB base + 2 TB/extra member = 10 TB for $65/mo ($780/yr) with native NLE panels and unlimited free client reviewers; IDEA-1 ($40.83/mo annual) + 10 TB Cloudflare R2 ($150/mo) costs $190.83/mo ($2,290/yr \u2014 2.9x more expensive). At 10 seats / 21 TB, Frame.io Team ($220/mo) still beats IDEA-1 + R2 ($355.83/mo) by 62%. (2) Turnkey Flat-Rate Encirclement: HubDesk ($39/mo annual / $49/mo monthly flat, unlimited seats/clients, 2 TB managed storage, white-label domain, Premiere/NLE), PlayPause ($27/mo flat, 1 TB, native Premiere/AE/Resolve panels, C2C, approval PDF certificates), Dusken ($39/mo annual, unlimited storage, 5-mode Diff, Premiere/Resolve EDL/XML), and Brault ($70/mo 5 TB + $9/TB extra, 40% cheaper per TB than R2) all beat IDEA-1 on total cost, features, and zero DevOps friction. (3) Native & OSS Squeeze: Blackmagic Cloud Presentations offers $0 base SaaS + $15/TB/mo natively inside Resolve, while open-source FreeFrame natively supports BYO R2/S3/B2/MinIO with HLS, annotations, wipe comparison, and NLE XML/EDL roundtripping for $0/mo (and MediaSilo offers commercial BYO S3 on Pro). Attempting to rescue 0.5 by narrowing strictly to NDA-bound BYO-S3 shops refusing Docker collapses Plausible by >=10x without solving SOC 2/DRM needs.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Score = 0.5 (retained on strict ASB category-recurrence rubric, tagged [fermi] at 0.4 believability, with severe architectural churn caveat). Established 2-15 person commercial video agencies produce 7-15+ client deliverables continuously every month rather than facing a one-time event (0.1). However, Rude Q&A exposed an acute structural retention flaw: because all raw masters and live custom-domain embeds remain on the agency's own R2/Bunny account and IDEA-1 omits daily NLE panels, canceling IDEA-1 breaks zero live client embeds and deletes zero archived media \u2014 leaving actual retention at the fragile floor of 0.5 (and near 0.1 for seasonal 1-3 person shops). Defending 0.5 does not rescue viability (overall score remains 0.20).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 125000.0,
+        "score": 0.2,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "panel": {
+        "votes": {
+          "scorer": 1.0,
+          "attacker": -1.0,
+          "consequence_ev": -1.0
+        },
+        "weights": {
+          "scorer": 0.3,
+          "attacker": 0.4,
+          "consequence_ev": 0.3
+        },
+        "panel_weighted_score": -0.4,
+        "disagreement_flag": true
+      },
+      "ev_metrics": {
+        "p_viable_pct": 12.0,
+        "target_arr_usd": 120000.0,
+        "validation_hours": 20.0,
+        "expected_arr_usd": 14400.0,
+        "ev_per_validation_hour": 720.0
+      },
+      "reason": "Rude Q&A=BAD_IDEA | Consequence/EV=KILL | Post-Score=0.2 (EBI=0.7, Min=0.4) | PanelWeighted=-0.4. FATAL KILL (BAD_IDEA) \u2014 Deterministic Problem Score collapses 5x from 1.0 to 0.20 (unviable) after both Rude Q&A and independent Advocate verification confirmed three lethal, unfixable defects. First, the core 'BYO Cloudflare R2 escapes storage markups' thesis is mathematically inverted: Frame.io V4 Pro bundles 10 TB for $65/mo annual (5 seats, native NLE panels, free external reviewers) versus $190.83/mo for IDEA-1 + 10 TB R2 (2.9x MORE expensive), and Frame.io Team (21 TB = $220/mo) beats IDEA-1 + R2 ($355.83/mo) by 62%. Second, IDEA-1 is encircled by a 14+ rival red ocean from every angle \u2014 cheaper turnkey flat-rate rivals with NLE support (HubDesk $39-$49/mo w/ 2 TB, PlayPause $27/mo w/ native Premiere/AE/Resolve panels, Dusken $39/mo w/ unlimited storage + EDL/XML, Brault $70/mo 5 TB + $9/TB), native $0-SaaS Blackmagic Cloud Presentations ($15/TB in Resolve), $0 open-source BYO-R2/S3 FreeFrame, and MediaSilo BYO S3 on Pro. Third, the R2 + Bunny Stream architecture is split-brain and broken for 4K ProRes mobile playback without either running an FFmpeg farm or forcing non-technical video producers into dual cloud accounts with $0.15/min 4K encoding fees, egress bills, and doubled storage. Conceding Eager-Comparative from 0.5 to 0.1 drops the Problem Score to 0.20, and attempting to rescue Eager-Comparative via niche narrowing triggers a Catch-22 that collapses Plausible by >=10x (score <=0.10-0.20). Do not build and do not spend interview cycles pitching this wedge."
+    },
+    {
+      "id": "IDEA-2",
+      "title": "Flat-Workspace Agency Retainer Burn & Proof-of-Hours Billing Hub (Lens 2)",
+      "slug": "idea-2-flat-workspace-agency-retainer-b",
+      "stage": "Phase 4 \u2014 Rude Q&A + Dalio Panel",
+      "best_scenario_label": "Scenario A",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 100000,
+            "justification": "Bottom-up triangulated count places retainer-based digital marketing, SEO, branding, web-design, and software agencies (3-25 staff + rotating contractors managing 10-50 monthly retainers on QBO/Xero/Stripe) squarely at the 100,000 order of magnitude (est. ~100k-250k globally). Why 10,000 is too low: IBISWorld tracks ~119,000 US digital marketing agencies and ~160,000+ US web design businesses alone, Haus Advisors estimates 200k-250k+ marketing/creative agencies globally (excluding custom dev studios), and Harvest (70,000+ paying companies) plus Toggl (70,000+ paying teams) prove well over 100k service firms pay for time tracking. Why 1,000,000 is too high: restricting strictly to 3-25 full-time staff firms managing 10-50 recurring retainers ($2k-$15k/mo) excludes the ~60-70% solo/micro-freelancer majority and project-only shops, keeping the true specific-buyer universe well below the ~316k geometric midpoint to 1M (following DP35 without double-counting Liquid/Self-Aware/Eager).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Tracking billable hours against monthly retainers and pushing invoices to QBO/Xero/Stripe is established industry standard practice (0.5) across digital, SEO, web, and software agencies \u2014 evidenced by 70k+ Harvest customers, 70k+ Toggl teams, and widespread 2025-2026 Harvest migration discussions across r/HarvestApp and agency communities (ruling out 0.1). Does not earn 1.0 ('almost everyone cares') because a meaningful minority of value-based/productized agencies deliberately refuse hourly tracking and resist exposing raw hour logs to clients, and non-Harvest agencies on stable per-seat tools do not all feel acute pricing pain today.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Live 2026 primary pricing proves 3-25 staff retainer agencies already allocate $500-$3,000+/yr (median ~$1,000-$1,800/yr) for time tracking and retainer billing: Clockify Pro ($7.99/user/mo annual = $960-$1,920/yr for 10-20 users), Everhour Team ($8.50/user/mo annual = $1,020-$2,040/yr for 10-20 users), Toggl Track ($9-$18/user/mo = $1,080-$2,160/yr for 10 users), MinuteDock ($1,092/yr for 10 users), Keito Business with QBO/Xero ($1,908/yr), and Harvest Teams/Enterprise + Flex ($1,200-$20,000+/yr). The proposed price ($590/yr annual, $708/yr monthly) sits cleanly above the $316/yr geometric midpoint to $100 and squarely on the $1,000 order of magnitude.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Clearly not 1.0 (agencies already have an incumbent timer wired into staff habits and accounting, so they do not switch casually every month). Earns 0.1 (annual decision) over 0.01 (multi-year heavy lock-in) because: (1) agency time-tracking subscriptions (Harvest, Clockify, Everhour, Toggl) run predominantly on annual billing cycles, and Harvest's post-Bending Spoons Flex repricing is forcing explicit annual-renewal switch decisions across tens of thousands of legacy accounts in 2025-2026; (2) smaller agencies hitting 5-user free caps (Clockify/Everhour) evaluate paid switches annually; and (3) avoiding PM/CRM/ledger migration plus offering a 1-click Harvest REST API history importer lowers switching friction to a clean annual-renewal or 1st-of-month billing cutover. Risk: outside the current Harvest repricing shock, steady-state inertia sits near the 0.01-0.1 boundary.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Self-serve $59/mo credit-card SaaS sold to small digital/web/SEO/software agency founders and ops leads has no SOC 2, HIPAA, IRS, or enterprise IT procurement wall (DP10/DP37 baseline = 0.5). Live 2025-2026 r/HarvestApp and r/TimeTrackingSoftware threads confirm agencies are actively adopting solo- and indie-built Harvest alternatives (Hourhaven, Keito, HourCap, TallyHo) right now \u2014 often preferring indie vendors over PE/roll-up acquirers like Bending Spoons. QBO/Xero remain the accounting ledger of record and data is portable, limiting solo bus-factor fear. Not 1.0 because an unvetted founder lacks mission-level personal pull.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Verified live 2026 pricing and features across major incumbents and new Harvest-refugee entrants. Not 1.0 because agencies have multiple viable alternatives (Clockify Pro, Everhour, Hourhaven, Keito, MinuteDock, Plutio, Teamwork). Earns 0.5 (not 0.1) under DP36/ConvertKit calibration because NO single rival combines flat $59/mo unlimited staff + rotating contractors, native QBO/Xero/Stripe invoice sync, zero PM bloat, rolling Burn % vs. % Elapsed retainer pacing, zero-login proof-of-hours share links, and 1-click Harvest API import: (1) Harvest charges $9-$14/seat + $20-$960/mo Flex usage meters; (2) Clockify Pro ($7.99/seat), Everhour ($8.50/seat, 5-seat min), Toggl ($9-$18/seat), MinuteDock ($19 + $9/seat), and solo-built Harvest clone Hourhaven ($8-$10/seat) all tax every rotating contractor ($160-$250/mo for 12 staff + 8 contractors) and structurally cannot adopt $59/mo flat without cannibalizing 60-75% of ARPU; (3) flat-workspace rival Keito paywalls QBO/Xero behind its $159-$199/mo Business tier (2.7x-3.4x higher) and uses login-gated client portals; (4) Plutio ($49/mo) forces adopting a full PM/CRM suite; (5) TimeNTrack ($9/mo flat) lacks native QBO/Xero API sync and Harvest API import. Caveat: the wedge is strongest for contractor-heavy 8-25 staff shops (12-35+ active loggers) and weak for 3-7 seat shops where Clockify/Everhour/Hourhaven match $59/mo.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Agency time tracking, monthly retainer burn monitoring, and client invoicing are daily/monthly recurring operational necessities, producing durable recurring SaaS revenue (ruling out 0.1). Does not earn 1.0 (system-of-record lock-in) because IDEA-2 deliberately leaves task/project management in Linear/Asana/ClickUp/Notion and leaves the financial general ledger in QBO/Xero, keeping data portable while exposing the product to upward graduation churn when agencies cross 25+ staff and adopt full PSAs (Productive, Teamwork, Accelo). Matches the canonical 0.5 recurring-problem SaaS anchor (like ConvertKit).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 625000.0,
+        "score": 1.0,
+        "evidence_believability_index": 0.786,
+        "bottleneck_believability": 0.7,
+        "band": "VIABLE INDIE (>= 1.0 \u2014 can sustain an indie company)"
+      },
+      "scenario_b": null,
+      "post_rude_qa": {
+        "criteria": {
+          "plausible": {
+            "value": 100000,
+            "justification": "Maintained at 100,000 for the originally defined global 3-25 staff retainer-agency universe (anchored by 70k+ Harvest and 70k+ Toggl paying teams and >200k global digital/creative/dev agencies under DP35). Explicit caveat logged: because flat $59/mo loses on price to Clockify/Zebu/Quanta at 3-7 staff, narrowing the target to 10-25 staff contractor-heavy hourly-retainer shops would push Plausible sharply down toward the 10,000-100,000 boundary \u2014 though even holding 100,000 produces a fatal 0.02 Problem Score.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Maintained at 0.5 strictly for internal agency time tracking, retainer burn monitoring, and monthly invoicing to QBO/Xero/Stripe (standard practice across digital/web/SEO/dev agencies). Feature-level caveat logged: for client-facing raw 'proof-of-hours' live share links on fixed retainers, Self-Aware collapses to 0.1 because experienced agency owners on r/agency, r/digital_marketing, and r/PPC actively reject sharing raw hour logs with retainer clients.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Maintained at 1,000 order of magnitude based on live 2026 pricing proving 3-25 staff retainer agencies budget $500-$3,000+/yr for time tracking and billing (Clockify, Everhour, Toggl, Keito, Harvest), and IDEA-2's proposed $59/mo ($590-$708/yr) exceeds the $316/yr geometric midpoint to $100. Caveat logged: competing against Quanta ($40/mo = $480/yr) compresses net unit margin once Xero Core/Plus ($35-$245 AUD/mo + egress) and Intuit Silver ($300/mo) platform fees and annual security audit costs are absorbed.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.01,
+            "justification": "CONCEDED from 0.1 to 0.01 (FATAL): Bending Spoons acquired Harvest in June/July 2025 and rolled out Flex usage-based pricing across late 2025 and 2026 annual renewals (peaking with widespread backlash by mid-2026). As of late November 2026, an unvetted founder still needing discovery, v1 build, and Intuit App Assessment + Xero App Certification/Security Assessment cannot launch until Q1-Q2 2027 \u2014 18-24 months post-acquisition, after virtually the entire acute Harvest refugee wave has already switched and locked into Quanta, Keito, Clockify, Everhour, or Toggl. Outside a one-time PE price-shock window, agency time-tracking wired into staff habits and accounting ledgers exhibits multi-year switching inertia (once every 3-5+ years), which is squarely 0.01.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Maintained at 0.5 strictly on buyer-side procurement friction (DP37): small digital/web/SEO/dev agencies routinely buy $40-$100/mo credit-card SaaS from indie vendors without SOC 2, HIPAA, or enterprise IT committees, evidenced by live agency adoption of Quanta, Keito, Hourhaven, and Zebu. However, the original scorecard's 'zero compliance walls' claim is formally retracted: vendor-side Intuit App Assessment/annual Security Reviews and Xero App Certification/initial & annual Security Assessments impose real compliance gates on the solo developer even though the agency buyer has no procurement wall.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "CONCEDED from 0.5 to 0.1 (FATAL) even under DP36 (ConvertKit/WP Engine calibration): 0.1 is the exact honest score when a cheaper rival ALREADY solves the exact core workflow for the exact same buyer without the incumbent's structural pain. Verified directly on 2026-11-25 that Quanta (https://quanta.is) already sells flat $40/mo workspaces for up to 50 users (32% cheaper than IDEA-2's $59/mo and covering 100% of the 3-25 staff + rotating contractor band) with native QuickBooks Online and Xero sync included on EVERY plan, monthly retainers with rollover hours and overages, Stripe auto-pay, weekly grids, Mac/Windows desktop apps, and Harvest migration. Meanwhile Clockify already ships an official native Harvest API Migrator, zero-login client share links ($3.99/seat), QBO sync ($5.49/seat), and project budgets ($7.99/seat), alongside a dozen live 2025-2026 Harvest clones (Keito, Zebu, HourCap, Hourhaven, Invoisin, TimeNTrack, solidtime). IDEA-2 has zero incumbent-uncopyable wedge and is 47.5% more expensive than Quanta for fewer features.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Maintained at 0.5: agency time tracking, internal retainer burn monitoring, and monthly invoicing are recurring operational workflows (ruling out 0.1), properly capped at 0.5 rather than 1.0 because deliberately omitting PM/resource capacity leaves Asana/Linear and QBO/Xero as the true systems of record and creates upward graduation churn to full PSAs (Productive.io, Teamwork, Accelo) once agencies grow past 20-25 staff.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 12500.0,
+        "score": 0.02,
+        "evidence_believability_index": 0.786,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "panel": {
+        "votes": {
+          "scorer": 1.0,
+          "attacker": -1.0,
+          "consequence_ev": -1.0
+        },
+        "weights": {
+          "scorer": 0.3,
+          "attacker": 0.4,
+          "consequence_ev": 0.3
+        },
+        "panel_weighted_score": -0.4,
+        "disagreement_flag": true
+      },
+      "ev_metrics": {
+        "p_viable_pct": 8.0,
+        "target_arr_usd": 90000.0,
+        "validation_hours": 20.0,
+        "expected_arr_usd": 7200.0,
+        "ev_per_validation_hour": 360.0
+      },
+      "reason": "Rude Q&A=BAD_IDEA | Consequence/EV=KILL | Post-Score=0.02 (EBI=0.786, Min=0.7) | PanelWeighted=-0.4. KILL IDEA-2 (Verdict: BAD_IDEA; deterministic Problem Score collapsed from 1.00 to 0.02 \u2014 50x below the 1.0 viable indie threshold). Both the Interrogator and Advocate independently verified on 2026-11-25 that IDEA-2's core comparative thesis is factually falsified: Quanta (https://quanta.is) ALREADY ships the exact flat-rate agency time-tracking + retainer rollover/overage + native QuickBooks Online & Xero sync + Harvest migration wedge today for $40/mo flat (up to 50 users \u2014 32% cheaper than IDEA-2's $59/mo), while Clockify already offers an official Harvest API Migrator, share links ($3.99/seat), QBO sync ($5.49/seat), and budgets ($7.99/seat) alongside a dozen live 2025-2026 Harvest clones. Combined with arriving 18-24 months late to the mid-2025 Bending Spoons/Harvest renewal wave (Liquid 0.1 -> 0.01), mature retainer agencies actively rejecting client-facing raw 'proof-of-hours' links, and real 2026 Xero/Intuit certification, API fee, and annual security assessment walls, there is no salvageable wedge here. Walk away cleanly without writing code or spending field-validation cycles on this concept."
+    },
+    {
+      "id": "IDEA-3",
+      "title": "Flat-Workspace + BYO-LLM Shared Inbox for SaaS & Shopify Stores (Lens 3)",
+      "slug": "idea-3-flat-workspace-byo-llm-shared-in",
+      "stage": "Phase 4 \u2014 Rude Q&A + Dalio Panel",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 100000,
+            "justification": "Bottom-up and top-down verification both place the specific problem-holder count in the 100,000 order of magnitude (32k-316k log10 band), refuting the idea's 1,000,000+ claim without double-counting Liquid/Self-Aware/Eager (DP35). Bottom-up install bases of all major helpdesks globally (across ALL industries and company sizes): Intercom (~30,000 paying customers), Gorgias (17,000+ e-commerce brands), Help Scout (~10,000-11,500 active companies), and Freshworks (50,000+ orgs across Freshdesk/Freshservice/Freshsales, ~25,400 paying >$5k ARR) sum to ~108,000 total companies; even adding Zendesk (~100k-110k total globally) and Zoho Desk (125k+ businesses) across all non-target verticals yields ~333k total before filtering to 2-20 staff SaaS and Shopify/WooCommerce DTC stores. Top-down cross-check: global SaaS companies total only ~30,000-50,000; live Shopify stores (~2.8M-3.3M) and WooCommerce stores (~4.1M-4.3M) are 85-90% under $100k/yr (hobby/low-volume stores handling emails in Gmail/Shopify Inbox, not 500-10,000 tickets/mo). Reaching 500+ support tickets/mo (~5-15% contact rate = ~3,300-10,000 orders/mo, typically >$500k-$1M+ GMV) aligns with Shopify Plus (~47k-84k active stores) plus upper-tier SMB Shopify/WooCommerce stores (~100k-200k) plus 2-20 staff SaaS companies (~20k-30k) = ~170,000-310,000 true problem-holders globally -> 100,000.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Managing support software costs and AI deflection ROI is mainstream industry-standard practice (0.5) among scaling SaaS and DTC ops teams, backed by extensive firsthand backlash across Reddit (r/SaaS, r/shopify, r/ecommerce, r/CustomerSuccess), Hacker News, and independent blogs over Help Scout's pricing flip-flops and $0.75/resolution Envoy fees, Intercom Fin's $0.99 outcome bills, and Gorgias's seasonal ticket-volume and AI double-counting charges. It clearly clears 0.1 (far beyond thought-leader evangelism), but falls short of 1.0 ('almost everyone cares') because a meaningful slice of 2-20 person teams have not enabled per-resolution AI agents yet or treat $200-$400/mo helpdesk spend as a secondary cost compared to acquisition and fulfillment.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Primary pricing pages confirm target buyers already allocate $2,400-$18,000+/yr to support helpdesks: Intercom charges $29-$132/seat/mo + $0.99/Fin outcome + $29/seat Copilot; Help Scout charges $25-$75/seat/mo + $0.75/Envoy AI resolution; Gorgias charges $360/mo (Pro, 2,000 tickets) to $1,430/mo (Advanced, 5,000 tickets) + $0.90-$1.50/AI interaction double-counted against ticket quotas. Even measured strictly at IDEA-3's discounted Less-for-Less flat price ($59/mo = $708/yr monthly or $590/yr annual, >90% gross margin = ~$530-$640/yr net revenue since BYO-LLM removes LLM COGS), annual net revenue sits well above the $316/yr log10 midpoint between $100 and $1,000, making $1,000 the exact Fermi bucket (scoring $100 would understate realized annual net revenue by 5.3x-6.4x and buyer budget by 24x-180x).",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.01,
+            "justification": "Rip-and-replace of an entrenched customer support helpdesk happens every few years with heavy migration lock-in, matching 0.01 (identical to canonical WP Engine = 0.01 and ConvertKit = 0.01). Live market research confirms B2B SaaS teams switch helpdesks every 3-5+ years and e-commerce brands every 2-3 years. Migrating off Intercom, Help Scout, Gorgias, or Freshdesk requires rebuilding routing rules, macros, historical ticket archives, embedded widgets, SEO-ranked help-center URLs, and deep e-commerce integrations (Shopify, 3PLs, shipping trackers, return portals like Loop), while incumbents lock in discounts via annual billing. Reddit buyers explicitly cite migration cost as the main reason they tolerate high bills or plug in third-party AI layers (My AskAI, Eesel AI) instead of switching helpdesks. Calling a helpdesk an 'annual decision' (0.1) contradicts both the 2-5 year empirical switching cycle and the WP Engine/ConvertKit anchors.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Calibrated to 0.5 per DP37 ('indifferent, no red flags' \u2014 baseline for self-serve credit-card SaaS sold to 2-20 person SaaS founders and Shopify/WooCommerce merchants). At $59/mo flat on a company credit card, buyers face no enterprise procurement committee, HIPAA/IRS statutory liability, or Entra Admin Consent wall (explicitly conceded in trade-offs), and BYO-LLM keys plus customer-verified domains preserve data/key portability. Active adoption of small/indie helpdesks like Rinhelp, ThriveDesk, HelpStack, and HelpSpace confirms SMB credit-card willingness to buy from small vendors. [UNVETTED founder fit]: an unknown solo founder lacks mission-level pull (ruling out 1.0) and must still clear baseline reliability trust for inbound support email delivery and Shopify/Stripe refund OAuth scopes.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Earns a contested 0.5 under DP36 (comparable to WP Engine vs. $3/mo hosts and ConvertKit vs. Mailchimp/Sendy), NOT 1.0 and NOT 0.1. Against the dominant incumbents where >95% of target buyers sit \u2014 Intercom ($29-$132/seat + $0.99/Fin outcome), Help Scout ($25-$75/seat + $0.75/Envoy resolution), Gorgias ($60-$1,430/mo ticket tiers + $0.90-$1.50/AI double-counted against ticket quotas), Richpanel ($99/seat + $0.20/AI), Featurebase ($29-$99/seat + $0.49/Fibi), and Plain ($45-$99/seat + credit packs) \u2014 IDEA-3 makes a structural trade-off (flat $59/mo unlimited seats/tickets + 100% BYO-LLM zero token markup + draft-first guardrails + 1-click Shopify/Stripe write actions) that incumbents refuse to copy because it cannibalizes their seat and AI-markup ARR. Verified mid-tier rivals also leave gaps: Crisp ($45-$95/mo) caps seats at 4-10, meters Hugo AI credits ($5-$25), and gates ticketing at $295/mo; BoldDesk ($99/mo Scale AI) caps AI at 500 credits and lacks Shopify/Stripe macros; Re:amaze caps its $59 flat tier at 500 conversations; Tidio caps seats at 10 and meters billable conversations plus Lyro AI ($39+/mo); ThriveDesk charges $99-$129/mo for unlimited seats and meters Neo AI. However, live 2026 verification (DP26) reveals this 0.5 is tightly contested rather than clean whitespace: Rinhelp ($49/mo flat whole team, native Shopify/Stripe with human-approved refund/cancel actions, 5,000 AI replies/mo, though obscure with manual Shopify Dev Dashboard setup and vendor-capped AI rather than BYO-LLM), HelpStack (\u20ac29/mo flat unlimited agents + Shopify + AI drafts), Supplo ($29-$79/mo + $0.04/AI resolution), and FreeScout + PikaPods + FreeScout GPT Pro (~$23/mo managed, unlimited seats, BYO OpenAI key, though Shopify/Stripe modules are strictly read-only with no refund/cancel actions) already crowd the low-cost flat-rate lane, while decoupled AI overlays (My AskAI, Eesel AI, Chatbase) let teams cut Fin/AI bills without switching helpdesks. A clear cost-sensitive, AI-savvy sub-segment of SaaS founders and DTC ops burned by per-resolution AI taxes would still choose IDEA-3 specifically for managed unlimited seats + pure BYO-LLM + 1-click Shopify/Stripe write actions, justifying 0.5 over 0.1.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 1.0,
+            "justification": "A shared support inbox is core operational system-of-record infrastructure: once a SaaS startup or DTC store routes support@domain.com MX/SPF/DKIM, embeds the live chat widget, imports ticket history, configures saved macros and RAG help docs, and trains 2-20 agents on Shopify/Stripe order workflows, switching away is disruptive. Live SaaS and e-commerce support benchmarks confirm 3-5+ year retention in B2B SaaS and 2-3 year retention in e-commerce despite pricing dissatisfaction \u2014 the exact mirror image of Liquid = 0.01 and directly aligned with WP Engine (1.0). SMB business-failure churn and graduation of >20-staff teams to omnichannel/SOC 2 suites are real drags, but system-of-record lock-in earns 1.0 over 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 125000.0,
+        "score": 0.2,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Honestly drops 10x from Scenario A's 100,000 to 10,000 due to narrowing strictly to high-volume, non-enterprise support teams (5-20 support agents, 2,000-25,000+ monthly tickets) ALREADY operating on Zendesk, Intercom, Gorgias, or Help Scout whose AI volume justifies a $399/mo flat BYO-LLM overlay. Bottom-up verification: combined global customer bases of Zendesk (~100k-110k), Intercom (~30k), Gorgias (17k+), and Help Scout (~10k-11.5k) total ~160k-170k organizations across all sizes and industries; excluding <1,500-ticket/mo small stores (where $399/mo lacks ROI vs. My AskAI/Help Scout Plus) and >25-agent enterprise orgs (which hit SOC 2/FedRAMP walls) leaves roughly ~15,000-35,000 mid-tier high-volume SaaS and DTC support teams globally \u2014 squarely in the 10,000 Fermi bucket (log10 midpoint to 100k is 31,623).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Kept honestly at 0.5 (not inflated to 1.0). Even among 2,000-25,000 ticket/mo teams on Zendesk, Intercom, Gorgias, and Help Scout, cutting AI resolution bills and defending support headcount budgets is widespread industry-standard practice \u2014 confirmed by active Reddit/HN threads recommending decoupled AI layers (eesel AI, My AskAI, Aissist) to avoid Fin/Gorgias/Zendesk AI overages \u2014 yet a meaningful minority on bundled annual contracts still absorb native AI pricing or avoid AI replies for brand-voice reasons, keeping Self-Aware strictly at 0.5 rather than 'almost everyone cares' (1.0).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 10000,
+            "justification": "Genuinely moves 10x from $1,000 (Scenario A) to $10,000 by repricing upmarket to $399/mo flat ($3,990/yr annual / $4,788/yr monthly) for high-volume 2,000-25,000 ticket/mo teams where realized net annual revenue (>90% gross margin due to 100% BYO-LLM = ~$3,600-$4,300/yr) clears the $3,162/yr log10 midpoint cleanly. Live primary pricing confirms these exact buyers currently face $14,000-$54,000+/yr AI bills at 2,000-5,000 AI tickets/mo: Zendesk AI (~$3,500-$4,500/mo for 2,000 resolutions + 10 Copilot seats), Intercom Fin (~$1,980-$4,950/mo at $0.99/outcome), Gorgias AI (~$1,800-$3,000+/mo at $0.90-$1.50/interaction), eesel AI ($1,749/mo for 5,000 credits = $20,988/yr), and Macha AI (~$1,200/mo at ~$0.40/ticket for 3,000 tickets = $14,400/yr). Paying $399/mo flat + ~$25-$60/mo raw API tokens delivers 75-90% immediate savings ($10k-$45k/yr) while anchoring ACV solidly in the $10,000 Fermi tier.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Genuinely moves 10x from 0.01 (Scenario A) to 0.1 ('annual/quarterly tool evaluation') by completely eliminating helpdesk rip-and-replace migration. Buyers keep their entrenched Zendesk, Intercom, Gorgias, or Help Scout workspace intact \u2014 zero MX/SPF/DKIM email cutover, zero historical ticket export, zero macro/routing rebuild, zero help-center SEO breakage, and zero 3PL/Loop/Recharge integration risk. As Reddit threads and the traction of drop-in layers (eesel AI, My AskAI, Macha AI, Aissist) confirm, teams strongly prefer plugging a 30-minute OAuth/webhook AI overlay into their existing queue in draft-only shadow mode. Kept honestly at 0.1 rather than 1.0 because B2B support ops teams still review and approve $399/mo AI automation vendors on quarterly/annual budget cycles or pre-BFCM/bill-shock reviews, not continuously every week.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5 per DP37 ('indifferent, no red flags' for credit-card B2B SMB/mid-market software). Capping the target segment at 5-20 agent SaaS and DTC support teams avoids Fortune 500 SOC 2 / FedRAMP / Entra procurement walls (DP10), and market leaders like eesel AI, My AskAI, Macha AI, and Aide AI prove small/bootstrapped SaaS vendors actively sell $199-$1,749/mo drop-in Zendesk/Intercom/Gorgias AI plugins on corporate credit cards. Pure BYO-LLM routing directly to the buyer's own OpenAI/Anthropic Zero-Data-Retention API account mitigates third-party LLM privacy friction, though an [UNVETTED] indie founder still has no mission-level pull (ruling out 1.0) and must pass helpdesk app-store review and baseline reliability checks.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Remains an honest 0.5 (not inflated to 1.0), now substantially cleaner than Scenario A because it exits the crowded $23-$49/mo flat-inbox race (Rinhelp, HelpStack, FreeScout+PikaPods) and targets a verified structural gap in the drop-in helpdesk AI market. Live 2026 research confirms EVERY mainstream native AI agent meters per-resolution or per-seat heavily \u2014 Zendesk AI ($50/agent Copilot + $1.50-$2.00/res), Intercom Fin ($0.99/outcome + $29/seat Copilot), Gorgias AI ($0.90-$1.50/interaction double-counted against ticket quotas), Help Scout Envoy ($0.75/res) \u2014 AND every leading third-party drop-in overlay STILL meters volume/credits: eesel AI ($299/mo for 500 credits up to $1,749/mo for 5,000 credits), Macha AI ($299/mo for 750 tickets, ~$0.40/ticket), My AskAI ($149-$199+/mo + ~$0.10/ticket), Aissist.io ($0.09/interaction, up to $0.60/chat), and Aide AI (tiered up to $499/mo by reply volume). None of these commercial drop-in apps offer flat-rate unlimited tickets + 100% BYO OpenAI/Anthropic/Gemini API keys because usage-based AI markup is their core expansion revenue. For a 3,000-10,000 ticket/mo team, paying $399/mo flat + ~$25-$60/mo raw API tokens saves $1,000-$4,000+/mo with zero helpdesk migration and direct customer ZDR privacy. Capped at 0.5 (not 1.0) because technical teams can hack DIY Zapier/Pipedream/AWS Lambda webhooks, Help Scout Plus already bundles agent-side internal drafts, and lower-volume stores (<1,500 tickets/mo) can use My AskAI/Aissist cheaply without managing API keys.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Honestly reduced from 1.0 (Scenario A) to 0.5 ('recurring revenue from recurring problem'). Giving up the underlying system-of-record inbox eliminates the rip-and-replace lock-in that kept customers trapped for 2-5 years: while indexed historical tickets, brand-voice prompt tuning, confidence guardrails, and Shopify/Stripe context rules create meaningful operational stickiness for a daily support workflow, a buyer can still disconnect an OAuth AI overlay far more easily than migrating an entire helpdesk if native AI pricing drops dramatically.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 625000.0,
+        "score": 1.0,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.4,
+        "band": "VIABLE INDIE (>= 1.0 \u2014 can sustain an indie company)"
+      },
+      "post_rude_qa": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Unchanged at 10,000 per DP35 (never double-counting Eager-Comparative inside Plausible). Combined Zendesk (~100k-110k), Intercom (~30k), Gorgias (17k+), and Help Scout (~10k-11.5k) customer bases total ~160k-170k organizations globally; filtering strictly by the stated problem-holder profile (5-20 agents, 2,000-25,000+ monthly tickets) places the global problem-holder count in the 10,000 Fermi bucket (~15k-35k orgs).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5. Cutting AI resolution costs is a widely discussed pain among high-volume Zendesk/Intercom/Gorgias/Help Scout teams, though a meaningful minority stays on native bundled contracts or avoids AI replies for brand-voice control.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 10000,
+            "justification": "Kept at $10,000 solely to reflect the tested $399/mo flat ($3,990/yr annual / $4,788/yr monthly, >90% gross margin clearing the $3,162/yr log10 midpoint) pricing tier anchored against live drop-in pricing ($149-$1,749/mo). Critically, live competitor floors (Aide Pro $149/mo, ZenBriefr $149/mo flat, Stylo $15/seat) make $399/mo unsustainable for a read-only overlay; repricing down to $99-$149/mo would immediately collapse Lucrative 10x to $1,000 as well.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1 ('quarterly/annual tool evaluation'). Removing helpdesk rip-and-replace avoids 2-5 year migration freezes, but 5-20 agent support ops teams still review $4,000-$4,800/yr AI automation vendors on quarterly/annual budget or pre-BFCM cycles alongside security review.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Conceded and lowered from 0.5 to 0.1 per DP10 (not covered by DP37's self-serve SMB baseline). Scenario B targets 5-20 agent mid-market SaaS and DTC teams ($5M-$50M ARR/GMV) and requires OAuth read/write across 100% of customer support tickets (PII, billing, credentials), Shopify/Stripe order/billing read access, vendor-hosted RAG indexing of ticket history, and custody of live OpenAI/Anthropic API keys. Retracting the misleading 'direct customer ZDR privacy' claim confirms the vendor backend is a full PII subprocessor. Live vendor pages confirm SOC 2 Type II is table stakes among competitors (Aide, Intercom, Help Scout, Zendesk) for 5-20 agent B2B SaaS teams bound by customer DPAs, while Zendesk prohibits third-party apps/bots from using raw customer API tokens or private OAuth clients (permanently deactivating legacy Support API tokens April 30, 2027) and mandates Global OAuth + Marketplace security vetting (mirrored by Intercom App Store review). An [UNVETTED] solo indie founder without SOC 2 Type II, an annual human pentest, or an established security entity hits a hard institutional trust and distribution gate.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Conceded and lowered from 0.5 to 0.1 per DP36 on primary live 2026 pricing proof. Across every target host helpdesk, cheaper, native, or free rivals already solve the exact core workflow for the exact same buyer without the incumbent's structural pain: (1) Aide (aide.app) integrates into Zendesk, Gorgias, and Front with unlimited seats at $39/mo (1,000 AI replies), $149/mo (4,000 AI replies), and $499/mo (15,000 AI replies; ~20% lower annually) \u2014 delivering BOTH drafts and live autonomous Shopify write actions (WISMO, returns, cancellations, address edits), zero BYOK ops risk, and SOC 2 Type II; (2) Because Scenario B concedes write actions ('draft-first + read-only Shopify/Stripe'), it competes directly against agent-drafting copilots that undercut $399/mo: Help Scout Plus ($45/seat) bundles Unlimited AI Drafts for $0 extra, Intercom Copilot unlimited is $29/seat annual ($145-$290/mo for 5-10 seats), Stylo AI (askstylo.com) is $12.75-$15/agent/mo ($64-$300/mo for 5-20 agents), ZenBriefr (zenbriefr.com) is $149/mo flat for unlimited Zendesk agents, and Adiacent's ChatGPT Assistant / Zendesk Marketplace BYOK apps already offer BYOK OpenAI drafts; (3) On Gorgias, third-party API bot replies still count as billable helpdesk tickets (docs.gorgias.com); and (4) technical SaaS teams have free self-hosted n8n Zendesk/Intercom/Gorgias OpenAI RAG templates (~$20/mo hosting).",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5 ('recurring revenue from recurring problem', not 1.0 lock-in). An OAuth AI overlay has minimal switching friction (disconnectable in 60 seconds) and high vulnerability to native helpdesk bundling (as Help Scout Plus already demonstrated with unlimited drafts) or migration to managed rivals like Aide.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 25000.0,
+        "score": 0.04,
+        "evidence_believability_index": 0.743,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "panel": {
+        "votes": {
+          "scorer": 1.0,
+          "attacker": -1.0,
+          "consequence_ev": 1.0
+        },
+        "weights": {
+          "scorer": 0.3,
+          "attacker": 0.4,
+          "consequence_ev": 0.3
+        },
+        "panel_weighted_score": 0.2,
+        "disagreement_flag": true
+      },
+      "ev_metrics": {
+        "p_viable_pct": 22.0,
+        "target_arr_usd": 160000.0,
+        "validation_hours": 20.0,
+        "expected_arr_usd": 35200.0,
+        "ev_per_validation_hour": 1760.0
+      },
+      "reason": "Rude Q&A=BAD_IDEA | Consequence/EV=PURSUE_VALIDATION | Post-Score=0.04 (EBI=0.743, Min=0.7) | PanelWeighted=0.2. UNANIMOUS KILL (BAD_IDEA) \u2014 Verified Problem Score collapses from 1.00 to 0.04 ((10,000 * 0.5 * 10,000 * 0.1 * 0.1 * 0.1 * 0.5) / 625,000 = 0.04). Both the Rude Q&A interrogation and the Advocate's independent live web verification confirm a fatal, unpatchable structural failure across IDEA-3 Scenario B (with Scenario A already unviable at liquid = 0.01 / lucrative = $1,000): (1) Pricing-Viability Pincer (Eager-Comparative = 0.1) \u2014 at $399/mo + raw LLM tokens for a read-only overlay, Scenario B loses head-to-head to Aide ($149/mo for 4k replies, $499/mo for 15k replies, unlimited seats, live Shopify write actions, SOC 2 Type II), ZenBriefr ($149/mo flat unlimited Zendesk agents), Stylo ($15/seat), Intercom Copilot ($29/seat annual), Help Scout Plus ($0 extra unlimited drafts), Zendesk Marketplace BYOK apps, and free self-hosted n8n workflows, while cutting price to $99-$149/mo drops Lucrative 10x to $1,000; (2) BYOK Market Split \u2014 non-technical DTC support leads reject managing LLM API quotas/BFCM rate limits while technical SaaS teams self-host free n8n templates; and (3) Institutional Trust & Platform Gatekeeping Wall (Eager-Identity = 0.1, DP10) \u2014 ingesting 100% of support ticket PII + Stripe/Shopify data into vendor-hosted RAG servers requires SOC 2 Type II / pentests / GDPR DPAs for 5-20 agent SaaS buyers and formal Global OAuth Marketplace security vetting across four competing hosts (with Zendesk permanently deactivating legacy API tokens April 30, 2027). Archive cleanly to KILLED-IDEAS.md."
+    }
+  ]
+}

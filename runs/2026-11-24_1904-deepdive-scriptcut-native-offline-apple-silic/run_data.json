@@ -1,0 +1,140 @@
+{
+  "run_id": "2026-11-24_1904-deepdive-scriptcut-native-offline-apple-silic",
+  "run_type": "deep_dive",
+  "ambition": "indie",
+  "survivors": [],
+  "killed": [
+    {
+      "id": "IDEA-1",
+      "title": "ScriptCut Native \u2014 Offline Apple-Silicon Text-Based Rough-Cut, Bad-Take & Caption Editor for Talking-Head Creators",
+      "slug": "idea-1-scriptcut-native",
+      "stage": "Deep Dive \u2014 Rude Q&A + Dalio Panel",
+      "best_scenario_label": "Scenario A",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 100000,
+            "justification": "Bottom-up and top-down checks converge on ~150k\u2013350k qualified buyers (100k order of magnitude, failing the 1M bar under DP14). Bottom-up: ~3M monetized YouTube Partner channels + ~3M\u20135M course creators + ~300k\u2013500k active video podcasts globally (https://demandsage.com, https://amworldgroup.com, https://ruzuku.com), filtered to talking-head format (~20\u201330%), ongoing 2+/mo publishing cadence (excluding one-off course shoots), self-editing non-NLE creators (excluding FCP/Resolve/Premiere regulars), and Apple Silicon Macs (~25\u201335% global creator share; 15\u201316% global Mac OS, >40% US, >60% developed-market video creators per https://commandlinux.com) yields ~200k\u2013350k. Top-down sanity check: ~65M\u201375M active Apple Silicon Macs \u00d7 0.2%\u20130.5% active 2+/mo self-editing talking-head creators = ~130k\u2013375k (1M would absurdly require ~1.5% of every Apple Silicon Mac owner on Earth).",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Automated rough-cutting, silence/filler removal, and auto-captions are mainstream creator practice in 2026: Descript generates ~$50M\u2013$55M ARR (https://arr.club, https://whoearns.com), 10+ commercial competitors actively serve this workflow, and active Reddit threads (r/Descript, r/NewTubers, r/macapps, r/finalcutpro) explicitly search for faster, offline, non-metered Mac alternatives. Scored 0.5 ('industry standard practice') rather than 1.0 because a material minority either outsource editing, enjoy manual NLE timelines, or publish raw unedited talking-head clips.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 100,
+            "justification": "Verified across 10 live commercial pricing pages that self-editing talking-head creators routinely allocate ~$70\u2013$300/yr to rough-cut, transcription, and caption software: Descript $192\u2013$600/yr (https://shade.inc, https://enrichlabs.ai), Gling $120\u2013$240/yr (https://videdge.ai), CapCut Pro $179.99/yr (https://reel2recipe.com), Detail Mac Pro \u20ac179/yr (https://apple.com), Apple Creator Studio $129/yr (https://finalcuthub.com), Screen Studio $108/yr (https://screen.movie), Vrew ~$105/yr (https://vrew.ai), TimeBolt $97/yr (https://promtable.com), Recut $99\u2013$149 one-time (https://getrecut.com), and BlitzCut $69.99/yr (https://blitzcutai.com). $10/yr is demonstrably too low and $1k/yr belongs to agencies, pinning Lucrative at $100/yr.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 1.0,
+            "justification": "Adopted fresh on the creator's very next raw 4K recording via a 5-minute DMG or Mac App Store download with zero cloud library migration, zero end-consumer switching rails (outputs standard MP4 or FCPXML), zero team procurement, and year-round 2+/mo publishing cadence (DP19/DP24). While a minority on annual Descript/CapCut plans may wait for renewal, $99/yr is a low-friction discretionary tool purchase routinely trialed per-video on any given week. Scored 1.0 at [fermi] 0.4 because actual annual-plan switching friction is unmeasured.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Non-regulated public creator media processed 100% locally on the user's Mac eliminates SOC 2, PII/HIPAA, and institutional procurement barriers (DP10/DP22). Solo and tiny-team indie Mac utilities routinely win paying creators in this exact segment\u2014proven by Screen Studio ($1.2M\u2013$2.4M ARR at $108/yr, https://trends.vc / https://whoearns.com), MacWhisper (https://embertype.com), Recut ($99\u2013$149, https://getrecut.com), and BlitzCut (https://blitzcutai.com). Buyers are pragmatic rather than emotionally devoted to an unknown founder (0.5, not 1.0), provided the app is Apple-notarized and proves itself on a free-trial clip.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Against dominant cloud-metered incumbents (Descript $192\u2013$600/yr, Gling $120\u2013$600/yr, CapCut Pro $179.99/yr, Vrew ~$105/yr) and pro NLEs (Final Cut Pro, DaVinci Resolve Studio $295), 100% offline Apple Silicon speed with zero uploads and zero minute/credit meters is a structural trade-off cloud SaaS incumbents cannot copy without cannibalizing metered ARR, and Reddit threads confirm no consensus offline Mac Descript replacement exists yet. However, the pitch missed live Apple Silicon rivals\u2014BlitzCut ($69.99/yr or $129.99 lifetime, native Mac text-based editing + silence/captions + FCPXML, though lacking automated bad-take collapse and carrying mixed/low review volume and cloud-credit edges), Cut Video Gaps (free 15 hrs/mo offline Whisper silence/filler/bad-take trimmer without text-doc editing or captions), and Detail (\u20ac179/yr camera-first Mac studio with shallow text editing and offline quirks). No single rival cleanly unifies the full wedge yet, earning 0.5 at low believability (0.4), but the moat is execution craft rather than uncopyable tech and sits one competitor release away from 0.1.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Publishing 2+ talking-head videos every month creates a genuinely recurring weekly/monthly editing workload, and annual recurring subscriptions are proven in this exact workflow by Descript ($50M\u2013$55M ARR) and Screen Studio ($1.2M\u2013$2.4M ARR at $108/yr after dropping one-time licenses). However, local-file editing has zero data lock-in (blocking 1.0), creator SaaS suffers high early churn when creators stop publishing, Apple Final Cut Pro ($129/yr Creator Studio) is steadily expanding on-device AI transcription, and offering a $149 one-time license risks cannibalizing Year-2 renewals toward 0.1. Scored 0.5 on the recurring $99/yr primary model with 0.4 believability until real renewal behavior is tested.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 625000.0,
+        "score": 1.0,
+        "evidence_believability_index": 0.529,
+        "bottleneck_believability": 0.4,
+        "band": "VIABLE INDIE (>= 1.0 \u2014 can sustain an indie company)"
+      },
+      "scenario_b": null,
+      "post_rude_qa": {
+        "criteria": {
+          "plausible": {
+            "value": 100000,
+            "justification": "Unchanged at 100,000 (~150k\u2013350k post-filter global Apple Silicon solo talking-head creators publishing 2+/mo without dedicated editors, further narrowed once remote-guest podcasters and collaborative teams anchored on Descript/Riverside are excluded). Leaves zero arithmetic buffer above the 1.0 indie threshold when Eager-Comparative and Enduring drop to 0.1.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5. Automated rough-cutting, silence/filler removal, and captions are mainstream creator practice with 15+ commercial competitors and active Reddit demand\u2014meaning buyers know the problem well, which also explains why multiple local Apple Silicon tools already occupy the floor.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 100,
+            "justification": "Unchanged at $100/yr. Verified across 12+ live creator tool pricing pages ($49\u2013$149 one-time for Aulio Studio/Recut; $69.99\u2013$179.99/yr for BlitzCut, TimeBolt, Screen Studio, cinemaOS, Apple Creator Studio, CapCut Pro, Gling), confirming individual talking-head creators sit squarely in the $100/yr order of magnitude\u2014though perpetual-license anchoring from Recut ($99\u2013$149 one-time) compresses realized multi-year LTV downward.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 1.0,
+            "justification": "Unchanged at 1.0 ([fermi], 0.4 believability). A standalone local Mac desktop utility can still be downloaded and trialed on the creator's next raw video with zero cloud library migration, zero end-consumer switching rails, and year-round publishing cadence (DP19/DP24). However, high trial liquidity cuts both ways when 5-minute trials expose VFR/alignment rough edges and creators immediately bounce back to Recut, Descript, or CapCut.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5. Non-regulated public creator media processed locally on macOS avoids SOC 2, PII/HIPAA, and enterprise IT procurement gates (DP10/DP22), and creators routinely buy notarized indie Mac utilities (Recut, MacWhisper, Screen Studio, Aulio Studio) after a free trial\u2014though pragmatic buyers show zero loyalty to an unvetted solo founder over established perpetual-license tools like Recut.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "CONCEDED (0.5 -> 0.1) and upgraded to 0.7 believability after independent dual verification across live 2026 product/pricing pages. The original 0.5 depended on a factually outdated claim that Recut was silence-only and no local Mac app unified the wedge. In reality, Recut (https://getrecut.com) already ships local transcription, doc-style transcript editing, automatic filler-word and retake highlighting with 1-click best-take selection, 1-click styled auto-captions, multicam, MCP control, and NLE XML export for $129\u2013$149 one-time ($99 promo); Cut Video Gaps (https://cutvideogaps.com) provides 100% offline Apple Silicon Whisper silence/filler/bad-take removal + XML for $0 (15 hrs/mo beta); BlitzCut (https://blitzcutai.com) occupies native Mac text-edit + animated captions (despite partial cloud-AI edges); cinemaOS (https://mntm-studios.com) provides offline Apple Silicon Paper Edit + full finishing at $9.99/mo; Aulio Studio (https://auliostudio.com) sells local voice cleanup + filler removal for $49 one-time; and Apple Creator Studio ($129/yr) + DaVinci Resolve Studio ($295 one-time) cap the ceiling. Sandwiched between $0\u2013$149 one-time native rivals below and $129/yr Apple / $295 Resolve above with zero uncopyable tech over WhisperKit/CoreML, Eager-Comparative is strictly 0.1 (DP8, DP20, DP23).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.1,
+            "justification": "CONCEDED (0.5 -> 0.1) and upgraded to 0.7 believability after dual verification of creator churn benchmarks and Mac utility pricing dynamics. Three independent forces destroy recurring durability: (1) perpetual-vs-subscription pincer\u2014offering $149 one-time alongside $99/yr self-cannibalizes power creators into non-renewing perpetual licenses, whereas subscription-only triggers the r/macapps backlash and clone wave Screen Studio faced while being undercut by Recut's $129\u2013$149 perpetual anchor; (2) zero local-file data lock-in combined with 9%\u201310.5% monthly creator SaaS churn (~70%\u201375%+ annualized, https://retentioncheck.com) and 73%\u201375% Year-1 podfade (median 3 episodes, https://www.podchaser.com); and (3) ongoing platform absorption via Apple Creator Studio ($129/yr) bundling Final Cut Pro with on-device Transcript Search and Captions plus Screen Studio ($108/yr) shipping local Whisper captions.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 25000.0,
+        "score": 0.04,
+        "evidence_believability_index": 0.614,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "panel": {
+        "votes": {
+          "scorer": 1.0,
+          "attacker": -1.0,
+          "consequence_ev": -1.0
+        },
+        "weights": {
+          "scorer": 0.3,
+          "attacker": 0.4,
+          "consequence_ev": 0.3
+        },
+        "panel_weighted_score": -0.4,
+        "disagreement_flag": true
+      },
+      "ev_metrics": {
+        "p_viable_pct": 15.0,
+        "target_arr_usd": 150000.0,
+        "validation_hours": 18.0,
+        "expected_arr_usd": 22500.0,
+        "ev_per_validation_hour": 1250.0
+      },
+      "reason": "KILL \u2014 BAD_IDEA (Adjusted Problem Score: 0.04, down 25x from 1.0). Both sides independently verified that ScriptCut Native's central differentiation premise is factually dead in 2026: Recut (https://getrecut.com) ALREADY ships local on-device transcription, doc-style transcript editing, automatic filler-word and retake highlighting with 1-click best-take selection, 1-click styled auto-captions, multicam sync, MCP agent integration, and battle-tested FCPXML/Resolve/Premiere/CapCut export for a $129\u2013$149 one-time perpetual license ($99 promo). Combined with Cut Video Gaps ($0 offline Apple Silicon Whisper beta), BlitzCut (native Mac text editing + animated captions), cinemaOS ($9.99/mo offline Apple Silicon Paper Edit studio), Aulio Studio ($49 one-time local voice cleanup + filler removal), Apple Creator Studio ($129/yr), and DaVinci Resolve Studio ($295 one-time), Eager-Comparative collapses from 0.5 to 0.1 (believability 0.7). Simultaneously, perpetual-vs-subscription self-cannibalization, Recut's perpetual anchor, 70%\u201375%+ annualized creator churn / 73%\u201375% Year-1 podfade, zero local-file lock-in, and Apple's on-device AI absorption collapse Enduring from 0.5 to 0.1 (believability 0.7). Deterministic score: 100,000 \u00d7 0.5 \u00d7 100 \u00d7 1.0 \u00d7 0.5 \u00d7 0.1 \u00d7 0.1 \u00f7 625,000 = 0.04. Layered on top of a 12\u201318 month CoreMedia/forced-alignment/VFR engineering tarpit and the absence of Screen Studio's visible viral loop, building ScriptCut Native as an unvetted solo founder has deeply negative Expected Value. Do NOT build."
+    }
+  ]
+}

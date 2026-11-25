@@ -1,0 +1,108 @@
+[
+  {
+    "deliberate_trade_offs": [
+      "Read-only variance auditing and dispute-packet export only \u2014 never writes back to Shopify, QuickBooks/NetSuite, or the 3PL WMS (full-stack ERPs like Cin7 and Fulfil.io sell two-way sync).",
+      "Ingests structured billing CSV exports from Extensiv (3PL Central), ShipHero, Deposco, and ShipBob only \u2014 refuses scanned handwritten PDFs, custom EDI 210 freight bills, and multi-modal LTL/ocean brokerage audits (enterprise freight auditors like Loop serve complex EDI freight).",
+      "Flat monthly subscription with zero percentage-of-recovery commission \u2014 refuses hands-off phone negotiation with warehouse reps (contingency auditors like BillSharp take 20%\u201325% of recovered cash indefinitely for brands that prefer zero upfront fee).",
+      "Audits contracted 3PL fulfillment, storage, and DIM-weight billing lines only \u2014 does not renegotiate UPS/FedEx parcel contracts or file carrier damage claims."
+    ],
+    "id": "IDEA-1",
+    "indie_feasibility": "Buildable and supportable by 1\u20132 technical founders in 6\u20138 weeks: connects to one stable read-only API (Shopify Fulfillment/Orders) plus deterministic parsers for 4 dominant 3PL WMS billing CSV schemas (Extensiv, ShipHero, Deposco, ShipBob) and a rule-based rate-card calculator (pick tiers, DIM divisor 139 vs 166, storage proration, duplicate fee checks). Constraining scope to structured WMS exports avoids the 2nd-order support trap of custom OCR across hundreds of bespoke warehouse PDFs. Structural persistence (DP4): Implentio ($1,000\u2013$2,000+/mo) and Octup ($2,500/mo) carry VC sales teams chasing $25M+ accounts, while FulfillAudit ($99/mo) focuses primarily on ShipBob. [UNVETTED] Founder-fit assumption: founder is comfortable onboarding the first 10 brands manually to map signed 3PL rate-card clauses into structured rules and understands basic e-commerce fulfillment billing math.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Switching to a new 3PL warehouse, hiring a full-time Supply Chain Analyst ($80k+/yr), paying a 20%\u201325% contingency recovery agency (BillSharp), or buying an enterprise operations suite (Implentio at $1,000\u2013$2,000+/mo, Octup at $2,500/mo, Fulfil.io at $4,000/mo).",
+      "obviated_below": "Downloading 10,000-line monthly 3PL billing CSVs, pasting raw invoices into ChatGPT/Claude, paying offshore VAs to cross-check Shopify fulfillment dates against signed PDF rate cards in Excel, and manually isolating duplicate return or storage lines.",
+      "promise_one_up": "Recover 3%\u201310% in overbilled 3PL fulfillment and storage fees every month before 30-day contract forfeiture deadlines close, without surrendering 25% of your recovered margin to a contingency agency.",
+      "your_level": "Audit every line of a regional 3PL monthly invoice against your signed rate card and Shopify fulfillment records to generate an itemized dispute packet within 48 hours of invoice receipt."
+    },
+    "one_liner": "Read-only rate-card variance auditor that checks Extensiv, ShipHero, Deposco, and ShipBob 3PL billing CSVs against Shopify fulfillments and signed warehouse contracts to generate itemized dispute packets before 30-day forfeiture deadlines expire.",
+    "price": "$249/mo flat (up to 15,000 orders/mo and 2 warehouses; $2,490/yr annual)",
+    "pricing_strategy": "Less for Less",
+    "signal_ids": [
+      "SIG-5",
+      "SIG-6"
+    ],
+    "specific_buyer": "Operations Managers, Supply Chain Leads, or Finance Controllers at $2M\u2013$25M GMV Shopify DTC and CPG brands shipping 1,500\u201315,000 orders/month through outsourced 3PL warehouses running Extensiv (3PL Central), ShipHero, Deposco, or ShipBob WMS.",
+    "specific_problem": "Brands treat dense multi-thousand-line 3PL invoices like utility bills and auto-pay them under strict 30-day dispute clauses (such as ShipBob Section 5.7), permanently forfeiting 3%\u201310% in monthly overcharges from unamended pick/pack rate drift, DIM divisor mismatches (139 vs. 166), Day-1 peak-vs-average pallet storage traps, duplicate return handling, and ghost recurring account fees \u2014 while enterprise audit suites (Implentio $1,000\u2013$2,000+/mo, Octup $2,500/mo) price them out and contingency agencies take 20%\u201325% of recovered cash forever.",
+    "title": "Regional 3PL Rate-Card Variance & 30-Day Dispute Auditor for Shopify Brands"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Invoice-statement-first ingestion (monthly distributor and vendor CSV/PDF bills from Pax8, Sherweb, Huntress, SentinelOne, and backup vendors) instead of live polling 40+ upstream vendor usage APIs \u2014 explicitly avoids Gradient MSP's silent API-breakage failure mode at the cost of monthly/bi-weekly reconciliation rather than real-time daily seat counts.",
+      "Audits net-dollar invoice variance and pushes an approval queue to ConnectWise Manage, Autotask, or Syncro \u2014 refuses to build a general-purpose PSA workflow automation IDE (Rewst serves MSPs with a dedicated Python/Jinja engineer at $750\u2013$1,100+/mo).",
+      "Supports ConnectWise Manage, Autotask, and Syncro PSAs only at launch \u2014 deliberately skips HaloPSA (where BillingBot already sells a $99/mo native-focused tool) and enterprise custom ERP billing (CloudOlive).",
+      "Never auto-edits live client agreements without human sign-off \u2014 every flagged proration, missing credit, or unbilled seat requires one-click approval before updating PSA recurring additions."
+    ],
+    "id": "IDEA-2",
+    "indie_feasibility": "Buildable and supportable by 1\u20132 technical founders in 8\u201310 weeks: integrates with just 3 core PSA billing APIs (ConnectWise Manage, Autotask, Syncro) and parses standardized monthly distributor/vendor invoice statements (Pax8, Sherweb, plus top 5 MSP security/backup CSV formats). Rejecting 40+ live upstream vendor usage APIs eliminates the primary 2nd-order engineering/support sink that breaks small-team MSP reconcilers. Structural persistence (DP4): Rewst ($750\u2013$1,100+/mo) and CloudOlive chase large MSPs with automation staff, Sync 365 License stays M365-only, BillingBot stays HaloPSA-only, and native PSA syncs read active seat counts rather than distributor invoice credit/proration lines. [UNVETTED] Founder-fit assumption: founder is willing to learn PSA recurring-agreement APIs and Microsoft NCE proration/co-termination accounting quirks via early design partners.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Hiring a part-time billing clerk or dedicated Rewst automation engineer ($750\u2013$1,100+/mo + salary), absorbing 2%\u20135% silent license leakage as cost of doing business, enforcing rigid \"no license changes after the 25th\" policies that frustrate clients, or paying for Gradient MSP Grow ($299/mo + $149/mo add-ons) while manually double-checking broken vendor feeds.",
+      "obviated_below": "Downloading monthly Pax8/Sherweb and EDR/backup CSVs, running brittle PowerShell scripts, manually matching NCE \"full charge + separate credit\" rows across shifted billing windows (14th\u201313th vs. 1st), and spot-checking PSA agreements line by line against QuickBooks/Xero.",
+      "promise_one_up": "Stop leaking recurring SaaS gross margin on every July 2026 M365 price hike, mid-cycle NCE proration, and forgotten security/backup trial seat \u2014 closing monthly MSP billing in under 30 minutes with verified net-dollar parity.",
+      "your_level": "Reconcile actual monthly distributor and vendor invoice line items (including fractional NCE charges, credits, and SKU cost increases) against ConnectWise, Autotask, or Syncro recurring agreements before the 1st-of-month invoice run."
+    },
+    "one_liner": "Invoice-first billing variance engine that reconciles actual Pax8/Sherweb NCE charge-plus-credit invoice lines and non-Microsoft vendor bills against ConnectWise, Autotask, or Syncro agreements before monthly invoices go out.",
+    "price": "$179/mo flat (up to 100 client companies, unlimited vendors and PSA users; $1,790/yr annual)",
+    "pricing_strategy": "More for Less",
+    "signal_ids": [
+      "SIG-1",
+      "SIG-2",
+      "SIG-4"
+    ],
+    "specific_buyer": "MSP Owners, Operations Managers, and Billing Admins at 5\u201325 technician Managed Service Providers ($1M\u2013$5M ARR) running ConnectWise Manage, Autotask, or Syncro who resell Microsoft 365 via Pax8 or Sherweb alongside 3\u20138 EDR, backup, email-security, and VoIP vendors.",
+    "specific_problem": "Native PSA syncs read raw active seat counts rather than distributor invoice line items, missing NCE mid-cycle \"full charge + separate credit\" pairs, Pax8 shifted billing windows (14th\u201313th), July 1, 2026 M365 +8%\u201333% SKU price hikes, 5% annual-billed-monthly surcharges, and forgotten non-M365 trials or deployments \u2014 while live-API reconcilers like Gradient MSP ($199\u2013$299/mo + add-ons) silently drop unmapped seats when vendor APIs break and Rewst ($750\u2013$1,100+/mo) requires a dedicated scripting engineer.",
+    "title": "Invoice-First NCE Proration & Multi-Vendor Billing Auditor for 5\u201325 Tech MSPs"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Strictly read-only via delegated Microsoft Graph GDAP permissions \u2014 never modifies tenant policies, pushes Intune packages, or runs auto-remediation (MSPs wanting active policy deployment keep CIPP at \u20ac99/mo or buy Inforcer at $1,000/mo).",
+      "Monitors Microsoft 365 and Entra ID security posture exclusively \u2014 refuses to build non-Microsoft firewall, RMM, or network inspectors (Liongard charges $29\u2013$39/env/mo + 12-month contracts and JMESPath query maintenance for full-stack asset inspection).",
+      "Outputs underwriter-mapped 18-month historical evidence packets and 72-hour temporary Conditional Access exclusion expiry alerts rather than raw JSON config diffs \u2014 targets vCIOs and cyber-insurance renewals instead of SOC alert triage.",
+      "Month-to-month flat-tier billing with zero annual minimum or mandatory onboarding engagement (incumbents like Inforcer and Liongard enforce ~$1,000/mo floors or 12-month lock-ins)."
+    ],
+    "id": "IDEA-3",
+    "indie_feasibility": "High indie feasibility for 1\u20132 technical founders: single official, well-documented API surface (Microsoft Graph via read-only GDAP), zero write-path liability (cannot lock out a client tenant), and deterministic daily snapshot storage retained for 18 months past Microsoft's 30-day Entra log expiry. 3rd-order platform risk (DP3): Microsoft's native Entra Tenant Governance snapshots configs per tenant, and CIPP could add PDF reporting; defense rests on cross-tenant 18-month immutable underwriter evidence mapping (Coalition/Travelers/Chubb questionnaire controls) plus helpdesk CA-exclusion expiry watchdogs. Structural persistence (DP4): Inforcer ($1,000/mo floor) and Liongard ($29\u2013$39/env/mo annual) optimize for larger MSPs buying heavy remediation/full-stack inspection, while CIPP optimizes for technician operations rather than client-facing insurance/QBR evidence. [UNVETTED] Founder-fit assumption: founder is comfortable navigating Microsoft Partner Center GDAP consent flows and translating cyber-insurance attestation questionnaires into Graph API checks.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Buying Inforcer (~$1,000/mo minimum) or Liongard ($29\u2013$39/env/mo + 12-month contract + JMESPath labor), maintaining custom PowerShell/Graph archival scripts in Azure, or risking denied client cyber-insurance claims and MSP E&O liability exposure when an un-reverted helpdesk MFA exclusion causes a breach.",
+      "obviated_below": "Manually clicking through 30+ client Entra portals before every QBR or insurance renewal, taking point-in-time screenshots, hunting down un-reverted \"emergency\" Conditional Access exclusions, and losing proof once default 30-day Entra audit logs purge.",
+      "promise_one_up": "Hand every client and cyber-insurance underwriter dated, continuous 12-month proof of MFA, Conditional Access, and privileged-admin compliance in two clicks \u2014 turning unbilled renewal scrambles into a billable vCIO compliance deliverable.",
+      "your_level": "Continuously archive read-only M365 and Entra ID security posture across all managed tenants for 18 months, alert on un-reverted emergency exclusions, and export white-labeled cyber-insurance renewal and QBR drift packets."
+    },
+    "one_liner": "Read-only GDAP evidence vault that snapshots M365 and Entra ID security controls daily for 18 months, catches un-reverted helpdesk MFA exclusions, and exports client-ready cyber-insurance renewal and QBR drift packets.",
+    "price": "$149/mo flat (up to 40 M365 tenants; $3/mo per additional tenant; $1,490/yr annual)",
+    "pricing_strategy": "Less for Less",
+    "signal_ids": [
+      "SIG-3",
+      "SIG-4"
+    ],
+    "specific_buyer": "vCIOs, Security Leads, and MSP Owners at 5\u201325 technician Managed Service Providers managing 15\u201380 business client Microsoft 365 tenants who prepare quarterly QBRs and sign off on annual client cyber-insurance renewal attestations.",
+    "specific_problem": "Default Entra audit logs expire after 30 days and helpdesk \"temporary\" Conditional Access MFA exclusions silently persist between onboarding and renewal; cyber-insurance underwriters increasingly reject checkbox answers and generic Secure Score exports, forcing small MSPs into unbilled manual screenshot scrambles because Inforcer (~$1,000/mo floor) and Liongard ($29\u2013$39/env/mo + 12-month contracts) price them out while CIPP (\u20ac99/mo) is built for technician remediation rather than client-facing historical insurance evidence.",
+    "title": "Read-Only M365/Entra Cyber-Insurance & QBR Drift Evidence Vault for Small MSPs"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Compliance-gating and QuickBooks Online AP bill-hold flagging only \u2014 refuses to build field project management, scheduling, estimating, or bidding modules (Procore at $15k\u2013$30k/yr and Knowify at $99\u2013$399/mo serve contractors wanting a full PM suite).",
+      "Zero subcontractor portal accounts and zero 0.2% subcontractor payout fees \u2014 subs submit COIs, endorsements, W-9s, and sign conditional/unconditional lien waivers via 30-second magic links, and the GC continues paying by existing QBO check/ACH (Procore Pay and Built bundle ACH rails and/or shift 0.2% access fees onto subs).",
+      "Covers U.S. statutory lien waivers (starting with the 12 statutory-form states plus generic commercial templates) and ACORD 25 COI + Additional Insured / Waiver of Subrogation endorsement verification \u2014 refuses to file mechanic's liens or preliminary notices with county recorders (Levelset charges $149/user/mo + $19\u2013$349 per notice/lien for legal filing workflows).",
+      "Integrates natively with QuickBooks Online only \u2014 explicitly skips QuickBooks Desktop legacy connectors, Sage 100 Contractor, and Foundation ERP (captures contractors migrating off sunsetting QuickBooks Desktop 2022\u20132024 onto QBO)."
+    ],
+    "id": "IDEA-4",
+    "indie_feasibility": "Buildable and supportable by 1\u20132 technical founders in 8\u201310 weeks: integrates with a single accounting API (QuickBooks Online Vendors + Bills + custom hold/memo tags), combines structured ACORD 25 / endorsement extraction with human-verified exception flags, and uses tokenized email/SMS magic links for subcontractor waiver e-signatures (eliminating sub-side password/support tickets). Constraining scope to AP compliance gating avoids money-transmitter/ACH compliance, county lien-filing legal liability, and full construction PM bloat. Structural persistence (DP4): Procore ($15k\u2013$30k/yr) and GCPay target high-ACV commercial GCs, Levelset monetizes per-seat + per-notice legal volume, CertiSub ($39\u2013$79/mo) tracks basic COI/W-9 files without QBO AP bill-hold or lien-waiver draw gating, and Intuit's QBD stop-sell (Sept 2024) + 2025\u20132027 sunsets are actively forcing contractors onto QBO. [UNVETTED] Founder-fit assumption: founder is comfortable working with construction project accountants/bookkeepers and maintaining statutory lien-waiver PDF templates across major commercial states.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Buying Procore + Procore Pay ($15,000\u2013$30,000/yr plus 0.2% subcontractor fee friction), GCPay, or Built; paying Levelset ($149/user/mo + per-notice fees); hiring an extra project accounting coordinator ($55k+/yr); or absorbing workers'-comp/GL insurance audit back-charges and double-payment lien exposure.",
+      "obviated_below": "Maintaining 14-tab Smartsheets and Excel trackers across active jobs, manually emailing/calling subs for updated COIs and signed waivers, squinting at ACORD 25 PDFs for missing Additional Insured endorsements, and manually toggling QuickBooks vendor hold flags before weekly check runs.",
+      "promise_one_up": "Never release another subcontractor check or ACH without a verified COI endorsement, W-9, and signed draw lien waiver on file \u2014 eliminating insurance audit back-charges and 14-tab Smartsheet chasing without forcing subs onto fee-bearing Procore Pay portals.",
+      "your_level": "Gate every QuickBooks Online subcontractor bill against verified COI expiry, endorsement clauses, W-9 status, and signed draw-specific lien waivers collected via zero-login subcontractor links before the weekly check run."
+    },
+    "one_liner": "QuickBooks Online accounts-payable compliance gate that collects subcontractor COI endorsements, W-9s, and statutory lien waivers via zero-login magic links and flags non-compliant QBO bills before checks or ACHs go out.",
+    "price": "$189/mo flat (up to 60 active subcontractors, unlimited office users, $0 per-waiver fees, $0 subcontractor payout fees; $1,890/yr annual)",
+    "pricing_strategy": "Less for Less",
+    "signal_ids": [
+      "SIG-11",
+      "SIG-13",
+      "SIG-14"
+    ],
+    "specific_buyer": "Project Accountants, Controllers, and Office Managers at $3M\u2013$25M revenue commercial General Contractors and Tier-1 specialty contractors running QuickBooks Online (including contractors migrating off sunsetting QuickBooks Desktop) who pay 15\u201380 active subcontractors per draw cycle.",
+    "specific_problem": "QuickBooks Online lacks native compliance payment holds, forcing project accountants onto brittle 14-tab Smartsheets to track quietly expiring sub COIs, missing Additional Insured or Waiver of Subrogation endorsements, W-9s, and unsigned conditional/unconditional lien waivers \u2014 resulting in accidental check releases and costly insurance audit back-charges, while Procore ($15k\u2013$30k/yr + 0.2% Procore Pay sub fees) and Levelset ($149/user/mo + per-notice fees) overprice the workflow or trigger subcontractor backlash.",
+    "title": "QuickBooks Online Subcontractor COI-Endorsement & Lien-Waiver AP Payment Gate"
+  }
+]

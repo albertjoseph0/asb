@@ -1,0 +1,81 @@
+[
+  {
+    "deliberate_trade_offs": [
+      "Refuses to build an ATS, candidate database, resume parser, or outbound email sequencer \u2014 sits strictly in front of Bullhorn, Invenias, Crelate, Loxo, or spreadsheets as a per-job-order calibration and SLA gate so agencies adopt it on their next req with zero database migration.",
+      "Refuses to join live Zoom or Teams calls as a passive transcription bot (leaving call recording and JD drafting to Carv at $65/user/mo, Metaview at $60/user/mo, and Granola at $18/mo) \u2014 instead forces external hiring managers into a 4-minute asynchronous vote on 3 to 5 anonymized benchmark profiles plus explicit comp-vs-skill trade-off sliders.",
+      "Refuses to store candidate contact PII, execute legal fee-collection contracts, or run backdoor-hire scraping (DP10, DP12, DP22 clean) \u2014 profiles are anonymized and the 48-hour feedback SLA functions as a timestamped operational working charter with automated req-pause alerts rather than legal indemnity.",
+      "Flat agency workspace pricing ($89/mo up to 10 recruiters, unlimited job orders and external hiring managers) instead of per-seat taxes that penalize growing desks or push agencies toward $119-$199/user/mo ATS replacements."
+    ],
+    "id": "IDEA-1",
+    "indie_feasibility": "Buildable by 1-2 indie developers in 4-6 weeks using standard web stack (magic-link external voting UI, PDF/text profile anonymizer, SLA countdown scheduler, webhook/email notifications, optional copy-paste export to Bullhorn/Crelate). Zero third-party portal scraping, zero live video/audio infrastructure, zero regulated PII storage, and minimal support burden because external hiring managers require no logins. [UNVETTED founder-fit assumption: assumes founder can reach independent recruiting agency owners via cold outreach, r/recruiting, LinkedIn recruiter communities, and staffing ops groups without enterprise procurement.]",
+    "needs_stack_sketch": {
+      "alternatives_above": "Retained-only business models with upfront commitment fees, refusing contingent work outright, hiring dedicated senior account managers to police hiring managers manually, or migrating the entire agency onto $149-$199/user/mo executive search ATS suites (Loxo, Clockwork, Ezekia).",
+      "obviated_below": "Drafting ad-hoc Search Blueprint docs in Notion or Google Docs, rigging static Typeform intake surveys, pasting sample profiles into email threads, manually reminding hiring managers after 5 days of silence, and arguing over verbal intake call transcripts from Carv/Metaview when criteria shift mid-search.",
+      "promise_one_up": "Stop burning 15-30 unpaid sourcing hours on uncalibrated purple-squirrel job orders and cut time-to-interview feedback by locking hiring-manager criteria, comp reality, and a 48-hour review SLA before sourcing starts.",
+      "your_level": "Get external hiring managers to vote on 3-5 anonymized benchmark profiles, confirm comp-vs-skill trade-offs, and click-sign a timestamped Search Charter & 48-hour feedback SLA per job order without migrating Bullhorn or Crelate."
+    },
+    "one_liner": "ATS-agnostic per-job-order calibration link where external hiring managers vote on anonymized benchmark profiles, lock comp-vs-skill trade-offs, and sign a 48-hour feedback SLA before sourcing begins.",
+    "price": "$89/month flat per agency (up to 10 recruiters, unlimited job orders & external hiring managers) or $890/year",
+    "pricing_strategy": "Less for Less",
+    "signal_ids": [
+      "SIG-3",
+      "SIG-4",
+      "SIG-1"
+    ],
+    "specific_buyer": "Solo headhunters, boutique executive search partners, and 2-15 person contingent or retained recruiting agencies (~25k-38.8k US agencies, ~31.3k UK firms, ~8.4k-12k AU firms, ~150k+ EU recruiters; post-filter ~100,000 active independent desks running >=10 external client job orders/year) operating on Bullhorn, Invenias, Crelate, Loxo, or spreadsheets who will not migrate their core ATS.",
+    "specific_problem": "Independent recruiters routinely waste 15-30 unpaid hours per job order when hiring managers state contradictory purple-squirrel requirements at below-market pay, shift evaluation criteria weeks into the search (brief drift), or ghost submitted candidates for 7-14 days. Verified live 2026 sub-$100 rivals miss this two-sided pre-search gate: Carv ($65/user/mo), Metaview ($60/user/mo Notetaker Pro), and Bullhorn Amplify Transcribe passively transcribe internal calls (codifying uncalibrated verbal wish-lists rather than forcing trade-offs); Candidately ($49+/mo client portal, annual tiers, Bullhorn/Salesforce focus) and Lattney operate downstream on finished shortlists after sourcing is done; and Typeform/Notion ($0-$29/mo) are static forms with no structured benchmark-profile voting, rejection-diff tracking, or automated 48-hour SLA req-pause enforcement.",
+    "title": "BriefLock \u2014 Two-Sided Hiring-Manager Calibration & Feedback-SLA Charter Gate for Boutique Recruiting Agencies"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Refuses to handle attendee ticketing, payment processing, badge printing, or attendee mobile networking apps \u2014 runs strictly as a per-event CSV sidecar alongside Eventbrite, Luma, WildApricot, Swoogo, or Cvent so organizers adopt it on their next conference with zero ticketing or AMS migration (Liquid = 1.0).",
+      "Zero-PII architecture by design: strips attendee names, emails, and phone numbers in the browser before upload, ingesting only Company Domain, Job Title, Industry, and Ticket Tier so organizers can share verified blind Target-Account overlap counts with sponsors pre-event and post-event without GDPR/CCPA attendee-list leakage.",
+      "Built exclusively for B2B corporate sponsorship ROI (seniority/department bucketing, blind Target-Account List overlap matching, exhibitor badge-scan ICP reconciliation, print-vector logo preflight, comp-pass cap enforcement, and 14-day CFO renewal packs) \u2014 deliberately excludes consumer festivals, food-vendor load-in permits, Venmo invoicing, and charity gala auctions served by Partner4Events ($0-$99/mo annual, $199-$449/event).",
+      "Excludes third-party event discovery databases (leaving buyer-side external event intelligence to multi-thousand-dollar Vendelux) and focuses solely on organizer-owned registration, booth-scan, and contracted deliverable proof."
+    ],
+    "id": "IDEA-2",
+    "indie_feasibility": "Buildable by 1-2 indie developers in 5-7 weeks: client-side CSV PII scrubber + job-title seniority/department normalizer, blind company-domain matcher for sponsor Target-Account Lists, SVG/EPS/DPI print-preflight validator, mobile web photo-tagger mapped to contracted deliverable line items, and branded interactive/PDF CFO recap generator. No live event-day badge-hardware failure risk, no payment-processing/MoR liability, and no stored attendee PII. [UNVETTED founder-fit assumption: assumes founder can reach B2B conference producers and association sponsorship directors via LinkedIn, association-ops forums, and direct cold outreach ahead of scheduled event dates.]",
+    "needs_stack_sketch": {
+      "alternatives_above": "Migrating registration and member databases into $17,999-$79,000/yr enterprise suites (Bizzabo Event Experience OS, Cvent) with hardware SmartBadges, hiring dedicated sponsorship-fulfillment coordinators or agencies to hand-build Canva/PowerPoint decks, or discounting renewal tiers 20-30% when sponsors push back on ROI.",
+      "obviated_below": "Chasing vector logos and comp-ticket rosters across 3-tab Google Sheets and Content Snare ($35-$71/mo), manually scrubbing Eventbrite/Luma attendee CSVs in Excel to count VP+ buyers, cross-referencing sponsor target accounts by hand, hunting for unlabelled stage photos in shared drives, and spending 20+ hours compiling PowerPoint/Canva recap PDFs during the 14-day post-event renewal window.",
+      "promise_one_up": "Close larger pre-event sponsor upgrades using verified blind Target-Account overlap previews and lock next-year corporate renewals inside the critical 14-day post-event window with CFO-defensible audience and badge-scan proof.",
+      "your_level": "Turn raw Eventbrite, Luma, WildApricot, or Cvent attendee CSVs, sponsor target-account lists, print-preflighted sponsor deliverables, and booth badge scans into zero-PII Target-Account overlap reports and 24-hour post-event CFO renewal proof packs."
+    },
+    "one_liner": "Sidecar sponsor entitlement and zero-PII attendee ICP-reconciliation workspace that turns Eventbrite/Luma/Cvent registration CSVs, sponsor target-account lists, and booth badge scans into CFO-defensible renewal proof packs within 24 hours.",
+    "price": "$129/month flat per organizer (unlimited B2B events, up to 50 sponsors per event) or $1,290/year",
+    "pricing_strategy": "More for More",
+    "signal_ids": [
+      "SIG-6",
+      "SIG-5",
+      "SIG-8"
+    ],
+    "specific_buyer": "Sponsorship directors and event operations managers at independent B2B conference producers, regional/vertical trade and professional associations (47k-60k US orgs/chapters plus global associations), and B2B field-event teams running 2+ sponsored B2B conferences, summits, or executive workshops per year (selling $2k-$50k+ sponsorships) on Eventbrite, Luma, WildApricot, Swoogo, or Cvent/Bizzabo without migrating core ticketing or AMS systems.",
+    "specific_problem": "Under 2026 CFO budget scrutiny, 69% of B2B organizations cut event attendance and reject vanity logo/footfall recaps in favor of hard ICP seniority match, target-account presence, and attributed booth leads; 68.9% of marketing/sales pros report handing leadership untrusted event ROI numbers while scrambling across spreadsheets and Canva to meet the 14-day post-event renewal window. Verified live 2026 rivals leave a sharp B2B gap: Partner4Events ($0-$99/mo annual, $199-$449/event) and Content Snare ($35-$71/mo) handle festival/gala vendor portals, COI/logo collection, and manual photo recaps but do not normalize attendee CSVs by job seniority, run privacy-safe Target-Account domain matching, or reconcile booth badge scans; Sponsy ($49-$79/mo) targets newsletter/podcast ad slots; SponsorPact ($149/event or $249/mo) and SponsorFlo ($299/mo) lack blind TAL/ICP matching; Vendelux is quote-only buyer-side intelligence; and Whova ($1,499+/event), Eventify Advance ($3,599/yr), Bizzabo ($17,999+/yr), and Cvent ($20k-$79k+/yr) confine metrics to their own event apps and require migrating registration.",
+    "title": "SponsorProof \u2014 Zero-PII Target-Account Overlap & 14-Day Sponsor ROI Audit Pack for B2B Conferences"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Refuses to build live video streaming, backstage studios, or live webinar registration engines \u2014 buyers keep hosting live on Zoom Webinars ($79/mo), Microsoft Teams, or Riverside with zero broadcast-day migration risk (Liquid = 1.0), directly bypassing Contrast's live-host lock-in and 100-500 monthly registrant caps.",
+      "Refuses to build a full social-clip video editor or general site-wide video hosting CMS (leaving clip editing to Descript/Riverside and brand video libraries to Wistia/Vimeo) \u2014 focuses exclusively on turning finished B2B webinar recordings plus Zoom Q&A/poll exports into interactive chaptered replay microsites with topic-level CRM attribution.",
+      "Flat workspace pricing ($99/mo for unlimited replay viewers, unlimited team seats, and native HubSpot/Salesforce/Slack chapter-intent sync across up to 25 active replay rooms) rather than gating CRM attribution behind Wistia's $329/mo annual ($412/mo monthly) Business + Signals paywall or Vidyard's $99/user/mo minimum-seat Teams tier.",
+      "Syncs only standard B2B marketing-contact behavioral events (work email, chapter watched, watch duration, topic CTA clicked) via user-scoped HubSpot/Salesforce/Slack webhooks \u2014 zero regulated PII, financial data, or enterprise production infrastructure coupling (DP22 clean)."
+    ],
+    "id": "IDEA-3",
+    "indie_feasibility": "Buildable by 1-2 indie developers in 4-6 weeks using commodity HLS video hosting (Cloudflare Stream/Mux for low unit bandwidth cost), Zoom/Riverside recording & Q&A ingest, transcript chaptering, embeddable interactive replay microsites with progressive email capture and topic CTAs, and standard HubSpot/Salesforce/Slack OAuth event sync. Zero live-broadcast WebRTC ops burden and zero 24/7 show-day pager duty. [UNVETTED founder-fit assumption: assumes founder can reach B2B demand-gen and RevOps managers via HubSpot App Marketplace, LinkedIn, r/b2bmarketing, and displaced ON24/Goldcast renewal campaigns.]",
+    "needs_stack_sketch": {
+      "alternatives_above": "Upgrading to Wistia Business + Signals ($329-$412/mo) plus Wistia Webinars ($429-$829/mo), buying Parmonic ($399-$799/mo), ripping out Zoom to host live on Contrast (\u20ac79-\u20ac349/mo with registrant caps), or paying Cvent-acquired Goldcast/ON24 $20,000-$100,000/yr enterprise contracts.",
+      "obviated_below": "Posting raw Zoom cloud links or unlisted YouTube videos on dead landing pages, stitching Zoom + Zapier + Castmagic + HubSpot landing pages ($60-$90/mo in brittle glue) that still fail to capture per-chapter watch time or in-video topic CTAs, and handing SDRs generic watched-replay CSV lists with zero buying-topic context.",
+      "promise_one_up": "Convert the 65-70% of B2B webinar registrants who watch on-demand into routed HubSpot/Salesforce pipeline by giving SDRs exact chapter-level buying intent and contextual follow-up triggers within minutes of a prospect watching.",
+      "your_level": "Drop any Zoom, Teams, or Riverside webinar recording plus Q&A/poll logs into a branded, chaptered interactive replay room with progressive email capture, topic-specific CTAs, and native HubSpot/Salesforce/Slack chapter-intent sync."
+    },
+    "one_liner": "Turns any Zoom, Teams, or Riverside webinar recording into a chaptered interactive replay room with topic-level HubSpot/Salesforce intent sync and Slack SDR alerts without migrating live hosting or paying Wistia's $329/mo Signals paywall.",
+    "price": "$99/month flat per workspace (unlimited replay viewers, unlimited seats, native HubSpot/Salesforce/Slack chapter-intent sync, up to 25 active replay rooms) or $990/year",
+    "pricing_strategy": "Less for Less",
+    "signal_ids": [
+      "SIG-10"
+    ],
+    "specific_buyer": "1-15 person B2B marketing, demand-generation, and RevOps teams at B2B SaaS, IT services, and B2B consulting firms (100,000+ companies globally) running 1+ monthly webinars on Zoom Webinars, Microsoft Teams, or Riverside with HubSpot or Salesforce as their CRM \u2014 explicitly excluding solo hobbyist course creators.",
+    "specific_problem": "Live B2B webinar attendance has dropped to 30-35%, pushing most views to on-demand replays, yet raw Zoom/YouTube links sit as unattributed dead pages and HubSpot still has no native webinar engine or clean Zoom on-demand replay watch-time sync. Following Blackstone-backed Cvent's acquisitions of Goldcast (~$300M, Dec 2025) and ON24 (~$400M, closed Mar/Apr 2026), lean B2B teams face an exposed pricing cliff verified across live 2026 tiers: Wistia Business ($79/mo annual / $99/mo monthly) explicitly locks HubSpot/CRM integrations behind Business + Signals ($329/mo annual / $412/mo monthly) and prices Webinars at $429/mo annual; Contrast (\u20ac79-\u20ac349/mo) syncs to HubSpot well but forces ripping out Zoom/Teams to host live and caps monthly registrants at 100-500; Parmonic starts at $399/mo annual; Vidyard Teams requires $99/user/mo with seat minimums; and Goldcast/ON24/Cvent cost $20k-$100k+/yr.",
+    "title": "ReplayPipe \u2014 Non-Rip-and-Replace Post-Webinar Interactive Replay Rooms & Chapter-Intent CRM Sync"
+  }
+]

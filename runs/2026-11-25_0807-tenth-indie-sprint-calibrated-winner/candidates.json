@@ -1,0 +1,81 @@
+[
+  {
+    "deliberate_trade_offs": [
+      "Zero bundled cloud storage or bandwidth resale: agencies plug in their own Cloudflare R2 ($0.015/GB, $0 egress) or Bunny Stream ($0.01/GB storage, free H.264 transcoding) accounts, trading turnkey vendor billing for 70-85% lower multi-TB costs and direct file ownership.",
+      "No Camera-to-Cloud (C2C) hardware ingest, no Adobe Premiere/After Effects timeline panels, and no studio-grade DRM/SOC 2 vaulting \u2014 conceding Hollywood post houses to Frame.io V4 so corporate clients get a single-screen, zero-login review page instead of a cluttered database UI.",
+      "No per-member seat billing or internal approval hierarchies: every workspace is a flat $49/mo for unlimited staff, rotating freelance editors, and client links, intentionally leaving enterprise role-based permissions to Filestage and Frame.io Enterprise.",
+      "No broad marketing funnel analytics, email gates, or LMS course hosting \u2014 built strictly for agency client review, version-locked sign-off, final raw master delivery, and brandless client embed handoff."
+    ],
+    "id": "IDEA-1",
+    "indie_feasibility": "Shippable by 1-2 indie developers in 8-10 weeks without running transcoding farms: Bunny Stream API handles adaptive HLS encoding at $0 transcoding fee while Cloudflare R2 handles $0-egress multi-GB raw master downloads via pre-signed URLs. Core v1 scope is an authenticated agency workspace, frame-accurate HTML5/HLS comment overlay (Vidstack), version-stack comparison, magic-link zero-login client sign-off with reliable email digests (Postmark/Resend), and a branded final download + clean embed page. Low support burden because customer storage/egress stays on their own R2/Bunny accounts; zero enterprise sales or compliance gates. [UNVETTED founder fit: assumes technical founder comfortable with media APIs and agency self-serve marketing.]",
+    "needs_stack_sketch": {
+      "alternatives_above": "Pay $400/mo annual for Vimeo Studio ($4,800/yr) or $15-$25/member/mo for Frame.io V4 plus separate final-delivery tools (Dropbox Replay at $10-$12/user/mo on top of paid Dropbox, VoiceDeck at ~$50/mo per 1TB storage cap, PlayPause at $9+/mo review-only without multi-TB BYO delivery/embeds, or VidPaar/Livid hosting without unified review-to-approval workflows), or hire a developer to build a custom Bunny/R2 client portal.",
+      "obviated_below": "Configure raw Cloudflare R2 buckets, Bunny Stream flat collections, signed download URLs, and HLS embed snippets by hand, or reconcile client timestamp notes scattered across Slack, email, Google Drive, and 3GB-capped WeTransfer links.",
+      "promise_one_up": "Get non-technical corporate clients to review cuts and sign off final masters in one pass without hand-holding calls, while cutting monthly agency video review and delivery overhead by 70-85%.",
+      "your_level": "Run zero-login frame-accurate client video review, version-locked approval, and branded multi-GB final delivery/embeds from one flat-rate workspace backed by our own Cloudflare R2 or Bunny Stream account."
+    },
+    "one_liner": "A flat $49/mo client video review, sign-off, and final delivery portal backed by the agency's own Cloudflare R2 or Bunny Stream account \u2014 replacing Frame.io V4 per-seat taxes, Vimeo's $400/mo Studio tier, and WeTransfer's discontinued Portals & Reviews.",
+    "price": "$49/mo flat workspace ($490/yr annual) \u2014 unlimited staff, rotating freelance editors, client reviewers, and projects; agency pays raw R2 ($0.015/GB, $0 egress) or Bunny Stream ($0.01/GB) directly.",
+    "pricing_strategy": "Less for Less",
+    "signal_ids": [
+      "SIG-2",
+      "SIG-1",
+      "SIG-13"
+    ],
+    "specific_buyer": "Boutique video production companies, commercial videographers, and video-producing marketing/creative agencies (2-15 staff plus rotating freelance editors and colorists, managing 5-30 external corporate or brand clients) delivering multi-gigabyte draft cuts for client feedback and final masters/embeds.",
+    "specific_problem": "Boutique agencies lost WeTransfer Portals & Reviews (shut down Dec 2025), face Vimeo's $400/mo ($4,800/yr) Studio hike for corporate accounts, and hit Frame.io V4's cluttered UI, broken client notifications, and $15-$25/member/mo seat taxes on temporary freelancers. Sub-$100 rivals leave a verified structural gap: PlayPause ($9+/mo) and VoiceDeck (~$50/mo, hard upload pause at 1TB) stop at review on vendor-marked-up storage without multi-TB BYO final master delivery or brandless embeds, while VidPaar ($9.99-$62.49/mo) and Livid ($10-$24/mo) are hosts rather than zero-login client review-to-approval hubs. Path A adoption (Liquid = 1.0): agencies launch on their next client shoot with zero legacy migration.",
+    "title": "BYO-Storage Client Video Review & Final Delivery Hub (Lens 1)"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Zero project-management bloat: no Kanban boards, Gantt charts, CRM pipelines, proposal builders, or resource-capacity grids \u2014 deliberately conceding all-in-one suites to Plutio ($49/mo), Productive.io ($25-$28/user/mo), and Teamwork ($24.99/user/mo) so agencies never have to migrate out of Linear, Asana, ClickUp, or Notion.",
+      "Flat $59/mo workspace with unlimited staff, part-time contractors, active/archived clients, projects, and invoices \u2014 refusing both per-seat taxes (Clockify/Toggl/Everhour) and activity-based Flex meters (Harvest) even when a 20-person agency adds 15 freelance contractors.",
+      "Built strictly for recurring monthly retainers and time-and-materials agency billing, not enterprise multi-entity ERP, payroll processing, or government DCAA timekeeping compliance.",
+      "Read-only client proof-of-hours portals with zero client logins (signed share URLs) instead of full multi-tenant client messaging/file workspaces, cutting portal admin overhead to zero."
+    ],
+    "id": "IDEA-2",
+    "indie_feasibility": "Shippable by 1-2 indie developers in 8-10 weeks: fast web timer + weekly timesheet grid + lightweight browser/Slack micro-logger, rolling monthly retainer pacing engine (Burn % vs. % of Billing Period Elapsed, optional rollover caps, automated 75%/90% ops alerts), read-only client proof-of-hours share links, 1-click Harvest REST API full-history importer (clients, projects, rates, archived entries), and native QuickBooks Online / Xero / Stripe draft-invoice push. Standard CRUD + accounting OAuth integrations with low ongoing support burden and zero enterprise compliance walls. [UNVETTED founder fit: assumes founder willing to build clean QBO/Xero invoice sync and market directly to Harvest-refugee agency owners.]",
+    "needs_stack_sketch": {
+      "alternatives_above": "Absorb Harvest Flex's $200-$1,000+/mo stacked project/client/invoice usage taxes, pay per-seat multipliers across Clockify ($5.49-$7.99/user/mo), Toggl Track ($9-$16/user/mo), Everhour ($8.50/user/mo with 5-seat min), or Productive.io/Teamwork ($25-$28/user/mo), migrate the entire agency's task management into Plutio ($49/mo), self-host Kimai OSS, or keep writing off unbilled scope creep at month-end.",
+      "obviated_below": "Export CSV time logs from per-seat trackers into spreadsheets, calculate mid-month retainer pacing manually, paste status tables into Notion client portals, and re-key line items into QuickBooks Online or Xero.",
+      "promise_one_up": "Spot over-serviced monthly retainers by the 10th of the month and invoice 100% of billable hours without client 'prove the hours' disputes, unbilled write-offs, or renewal sticker shock.",
+      "your_level": "Track unlimited staff and part-time contractor hours against rolling monthly retainers with live burn-vs-elapsed alerts, zero-login client proof-of-hours links, and 1-click QBO/Xero/Stripe draft invoices."
+    },
+    "one_liner": "A flat $59/mo agency retainer-burn, contractor time-tracking, and live client proof-of-hours billing hub with 1-click Harvest history import \u2014 eliminating Harvest's Flex usage taxes and Clockify/Toggl's per-contractor seat penalties.",
+    "price": "$59/mo flat workspace ($590/yr annual) \u2014 unlimited staff, part-time contractors, clients, active/archived projects, retainers, and invoices synced to QBO/Xero/Stripe.",
+    "pricing_strategy": "Less for Less",
+    "signal_ids": [
+      "SIG-5",
+      "SIG-8",
+      "SIG-12"
+    ],
+    "specific_buyer": "Retainer-based digital marketing, SEO, branding, web-design, and software agencies (3-25 full-time staff plus rotating part-time contractors, managing 10-50 monthly retainers of $2,000-$15,000/mo) invoicing through QuickBooks Online, Xero, or Stripe.",
+    "specific_problem": "Following Bending Spoons' mid-2025 acquisition, Harvest stacked opaque Flex usage fees ($20-$960/mo per category across active clients, projects, tasks, and invoiced amounts) on top of $9-$14/user/mo seats, triggering 500%-1,500% renewal jumps. Meanwhile, agencies bleed margin on untracked micro-requests because per-seat alternatives (Clockify $5.49-$7.99/user/mo, Toggl Track $9-$16/user/mo, Everhour $8.50/user/mo 5-seat min) tax rotating contractors and log raw hours without rolling monthly Burn % vs. % of Month Elapsed pacing or live client proof-of-hours links \u2014 while Plutio ($49/mo flat) forces adopting a full PM/CRM suite without dedicated retainer pacing or 1-click Harvest-to-QBO/Xero reconciliation. Path B massive category (~1M small agencies/consultancies globally) with clean 1st-of-month retainer billing transitions.",
+    "title": "Flat-Workspace Agency Retainer Burn & Proof-of-Hours Billing Hub (Lens 2)"
+  },
+  {
+    "deliberate_trade_offs": [
+      "100% BYO-LLM API keys (OpenAI, Anthropic, or Gemini) with zero vendor token resale and zero per-resolution fees \u2014 deliberately forfeiting the 100x AI markup ($0.75-$1.50/resolution) that funds Intercom, Help Scout, and Gorgias, so customers pay raw token cost (~$0.003-$0.01/ticket).",
+      "No outbound marketing campaigns, product tours, voice/IVR call-center telephony, or multi-brand enterprise HIPAA/SOC 2/Entra SSO governance \u2014 conceding enterprise contact centers to Zendesk and Intercom Expert to keep the inbox fast and self-serve.",
+      "Draft-first AI guardrails by default (auto-send strictly opt-in per explicit confidence rule and intent class) \u2014 never billing for 'assumed' silent resolutions or human-rescued tickets.",
+      "Flat $59/mo workspace with unlimited human seats and unlimited email/chat conversations, relying strictly on email + lightweight web widget + native Shopify/Stripe order actions rather than sprawling omnichannel social/WhatsApp suites."
+    ],
+    "id": "IDEA-3",
+    "indie_feasibility": "Shippable by 1-2 indie developers in 8-12 weeks: inbound/outbound support email pipeline on customer-verified domains (Postmark/SES/Resend), real-time shared inbox with collision detection and saved macros, lightweight embeddable web-chat widget, BYO-LLM RAG indexing over customer help docs/policies with zero variable LLM COGS borne by the founder, 1-click Shopify/Stripe OAuth sidebar (view order/subscription, refund, cancel, resend tracking/invoice), and Help Scout/Zendesk/Gorgias API history importer. High gross margin (>90%), no shared-IP bulk-marketing spam liability, and standard credit-card self-serve onboarding. [UNVETTED founder fit: assumes full-stack founder comfortable with email threading edge cases and Shopify/Stripe APIs.]",
+    "needs_stack_sketch": {
+      "alternatives_above": "Pay Intercom ($29-$132/seat/mo + $0.99/Fin resolution), Help Scout ($25-$75/seat/mo + $0.75/AI resolution), Gorgias ($50-$750/mo + $0.36-$0.40 ticket overages + $1.50/AI resolution double-counted against base tickets), metered-AI workspaces like Crisp ($45-$95/mo capped at 4-10 seats and $5-$25 AI credits, ticketing portal gated at $295/mo) or BoldDesk ($99/mo capped at 500 AI credits, IT-leaning without native Shopify macros), or turn off AI deflection and hire another support agent ($2,500-$4,500/mo).",
+      "obviated_below": "Provision and maintain self-hosted FreeScout PHP/MySQL or Chatwoot Docker containers on a VPS, script custom OpenAI/Anthropic RAG webhooks by hand, or bounce between shared Gmail tabs and Shopify/Stripe dashboards to process refunds.",
+      "promise_one_up": "Cut recurring support software bills by 60-85% and answer repetitive order, shipping, and billing tickets faster without triggering per-resolution AI penalties or per-seat bill spikes as volume grows.",
+      "your_level": "Run a flat-rate managed shared inbox for unlimited agents and tickets with 1-click Shopify/Stripe order actions and BYO-LLM drafting/auto-replies billed directly at raw API token cost."
+    },
+    "one_liner": "A flat $59/mo managed shared inbox with unlimited seats, native Shopify/Stripe order actions, and 100% BYO-LLM API keys \u2014 eliminating Intercom Fin ($0.99), Help Scout ($0.75), and Gorgias ($1.50) per-resolution AI taxes.",
+    "price": "$59/mo flat workspace ($590/yr annual) \u2014 unlimited human agents, unlimited email/chat tickets, native Shopify & Stripe action sidebar, and 100% BYO OpenAI/Anthropic/Gemini API keys at raw token cost.",
+    "pricing_strategy": "Less for Less",
+    "signal_ids": [
+      "SIG-9"
+    ],
+    "specific_buyer": "Self-serve SaaS companies and Shopify/WooCommerce DTC e-commerce stores (2-20 staff, handling 500-10,000+ monthly customer support email and chat conversations) currently paying $200-$1,500+/mo on Intercom, Help Scout, Gorgias, or Freshdesk.",
+    "specific_problem": "SaaS founders and DTC merchants face a punitive 'success tax' on modern helpdesks: Intercom charges $29-$132/seat/mo plus $0.99 per Fin resolution (including silent/assumed resolutions), Help Scout charges $25-$75/seat/mo plus $0.75/AI resolution, and Gorgias bills $50-$750/mo plus $0.36-$0.40/ticket overages and $1.50/AI interactions that also consume base ticket quotas. Verified sub-$100 rivals leave the core wedge wide open: Crisp ($45-$95/mo) meters Hugo AI credits ($0.05-$0.10 overage), caps seats at 4-10, and gates its ticketing portal at $295/mo; BoldDesk ($99/mo Scale AI) caps AI at 500 credits/mo without native Shopify/Stripe macros; Re:amaze caps flat plans at 500 conversations or charges $0.85/AI resolution; FreeScout requires VPS sysadmin maintenance; Shopify Inbox is storefront live-chat only without email ticketing. Path B massive category (~1M+ SaaS & DTC stores globally, Enduring = 1.0).",
+    "title": "Flat-Workspace + BYO-LLM Shared Inbox for SaaS & Shopify Stores (Lens 3)"
+  }
+]

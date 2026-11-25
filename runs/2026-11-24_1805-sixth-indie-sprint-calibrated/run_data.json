@@ -1,0 +1,367 @@
+{
+  "run_id": "2026-11-24_1805-sixth-indie-sprint-calibrated",
+  "run_type": "discovery",
+  "ambition": "indie",
+  "lenses": [
+    {
+      "domain": "Self-serve privacy-first, flat-priced, or creator/developer-owned operational tools in 1M-10M spend pools (forms, booking, lightweight analytics, email deliverability, testimonial/review capture, digital storefronts)",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Self-serve privacy-first, flat-priced, or creator/developer-owned operational tools in 1M-10M spend pools (forms, booking, lightweight analytics, email deliverability, testimonial/review capture, digital storefronts)",
+      "why_indie_friendly": "User-supplied domain lens"
+    },
+    {
+      "domain": "Per-property and per-stay operational workflows for independent short-term rental (Airbnb/VRBO) hosts and real-estate media/staging pros (direct-booking capture, guest upsells, visual turnover verification, property delivery portals)",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Per-property and per-stay operational workflows for independent short-term rental (Airbnb/VRBO) hosts and real-estate media/staging pros (direct-booking capture, guest upsells, visual turnover verification, property delivery portals)",
+      "why_indie_friendly": "User-supplied domain lens"
+    },
+    {
+      "domain": "Per-engagement interactive proposals, client onboarding/document collection, and deliverable handoff workflows for independent B2B consultants, fractional executives, and boutique accounting/advisory firms",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Per-engagement interactive proposals, client onboarding/document collection, and deliverable handoff workflows for independent B2B consultants, fractional executives, and boutique accounting/advisory firms",
+      "why_indie_friendly": "User-supplied domain lens"
+    }
+  ],
+  "signals_count": 13,
+  "candidates_count": 3,
+  "worker_errors": [],
+  "survivors": [],
+  "killed": [
+    {
+      "id": "IDEA-1",
+      "title": "TenantMail Firewall: Multi-Tenant Transactional Email Circuit-Breaker & BYO-ESP Failover Proxy",
+      "slug": "idea-1-tenantmail-firewall-multi-tenant",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Global SaaS trackers (Ascendix, LeadWave, Latka) estimate ~30,800-50,000+ active SaaS companies worldwide (Latka's broader historical index tracks ~72,000 profiles), of which 75-85% (~25,000-40,000) are B2B SaaS and ~45-55% (~14,000-25,000, plus unindexed micro-SaaS) have fewer than 20 employees. Applying behavioral filters (DP14) for multi-tenant B2B SaaS apps that actually send high-bounce-risk customer-triggered external mail (invites, ticketing, forms) alongside auth/OTP through BYO AWS SES, Postmark, Resend, or Mailgun \u2014 excluding apps using dedicated auth providers (Clerk/Auth0) or low-risk internal notifications \u2014 narrows the qualified buyer pool to ~5,000-15,000 companies globally. Nearest legal Fermi value is 10,000: clearly above 1,000 globally, and mathematically impossible to reach 100,000 since total active B2B SaaS companies of all sizes are under 50,000.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.1,
+            "justification": "Triangulated across r/SaaS, r/aws, Hacker News, and official Postmark/Resend/AWS documentation: while developers who hit AWS SES sandbox rejections or sudden Resend (4% bounce / 0.08% complaint) and Postmark suspensions complain loudly post-incident, proactive per-tenant bounce circuit-breaking plus cross-ESP failover is NOT an industry standard practice (0.5) among 1-15 person SaaS teams. Like WP Engine's canonical 0.1 anchor, most small SaaS founders wire up a single ESP (Postmark/Resend/SES) and rely on basic signup validation or native streams until burned; only the ~10% slice actively evangelized by deliverability blogs or scarred by a live suspension actively prioritizes dedicated multi-tenant reputation firewalling and dual-ESP failover.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 100,
+            "justification": "Live competitor pricing pages show demonstrated annual budgets for small-team BYO email routing/failover layers cluster in the $84-$360/yr range \u2014 squarely at the $100 Fermi order of magnitude (matching the WP Engine and ConvertKit canonical anchors at $100 for $29-$99/mo products). Specifically: AWS SES Tenant Management is $0/yr for up to 1,000 tenants (with total SES transport costing $60-$384/yr for 50k-200k emails/mo); Sendmux Pro is $7/mo ($84/yr); Postmark Platform upgrade over Basic is $3/mo ($36/yr delta, $216/yr total at 10k); Mailers.io Essentials is $29/mo ($348/yr); Novu Pro is $30/mo ($360/yr; $0 self-hosted); Mailcoach self-hosted is $249 one-time. Even the proposed Starter tier ($490/yr) sits below $1,000/yr and asks small teams paying $15-$55/mo total for Resend/Postmark/SES to double or triple their email bill purely for a BYO proxy with no transport, templates, or multi-channel notifications. Demonstrated budget cannot justify $1,000/yr.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Transactional email infrastructure is sticky set-and-forget plumbing that small B2B SaaS teams typically re-evaluate only at launch, major volume tiers, or after a suspension incident (roughly every 1-3 years, not continuously per project). While a BYO proxy avoids migrating email templates or subscriber lists (keeping it above 0.01 heavy rip-and-replace lock-in), activating its promised benefits still requires instrumenting every tenant-triggered send with an explicit tenant_id header/tag, configuring webhook/SNS feedback loops, and maintaining verified DNS/DKIM/SPF across two separate ESP accounts for failover. Teams are not always in-market (ruling out 1.0); 0.1 accurately reflects infrequent/annual evaluation cadence.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Triangulated HN and Reddit (r/sysadmin, r/netsec) security discussions establish that transactional email APIs are Tier-0 identity infrastructure: compromising an email proxy or its stored API keys enables silent interception of password reset tokens and OTPs for mass Account Takeover (ATO). Asking backend engineers at 1-15 person B2B SaaS companies to hand production AWS SES, Postmark, and Resend credentials \u2014 plus synchronous runtime control over every auth/OTP email \u2014 to an unvetted solo/2-person closed-source indie SaaS [UNVETTED] creates a structural trust barrier: (1) reliability paradox (inserting an unknown 1-person cloud SPOF in front of AWS/Postmark to supposedly prevent outages), and (2) SOC 2/Vanta subprocessor and PII exposure friction. This is why developer adoption in this exact layer heavily favors native ESP features or self-hosted open-source proxies (Outgoer, MailySend, Plunk, Novu) over closed-source indie cloud proxies. Challenging 0.1 from above: normal credit-card indifference (0.5) does not hold for closed-source Tier-0 auth proxies operated by an unvetted indie founder.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Primary 2025-2026 vendor documentation proves the idea's core premise is already solved natively and at the sub-$30/mo floor: (1) On August 1, 2025 (with quota expansions on Nov 11, 2026), Amazon SES launched native Tenant Management with Automated Reputation Policies (Standard/Strict/None), accepting the exact same API parameter (TenantName) and SMTP header (X-SES-TENANT) to track per-tenant bounces/complaints, automatically pause ONLY offending tenants, and emit EventBridge alerts \u2014 with 1,000 tenants INCLUDED FREE per AWS region ($0.005/mo per tenant beyond 1,000). (2) Postmark's Platform plan is $18/mo (just $3/mo above Basic) and unlocks unlimited isolated Servers and Message Streams (physically separating transactional vs. broadcast IP lanes with per-server/stream pausing). (3) Multi-provider BYO failover proxies already colonize the $0-$29/mo floor: Sendmux ($7/mo Pro with automated failure circuit-breaking and weighted routing), Mailers.io ($0 Free / $29/mo Essentials with 3 BYO providers across SES/Postmark/Resend/Mailgun, priority failover, and unified suppression), Courier ($0 base + $0.005/send with native multi-provider failover on BYO SES), plus free self-hosted open-source proxies Outgoer (mailpace/outgoer) and MailySend (drop-in Resend/SES failover proxy). Resend lacks native subaccounts today, but an isolated Resend-only wrapper without domain-reputation magic is trivially bypassed by migrating to AWS SES Tenant Management ($0) or adding a Redis webhook check. No uncopyable structural trade-off survives to earn 0.5.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Once wired into production SMTP/REST traffic with live per-tenant reputation state and suppression logs, transactional email routing addresses a continuous operational need and generates recurring monthly subscription revenue (0.5). It cannot earn 1.0 (strong system-of-record lock-in) because Deliberate Trade-Off #1 leaves DNS/DKIM, ESP accounts, and templates with the customer, making exit a straightforward endpoint swap back to native AWS SES Tenant Management or Postmark Servers; ongoing host-platform feature absorption also caps long-term retention at 0.5 rather than 1.0.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 50.0,
+        "score": 0.0001,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Drops 10x from Scenario A (10,000 -> 1,000) due to the sharper high-volume white-label filter. Out of ~25,000-40,000 active B2B SaaS companies globally (LeadWave/Ascendix/Latka), only an estimated ~3-8% (~1,000-3,000 companies worldwide) are 10-50 person platforms sending 500k-10M+ emails/month on behalf of 100-5,000+ customer custom sending domains (helpdesks, ATS/recruiting, invoicing, vertical CRMs, booking/form platforms) over BYO AWS SES, Postmark, Mailgun, or Resend. Nearest legal Fermi value is 1,000.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Genuinely improved from Scenario A (0.1 -> 0.5): triangulated across Reddit (r/SaaS, r/sysadmin, r/cybersecurity), Hacker News, Entri case studies, and AWS/Postmark multi-tenant documentation, engineering leaders at high-volume white-label SaaS platforms sending on behalf of customer custom domains already treat tenant reputation isolation, CNAME/DKIM alignment, hard-bounce suppression, and abuse rate-limiting as standard operational practice rather than an obscure post-incident afterthought.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Genuinely improved from Scenario A ($100 -> $1,000) by moving upmarket to 10-50 person high-volume white-label SaaS platforms sending 500k-10M+ emails/mo. Live pricing pages prove this buyer cohort routinely allocates $1,000-$6,000+/yr to email/deliverability and in-VPC developer infrastructure: Entri Startup is $249/mo ($2,988/yr) for customer DNS/DKIM onboarding; Sidekiq Pro is $99/mo ($1,188/yr) and Sidekiq Enterprise starts at $269/mo ($3,228/yr); AWS SES Pro is $105/mo ($1,260/yr) + usage; SendGrid Pro starts at $89.95/mo ($1,080/yr); Mailers.io Enterprise starts at $349/mo ($4,188/yr); and MailChannels outbound filtering is $524.99/mo ($6,300/yr) for 1M emails/mo. A $199/mo ($1,990/yr) to $499/mo ($4,990/yr) in-VPC commercial license squarely matches demonstrated $1,000 Fermi-order budgets.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged from Scenario A (0.1): re-architecting outbound mail pipelines for a 10-50 person white-label SaaS sending 500k-10M+ emails/mo across 100-5,000+ verified customer custom domains is an infrequent, high-deliberation infrastructure decision (typically triggered annually or post-outage, never per-project or impulse). Adopting cross-ESP failover still requires maintaining dual-ESP DNS/DKIM verification and tagging every tenant send, confirming Liquid cannot exceed 0.1.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Genuinely improved from Scenario A (0.1 -> 0.5) by pivoting delivery from a closed-source hosted cloud proxy to a self-hosted, in-VPC Docker/single-binary commercial appliance. Running 100% inside the buyer's own AWS/GCP/Kubernetes VPC eliminates the three Scenario A trust killers: (1) production AWS SES/Postmark/Mailgun API keys and plaintext OTP/invoice bodies never leave the customer network (zero Tier-0 ATO exposure to an unvetted indie founder), (2) zero external third-party cloud SPOF in the auth hot path, and (3) zero SOC 2 subprocessor onboarding gate. Live commercial developer infrastructure precedents (Sidekiq Pro at $99/mo, Sidekiq Enterprise at $269/mo, Mailcoach self-hosted at $249, KumoMTA in-VPC adoption) confirm that technical CTOs and principal engineers routinely swipe credit cards for indie-built in-VPC infrastructure licenses.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Primary 2025-2026 documentation confirms that even after pivoting to a self-hosted in-VPC appliance for high-volume white-label SaaS, incumbents and free OSS already cover the core value proposition: (1) AWS SES native Tenant Management covers 1,000 tenants FREE per region and $0.005/mo per extra tenant (5,000 tenants = $20/mo), including TENANT-scoped suppression lists, per-tenant bounce/complaint tracking, automated pausing (Standard/Strict), and EventBridge alerts. While AWS docs confirm Tenant Management is flat (no nested tenants, no cross-account tenants) and single-vendor, 10-50 person engineering teams can bridge those edge cases with lightweight internal EventBridge/Redis glue. (2) Postmark Platform ($18/mo base + volume) gives unlimited isolated Servers/domains; MailChannels ($525/mo Standard) handles outbound spam filtering; and Entri ($249/mo Startup) solves the hardest white-label customer-domain pain (automated DNS/DKIM injection across 70+ registrars via OAuth), which a self-hosted VPC binary cannot replicate. (3) Free open-source in-VPC tools already cover raw multi-provider failover (Outgoer, MailySend) and high-volume MTAs (KumoMTA, Apache 2.0). Challenging 0.5 from below: no uncopyable structural trade-off forces a clear sub-segment to pay $1,990-$4,990/yr for this thin residual seam over AWS SES Tenant Management + OSS/DIY.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged from Scenario A (0.5): an in-VPC email routing and reputation-policy gateway solves an ongoing operational dependency and supports recurring annual commercial licensing (matching Sidekiq Pro/Enterprise renewal dynamics). Still capped below 1.0 (strong system-of-record lock-in) because BYO ESP accounts, customer DNS/DKIM CNAMEs, and templates stay outside the appliance, keeping exit costs moderate as native ESP multi-tenant controls mature.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 1250.0,
+        "score": 0.002,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.002 (EBI=0.657, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: eager_comparative (0.1): Even in the high-volume white-label SaaS niche, AWS SES native Tenant Management (Aug 2025; expanded Nov 2026) already provides 1,000 tenants FREE + $0.005/mo per extra tenant ($20/mo for 5,000 tenants) with TENANT-scoped suppression and automated per-tenant pausing; Postmark Platform offers unlimited isolated Servers ($18/mo base + volume); OSS Outgoer and MailySend offer free in-VPC multi-ESP failover; KumoMTA is Apache 2.0 free; and Entri ($249/mo) owns 1-click registrar DNS/DKIM onboarding across 70+ registrars. The residual gap (nested/cross-account SES + cross-ESP failover) is too thin to prevent DIY EventBridge/Redis wrappers.; plausible x liquid arithmetic trap (1,000 x $1,000 x 0.1 = $100k annual liquid TAM): Violates DP9, DP14, and DP16. Narrowing to 10-50 person high-volume white-label SaaS platforms sending 500k-10M+ emails/mo across 100+ customer domains collapses Plausible 10x to 1,000 accounts while outbound mail plumbing remains illiquid (Liquid = 0.1), making it mathematically impossible to reach Problem Score >= 1.0 even if Eager-Comparative rose to 0.5 (which would still yield only 0.01)."
+    },
+    {
+      "id": "IDEA-2",
+      "title": "KeystoneDock: MoR-Agnostic License, Signed Release & Branded Customer Hub for Software Vendors",
+      "slug": "idea-2-keystonedock-mor-agnostic-licens",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Applying KeystoneDock's own behavioral and revenue filters (DP14) \u2014 paid installable software only (no SaaS web apps, ebooks, courses, or templates), direct off-store sales (excluding Mac App Store/JetBrains Marketplace native IAP), and commercial volume sufficient to pay $39-$89/mo flat (excluding zero/low-revenue hobbyists) \u2014 yields ~10,000 to 30,000 qualified studios globally. Ecosystem anchors: Lemon Squeezy's entire merchant base across ALL digital goods was ~15,000+ stores (of which only a subset sell commercial installable software); global paid plugin developers across JetBrains (low hundreds, with native Marketplace billing), Figma (~200-250 monetized plugins), Obsidian (~30-40 strictly paid), and VS Code (hundreds to low thousands) total ~1,000-2,000; active indie Mac app developers number ~5,000-15,000 (many on Mac App Store IAP or sub-$1k/yr); paid WordPress plugin developers number ~15,000-35,000 (many hobbyists or deeply embedded in WordPress-native EDD/WooCommerce/Freemius); plus low thousands of indie Windows/Linux/CLI/self-hosted ISVs. After stripping hobbyists, native-store IAP, and WP-native stacks, the qualified buyer count sits far closer to 10,000 than 100,000 (geometric midpoint 31,623). Score = 10,000.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Commercial desktop app, WordPress plugin, and CLI software vendors broadly recognize license key validation, device-activation resets, and authenticated update delivery as standard operational infrastructure (0.5 = industry standard practice). Awareness is especially acute in late 2026 due to Lemon Squeezy's March 31, 2027 shutdown and Stripe Managed Payments omitting license keys, digital file delivery, and affiliate tracking, evidenced across Reddit, Hacker News, migration portals (migratefromlemonsqueezy.com), and multiple licensing vendors publishing Lemon Squeezy migration guides. It stops short of 1.0 because many indie devs either roll simple Stripe-webhook + Ed25519 scripts themselves or simply move to a single all-in-one MoR (Polar, Creem, Paddle, Freemius) rather than viewing multi-MoR portability as a universal must-have. Score = 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 100,
+            "justification": "Verified live pricing pages across direct competitors serving indie and 1-5 person software studios cluster firmly in the $100-$600/yr band: LicenseSeat ($9/mo = $108/yr Indie, $29/mo = $348/yr Starter w/ auto-updates, $79/mo = $948/yr Pro), Keylight ($19/mo = $228/yr Starter for 2,000 devices, $59/mo = $708/yr Pro), Licensr ($8.99/mo = ~$108/yr Indie, $25.99/mo = ~$312/yr Studio), LicenseManager.dev (\u20ac29/mo = ~$380/yr Startup), Easy Digital Downloads Pro/All Access ($299-$599/yr), Keymint ($49/mo = $588/yr Startup), Cryptlex ($50/mo = $600/yr Developer), and Keygen.sh ($0 Free Dev / Free Self-Hosted CE / $99/mo Std). KeystoneDock's own Indie tier is $390/yr (covering up to 2,500 active licensed customers, where the vast majority of 1-5 person studios sit) and even its Studio tier is $890/yr (below $1,000/yr). Calibrated directly to Jason Cohen's ConvertKit ($29-$79/mo -> $100) and WP Engine ($20-$30/mo -> $100) canonical anchors, realistic blended annual net revenue per indie customer sits around ~$300-$450/yr \u2014 squarely in the $100 bucket, not $1,000. Score = 100.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Lemon Squeezy's hard March 31, 2027 shutdown (new sign-ups closed Nov 16, 2026) creates an acute 4-month migration wave, but per DP15/DP19 this is a transient shock closing almost immediately rather than evergreen 'always in market' (1.0) liquidity. Structurally, once an installable desktop app or WordPress plugin ships binaries validating against a licensing API and auto-update feed, migrating requires rewriting webhook glue and pushing mandatory updates to every end-user before old endpoints die (a 4-8 week disruption documented across Lemon Squeezy migration guides and HN/Reddit). In steady state, software vendors adopt a licensing layer only when launching a net-new commercial product or during rare multi-year platform/pricing crises \u2014 an annual-ish ~10% cohort rate (0.1) rather than always-in-market (1.0) or pure multi-decade stasis (0.01). Score = 0.1.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Independent software developers and 1-5 person product studios routinely swipe credit cards for bootstrapped/indie dev-infrastructure tools without enterprise procurement, SOC 2, or institutional indemnity (proven by active indie adoption of solo/small-team tools like Keygen.sh, LicenseSeat, Keylight, Keymint, LicenseManager.dev, and Licensr). While developers just burned by Lemon Squeezy care about continuity/bus-factor, Ed25519 offline signing plus custom-domain endpoints neutralize catastrophic lock-in fears sufficiently to keep buying at normal self-serve indie parity (0.5). No mission-level identity pull (1.0) exists for an unvetted founder. Score = 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Live product and pricing pages show that multiple sub-$30/mo indie tools ALREADY solve KeystoneDock's exact MoR-agnostic wedge cleanly (DP8/DP20). LicenseSeat ($0 Hobby / $9/mo Indie / $29/mo Starter w/ auto-updates, 0% rev share) already provides multi-provider webhooks (Stripe, Paddle, Polar, Gumroad, Lemon Squeezy, Shopify), Ed25519 offline validation, hosted .dmg/.exe/.zip release & auto-update distribution, native Swift/Tauri/Rust/JS/C#/C++ SDKs, and a whitelabel custom-domain self-service customer portal. Keylight ($0 / $19/mo for 2,000 devices, unlimited products) provides multi-MoR webhooks (Stripe, Paddle, Polar, Gumroad), Ed25519 offline validation, Swift/Tauri/Electron SDKs, and a self-service customer portal. Licensr ($8.99-$25.99/mo, 0% rev share) connects Stripe/PayPal/Razorpay/Mercado Pago; LicenseManager.dev (\u20ac29/mo) connects Stripe/Paddle with JWT offline keys and a self-service portal; Keymint ($49/mo) explicitly targets Lemon Squeezy CSV migration; Keygen.sh offers free Fair-Source self-hosted CE + Software Distribution API; and Anystack.sh combines GitHub-native Electron/Tauri releases, licensing, and built-in affiliates. Worse, KeystoneDock's 'More for Less' claim fails on price ($39/mo Indie excludes auto-update CDN, custom domain, and affiliates, locking them behind $89/mo Studio, whereas LicenseSeat includes auto-updates at $29/mo and Keylight offers 2,000 devices at $19/mo) and omits a free production tier. Adding Creem/Dodo webhook adapters or basic affiliate tracking is trivially copyable by incumbents rather than an uncopyable structural trade-off. Score = 0.1.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "License validation, device activation state, and authenticated release/auto-update feeds are continuous recurring operational dependencies (clearly above 0.1 one-off). However, challenging 1.0 (system-of-record lock-in like WP Engine) from below: two real forces hold steady-state retention at 0.5 (matching ConvertKit's canonical 0.5 anchor for indie creators): (1) high natural product-mortality churn among 1-5 person indie desktop apps and plugins whose sales stall or sunset within 12-24 months, and (2) KeystoneDock's own custom-domain + standard Ed25519 portability architecture explicitly reduces switching friction to self-hosted Keygen CE or a custom server. Score = 0.5.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 1250.0,
+        "score": 0.002,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Narrowing from broad indie installable software (Scenario A: 10,000) to B2B startups distributing self-hosted Docker Compose, Helm/Kubernetes, or air-gapped software drops Plausible 10x to 1,000. Ecosystem research places total global B2B self-hosted/on-premise software startups at ~1,500-4,000 active companies; filtering to mid-volume vendors with 10-250 active self-hosted customer orgs (past the 1-5 org stage served by Distr's free CE or $160-$640/mo tier, and below large enterprise ISVs requiring Replicated's full kURL/embedded-cluster SLA) leaves roughly 500-2,000 qualified buyers globally. Score = 1,000.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5. B2B startups shipping self-hosted enterprise software clearly recognize private container distribution, offline license entitlements, and air-gap delivery as standard operational requirements (and acutely feel Replicated/Distr pricing pain once scaling past 10+ enterprise orgs). It does not reach 1.0 because many open-core startups still publish public GHCR/Docker Hub images with a simple JWT/Ed25519 key check or self-host free OSS/Fair-Source tools (Distr CE, Keygen CE) rather than treating a paid distribution control plane as universally mandatory. Score = 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Verified directly on live incumbent pricing pages for self-hosted B2B software distribution: Replicated Builders starts at $2,000/mo + $50/license/mo ($24,000+/yr), Replicated Business at $3,000/mo + $200/license/mo ($36,000+/yr), Replicated Compatibility Matrix at $500/mo ($6,000/yr), Distr Business starts at $160/mo ($1,920/yr) scaling by $128/customer-org/mo ($38,400/yr at 25 orgs) to $59,000/yr Enterprise, LicenseSpring Business Starter is $199/mo ($2,388/yr) to $750/mo ($9,000/yr), and Keygen Standard/Enterprise spans $1,188/yr to $35,988+/yr. Scenario B's $299-$699/mo ($3,588-$8,388/yr) pricing sits cleanly within demonstrated multi-thousand-dollar annual budgets, moving Lucrative up 10x from $100 to $1,000 (challenging $10,000 from below since entry pricing is $3,588/yr and Distr/LicenseSpring/Keygen start at $1,188-$2,388/yr). Score = 1,000.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1. Removing the transient Lemon Squeezy 2027 deadline does not improve structural liquidity: B2B software startups only buy a self-hosted container/air-gap distribution layer when launching an enterprise on-prem SKU or when hitting an annual Replicated ($24k-$60k/yr) or Distr ($128/org/mo) renewal cliff. Migrating live enterprise VPC customer registries is heavy friction, confining buying to annual budget/renewal or SKU-launch windows (~10% of the pool in-market per year, per DP9). Score = 0.1.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Shifting upmarket from solo indie developers (Scenario A: 0.5) to Seed-to-Series-B B2B startups shipping production containers and air-gap bundles into regulated enterprise VPCs introduces structural supply-chain security and trust barriers (DP10). Enterprise buyers audit their vendors' software distribution pipeline for SOC 2 Type II, uptime SLAs, and vendor continuity; an unvetted solo indie founder faces steep institutional trust friction convincing CTOs/VPs of Engineering to route enterprise container pulls and air-gap licensing through a new indie cloud control plane. Score drops from 0.5 to 0.1.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Unlike Scenario A (where LicenseSeat $9-$29/mo and Keylight $19/mo already ship the exact desktop-licensing wedge), this narrowed B2B self-hosted container niche hits a genuine incumbent business-model conflict: Replicated charges $2,000-$3,000/mo + $50-$200/license/mo ($24k-$60k+/yr) for enterprise Kubernetes/kURL delivery, and Distr (Glasskube) charges $160/mo base plus $128/customer-org/mo (reaching $3,200/mo at 25 orgs and $59,000/yr Enterprise). Meanwhile, sub-$30/mo indie tools (LicenseSeat, Keylight, Licensr) target desktop binaries rather than authenticated OCI/Helm container registries and air-gap tarball bundles, and Keygen.sh ($99-$2,999+/mo) lacks turnkey Docker Compose/Helm guided customer portals out of the box. Flat-rate $299-$699/mo pricing with 0% per-org tax creates a real structural wedge for mid-volume vendors (15-250 orgs) that incumbents resist copying (0.5), though not 1.0 because Distr CE (free OSS) and Keygen CE (free Fair-Source) exist as DIY alternatives. Score = 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 1.0,
+            "justification": "Moving from high-mortality indie desktop utilities (Scenario A: 0.5) to B2B startups with 10-250 paying self-hosted enterprise deployments elevates retention to genuine system-of-record lock-in (1.0). Once enterprise customer VPCs whitelist the private OCI/Helm registry proxy, consume automated air-gap tarballs, and authenticate via the custom-domain enterprise portal, ripping out the distribution control plane requires coordinating credential and firewall changes across dozens of enterprise customer IT teams, while B2B vendor survival rates far exceed solo indie apps. Score = 1.0.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 2500.0,
+        "score": 0.004,
+        "evidence_believability_index": 0.614,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.004 (EBI=0.614, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: Plausible (1,000) x Lucrative ($1,000) = $1M raw ceiling at Liquid = 0.1: Narrowing upmarket 10x rescues Lucrative ($100 -> $1,000) and Eager-Comparative (0.1 -> 0.5) but leaves Plausible x Lucrative unchanged at $1M \u2014 still 100x below the DP16 floor ($100M at Liquid = 0.1) and violating DP9/DP14 (micro-niche escape inside an illiquid category). Global B2B self-hosted/on-prem startups total ~1,500-4,000, leaving only ~500-2,000 in the 10-250 customer-org band.; Eager-Identity (0.1): Moving upmarket from indie desktop devs to B2B startups distributing production Docker/Helm images and air-gap bundles into regulated bank/healthcare/enterprise VPCs triggers supply-chain security, SOC 2 Type II, and vendor-longevity barriers that an unvetted solo indie founder cannot clear (DP10), dropping Eager-Identity from 0.5 to 0.1.; Liquid (0.1): Unchanged and structurally illiquid \u2014 B2B vendors only select a self-hosted container/air-gap distribution control plane when launching an on-prem tier or escaping a Replicated/Distr annual renewal cliff; migrating existing enterprise VPC registry allowlists and customer scripts is a multi-year lock-in event."
+    },
+    {
+      "id": "IDEA-3",
+      "title": "PassThruPBC: Zero-Persistence BYO-Drive Magic-Link PBC & Prospect Intake Shield for Small Accounting Firms",
+      "slug": "idea-3-passthrupbc-zero-persistence-byo",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario A",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 100000,
+            "justification": "Census and regulatory counts across the 4 target markets show ~250k\u2013300k total small (1\u201310 person) accounting, tax, and bookkeeping practices before behavioral filtering: US has ~50,000\u201351,000 CPA firms (NAICS 541211), 88,000+ accounting/tax/bookkeeping employer entities, plus tens of thousands of solo EAs (73k\u201387k active EAs globally, mostly US) and solo bookkeepers (~100k\u2013150k small US practices); Canada has 62,000+ establishments (ISED, ~75% micro <5 staff, ~40k non-employer); UK has ~40,605 accounting/bookkeeping enterprises (ONS SIC 6920, ~70\u201380% small); Australia has 63,911 registered tax & BAS agents (TPB: ~47k tax, ~17k BAS, ~70\u201380% small practices). Applying DP14 behavioral filters\u2014100\u2013600 annual returns or monthly bookkeeping closes (~50\u201365% of small practices) AND storing client workpapers in Google Workspace Drive or M365 SharePoint/OneDrive rather than tax-suite DMS or on-prem servers (~40\u201355%)\u2014yields roughly 60,000\u2013120,000 qualified firms. This sits cleanly above the 31,623 geometric midpoint from 10,000 and well below 316,228 toward 1,000,000, landing squarely on 100,000.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Client document-chasing friction, forgotten portal passwords, and FTC Safeguards Rule / IRS Pub 4557 security compliance (explicitly attested on annual IRS PTIN renewal) are universally recognized pain points across r/taxpros, r/Accounting, and accounting trade press, with secure upload/portal software being established industry-standard practice (0.5). Challenging 1.0: while almost all practitioners dislike chasing documents, a large share rely on bundled practice suites, tax-software portals, or inexpensive encrypted-link tools and do not view 'zero-persistence BYO-Drive' specifically as an urgent standalone problem. Accurately 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Proposed pricing ($59/mo = $590/yr Solo/Boutique up to 5 staff; $99/mo = $990/yr Practice up to 15 staff) sits squarely inside demonstrated annual budgets paid by 100\u2013600 return practices for document collection and lightweight portals: EZ File Drop Business ($588/yr), FileRequestPro Pro\u2013Team ($708\u2013$1,548/yr), Content Snare Basic\u2013Pro ($420\u2013$1,428/yr), Portico Pro\u2013Business ($708\u2013$1,428/yr), Client Hub Solo\u2013Team ($588\u2013$2,124/yr), DokuTrak Solo ($948/yr), TaxDome ($1,500+/yr), SmartVault ($1,560+/yr), and StanfordTax ($1,800\u2013$10,000+/yr). Challenging 1000 from below: $100/yr ($8/mo) materially understates typical firm spend (only 1-seat Encyro Pro at $120/yr or 5GB EZ File Drop Starter at $120/yr sits near $100/yr), and blended annual ACV (~$600\u2013$990/yr) is well above the $316/yr geometric midpoint between 100 and 1,000. Legitimately earns 1000.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Because PassThruPBC sits on top of existing Google Drive/SharePoint without migrating historical workpapers, billing, or tax prep software, switching friction is far lower than ripping out an ERP or full practice suite (clearing 0.01). However, it fails the 1.0 ('always in market') bar: tax and accounting firms operate on rigid seasonal cycles (Jan\u2013Apr filing freeze where client-facing tool changes are taboo; primary stack evaluations occur annually in Oct\u2013Dec or post-season May\u2013Jun), major incumbent portals (TaxDome, Financial Cents Solo, Client Hub Solo, SmartVault) bill annually\u2014with r/taxpros threads noting firms often absorb price hikes mid-cycle rather than disrupt client habits\u2014and adding a new taxpayer-PII service provider triggers FTC Safeguards WISP vendor-vetting overhead. Textbook 0.1 (annual decision cycle).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Under the FTC Safeguards Rule (16 CFR Part 314) and IRS Publication 4557, tax preparers, CPAs, EAs, and bookkeepers are legally classified as financial institutions and remain legally responsible for client NPI (SSNs, W-2s, bank statements) touched by third-party service providers. While firms with <5,000 consumers are exempt from four administrative WISP provisions and SOC 2 Type II is not strictly mandated by statute (so this is not 0.0 structurally barred\u2014small practices can legally vet a small vendor via security questionnaire + signed DPA, and do buy from established small SaaS vendors like Encyro or FileRequestPro), SOC 2 Type II is the industry standard for third-party vendor oversight. An unvetted solo/2-person indie founder with no SOC 2 Type II, no CPA/EA domain pedigree, and no r/taxpros track record asking firms to grant Google Drive/SharePoint OAuth scopes AND stream raw taxpayer SSNs/W-2s through an ephemeral 60-second server transit buffer for PDF conversion faces real structural trust barriers (0.1), not buyer indifference (0.5)\u2014especially given documented r/taxpros skepticism toward email-only magic-link security.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Live floor-and-ceiling competitive audit (DP8, DP20) reveals that existing free and $10\u2013$79/mo tools ALREADY solve every element of PassThruPBC's core wedge cleanly, with no structural business-model barrier preventing incumbents from matching it: (1) BYO Google Drive/SharePoint pass-through with auto-deletion and auto-file renaming is already offered by EZ File Drop ($10\u2013$12/mo Starter, $49/mo Business for up to 20 users, explicitly marketed to accounting firms with ephemeral S3 staging purged after delivery) and FileRequestPro ($29/mo Lite, $59/mo Pro with SharePoint, no-login upload pages, dynamic subfolders, email reminders, and an auto-delete toggle); Microsoft 365 also bundles OneDrive/SharePoint 'Request Files' for $0 with zero third-party storage. (2) Accounting-specific passwordless magic-link / email-OTP PBC checklists with item review/approval loops, mobile photo upload, and automated reminders are already sold by ClientCollect ($29\u2013$199/mo flat, email-OTP verified), ShieldFive (\u20ac29/seat/mo, unlimited requests + stronger browser-side zero-knowledge encryption), Portico ($0 Free, $29 Starter, $59 Pro with e-signatures & Stripe), DokuTrak ($79/mo flat with AI upload-time blurry-scan rejection), and Content Snare ($35\u2013$119/mo with native Drive/SharePoint sync). (3) The TaxDome $15/active-account prospect-intake squeeze is already cheaply bypassed with Encyro Pro ($9.99/mo annual / $14.99/mo monthly, beloved on r/taxpros, IRS Pub 4557 compliant, includes e-signatures) or Financial Cents ($19/mo Solo full PM + passwordless magic-link portal; $69/user/mo Scale adds two-way Google Drive/SharePoint sync). Meanwhile, PassThruPBC's deliberate exclusions (no e-signatures for Form 8879/engagement letters, no SMS reminders) make it less complete than $10\u2013$59/mo rivals. Fails the 0.5 bar; 0.1 is earned on primary pricing/feature proof.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Client document collection is a genuine recurring annual (tax season + October extensions) and monthly (bookkeeping close) operational workflow, supporting recurring SaaS subscriptions like Content Snare, FileRequestPro, and Encyro (clearing 0.1 one-off). However, PassThruPBC deliberately refuses to store client files at rest or serve as a practice management/CRM system-of-record, eliminating data gravity and archive lock-in (preventing 1.0) and leaving tax-only solo practices prone to off-season monthly churn unless locked into annual billing. Solidly 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 25000.0,
+        "score": 0.04,
+        "evidence_believability_index": 0.829,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Narrowing Scenario A's ~60k\u2013120k qualified small practices (100,000) specifically to higher-volume 300\u20131,000+ annual return independent tax practices (2\u201315 staff) in the US, Canada, UK, and Australia that store workpapers in Google Workspace Drive or Microsoft 365 SharePoint/OneDrive (excluding solo micro-practices under 300 returns and mid/large firms on enterprise DMS like UltraTax/FileCabinet CS, GoFileRoom, CCH Axcess, or SmartVault) cuts the qualified population roughly 5x\u201310x to ~10,000\u201320,000 firms\u2014squarely 10,000 on the legal Fermi scale.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 1.0,
+            "justification": "Concentrating on 300\u20131,000+ return practices legitimately raises Self-Aware from 0.5 to 1.0: at 300+ returns compressed into a 10-week filing season, virtually every practice owner acutely recognizes client document-intake bottlenecks, portal login support floods, and per-return/per-account software fee escalation (evidenced by intense r/taxpros backlash to TaxDome's per-active-account floor and universal category spend on TaxCaddy, SmartVault, Content Snare, StanfordTax, and Truss).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Repricing Scenario B to $149/mo ($1,490/yr flat, unlimited staff and unlimited simultaneous seasonal PBC requests) undercuts Truss (~$3,000/yr flat), Content Snare Custom ($2,580+/yr for 200+ active requests), TaxDome ($3,750\u2013$14,250/yr at 300\u20131,000 active accounts), and StanfordTax ($5,400\u2013$20,000/yr at 300\u20131,000 returns). Because Scenario B deliberately omits AI data extraction, workpaper binder assembly, e-signatures, and full practice management, it cannot credibly command $10,000/yr (midpoint from 1,000 is $3,162/yr); at $1,490/yr it remains firmly in the $1,000/yr Fermi bucket. Remains 1000.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged from Scenario A: 300\u20131,000+ return tax practices are even more tightly bound to annual pre-tax-season stack decisions (Oct\u2013Dec evaluation window, strict Jan\u2013Apr change freeze, annual-only incumbent renewals, and WISP vendor approval). Remains 0.1.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Switching from a 60-second server transit buffer to browser-direct Google Drive / Microsoft Graph resumable upload URIs removes vendor server handling of raw PDF bytes, but does NOT lift eager_identity to 0.5 for an unvetted solo founder. First, the app still requires Google Workspace / SharePoint OAuth tokens and executes client-side JavaScript controlling where taxpayer SSNs/W-2s go. Second, narrowing upmarket to 300\u20131,000+ return firms (2\u201315 staff) brings buyers closer to or above the FTC Safeguards Rule 5,000-consumer threshold (accumulated across multi-year retention of clients, spouses, dependents, and entities), increasing formal SOC 2 Type II and vendor-oversight expectations under 16 CFR 314.4(f) and IRS Pub 4557. Remains 0.1.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Even narrowed to high-volume 300\u20131,000+ return practices squeezed by per-return fees and TaxDome's $15/active-account surcharge, Scenario B fails to earn 0.5. Removing the 60-second server transit buffer in favor of true browser-direct Google Drive/Microsoft Graph resumable upload URIs makes the zero-persistence claim cleaner, but it structurally blocks the high-value features that 300\u20131,000 return firms actually pay $3,000\u2013$20,000/yr for (AI document classification, OCR prior-year organizer extraction, auto-assembled tax workpaper binders, and Form 8879 e-signatures offered by Truss at ~$3,000/yr flat unlimited, StanfordTax at $18\u2013$20/return, Soraban at $20\u2013$40/return, and Juno at $48\u2013$50/return). Stripped back to a passwordless PBC checklist + BYO-Drive uploader, PassThruPBC collides head-on with an already-colonized $8\u2013$199/mo floor: ClientBrief (~$8/mo flat Suralink/PBC checklist alternative), Dropyourdocs (\u20ac29/mo flat for whole team straight into Google Drive), EZ File Drop ($49/mo Business / $149/mo Premium for 20 users, 100GB\u20131TB/mo into Google Drive/SharePoint with ephemeral S3 auto-delete & renaming), FileRequestPro ($59\u2013$129/mo with Drive/SharePoint auto-delete & reminders), ClientCollect ($29\u2013$199/mo email-OTP checklists + review loops), ShieldFive (\u20ac29/seat/mo unlimited requests + browser-side zero-knowledge E2EE), DokuTrak ($79\u2013$199/mo flat with AI scan-blur validation), and AuditDashboard ($29\u2013$35/user/mo small-firm PBC lists). Remains 0.1.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged from Scenario A: 300\u20131,000 return tax practices repeat peak-season document collection every year on annual subscriptions (clearing 0.1 one-off), while zero-persistence BYO-Drive deliberately surrenders document-archive system-of-record lock-in (preventing 1.0). Solidly 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 5000.0,
+        "score": 0.008,
+        "evidence_believability_index": 0.743,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.04 (EBI=0.829, Min=0.7, NOT VIABLE (< 0.5 as scored)). Weak links: eager_comparative (0.1): The sub-$60 to $79/mo floor is already heavily colonized by 9+ live direct competitors solving the exact core wedge cleanly\u2014including EZ File Drop ($10\u2013$49/mo for 20 users, ephemeral S3 staging auto-delete to Google Drive/SharePoint + auto-file renaming), FileRequestPro ($29\u2013$59/mo, direct Google Drive/SharePoint routing + auto-delete toggle + reminders), ClientCollect ($29+/mo, email-OTP passwordless checklists + review/approval loops), ShieldFive (\u20ac29/seat/mo, unlimited requests + browser-side zero-knowledge E2EE), Portico ($0\u2013$59/mo, magic-link checklists + e-sign + Stripe), DokuTrak ($79/mo flat, AI upload-time blurry-scan rejection), Encyro Pro ($10\u2013$15/mo, r/taxpros staple + e-sign), Financial Cents ($19/mo Solo passwordless portal; $69/user/mo two-way Drive/SharePoint sync), and free M365 OneDrive Request Files. There is no uncopyable structural trade-off incumbents refuse to match.; eager_identity (0.1): Under the FTC Safeguards Rule (16 CFR 314.4(f)) and IRS Pub 4557, even solo tax preparers are legally regulated financial institutions liable for third-party breaches of taxpayer NPI (SSNs, W-2s, bank statements). Asking risk-averse CPAs/EAs to grant Google Workspace/SharePoint OAuth access and route taxpayer files through an unvetted solo founder's ephemeral server PDF-conversion buffer without SOC 2 Type II or established peer reputation creates a structural trust barrier.; liquid (0.1): Tax and accounting practices concentrate software changes into narrow annual pre-tax-season windows (Oct\u2013Dec) or post-season reviews (May\u2013Jun), freeze client-facing tools during peak season (Jan\u2013Apr), face annual-only contracts on incumbent suites (TaxDome, Financial Cents, SmartVault), and must log new PII vendors in their FTC WISP\u2014pinning adoption velocity to annual decision cycles rather than always-on liquidity."
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "run_id": "2026-11-25_0720-ninth-indie-sprint-platform-ecosyste",
+  "run_type": "discovery",
+  "ambition": "indie",
+  "lenses": [
+    {
+      "domain": "Atlassian Marketplace Forge (Runs on Atlassian) for Jira Cloud & JSM: Jan 31 2027 Connect EOL abandoned apps, Data Center-to-Cloud parity gaps, or JSM portal/ESM workflow gaps",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Atlassian Marketplace Forge (Runs on Atlassian) for Jira Cloud & JSM: Jan 31 2027 Connect EOL abandoned apps, Data Center-to-Cloud parity gaps, or JSM portal/ESM workflow gaps",
+      "why_indie_friendly": "User-supplied domain lens"
+    },
+    {
+      "domain": "Atlassian Marketplace Forge (Runs on Atlassian) for Confluence Cloud & Rovo AI Hygiene: section-level freshness/ownership governance, approval gates, or regulated export gaps",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Atlassian Marketplace Forge (Runs on Atlassian) for Confluence Cloud & Rovo AI Hygiene: section-level freshness/ownership governance, approval gates, or regulated export gaps",
+      "why_indie_friendly": "User-supplied domain lens"
+    },
+    {
+      "domain": "Microsoft AppSource (Teams/SharePoint native zero-egress departmental workflows) or HubSpot Marketplace (multi-portal/RevOps guardrails): verified paid B2B Marketplace gaps",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Microsoft AppSource (Teams/SharePoint native zero-egress departmental workflows) or HubSpot Marketplace (multi-portal/RevOps guardrails): verified paid B2B Marketplace gaps",
+      "why_indie_friendly": "User-supplied domain lens"
+    }
+  ],
+  "signals_count": 13,
+  "candidates_count": 3,
+  "worker_errors": [],
+  "survivors": [],
+  "killed": [
+    {
+      "id": "IDEA-1",
+      "title": "StepShield for Jira (Forge Automation JSON Offload Runner)",
+      "slug": "idea-1-stepshield-for-jira-forge-automa",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Bottom-up count anchored to Atlassian's FY2026 Form 10-K (primary SEC data, FY ended June 30, 2026): Atlassian has >350,000 total paying customers (2+ seats across all products) and ONLY 57,334 customers worldwide generating >$10,000 in total Cloud ARR across ALL products and tiers combined (Jira Standard/Premium/Enterprise, Confluence, JSM, Bitbucket, Trello, Loom). At Jira Cloud Standard list pricing ($9.70/user/mo; ~$9,660\u2013$11,640/yr at 100 seats before Confluence), virtually all 100\u2013250 seat orgs and most 50\u201399 seat multi-product orgs sit inside that 57,334 cohort (~60k\u201375k total 50\u2013250 seat Atlassian Cloud orgs across all tiers). Filtering to Jira Cloud Standard (excluding Jira Premium/Enterprise, Data Center, and non-Jira orgs; generously 40\u201350%) yields ~25,000\u201335,000 orgs. Applying the mandatory behavioral filter (DP14): allowances pool org-wide across Jira Standard (400 steps/user), Confluence Standard (+100 steps/user), and JSM Standard (+3,000 steps/agent); Atlassian exempted NO_ACTIONS_PERFORMED runs, logging, variables, and lookup tables before the Dec 3, 2026 billing start and states 'most customers' stay within built-in allowances. Worse, to break even vs Atlassian's $0.50/1k PAYG rate at StepShield's $1.50/user/mo price, a 100-seat org must burn >340,000\u2013350,000 billable action-producing Jira-internal (non-webhook) steps/mo (8.5x its 40k Jira pool), and a 250-seat org must burn >850,000+ steps/mo. Even generously assuming 5\u201310% hit the cap at all (~1,500\u20133,500 orgs) and 2\u20135% clear the PAYG break-even on Jira-internal rules (~500\u20131,800 orgs), the true qualified buyer pool is firmly 1,000 (10,000 would implausibly require ~30\u201340% of all 50\u2013250 seat Jira Standard orgs globally to exceed pooled allowances by ~8x). Tagged [fermi] (believability 0.4) because while the 57,334 >$10k Cloud ARR ceiling is primary SEC data, Atlassian does not disclose exact tier or step-overage percentages.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Triangulated across Atlassian official documentation, Atlassian Community threads, Reddit (r/jira, r/atlassian), and multiple Atlassian Solution Partners (Cprime, Isos Tech, Empyra, Softgile, eCanarys, The Jira Guy): Atlassian launched its real-time automation step usage dashboard in September 2026, sends automated 80% and 100% pool warning notifications to admins, and activates billable overages on December 3, 2026. Managing automation limits and auditing high-burn rules is actively recognized across the Jira admin community (earning 0.5 \u2014 industry standard practice). Falls short of 1.0 ('almost everyone cares') because billing has not yet appeared on post-Dec-3 invoices, Atlassian's NO_ACTIONS_PERFORMED rollback calmed early alarm, and many admins hitting small PAYG overages ($25\u2013$75/mo) will simply pay or prune rules natively rather than shop for a replacement engine.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Demonstrated annual Marketplace budget for workflow automation apps at 50\u2013250 Jira Cloud seats is squarely in the $1,000/yr order of magnitude ($900\u2013$4,500/yr at StepShield's $1.50/user/mo; ~$1,500\u2013$1,800/yr at the 100-seat midpoint with 0% Atlassian Marketplace rev share up to $1M lifetime Forge revenue). Validated by live Marketplace spending across tens of thousands of orgs: JMWE (~$2,500\u2013$3,000/yr at 100 seats, 16,300+ installs), JSU (~$2,500/yr at 100 seats, 11,800+ installs), and ScriptRunner (~$3,000\u2013$4,000/yr at 100 seats, 35,000+ installs). Note: this $1,000 rung holds only for the heavy-burn tail isolated in Plausible = 1,000; mild-overage Standard orgs pay only $100\u2013$600/yr in Atlassian PAYG overages.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Although Atlassian Marketplace offers 1-click 30-day free trials billed via Atlassian, two primary structural constraints prevent Liquid = 1.0 for 50\u2013250 seat Jira Standard orgs: (1) Atlassian strictly enforces Billing Cycle Matching\u2014any Marketplace Cloud app MUST match the parent Jira subscription's billing cycle, meaning annual Jira Cloud Standard customers (the majority at 50\u2013250 seats for the ~17% discount) cannot buy monthly and must commit upfront annually for their entire licensed user tier ($1,500\u2013$3,750/yr at 100\u2013250 seats), routing through annual IT/finance budget approval; and (2) Jira Cloud Standard excludes Sandboxes (Premium-only), so disabling live native automation rules and cutting over to a third-party Forge runner happens in live production Jira\u2014an operational change deferred to planned review windows rather than impulsive per-project adoption. Scores 0.1 (annual/budget-gated decision).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Atlassian's programmatic 'Runs on Atlassian' badge (pure Forge, Atlassian-hosted compute/storage, zero external data egress, native data residency) plus 'Paid via Atlassian' Marketplace billing genuinely neutralizes the SOC 2, external-server VRA, and new-vendor procurement walls that trap normal standalone indie SaaS at 0.1. For 50\u2013250 seat SMB/lower-mid-market Jira Cloud Standard admins, an indie Marketplace developer with the 'Runs on Atlassian' badge and a 30-day free trial clears security review easily enough that buyer identity is broadly indifferent (0.5). Caveat: [UNVETTED] solo founder status and 0 initial installs without Atlassian Enterprise Certified (AEC) status still create mild trust friction when requesting write:jira-work production permissions with no Jira Standard Sandbox, and marketing explicitly as an Atlassian billing bypass invites Marketplace App Review scrutiny under Developer Terms anti-circumvention clauses\u2014but on buyer-side identity willingness alone, 0.5 is the calibrated score.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Crushed in a DP8 floor-and-ceiling sandwich once live Dec 3, 2026 Atlassian rules are audited. First, IDEA-1's core premise is factually outdated: Atlassian updated its usage-based policy prior to Dec 3, 2026 so NO_ACTIONS_PERFORMED runs, logging, variables, lookup tables, and re-fetches cost 0 steps, AND Jira Standard orgs do NOT face an $11,880\u2013$29,700/yr Premium upgrade wall (upgrading 100 seats to Premium adds only +35,000 steps/mo\u2014worth $17.50 on PAYG!). Instead, Atlassian's native $0.50/1k PAYG is a built-in floor that costs LESS than StepShield ($1.50/user/mo = $150/mo at 100 seats; $375/mo at 250 seats) all the way up to 340,000+ billable action-producing steps/mo at 100 seats (40k included + 300k PAYG) and 850,000+ steps/mo at 250 seats\u2014with zero migration, zero split-brain rule estates, and full Slack/webhook/smart-value support. Second, for the extreme outlier tail above break-even, JMWE by Appfire (16,300+ installs, ~$2,500\u2013$3,000/yr at 100 seats\u2014far below IDEA-1's claimed $4.5k\u2013$5k/yr) and ScriptRunner (35,000+ installs, ~$3,000\u2013$4,000/yr at 100 seats) already provide unlimited Event-based Actions and Scheduled JQL Actions outside Atlassian's step quota, alongside Workflow Building Blocks (335 installs) and free Forge scripting (Scriptwright). StepShield's sole narrow advantage (1-click JSON import of strictly Jira-internal rules, saving a few hours of one-time rule rebuild and ~$700\u2013$1,200/yr vs JMWE) is undercut by Forge's hard scheduling constraints (minimum fiveMinute interval, max 5 scheduled triggers per manifest, no 1-min cron) and split-brain maintenance when rules containing webhooks or unsupported smart values must stay native. Scores 0.1.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Recurring Marketplace subscription tied to ongoing monthly Jira workflow automation execution earns 0.5 (recurring revenue from recurring problem), not 1.0 because Jira remains the system of record and rules are portable JSON that can be re-enabled natively or moved to JMWE/ScriptRunner. Severe 3rd-order fragility (DP3/DP15) caps upside and threatens multi-year durability: (1) Atlassian Developer Terms prohibit circumventing usage caps/platform limits, putting an explicitly positioned 'step-quota offload' app at platform-policy risk; (2) Atlassian controls both Forge compute pricing ($0.000025/GB-sec) and native Automation allowances/$0.50 overage rates; and (3) many admins reacting to Dec 3, 2026 billing will optimize runaway rules once (one-time cleanup) and churn at annual renewal once native burn falls under their pooled cap.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 1250.0,
+        "score": 0.002,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Bottom-up bound anchored to Atlassian's FY2026 Form 10-K (57,334 total customers globally with >$10k Cloud ARR across all products and tiers combined; Atlassian does not disclose $100k+ ARR counts). Estimating 500\u20132,000+ seat Jira Cloud Enterprise & Premium organizations (~5,000\u20138,000 globally) and filtering to the extreme-burn cohort exceeding their 500k\u20132M+ monthly org-wide pooled allowance (Jira Enterprise 1,000/user + Confluence + JSM Enterprise 9,500/agent) by 3M\u201320M+ strictly Jira-internal action-producing steps/mo (after the NO_ACTIONS_PERFORMED = 0 exemption) without already offloading via existing ScriptRunner/JMWE licenses leaves ~500\u20131,200 organizations globally\u2014clamped to the lowest legal rung of 1,000 (acknowledging the true pool may sit slightly below 1,000). Tagged [fermi] (0.4) because tier-specific step-burn tails are undisclosed.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 1.0,
+            "justification": "Genuinely rises from 0.5 to 1.0 in this narrowed cohort. Unlike 50\u2013250 seat Standard teams facing $25\u2013$100/mo PAYG noise, 500\u20132,000+ seat Jira Cloud Enterprise & Premium admins who lost legacy 'Unlimited' automation and see $1,250\u2013$9,500+/mo projected overages in the Sept\u2013Nov 2026 Atlassian Administration Usage dashboard (with automated 80%/100% alerts and Dec 3, 2026 billing activation) are acutely aware and actively scrambling for remediation, triangulated across Atlassian Community, r/jira, and Atlassian Solution Partner advisories.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 10000,
+            "justification": "Genuinely rises from $1,000 to $10,000 via the Enterprise/Premium upmarket shift. Progressive Atlassian Marketplace per-user pricing ($1.50/user/mo for 1\u2013250 seats tapering to $0.75/user/mo for 501\u20132,000 seats) generates $9,000\u2013$18,000/yr ACV (order of magnitude $10,000/yr; 0% rev share up to $1M lifetime Forge revenue), anchored against $15,000\u2013$114,000+/yr in net-new Dec 3, 2026 Atlassian PAYG overage invoices and verified Enterprise Marketplace spend on ScriptRunner/JMWE ($10k\u2013$25k+/yr at 500\u20132,000 seats).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1. Moving to Jira Cloud Premium & Enterprise eliminates Scenario A's no-Sandbox testing barrier (both Premium and Enterprise include Sandboxes for shadow-run testing), but 500\u20132,000+ seat organizations buy Jira on annual enterprise agreements\u2014and Atlassian Marketplace mandates billing-cycle matching, forcing an upfront $9,000\u2013$18,000/yr annual purchase through formal IT security, legal, and annual budget approval cycles.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Downgraded honestly from 0.5 to 0.1 (DP25 upmarket trap). Although Atlassian's programmatic 'Runs on Atlassian' Forge badge guarantees zero external data egress and native data residency, 500\u20132,000+ seat Jira Cloud Enterprise procurement teams treat 'Runs on Atlassian' as necessary but insufficient for a $10k\u2013$18k/yr mission-critical workflow execution engine. Enterprise buyers look for Atlassian Enterprise Certified (AEC, replacing Cloud Fortified), independent compliance/logic audits, commercial SLAs, established vendor longevity (Appfire/Adaptavist vs [UNVETTED] 0-install solo indie), and clean compliance with Atlassian Developer Terms (which prohibit circumventing platform usage caps).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Genuinely improves from 0.1 to 0.5 within this narrowed Enterprise/Premium outlier segment because Atlassian's native $0.50/1k PAYG is NO LONGER cheaper once an org burns 3M\u201320M+ billable Jira-internal steps/mo ($15,000\u2013$114,000+/yr in net-new PAYG bills vs $9,000\u2013$18,000/yr for StepShield). Pairing 1-click native Jira Automation JSON import with a Sandbox Shadow-Run Parity Verifier solves a real migration bottleneck that JMWE and ScriptRunner do not offer (both require manually rebuilding dozens of legacy 'Unlimited Enterprise' rules from scratch). Still capped at 0.5 (not 1.0) because many 500+ seat Enterprise orgs already license ScriptRunner (35,000+ installs) or JMWE (16,300+ installs) and can rewrite their top 3\u20135 runaway rules in hours, while Forge's 5-scheduled-trigger / fiveMinute-minimum limits and zero-webhook trade-off leave complex rules on native Jira Automation.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5 (recurring annual Marketplace subscription tied to continuous monthly workflow execution). Still NOT 1.0 because Jira remains the system of record and rules are portable JSON; remains exposed to severe 3rd-order platform risk (Atlassian controls both Forge compute pricing and Automation step allowances/overages, plus Developer Terms anti-circumvention enforcement) and year-one rule-optimization churn.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 25000.0,
+        "score": 0.04,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.04 (EBI=0.657, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: Plausible (1,000 \u2014 true pool likely 500\u20131,000) \u2014 Even after targeting 500\u20132,000+ seat Jira Cloud Enterprise & Premium orgs losing legacy 'Unlimited' automation on Dec 3, 2026, Atlassian has only 57,334 customers globally with >$10k Cloud ARR across all products and tiers combined (FY2026 10-K). Filtering to 500+ seat Jira Cloud Enterprise/Premium orgs (~5,000\u20138,000 globally) that burn 3M\u201320M+ billable Jira-internal steps/mo above their 500k\u20132M/mo org-wide pooled allowance (Jira + Confluence + JSM) and haven't already offloaded those few runaway rules into existing ScriptRunner/JMWE licenses yields <=1,000 buyers globally\u2014mathematically unable to clear the DP16 arithmetic floor at Liquid = 0.1.; Eager-Identity (0.1 \u2014 classic DP25 upmarket indie-trust penalty) \u2014 Moving upmarket to 500\u20132,000+ seat Enterprise buyers to escape the $0.50/1k PAYG break-even floor destroys indie buyer fit. While the 'Runs on Atlassian' Forge badge solves zero-egress data residency, Enterprise procurement still mandates Atlassian Enterprise Certified (AEC) status, independent security/logic audits, uptime SLAs, vendor longevity (zero solo bus-factor), and legal review of Atlassian Developer Terms anti-circumvention clauses before delegating mission-critical production workflows.; Liquid (0.1) \u2014 Although Jira Premium and Enterprise include Sandboxes (resolving Scenario A's live-production cutover risk), 500\u20132,000+ seat Enterprise organizations operate on annual Jira subscriptions with mandatory co-termed annual Marketplace billing ($9,000\u2013$18,000/yr upfront) and formal IT/procurement budget cycles.; Platform Arbitrage & Forge Ceiling Fragility (DP3) \u2014 Even at Enterprise scale, StepShield's entire value proposition depends on exploiting Atlassian's Forge compute subsidy ($0.000025/GB-sec) to undercut Atlassian's own $0.50/1k Automation usage billing, directly exposing the app to Atlassian Developer Terms anti-circumvention enforcement, Forge pricing changes, or Forge's hard 5-scheduled-trigger / fiveMinute-minimum manifest limits."
+    },
+    {
+      "id": "IDEA-2",
+      "title": "SectionGuard for Confluence (Macro-Free Section Freshness & Rovo Quarantine)",
+      "slug": "idea-2-sectionguard-for-confluence-macr",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario A",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "10,000 organizations globally (post-filter behavioral TAM, per DP14/DP28). Anchored bottom-up on primary filings: Atlassian's FY2026 10-K reports >300,000-350,000 total customers across all products (2+ seats) and exactly 57,334 customers generating >$10,000 in total Cloud ARR across Jira, Confluence, JSM, and Bitbucket combined. Technographic data estimates 46,000-110,000 total Confluence organizations across all sizes and hosting types. Filtering to 50-250 seat Confluence Cloud orgs (typical combined Atlassian spend $8k-$60k/yr, largely bounded inside the 57,334 >$10k ARR cohort plus Confluence-only 50-100 seat Standard accounts) yields ~15,000-30,000 orgs; further filtering to those maintaining multi-team monolithic engineering/IT runbooks & SOPs with Rovo enabled (bundled into paid Confluence Cloud plans) or post-Data Center migrations lands squarely around ~10,000-18,000 buyers. What makes 100,000 wrong: there are only 57,334 Atlassian customers >$10k Cloud ARR across ALL products combined. What makes 1,000 wrong: Rovo is bundled across paid Confluence Cloud tiers and far more than 1,000 mid-sized tech/IT orgs run engineering runbooks on Confluence Cloud. Marketplace category ceilings corroborate this order of magnitude: #1 Comala Document Management has ~5,900 total installs (all sizes, Cloud+DC) and #1 Midori Better Content Archiving has ~1,100 total installs.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.1,
+            "justification": "0.1 (thought-leaders and Atlassian Partners evangelize AI-readiness hygiene, NOT an industry-standard budgeted practice). Atlassian Community and r/atlassian threads confirm real admin frustration with 'Garbage in, Rovo out' and active voting on JAC AI-621 / CONFCLOUD-35817 (excluding pages from search/AI index), plus minor complaints that typo edits reset lastModified \u2014 ruling out 0.01 ('few agree/care'). However, 0.5 ('industry standard practice') is strongly refuted by empirical Marketplace adoption: out of 46,000-110,000 Confluence companies, the #1 archiving/freshness app (Midori Better Content Archiving) has only ~1,100 installs (~1-2%), Breeze has ~180 installs, and every 2025-2026 Forge AI-readiness/freshness app (CodeTailor AI Readiness, Evergreen, Page Hygiene Report, Stale Page Finder, Doc Ownership & Reviews) sits at 1-3 installs. Moreover, admins facing monolithic-page staleness are routinely advised by the community to split pages into child pages rather than seek sub-page heading hashing. Calibrates directly to canonical WP Engine anchor (0.1).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "$1,000/yr order of magnitude (verified directly from live Atlassian Marketplace Cloud pricing pages and official Forge revenue-share terms). Comparable Confluence Cloud governance/archiving apps charge $1,075-$1,254/yr at 50 seats (Comala $1,075-$1,185/yr; Midori Better Content Archiving $1,254/yr at $2.09/u/mo), $2,150-$2,508/yr at 100 seats (Comala $2,150-$2,370/yr; Midori $2,508/yr), and ~$4,100-$5,100/yr at 200-250 seats (Midori ~$1.72/u/mo at 200 seats). Atlassian's Forge revenue-share incentive (active Oct 2025 for 'Runs on Atlassian' apps) grants 0% Marketplace fee on the first $1M lifetime Forge revenue (15-16% thereafter), yielding ~$1,200-$5,100/yr net revenue per customer (~$2,400/yr median at 100 seats). This cleanly rules out $100/yr below (even 50-seat buyers pay >$1,000/yr) and $10,000/yr above (250-seat cap sits around ~$4.5k-$5.4k/yr).",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "0.1 (annual / periodic IT budget & renewal decision, NOT always-in-market per-project adoption). Although Atlassian Marketplace enables 1-click 30-day trials on unified billing, two verified structural mechanics kill 1.0 at 50-250 seats: (1) Atlassian's Matched-Tier site-wide licensing rule forces organizations to license ALL Confluence seats (including the ~70% non-engineering HR/marketing/legal users Atlassian reports on Confluence), turning an SRE team experiment into a $1,200-$5,400/yr site-wide spend; (2) 50-250 seat orgs route Marketplace purchases through Org Admins and IT budget approval, commonly co-terminated with annual Confluence renewals or one-time Data Center migration / Rovo rollout budgets. Marketplace vendor benchmarks confirm 10-15% trial-to-paid conversion with high 'silent trial abandonment' driven by this champion-vs-procurement gap. What makes 0.01 wrong: apps can be added/removed without migrating off Confluence, so lock-in is annual/budget-cycle rather than multi-year ERP lock-in.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "0.5 (indifferent / normal Atlassian Marketplace indie parity at 50-250 seats). Unlike external OAuth relays that transit corporate data through solo-hosted servers (DP22 -> 0.1), Atlassian's programmatically verified 'Runs on Atlassian' Forge badge enforces 100% Atlassian-hosted compute/storage, zero external end-user data egress, and inherited native Data Residency, while 'Paid via Atlassian' handles billing as Merchant of Record. What makes 0.1 wrong: Atlassian's Shared Responsibility model specifically eliminates SOC 2 infrastructure vetting for 50-250 seat SMB/mid-market buyers, and internal runbook freshness is non-catastrophic operational tooling (not DP10 strict legal/HIPAA/audit liability transfer). Caveat keeping it from 1.0: requesting write/move scopes for quarantine + lacking Platinum Partner / Cloud Fortified status on Day 1 creates mild scrutiny against Midori/Appfire at the 200-250 seat upper bound, but not a structural identity block. [UNVETTED] Founder-fit assumes indie dev can maintain Forge manifest least-privilege scopes and publish a credible support SLA.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "0.1 (commodity / insufficient structural wedge to compel site-wide purchase alone). Three verified live-research findings kill 0.5: (1) Zero-egress Forge is NOT differentiated \u2014 CodeTailor AI Readiness, Evergreen, Stale Page Finder, and FREE Stale Content Auditor already run 100% on Forge with zero egress. (2) Rovo quarantine is either natively solved or structurally broken \u2014 Atlassian docs confirm Confluence's native Page Archiving (free on all plans) ALREADY excludes archived pages from Rovo AI search and chat within minutes to hours; conversely, moving a monolithic 15-section runbook with 1 stale section into a restricted holding space hides all 14 live sections from human responders (since Rovo strictly mirrors human view permissions). (3) Macro-free H2/H3 heading hashing is priced at $2.00/user/mo \u2014 virtually identical to Midori Better Content Archiving ($2.09/u/mo, 1,100 installs, full analytics/archiving/notifications) and Comala ($1.80-$2.00/u/mo, 5,900 installs) while omitting workflows, archiving, and analytics, and competing against free native splitting into child pages + Verified Pages + Premium Content Manager/Automation. Unlike ConvertKit or WP Engine, heading hashing is not an uncopyable business-model trade-off (Midori or CodeTailor could ship ADF heading hashing in weeks if buyers demanded it), and existing Forge AI-readiness/hygiene apps sit at 1-3 installs each.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "0.5 (recurring revenue from a recurring problem, capped below 1.0). Documentation decay in living engineering runbooks and Rovo knowledge bases is continuous rather than strictly one-off, supporting ongoing Marketplace SaaS renewals as proven by Midori Better Content Archiving (1,100 installs, 4.8 stars) and Breeze (~180 installs) \u2014 making 0.1 wrong. However, 1.0 (system-of-record lock-in) is ruled out by three facts: (1) SectionGuard's deliberate zero-macro trade-off explicitly removes switching/data lock-in; (2) Atlassian admin reports highlight heavy 'tech stack trimming' of site-wide Marketplace add-ons at annual renewal under Maximum Quantity Billing; and (3) direct host-platform absorption risk (DP11) as Atlassian expands native Verified Pages, Content Manager, Approvals, and Rovo knowledge hygiene (with JAC AI-621 / CONFCLOUD-35817 tracking native search/AI exclusion).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 2500.0,
+        "score": 0.004,
+        "evidence_believability_index": 0.743,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "1,000 organizations globally (10x narrower than Scenario A's 10,000). Narrowing from all 50-250 seat Confluence Cloud orgs with runbooks to 100-500 seat organizations running BOTH Confluence Cloud AND Jira Service Management (JSM) Premium/Enterprise with Virtual Service Agent (VSA) / Rovo Support Agents actively grounded on multi-section Confluence KB spaces sharply shrinks the funnel. Anchored on Atlassian's FY2026 10-K (57,334 customers >$10k Cloud ARR across all products combined), only a fraction license JSM Premium/Enterprise (required for VSA), deploy Confluence as their active VSA KB, sit in the 100-500 seat band, and suffer from multi-section monolithic KB staleness \u2014 yielding roughly ~1,500-4,000 orgs globally (cleanly 1,000 order of magnitude; cannot reach 10,000 after intersecting JSM Premium VSA + Confluence KB + 100-500 seats + multi-section KB pain).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "0.5 (genuinely concentrated 5x vs. Scenario A's 0.1). Unlike general internal engineering wikis where stale pages are passive 'gardening' chores (<2% app adoption), ITSM and Customer Support teams running JSM Virtual Service Agent / Rovo Support Agents actively track ticket deflection accuracy, wrong AI answers, and reopened tickets as daily operational KPIs. Atlassian Community, JSM VSA best-practice docs, and KCS workflows show widespread operator recognition that stale/conflicting Confluence KB articles directly break VSA deflection \u2014 elevating KB freshness hygiene to standard operational practice (0.5) inside this narrow VSA cohort (though not 1.0 specifically for sub-page H2/H3 hashing).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "$1,000/yr order of magnitude (unchanged from Scenario A \u2014 does NOT reach $10,000/yr median). Live Midori Better Content Archiving Cloud pricing shows progressive per-user tapering: $2,508/yr at 100 users ($2.09/u/mo), $4,128/yr at 200 users ($1.72/u/mo), and $7,560/yr at 500 users ($1.26/u/mo). Even with Atlassian's 0% Forge revenue share up to $1M lifetime revenue, the median 150-250 seat JSM+Confluence buyer pays ~$3,000-$5,000/yr \u2014 still squarely in the $1,000/yr Fermi bracket and well below $10,000/yr (which would require >700-1,000+ Confluence seats, crossing into enterprise procurement where Eager-Identity drops to 0.1).",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "0.1 (unchanged from Scenario A \u2014 site-wide Confluence licensing cannot be bypassed by narrowing to JSM Support teams). Official Atlassian Marketplace licensing docs confirm that any Forge app installed on Confluence MUST be licensed for 100% of active Confluence users on the site \u2014 NOT just the 15-40 JSM Support Agents (and even a Jira/JSM-hosted app charges the maximum of total Jira Software users or JSM agents). Thus, a 100-500 seat company still faces a $2,400-$7,500/yr site-wide IT/Org Admin approval gate co-terminated with annual Atlassian renewals, keeping buying velocity at annual budget cycles (0.1) rather than always-on team self-serve (1.0).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "0.5 (unchanged from Scenario A). Atlassian's programmatically verified 'Runs on Atlassian' Forge badge (zero external data egress, native Atlassian hosting & Data Residency, Paid via Atlassian billing) continues to neutralize SOC 2 infrastructure blockers for indie vendors among 100-500 seat SaaS/IT orgs. Note: moving up to 250-500 seats introduces incremental preference for Cloud Fortified / Platinum Partner status (Midori, Appfire) and closer review of write/move scopes, preventing any move above 0.5, though not yet a hard structural block (0.1). [UNVETTED] Assumes solo/2-person founder maintains clean least-privilege Forge manifest scopes and responsive support SLA.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "0.1 (unchanged from Scenario A \u2014 narrowing to JSM Virtual Service Agent + Rovo KB does NOT create a 0.5 structural wedge). Live Marketplace audit uncovered FreshPage: Trusted Knowledge for Confluence (LogicLemur Labs, native Forge), which ALREADY explicitly targets this exact wedge ('ensuring that stale documentation is flagged or hidden so that JSM self-service portals and Rovo AI agents only pull answers from trusted, verified material') and has only ~2 active installs. Furthermore, Atlassian docs verify that (1) native Confluence Page Archiving (free on all plans) already excludes archived KB pages from Rovo/VSA search and chat, (2) JSM Virtual Service Agent natively supports narrowing/scoping knowledge sources per intent/scenario, (3) Midori Better Content Archiving (~$2.09/u/mo, 1,100 installs) and native Verified Pages + Automation already serve JSM-linked Confluence spaces, and (4) JSM KB articles are typically short, single-issue pages rather than 15-section monolithic runbooks, further reducing buyer willingness to pay $2.4k-$7.5k/yr site-wide solely for H2/H3 heading hashing.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "0.5 (unchanged from Scenario A). Support/ITSM KB decay is an evergreen recurring operational problem whenever product releases, VPN/SSO tools, or policies change \u2014 ruling out one-off 0.1. However, 1.0 (system-of-record lock-in) remains unreachable due to zero-macro zero-lock-in architecture, annual Marketplace stack-trimming under Maximum Quantity Billing, and direct Atlassian platform-absorption risk as Atlassian integrates Rovo, JSM Virtual Service Agent, and native Confluence Verified Pages/Content Manager.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 1250.0,
+        "score": 0.002,
+        "evidence_believability_index": 0.743,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.004 (EBI=0.743, Min=0.7, NOT VIABLE (< 0.5 as scored)). Weak links: Eager-Comparative (0.1): Native Confluence Cloud Page Archiving (free on all plans) ALREADY removes archived pages from Rovo AI search/chat indexing, while quarantining a partially stale monolithic runbook into a restricted holding space hides all healthy sections from on-call humans too. Meanwhile, native Verified Pages + Content Manager + Automation (Premium), Midori Better Content Archiving (~$2.09/u/mo, 1,100 installs), Comala (~$1.80-$2.00/u/mo, 5,900 installs), CodeTailor AI Readiness (Forge, zero egress), and FREE Stale Content Auditor already crowd the shelf at the same or lower price \u2014 and H2/H3 heading hashing is a copyable feature rather than a structural wedge incumbents refuse to build.; Self-Aware (0.1): While Atlassian partners evangelize 'AI Readiness / Garbage in, Rovo out,' live Marketplace reality shows <2% of Confluence organizations install even the #1 page-level archiving app (Midori: ~1,100 installs across all tiers/hosting) and every 2025-2026 Forge hygiene/AI-readiness app (CodeTailor, Evergreen, Page Hygiene Report, Stale Page Finder, Doc Ownership & Reviews) has only 1-3 installs; virtually no buyers actively search for sub-page ADF heading hashing vs. splitting runbooks into child pages.; Liquid (0.1) + Plausible (10,000) Arithmetic Trap (DP16): Atlassian's Matched-Tier site-wide licensing forces a 50-250 seat org to license 100% of Confluence users (including ~70% non-dev staff) at $1,200-$5,400/yr rather than adopting per-team/per-project, pushing purchase into annual IT budget/renewal cycles (Liquid = 0.1) with 10-15% trial-to-paid conversion. Combined with an ecosystem-bounded post-filter TAM of ~10,000 orgs (bounded by Atlassian's 57,334 total >$10k Cloud ARR customers across all products), Plausible x Lucrative = $10M \u2014 10x below the $100M DP16 floor needed at Liquid = 0.1."
+    },
+    {
+      "id": "IDEA-3",
+      "title": "SOPVault 365 (Zero-Egress Teams & SharePoint ISO Document Control)",
+      "slug": "idea-3-sopvault-365-zero-egress-teams-s",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario A",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Anchored bottom-up from official ISO Survey 2024/2025 (IAF CertSearch) counts per DP14/DP28: globally there are 1,611,729 valid ISO 9001 certificates and 125,622 ISO/IEC 27001 certificates (2025), but China alone accounts for ~44% of ISO 9001 (~651,851 in 2024) and ~28% of ISO 27001 (35,389 in 2025) and is outside Western AppSource M365 reach. Reachable Western/English-focused M365 markets total ~450,000-500,000 certificates across all sizes (Europe ~374k ISO 9001 + ~35k ISO 27001; USA only 28,977 ISO 9001 and 5,297 ISO 27001; UK ~33k ISO 9001 and ~4.5k-5.5k ISO 27001; plus Canada/ANZ). Filtering to the 50-250 seat band (~15-25% -> ~70k-120k), Microsoft 365/SharePoint Online standardization (~60-75% -> ~45k-85k), and active SharePoint-based SOP management lacking an existing eQMS (~25-30% -> ~15,000-25,000 organizations, with only ~3,500-5,000 in core English-speaking US/UK/CA/ANZ). Even including English-fluent European buyers, the qualified buyer count sits firmly at 10,000 (well below the 31.6k log-midpoint to 100,000, and clearly above 1,000).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "ISO 9001 Clause 7.5 (Control of Documented Information) and ISO/IEC 27001 Annex A.5.1 (Policies for Information Security) are mandatory, annually audited clauses that make SOP version control, approval proof, and obsolete-document isolation industry standard practice (clearly above 0.1 thought-leader evangelism, supported by an established market of SharePoint policy/ISO vendors and Microsoft's 3-year SP2013 retirement campaign). It does not reach 1.0 because many ISO 9001 manufacturers satisfy Clause 7.5 via native SharePoint Content Approval + Draft Item Security or offline training sheets without believing they need automated Teams read-receipt software.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Live competitor pricing and the proposal's own price ($1,800/yr at 50 seats, $3,600/yr at 100 seats, $7,500/yr at 250 seats; net of 3% AppSource fee) confirm a demonstrated annual budget squarely in the $1,000/yr order of magnitude (typical 50-150 seat SMB spend of $1,200-$4,000/yr). Primary benchmarks: Compliance Tracker 365 ($1-$2/user/mo = $600-$2,400/yr for 50-100 seats), Xoralia (~$4,000/yr starting), SP Policy Manager (~$15/user/yr = $1,500/yr at 100 seats + Year-1 FullStart), isoTracker ($1,188-$4,000/yr), Effivity ($350-$2,250+/yr), and qmsWrapper (\u20ac3,499/yr unlimited users). $100/yr is clearly below real allocated budgets, while $10,000/yr overstates median 50-100 seat SMB willingness to pay for a narrow SOP-only SharePoint add-on without CAPA/audits.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Buying and switching occur on an annual ISO surveillance audit and IT/QMS budget cycle rather than on-demand/per-project (ruling out 1.0). Crucially, Microsoft's hard retirement of SharePoint 2013 workflows occurred on April 2, 2026 \u2014 nearly 8 months prior to November 2026 (after 3 years of deprecation notice since April 2, 2023) \u2014 meaning organizations whose workflows hard-stopped already executed emergency migrations or Power Automate patches, removing the acute cliff catalyst. Deploying a tenant-wide Teams + SharePoint SOP control app across 50-250 employees requires Quality Manager sponsorship, M365 IT Admin consent, library re-baselining, and QMS procedure updates, confining fresh adoption to annual audit/budget windows. It avoids 0.01 because target buyers still on DIY SharePoint/Power Automate have no multi-year vendor contract blocking an annual switch.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Structural trust barriers for an unvetted 1-2 person indie founder (DP10/DP22). Selling a tenant-wide Teams Adaptive Card Bot + SPFx SharePoint extension that automates permission-inheritance breaking/stripping requires Entra ID Global/SharePoint Admin Consent for elevated Graph/SharePoint scopes plus a vendor-hosted Bot Framework webhook and client-side SPFx execution. While documents remain in SharePoint, code execution and Graph permission control still trigger Vendor Risk Assessments under ISO/IEC 27001 Annex A.5.19 (Supplier Relationships) and M365 Admin Consent Workflows. Microsoft's own compliance guidance directs corporate IT admins to vet apps via Microsoft 365 Certification (Level 3 third-party security audit/pen-test) or demand SOC 2 Type 2 / ISO 27001 certificates for non-certified apps requesting write scopes. Free Level 2 Publisher Attestation lets an indie list on AppSource (ruling out 0.0 structural ban, as some relaxed 50-seat ISO 9001 shops will install attested apps), but corporate M365 admins/MSPs and ISO 27001 compliance officers will not casually credit-card swipe (ruling out 0.5) when established Microsoft Partners (Content Formula/Xoralia, Collaboris/DocRead, SharePoint Gurus/CT365) sit beside it on AppSource.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Primary competitor docs refute the claimed gap across both floor and ceiling (DP8, DP23, DP26). Floor: (1) Native SharePoint Online ($0) already provides Major/Minor versioning, Draft Item Security ('Only users who can approve items'), Content Approval, and native SharePoint-to-Teams Library Approvals ('Automate -> Configure Approvals'); (2) Compliance Tracker 365 ($1/user/mo Basic, $2/user/mo Advanced with quizzes; 25-user min on AppSource) is already 100% SharePoint-native zero-egress (stores all logs inside customer SharePoint lists), integrates with Teams, and explicitly supports major-version re-read/acknowledgment resets; (3) Read and Understood (SP Additions) offers version-bound SharePoint/Teams acknowledgments and Excel ISO audit exports on flat per-site pricing (avoiding the per-reader seat penalty); (4) ThePoint charges \u00a3249/yr flat up to 500 users; (5) ISO Cloud Consulting sells a complete SharePoint ISO 9001 Clause 7.5 QMS-in-a-Box (Draft/Published/Obsolete libraries + approvals) for $699 one-time. Ceiling: M365/Teams-native full-lifecycle Xoralia (Drafting -> Multi-stage Approval -> Publishing -> Obsolete suppression -> Teams attestation -> AI quizzes -> Audit trail) starts around $4,000/yr, SP Policy Manager starts ~$15/user/yr (+ FullStart), and unlimited-user standalone qmsWrapper is \u20ac3,499/yr (Effivity $29-$187+/mo). At $3/user/mo ($3,600/yr at 100 seats; $7,500/yr at 250 seats), SOPVault imposes a per-reader seat penalty that makes it 3x pricier than Compliance Tracker 365 and equal to or pricier than Xoralia/qmsWrapper at 150-250 seats, with no structural trade-off incumbents refuse to copy. Next value up (0.5) fails because existing zero-egress AppSource apps and native SharePoint already solve the core wedge cleanly.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "ISO 9001 and ISO 27001 surveillance audits recur annually and controlled-document governance is a continuous operational requirement, making this recurring SaaS revenue rather than a one-off purchase (ruling out 0.1). However, it does not earn 1.0 system-of-record lock-in because: (1) its zero-egress architecture intentionally stores 100% of SOP files, version histories, and audit lists inside the customer's own SharePoint libraries, making exit friction low; (2) host-platform absorption risk (DP11) is active as Microsoft expands native SharePoint Library Approvals, Teams Approvals, and Purview Records Management; and (3) growing ISO buyers face graduation churn to full eQMS suites once they need CAPA, calibration, supplier audits, or training matrices.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 2500.0,
+        "score": 0.004,
+        "evidence_believability_index": 0.786,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Drops 10x from Scenario A (10,000 -> 1,000) when narrowing strictly to physical shop-floor discrete ISO 9001 manufacturers (50-250 seats, Western/English-reachable, standardized on M365 SharePoint Online, actively using printed/laminated workstation SOPs without an eQMS or paperless MES/ERP traveler system). Official ISO Survey 2025 counts show only 28,977 total ISO 9001 certificates in the entire USA (across all industries and all company sizes) and ~33k-43k in the UK. Filtering Western/English ISO 9001 firms (~400k across Europe + US + UK + CA/ANZ) to discrete physical-floor manufacturing (~35-45%), 50-250 seat band (~15-25%), M365 SharePoint Online (~60%), SharePoint-for-SOPs lacking eQMS/MES (~20%), and active printed-SOP floor compliance pain (~50%) yields ~2,000-4,000 qualified plants \u2014 squarely 1,000 on the log-10 scale (midpoint to 10,000 is 3,162).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5. Preventing unintended use of obsolete laminated SOP printouts on the physical shop floor (ISO 9001 Clause 7.5.3.2(d)) is a well-known, routinely audited surveillance-audit finding in discrete manufacturing (clearly above 0.1). Does not reach 1.0 because many ISO 9001 plants manage floor copies via static 'UNCONTROLLED IF PRINTED' Word footers, manual supervisor binder swaps, or existing ERP/MES workstation terminals rather than actively seeking a dedicated SharePoint QR-gating app.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Unchanged at $1,000/yr order of magnitude. Live benchmarks show factories spend $300-$500/mo ($3,600-$6,000/yr) on Muhimbi/Plumsail PDF watermarking engines or $1,500-$5,000+ on turnkey SharePoint controlled-document add-ons (Valto/partner builds), and our repriced flat tenant license is $199/mo ($2,388/yr unlimited shop-floor scanners). Demonstrated annual budget is $2,000-$5,000/yr \u2014 well above $100/yr, but clearly below $10,000/yr (a single-purpose SharePoint PDF watermark + QR verifier without CAPA/audits/MES cannot command $10k/yr ACV from 50-250 seat SMB factories).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1. Changing how a 50-250 seat factory issues, stamps, and audits physical shop-floor work instructions requires Quality Manager, Production Supervisor, and M365 IT Admin alignment plus re-issuing floor binders and updating ISO 9001 Clause 7.5 procedures. Buying occurs on the annual ISO surveillance audit or annual QMS/IT budget cycle (or after a specific audit non-conformity), not impulsively per project (ruling out 1.0). Avoids 0.01 because SharePoint-DIY factories lack multi-year eQMS lock-in contracts blocking an annual adoption decision.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Remains 0.1 despite dropping ISO 27001 Annex A.5.19 buyers and eliminating the vendor-hosted Teams Bot. Per Microsoft SharePoint governance documentation, uploading any third-party SPFx .sppkg into a 50-250 seat manufacturer's Tenant App Catalog still requires SharePoint/Global Admin approval, API permission review, and client-side JS supply-chain trust (as SPFx executes with the logged-in user's full SharePoint privileges). Furthermore, allowing non-M365 shop-floor tablets/phones to verify QR-coded printouts without Entra ID MFA logins requires a vendor-hosted status lookup endpoint, creating acute bus-factor and uptime risk for an unvetted 1-2 person indie founder (if the indie shuts down, every QR code on the factory floor breaks ahead of an ISO audit). Not 0.0 (some relaxed 50-seat machine shops will install an attested AppSource .sppkg), but clearly below 0.5 (not an indifferent credit-card swipe).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Genuinely improves 5x over Scenario A (0.1 -> 0.5). Live web research confirms that SharePoint digital policy-acknowledgment incumbents (Compliance Tracker 365 at $1-$2/user/mo, DocRead, Read and Understood, Xoralia at ~$4,000/yr) target knowledge-worker digital read receipts and do NOT natively generate dynamic 'CONTROLLED COPY' watermarked PDFs with live-status QR obsolete-version verification for physical shop floors. Today, factories running SOPs in SharePoint must duct-tape brittle Power Automate flows onto $300-$500/mo ($3,600-$6,000/yr) PDF stamping engines (Muhimbi/Plumsail) plus custom QR verification scripts, or abandon SharePoint for $15k-$50k+/yr shop-floor QMS/work-instruction suites (MasterControl, Dozuki, Poka). Pairing turnkey SharePoint-native controlled-copy watermarking + instant QR red/green obsolete gating with flat $199/mo unlimited-scanner pricing (eliminating the per-seat reader penalty for non-desk frontline workers) delivers a concrete structural difference a clear sub-segment of SharePoint ISO 9001 factories would buy for alone. Does not reach 1.0 because Muhimbi + Power Automate DIY stacks and standalone point tools (SOPX, isoTracker) remain viable alternatives.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5. Physical QR-stamped controlled printouts laminated across shop-floor workstations plus recurring annual ISO 9001 surveillance audits create steady recurring renewal value (clearly above 0.1 one-off). Still does not reach 1.0 lock-in because source SOP documents remain natively inside the customer's SharePoint libraries and growing discrete manufacturers frequently graduate to full eQMS/MES suites once they need CAPA, calibration, NCRs, and ERP traveler integration.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 1250.0,
+        "score": 0.002,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.004 (EBI=0.786, Min=0.7, NOT VIABLE (< 0.5 as scored)). Weak links: Eager-Comparative (0.1) \u2014 Severe DP8 floor-and-ceiling sandwich and DP26 failed competitor disqualifier: $0 native SharePoint Online (Major/Minor Versioning + Draft Item Security + Content Approval + native Teams Approvals), $1-$2/user/mo 100% SharePoint-native zero-egress Compliance Tracker 365 (which already supports version-reset re-read triggers and Teams), flat per-site Read and Understood, and $699 one-time ISO Cloud Consulting QMS-in-a-Box occupy the floor, while M365-native full-lifecycle Xoralia (~$4,000/yr) and unlimited-user qmsWrapper (\u20ac3,499/yr) cap the ceiling. SOPVault's $3/user/mo per-reader fee actually costs more than Xoralia/qmsWrapper at 150-250 seats while shipping fewer features.; Eager-Identity (0.1) \u2014 DP10/DP22 stateless-washing failure for an unvetted 1-2 person indie founder: granting a vendor-hosted Teams Bot and SPFx app Entra ID Admin Consent with SharePoint write/permission-inheritance scopes triggers formal IT security review, Microsoft 365 Certification (Level 3 third-party audit) expectations, and ISO 27001 Annex A.5.19 supplier vetting.; Liquid (0.1) \u2014 Annual ISO surveillance audit and IT budget cadence with multi-stakeholder tenant-wide deployment friction; Microsoft's April 2, 2026 SharePoint 2013 workflow hard retirement already passed ~8 months prior (as of Nov 2026), eliminating the forced cutover urgency.; Plausible (10,000) x Lucrative ($1,000/yr) = $10M \u2014 Fails the DP16 arithmetic floor ($100M required when Liquid = 0.1); Western/English-reachable ISO 9001/27001 firms shrink sharply once China (~44% of global ISO 9001), micro/enterprise size bands, non-M365 tenants, and existing eQMS users are filtered out."
+    }
+  ]
+}

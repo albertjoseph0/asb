@@ -1,0 +1,549 @@
+{
+  "run_id": "2026-11-22_2107-second-indie-sprint-liquid",
+  "run_type": "discovery",
+  "ambition": "indie",
+  "lenses": [
+    {
+      "domain": "Commercial Multi-Site Facilities Portal Work-Order, Field-Proof & Invoice Bridge for Independent Trade Contractors (HVAC, Refrigeration, Kitchen-Equipment, Plumbing, Electrical, Signage & Door/Dock Shops on Jobber/Housecall Pro/QuickBooks servicing ServiceChannel, Corrigo, FMX & Officetrax)",
+      "search_hypothesis": "Scout firsthand complaints on r/HVAC, r/HVAC_Trade, r/FacilityManagement, r/plumbing, r/electricians, and Facebook/contractor forums from 2-to-25-tech commercial service contractors forced by multi-site retail, restaurant/QSR, grocery, and franchise chains to manage work orders across ServiceChannel, Corrigo (JLL), FMX, Officetrax, and Verisae while running Jobber, Housecall Pro, Workiz, FieldEdge, or QuickBooks internally. Probe specifically for: (1) daily double-entry admin tax (paying $40k-$60k/yr office coordinators to re-key work orders, status updates, and invoices across 4-8 competing client portals), (2) automated vendor-scorecard penalties and frozen payouts caused by technicians forgetting portal-specific GPS/IVR check-in/out or required before/after photos, and (3) revenue leakage/stalled jobs from slow Not-To-Exceed (NTE) increase approvals. Verify both price floors (<$150/mo) and ceilings: confirm Jobber ($29-$499/mo) and Housecall Pro ($59-$329/mo) still lack native bi-directional ServiceChannel/Corrigo/FMX sync while ServiceTitan (multi-year enterprise contract with heavy exit fees) and BuildOps (quote-only commercial ERP rip-and-replace) force a full system migration. Check any niche middleware/connector pricing and ServiceChannel API/provider-fee constraints before synthesizing an overlay bridge wedge.",
+      "why_indie_friendly": "Clears DP8-DP11 cleanly: (1) Plausible >= 100,000 \u2014 ServiceChannel alone discloses 70,000+ contractors across 330k-500k+ commercial sites (plus Corrigo/JLL, FMX, and Officetrax providers across US/CA/UK/AU); (2) Liquid = 1.0 \u2014 daily revenue and cash-flow operations where missing a check-in, photo, or NTE approval immediately stalls payment and drops vendor scorecards, purchasable on a corporate card as a non-disruptive overlay without ripping out Jobber/HCP/QBO; (3) DP8 un-sandwiched \u2014 verified absence of a <$150/mo self-serve multi-portal bridge below ServiceTitan/BuildOps rip-and-replace ceilings; (4) DP10 safe \u2014 operational dispatch, field-photo proof, NTE alerts, and invoice sync carry no $1M+ strict-liability or regulatory certification gate for an [UNVETTED] indie founder; (5) DP11 durable \u2014 multi-party live operational state spanning 4-8 competing FM portals and field technicians cannot be replaced by DIY CSV/LLM scripts or absorbed by one host portal (ServiceChannel will never unify Corrigo/FMX/Officetrax). Founder-fit assumption [UNVETTED]: assumes a technical founder comfortable with API/webhook/portal automation and mobile/SMS technician UX."
+    },
+    {
+      "domain": "Paid-Social UGC Whitelisting, Spark-Ad / Meta Partnership-Ad Authorization & Live Usage-Rights Renewal Operations for Boutique Performance-Marketing Agencies & Scaling DTC/Shopify/TikTok-Shop Brands",
+      "search_hypothesis": "Scout firsthand complaints on r/FacebookAds, r/TikTokAds, r/influencermarketing, r/UGCcreators, r/ecommerce, and r/shopify from boutique paid-social/creative agencies (managing 5-40 client ad accounts) and $1M-$25M DTC/Shopify/TikTok-Shop brands running high-volume creator whitelisting (Meta Partnership Ads, TikTok Spark Ads) and timed 30/60/90-day paid usage licenses. Probe specifically for: (1) winning whitelisted ads silently continuing to spend in Meta Ads Manager or TikTok Ads Manager after creator usage rights expire\u2014triggering takedowns, $5k-$25k retroactive usage-fee demands, or abrupt mid-peak ROAS pauses, (2) manual friction chasing creators for expiring Spark Ad authorization codes, Meta Partnership permissions, and renewal sign-offs via Airtable/Notion/Slack hacks, and (3) lost renewal upsell revenue and attribution gaps when agencies stack separate tools. Strictly verify DP8 floor and ceiling boundaries: confirm micro-SaaS floor tools (<$150/mo) like UpPromote ($29-$89/mo coupon affiliate links), Foreplay ($49/mo swipe files), Pitchlo ($69/mo creator applications), and JoinBrands ($99/mo + 12-15% marketplace cut) do NOT sync live active Meta/TikTok Ads Manager spend/status against contractual usage expiry, while mid-market ceilings remain steep or single-purpose (Motion $750-$999/mo creative analytics only; SARAL $960-$1,200/mo quarterly/annual; Insense $400-$800+/mo + 10-20% payout fees; Archive $260+/mo organic capture; Euka/Cruva $199-$599/mo TikTok affiliate outreach). Avoid pure affiliate-link or TikTok-seeding clones that collide directly with Euka/Cruva/UpPromote.",
+      "why_indie_friendly": "Clears DP8-DP11 cleanly: (1) Plausible >= 100,000 globally across paid-social/UGC/e-commerce agencies and active DTC/Shopify/TikTok-Shop advertisers running creator whitelisting; (2) Liquid = 1.0 \u2014 always-on, campaign-driven paid-media revenue operations bought self-serve via credit card with zero annual procurement cycle, directly protecting live ad-spend ROAS and eliminating manual agency ops overhead; (3) DP8 un-sandwiched \u2014 verified whitespace on the live Meta/TikTok Ads Manager <-> creator contract expiry <-> 1-click renewal & Spark/Partnership code-refresh workflow between <$100/mo swipe-file/marketplace apps and $260-$1,200/mo analytics/seeding suites; (4) DP10 safe \u2014 functions as an operational live-ad guardrail, expiry alert, and creator renewal/code-capture workflow rather than legal indemnity or institutional risk transfer for an [UNVETTED] founder; (5) DP11 durable \u2014 spans three live external parties (Meta Ads API + TikTok Ads API + external creators/talent managers renewing codes and licenses), preventing single-platform absorption (Meta and TikTok will never cross-manage each other's rights) and resisting DIY CSV/LLM scripts. Founder-fit assumption [UNVETTED]: assumes comfort with Meta/TikTok Marketing APIs and agency self-serve PLG."
+    },
+    {
+      "domain": "Multi-Marketplace Inbound Lead Qualification, Spec-Grounded Speed-to-Lead & Listing-Drift Operations for Independent Heavy Equipment, Commercial Truck, Trailer, Marine & RV Dealers and Brokers (Sandhills/EquipmentTrader/TruckPaper, Boats Group/BoatTrader/YachtWorld, RVTrader & Facebook Marketplace)",
+      "search_hypothesis": "Scout firsthand complaints on r/heavyequipment, r/boating, r/yachting, r/CommercialTrucks, r/RVLiving, dealer forums, Trustpilot, and Capterra from independent heavy equipment, commercial truck, trailer, marine/yacht, and RV dealers/brokers selling $20k-$500k units across fragmented marketplaces (Sandhills Global: MachineryTrader, EquipmentTrader, TruckPaper, TractorHouse; Boats Group: BoatTrader, YachtWorld; Trader Interactive: RVTrader, CommercialTruckTrader; plus Facebook Marketplace and Craigslist). Probe specifically for: (1) high-intent cash/financed buyer leads dying or drowning in tire-kicker inbox noise because dealers lack instant 24/7 SMS/email qualification grounded in unit-specific specs, engine hours, maintenance records, trade-in details, financing readiness, and freight/transport quotes (whereas generic CRM filters/call centers fail technical unit Q&A), and (2) silent inventory-syndication drift and category-mapping drops where paid listings disappear from marketplace search filters or show stale prices/sold units while dealers still pay $1k-$5k+/mo in listing packages. Verify DP8 floor and ceiling: confirm absence of a <$150/mo self-serve multi-marketplace lead-qualification and listing-drift overlay below legacy DMS/website/ad monopolies (Lightspeed DMS $450-$3,000+/mo + 3PA fees; DealerSpike $550-$1,150+/mo + $1,000 setup; Sandhills and BoatWizard bundled ad-tier lock-ins). Validate that the wedge works purely via inbound lead emails/SMS/webhooks and public dealer inventory URLs without requiring paid DMS 3PA integration gates on day one.",
+      "why_indie_friendly": "Clears DP8-DP11 cleanly: (1) Plausible >= 50,000 US specialty equipment, commercial truck, trailer, marine, RV, and powersports dealers/brokers (100,000+ across US/CA/UK/EU/AU) with high Lucrative >= $1,800-$3,600/yr ($150-$300+/mo per rooftop, where a single recovered unit sale yields $3,000-$30,000+ gross margin); (2) Liquid = 1.0 \u2014 always-on daily lead-converting sales operations purchasable via dealership credit card with zero DMS rip-and-replace and immediate revenue attribution; (3) DP8 un-sandwiched \u2014 verified absence of a modern <$150/mo micro-SaaS floor; incumbents are opaque, sales-gated, bundled DMS/website/advertising monopolies ($450-$3,000+/mo + $1k setup fees); (4) DP10 safe \u2014 sales lead response, buyer qualification, and listing-accuracy monitoring carry zero catastrophic regulatory or $1M+ strict-liability exposure for an [UNVETTED] founder; (5) DP11 durable \u2014 unifies live inbound buyer threads and listing health across 5-10 competing marketplaces (Sandhills, Boats Group, Trader Interactive, Facebook Marketplace, Craigslist) that rival ad monopolies structurally refuse to unify, plus ongoing conversational buyer state and follow-up cadence that DIY CSV/LLM scripts cannot operate. Founder-fit assumption [UNVETTED]: assumes comfort selling self-serve/demo-light B2B SaaS to pragmatic dealership sales managers/owners."
+    }
+  ],
+  "signals_count": 15,
+  "candidates_count": 4,
+  "worker_errors": [],
+  "survivors": [],
+  "killed": [
+    {
+      "id": "IDEA-1",
+      "title": "Live Ad-Spend vs. Usage-Rights Watchdog & 14-Day Spark/Partnership Renewal Desk",
+      "slug": "idea-1-live-ad-spend-vs-usage-rights-wa",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario A",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Challenged from below: 1,000 is too low because Store Leads/StoreCensus/Uptek track ~33,000-35,000 Shopify Plus stores across US/UK/CA/AU (~53,000-56,000 parent merchants globally) alongside ~3,500-6,000 specialized DTC paid-social agencies in those four markets. However, 100,000 (and the pitch's 25,000-50,000 claim) fails once you apply the buyer's own qualifying filters: Shopify merchant surveys show only ~31% of $1M+ stores rely on paid ads as a primary growth engine, and only a subset of those have an in-house paid-social lead running >=15 active Meta Partnership or TikTok Spark ads/month under time-limited rights (~4,000-7,000 brands), plus ~2,000-5,000 boutique paid-social agencies actively managing 5-40 UGC-heavy DTC ad accounts. Combined realistic pool is ~6,000-15,000 organizations \u2014 squarely 10,000 on the log-10 scale (well below the 31,622 midpoint to 100,000). Believability is capped at 0.4 because the >=15 active Partnership/Spark assets/month sub-slice is a secondary filtered estimate rather than direct census data.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Challenged from below: 0.1 is too low because firsthand discussions across r/FacebookAds, r/UGCcreators, r/influencermarketing, TikTok error documentation (Error 4025 auth_code_expired), Meta error #4289001 threads, and agency playbooks (AdMakeAI, Archive, 1DS Management, CreatorsAgency) confirm that high-volume whitelisting teams already know Spark codes die without warning and Meta ads overrun contract dates, frequently maintaining manual spreadsheet/Ad Library audit checklists. However, 1.0 is clearly wrong: many qualifying agencies and DTC brands structurally sidestep the pain by negotiating 365-day Spark codes (explicit industry best practice across TikTok/Archive/Hubfluence) or perpetual/unlimited UGC usage buyouts (baked into modern UGC agency retainers per BrighterClick), and because most UGC ads fatigue within 14-30 days before hitting a 60-90 day rights cliff, roughly half of qualifying teams do not perceive an urgent standalone software problem. Thus 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Proposed pricing is $179/mo ($2,148/yr) for Brand and $349/mo ($4,188/yr) for Agency. Challenged from below: 100 ($100/yr) is wrong because even the lowest-priced manual usage-rights ledger (RightsRoster) charges $192-$384/yr ($16-$32/mo), Leadsie charges $708-$3,588/yr ($59-$299/mo), Lumanu starts at $1,188/yr ($99/mo), and paid-social agencies/DTC teams routinely pay $1,200-$3,600/yr for workflow utilities (Foreplay Team $1,188+/yr, Modash Essentials $2,388-$3,588/yr). Even if price competition compresses realized ACV to ~$1,200-$2,400/yr, it stays squarely in the 1000 bucket. 10000 ($10,000/yr) is ruled out because $7k-$12k/yr collides directly with full-stack creator/analytics suites (Cruva Scale $7,188/yr, Insense $4,800-$9,600/yr, Motion $9,000-$12,000+/yr, SARAL $11,520/yr).",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 1.0,
+            "justification": "Challenged from below: 0.1 (buyers locked into annual/multi-year contracts or infrequent buying windows) is too harsh for the core spreadsheet-using segment. At $179-$349/mo month-to-month, pricing sits within an agency director's or DTC growth lead's discretionary corporate credit card limit with zero procurement committee, proven by self-serve monthly credit-card adoption at peer tools (Leadsie $59-$299/mo, Foreplay $59-$99+/mo, RightsRoster $16-$32/mo), and usage-window / Spark-expiry triggers occur every 30-60 days rather than annually. Caveat keeping believability at 0.4: the subset of $5M-$25M DTC brands already on annual creator suites (SARAL $11,520/yr, GRIN, Archive) plus agencies needing client Business Manager admin approvals and manual contract backfilling face real onboarding drag, putting true liquidity around ~0.5-0.7 \u2014 which rounds to 1.0 on the {0.01, 0.1, 1.0} scale (above the 0.316 geometric midpoint).",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Challenged from below: 0.1 is too harsh because boutique paid-social agencies and $1M-$25M DTC growth leads are among the most indie-tolerant B2B buyers \u2014 they routinely adopt small-team/bootstrapped SaaS with Meta/TikTok integrations (Leadsie, Foreplay, RightsRoster, early Motion/Triple Whale) when permissions are strictly read-only (ads_read) and non-destructive, and $5k-$25k creator overage disputes are operational nuisances rather than DP10 catastrophic regulatory liability. However, 1.0 is ruled out: an [UNVETTED] solo/2-person founder without brand credibility, SOC 2, or agency track record faces real trust friction asking agencies to grant Meta Business Manager (ads_read + business_management) and TikTok Business Center OAuth access across 5-40 client ad accounts (where Meta account-restriction paranoia and client MSA data clauses are real) while relying on a tiny vendor's uptime to avoid client-facing usage overruns. Thus 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Classic DP8 floor-and-ceiling sandwich across live competitor pricing and features. Below sit RightsRoster ($16/mo Brand, $32/mo Team \u2014 purpose-built UGC usage-rights expiry alerts, creator records, and audit exports), Leadsie ($59-$299/mo for Meta/TikTok whitelisting access links), Lumanu ($99/mo+ creator payouts + automated whitelisting permissions), DIY Airtable/Sheets + Slack/Zapier ($0-$50/mo), and free behavioral workarounds (negotiating 365-day Spark codes \u2014 explicit best practice in Archive/Hubfluence/TikTok docs \u2014 or perpetual/unlimited usage buyouts baked into agency UGC retainers per BrighterClick). Immediately above sit month-to-month bundled creator/Spark platforms, not just legacy enterprise ERPs: Cruva ($199/mo Basic, $599/mo Scale with Auto Spark Ads, usage rights requests, GMV Max, and ad analytics), Archive (tracks Spark code Approved/Expired status with automated DM re-request loops and Meta Partnership workflows), UGCBloom (contract-bound usage expiry tracking), UGC Roster ($499/mo Brand Growth), Modash ($299-$599/mo), Insense ($400-$800/mo), and Superfiliate. Moreover, Meta's API does not store legal contract dates, so teams still face manual contract entry and broken asset mapping whenever media buyers duplicate or re-cut winning UGC creatives under new ad IDs. For the Brand tier ($179/mo) this is completely sandwiched; even for multi-client agencies ($349/mo), cross-account spend-vs-date sync is too thin a standalone wedge to clear 0.5 over cheaper floor trackers, perpetual/365-day buyouts, and bundled suites.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Challenged from below: 0.1 (dead within 1-2 years) is slightly too severe because paid UGC/creator amplification is a durable ad format and neither Meta nor TikTok will build a cross-platform (Meta + TikTok) multi-client agency contract renewal portal. However, 1.0 is ruled out by three concrete erosion forces verified in live 2025-2026 research: (1) Meta's updated Partnership Ads Hub / Creator Marketing Hub has already rolled out native content-level permissions mapped with expiration dates, making native pre-expiry alerts/auto-pause a trivial next increment; (2) TikTok's shift toward GMV Max affiliate pools and standard 365-day Spark authorizations reduces the frequency of 30/60-day Error 4025 cliffs; and (3) incumbent creative-analytics and creator suites already holding Meta/TikTok OAuth connections (Archive, Cruva, Motion, RightsRoster, Superfiliate) can absorb spend-vs-expiry alerting as a minor feature release, while 100% dependence on Meta/TikTok Marketing API reviews and policies adds ongoing platform fragility. Thus 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 125000.0,
+        "score": 0.2,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Drops 10x from Scenario A (10000 -> 1000) as a direct consequence of eliminating all in-house DTC brands and small <10-client freelancers. Market directory sizing estimates ~3,500-6,000 specialized e-commerce/DTC paid-social agencies across US, UK, Canada, and Australia in total; filtering strictly to agencies managing 10-50 active DTC clients running high-volume Meta Partnership Ads and TikTok Spark Ads / GMV Max across heterogeneous client stacks leaves roughly ~1,000-2,500 qualifying agencies \u2014 squarely 1000 on the log-10 scale (below the 3,162 midpoint to 10000). Believability remains 0.4 because this agency-size and whitelisting-volume intersection is a secondary filtered estimate.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 1.0,
+            "justification": "Genuinely rises from 0.5 to 1.0 in this narrowed cohort. Unlike individual DTC brands (which often sidestep tracking via perpetual buyouts or low asset counts), a 10-50 client paid-social/whitelisting agency juggles 150-500+ concurrent creator assets across heterogeneous client contracts and TikTok's hard 7/30/60/365-day Spark code windows. Triangulated agency playbooks and operator reports (inbeat.agency, wearemada.com, skalestrategy.com, admakeai.com, hubfluence.io, Reddit agency threads) confirm that virtually every agency operating at this multi-client whitelisting scale actively feels Spark Error 4025 downtime, cross-client code chasing, and post-expiry liability risk \u2014 ruling out 0.5 within this 1,000-agency slice.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Challenged strictly from below \u2014 kept at 1000 rather than inflating to 10000. Repricing exclusively for 10-50 client agencies at $349-$499/mo ($4,188-$5,988/yr list, ~$10-$15/client/mo) lifts potential ACV toward the top of the 1000 bucket (~$2,500-$4,500/yr realized after tier mix and churn), but cannot honestly claim 10000 (~$10k/yr ACV). Live pricing benchmarks show pure agency permission/ops plumbing caps around Leadsie Pro ($299/mo = $3,588/yr) and RightsRoster ($16-$32/mo+), whereas $4,800-$12,000/yr budgets go to full-stack platforms (Hubfluence $399-$599/mo, Cruva Scale $599/mo with affiliate CRM + Auto Spark Ads + analytics, Insense Agency $640-$800/mo, Motion $750-$1,200/mo daily creative analytics). A narrow alert/renewal watchdog lacks the pricing power to sustain $6k-$10k/yr realized ACV.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 1.0,
+            "justification": "Unchanged from Scenario A (1.0). Agencies managing 10-50 DTC retainers ($50k-$300k+/mo agency revenue) routinely put $349-$499/mo month-to-month ops tools on a corporate credit card with zero annual procurement cycle, triggered monthly by Spark Error 4025 outages, client onboarding, or creator overrun disputes. Caveat keeping believability at 0.4: client-side Meta Business Manager / TikTok Business Center OAuth approvals and manual contract backfilling across 10-50 clients introduce real onboarding drag.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Unchanged from Scenario A (0.5). Narrowing to 10-50 client agencies does not eliminate indie trust friction for an [UNVETTED] solo/2-person founder without SOC 2 or agency reputation: larger multi-client agencies actually enforce stricter client MSA data clauses and Meta Business Manager access controls across 10-50 client portfolios. Keeping OAuth strictly read-only (ads_read / TikTok read scopes) preserves indie trialability similar to Leadsie and Foreplay (ruling out 0.1), but 1.0 remains unsupported without vetted founder credentials.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Genuinely improves from 0.1 to 0.5 by dropping single DTC brands. A 10-50 client agency faces a structural multi-tenant fragmentation seam: Client A uses Insense, Client B uses SARAL, Client C uses Archive, Client D uses GRIN or spreadsheets \u2014 none of those single-brand suites unify live Meta + TikTok Ads Manager spend against usage clocks across all 10-50 client ad accounts (which is why specialized whitelisting agencies currently build bespoke internal dashboards or brittle Airtable/Zapier stacks per inbeat.agency and admakeai.com). Floor tools (RightsRoster $16-$32/mo, Leadsie $59-$299/mo) lack live ad-spend/ROAS and Error 4025/#4289001 monitoring. However, 1.0 is ruled out: TikTok-heavy agencies still buy bundled affiliate+Spark suites (Hubfluence $399-$599/mo, Cruva Scale $599/mo), Meta's API still lacks legal contract dates (preserving manual date-entry and ad-remix ID drift), and perpetual/365-day contract defaults remain partial substitutes.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged from Scenario A (0.5). Narrowing to multi-client agencies preserves cross-platform (Meta + TikTok) multi-account durability (neither Meta nor TikTok will unify competitor ad networks across 50 client accounts, ruling out 0.1), but Meta Partnership Ads Hub's 2025-2026 rollout of native content-level permission expiration dates, TikTok's move to GMV Max affiliate pools and 365-day Spark defaults, and incumbent agency suites (Motion, Archive, Cruva, Hubfluence, Triple Whale) bolting on expiry/permission alerts still rule out 1.0.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 125000.0,
+        "score": 0.2,
+        "evidence_believability_index": 0.571,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.2 (EBI=0.657, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: eager_comparative (0.1): Textbook DP8 floor-and-ceiling sandwich \u2014 $16-$129/mo floor tools (RightsRoster, Leadsie, Lumanu) plus free 365-day Spark codes and perpetual buyout norms below, and $199-$599/mo month-to-month creator/Spark suites (Cruva, Archive, UGCBloom, UGC Roster, Modash, Insense) above, compounded by manual contract-date entry and ad-remix ID drift on Meta.; plausible (10000): Once filtered to boutique agencies managing 5-40 DTC paid-social accounts (~3,500-6,000 in US/UK/CA/AU) and $1M-$25M DTC brands running >=15 active Partnership/Spark ads/mo with time-limited rights (~4,000-7,000), the true reachable market is ~8,000-15,000 accounts \u2014 well short of the pitch's 25,000-50,000 claim and far below 100,000.; Compounding 0.5 drags (self_aware 0.5, eager_identity 0.5, enduring 0.5): Creative fatigue + perpetual/365-day buyout norms blunt urgency; an unvetted indie founder faces agency OAuth trust friction on client Business Managers; and Meta Partnership Ads Hub's 2025-2026 rollout of native content-level permission expiration dates plus TikTok GMV Max/365-day defaults steadily compress the standalone alert wedge. Resulting deterministic Problem Score = (10000 * 0.5 * 1000 * 1.0 * 0.5 * 0.1 * 0.5) / 625000 = 0.20 (fails >= 1.0 indie bar)."
+    },
+    {
+      "id": "IDEA-3",
+      "title": "Zero-3PA ADF/XML Spec-Grounded Lead Qualifier & Freight/Trade-In Intake for Commercial Equipment, Truck & Trailer Dealers",
+      "slug": "idea-3-zero-3pa-adf-xml-spec-grounded-l",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "U.S. Census CBP / NAICS data shows ~9,000+ employer establishments in NAICS 423810 (Construction & Mining Machinery Wholesalers, which also includes scaffolding/mining parts wholesalers and multi-branch OEM franchises like CAT/Deere/Komatsu); NADA/ATD reports 2,104 franchised medium/heavy-duty truck rooftops (3,798 including commercial light/medium), while IBISWorld tracks ~14,537 broader U.S. Truck Dealer businesses (including independent used commercial truck sellers); plus several thousand commercial utility/heavy trailer and independent ag-equipment yards (NAICS 423820/441229). Filtering to independent dealerships and machinery brokers with 15\u2013300 active units ($25k\u2013$500k+ iron), no dedicated BDC desk, and active Sandhills/Trader Interactive listings yields roughly 10,000\u201320,000 qualifying U.S. accounts (even IDEA-3's own unfiltered ~24,000 estimate snaps to 10,000 on a log10 scale). 1,000 is clearly too low across all four commercial verticals; 100,000 is impossible even before excluding franchises.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.1,
+            "justification": "Scored 0.1 (thought-leaders care and evangelize) rather than 0.5 (industry-standard practice). While heavy equipment and truck dealers actively complain about tire-kickers and after-hours marketplace leads on Reddit and dealer forums, McKinsey & Associated Equipment Distributors (AED) research confirms off-highway heavy equipment dealers significantly lag automotive in digital and CRM adoption. Small independent 15\u2013300 unit yards without a BDC desk predominantly rely on phone calls, personal rep cell phones, and basic portal email alerts; paying for a standalone automated conversational SMS qualification bot is early-adopter behavior, not industry-standard practice. 0.01 is too low because Trader Interactive, Supreme Dealer, Kenect, and Lahzo show real active demand among progressive yards.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Demonstrated annual budget allocation for dealer SMS/CRM/BDC lead tools lands solidly in the $1,000/yr order of magnitude (specifically $1,800\u2013$7,200/yr): Leadferno starts at $150/mo ($1,800/yr), DealerCenter CRM Plus/Pro runs $99\u2013$199/mo ($1,188\u2013$2,388/yr), Supreme Dealer runs $279\u2013$599/mo ($3,348\u2013$7,188/yr), Kenect ~$350\u2013$500+/mo, Podium $399\u2013$649+/mo, and DealerAI $599/mo ($7,188/yr), alongside $12k\u2013$36k/yr in Sandhills/Trader Interactive listing spend. IDEA-3's proposed $169\u2013$299/mo ($2,028\u2013$3,588/yr net revenue after ~$0.005\u2013$0.015/segment SMS carrier pass-through) sits cleanly inside this proven allocation. $100/yr is clearly too low and $10,000/yr exceeds both sticker price and independent-yard BDC budgets.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Challenges and rejects IDEA-3's 'Liquid = 1.0' and 'go live in 15 minutes on a credit card' assertion. Four documented friction forces push decision/adoption liquidity to 0.1: (1) Already bundled\u2014Trader Interactive includes AI Lead Response free inside Core/Pro/Ultimate packages and Sandhills bundles Sandhills Cloud CRM; (2) A2P 10DLC carrier gatekeeping\u2014live carrier rules require exact legal name/EIN (IRS CP-575) matching, public website Privacy Policy updates barring third-party mobile data sharing, unchecked SMS consent checkboxes on quote forms, and 3\u201314+ business day TCR vetting with frequent rejections and silent SMS drops; (3) TCPA third-party lead consent gaps in standard ADF/XML emails; (4) Annual dealer marketing/website contracts (e.g., Dealer Spike 12-month agreements, Kenect/Podium annual plans). While 0.01 (multi-year ERP replacement) is too harsh because no DMS swap is needed, 1.0 (always-on, instant switch) is contradicted by carrier and bundling reality.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Scored 0.1 (structural challenges) rather than 0.5 (indifferent, no red flags) for an [UNVETTED] solo/2-person indie founder. While independent yards are not structurally barred (0.0 is wrong\u2014no enterprise SOC 2 mandate), three concrete identity barriers apply: (1) Buyer-facing AI risk on $25k\u2013$500k relationship-driven commercial iron sales, where scraped public VDP pages routinely lag real-time lot sales and omit true condition specs (undercarriage wear, engine blow-by, maintenance records), risking costly credibility damage; (2) TCPA vicarious legal liability on dealerships for automated SMS sent to third-party MachineryTrader/TruckPaper ADF leads lacking verifiable express written consent, where an unknown solo founder offers no legal indemnity or compliance team; (3) Zero heavy-equipment industry pedigree, dealer peer references, or OEM co-op eligibility (unlike Kenect or Sandhills/Trader Interactive). Tagged [fermi] at 0.4 believability; must be tested in real dealer interviews.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Live research directly falsifies the claimed 'indie gap' (DP8 violation). Free bundled host-platform incumbents already cover this workflow: Trader Interactive (Equipment Trader, Commercial Truck Trader) bundles 24/7 AI Lead Response at $0 extra cost in Core/Pro/Ultimate packages; Sandhills Global bundles Sandhills Cloud CRM and Click-to-Text/WhatsApp tracking; heavy-equipment DMS Flyntlok embeds AI customer text follow-ups at $0 extra cost. Above, direct vertical specialists explicitly target heavy equipment and commercial trucks\u2014Supreme Dealer has dedicated Heavy Equipment and Truck Dealer plans at $279/mo (Starter) and $399/mo (Growth with SMS AI BDC, CRM, website, ADF/XML, zero setup fees, no long-term contracts), falsifying IDEA-3's claim that Supreme Dealer is auto/RV/marine only; Lahzo AI targets multi-spec heavy equipment; Kenect serves equipment/trailer/truck dealers with OEM co-op reimbursement; Memox and DealerAI ($599/mo) serve catalog-trained dealer chat. Below, SurFox AI ($49/mo), Leadferno ($150/mo), TextingBase ($25/mo + $0.05/SMS), and DealerCenter CRM ($99\u2013$199/mo) occupy the floor. Non-binding ballpark lowboy mileage bands and trade-in prompts are easily copied prompt tweaks, not structural differentiation; public VDP scraping is inferior to live inventory feeds. Challenge from below: 0.5 cannot be defended when equivalent or broader tools exist for $0 bundled and $279\u2013$399/mo month-to-month.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Inbound after-hours marketplace lead qualification is a genuinely recurring monthly operational problem (dealers pay Podium, Kenect, and Supreme Dealer monthly year-round, so 0.1 one-off is wrong). However, 1.0 (system-of-record lock-in) is clearly wrong: by deliberate trade-off, IDEA-3 bypasses DMS/CRM integration and runs via month-to-month email forwarding, making cancellation a 2-minute rule deletion. Retention faces severe pressure from host-platform absorption (Trader Interactive already includes free AI Lead Response; Sandhills Cloud and Flyntlok are absorbing lead workflows), VDP scraper fragility when dealer sites change, and immediate churn after any A2P 10DLC silent drop or spec hallucination. Tagged [fermi] at 0.4 believability because no real retention data exists for a zero-3PA scraping shim.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 500.0,
+        "score": 0.0008,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Drops 10x from 10,000 \u2192 1,000. Starting from Scenario A's ~10,000\u201320,000 qualifying independent U.S. heavy equipment, truck, and trailer yards (Census NAICS 423810 ~9,000+ establishments; IBISWorld ~14,537 truck dealers; NADA/ATD 2,104\u20133,798 franchised rooftops) and narrowing strictly to export-focused used heavy equipment and Class 8 truck dealers/brokers in major U.S. port and border corridors (Houston/Channelview, Miami, Laredo, Southern CA, Savannah, NJ/NY) yields roughly 1,000\u20132,500 active target yards. 10,000 is clearly too high for port/border export specialists; 1,000 is the exact legal power of ten.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Rises from 0.1 \u2192 0.5 (industry-standard operational pain inside the narrowed export niche). Unlike rural domestic yards that rely primarily on phone calls, Houston and Miami commercial truck and heavy equipment exporters (e.g., Infinity Truck Export, EF Truck Sales, Pro Equipment Sales, Nextran export desks) explicitly publish WhatsApp lines for overseas buyers and visibly manage daily cross-timezone requests for walkaround/engine-start videos, VIN close-ups, port delivery terms, wire instructions, and third-party mobile mechanic inspections. Still short of 1.0 because many small export brokers tolerate messy manual WhatsApp threads as the cost of doing business.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Unchanged at 1,000. Repricing Scenario B upward from $169/mo to $299/mo single-yard ($3,588/yr) or $499/mo multi-yard ($5,988/yr) keeps annual net revenue per customer firmly in the $1,000/yr power of ten. Verified vertical machinery CRM benchmarks confirm this budget ceiling for independent brokers/yards: Machine Hub charges $250/mo + $100/user ($3,000+/yr), Machineric charges \u20ac300\u2013\u20ac500/mo (~$3,900\u2013$6,500/yr), DealershipSoft runs $349\u2013$399/mo ($4,188\u2013$4,788/yr), and Supreme Dealer runs $279\u2013$599/mo ($3,348\u2013$7,188/yr). Reaching $10,000/yr is not realistic for a standalone WhatsApp/email triage layer sold to 15\u2013300 unit yards.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1 \u2014 intentionally NOT inflated to 1.0. Although dropping outbound U.S. A2P 10DLC cold SMS eliminates carrier EIN/CP-575 rejections and TCPA third-party ADF consent blocks, switching to official Meta WhatsApp Business Cloud API introduces its own adoption gate: Meta Business Manager verification plus high rep behavioral resistance to migrating off personal/existing WhatsApp phone numbers where repeat Latin American and overseas brokers already maintain active chat threads. Meanwhile, MachineryTrader/TruckPaper subscribers remain embedded inside Sandhills Cloud (which already logs Click-to-Text/WhatsApp ROI metrics and hosts FR8Star and Trade-In apps). Challenge from below: 1.0 ('always in the market, easy to switch') is still unsupported.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Rises from 0.1 \u2192 0.5 (indifferent, no red flags) for an [UNVETTED] indie founder due to two structural trade-offs in Scenario B: (1) Eliminating autonomous cold SMS to third-party ADF leads removes the dealer's TCPA vicarious lawsuit exposure ($500\u2013$1,500/text); (2) Replacing freeform LLM spec claims from scraped VDPs with rep-approved media/spec packets (pre-loaded walkaround/cold-start videos, VIN/serial close-ups, verified yard specs) plus structured bilingual intake removes the fear of AI hallucinating undercarriage wear or quoting sold $250k iron. Independent port-corridor export brokers buy pragmatic software on credit cards without SOC 2 or OEM co-op hurdles. Tagged [fermi] at 0.4 believability pending direct Houston/Miami dealer interviews.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Rises from 0.1 \u2192 0.5 (some buyers would select it for export-specific fit alone), while failing 1.0. Domestic incumbents that crushed Scenario A do NOT solve cross-border export triage cleanly: Trader Interactive's free AI Lead Response and Sandhills' embedded FR8Star widget focus on domestic U.S. heavy-haul shipping (auto-populating RGN/step-deck/permit quotes) and domestic Trade-In/CurrencyFinance workflows, not Spanish/English WhatsApp export intake, Ro-Ro vs. container/dismantle port delivery (e.g., Veracruz, Manzanillo, Cartagena, Lagos), wire/LC readiness, or third-party mobile mechanic inspection scheduling. However, 1.0 is wrong because dedicated export WhatsApp CRMs (Linkora, featuring machinery templates, Spanish quoting, and port extraction), Supreme Dealer (advertising WhatsApp AI BDC for heavy equipment at $279\u2013$399/mo), Machineric (\u20ac300\u2013\u20ac500/mo), and custom Meta WhatsApp Cloud API + Make/HubSpot stacks already serve this slice.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5 (recurring revenue from a recurring monthly export-inquiry problem). Does not earn 1.0 because bypassing DMS/accounting/invoicing leaves no system-of-record lock-in, and export yards can churn back to personal WhatsApp or consolidate into Linkora, Machineric, Supreme Dealer, or future Sandhills Cloud WhatsApp automation. Tagged [fermi] at 0.4 believability (no real retention data).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 6250.0,
+        "score": 0.01,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.01 (EBI=0.657, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: plausible (1000) \u2014 Narrowing to U.S. port/border-corridor export heavy-equipment & Class 8 truck dealers drops the market 10x (~1,000\u20132,500 active yards/brokers), capping the theoretical maximum score at 1.6 (1,000 \u00d7 $1,000 \u00f7 625,000) before any friction multipliers; this is a textbook DP9 micro-niche trap.; liquid (0.1) \u2014 Dropping outbound U.S. A2P 10DLC cold SMS eliminates carrier EIN/TCPA cold-texting blockers, but buyer-initiated WhatsApp Cloud API still hits Meta Business Manager verification plus severe rep behavioral lock-in to personal WhatsApp numbers where repeat overseas brokers already message, alongside Sandhills Cloud bundling.; lucrative (1000) \u2014 Repricing up to $299\u2013$499/mo ($3,588\u2013$5,988/yr) stays in the $1,000/yr order of magnitude; independent 15\u2013300 unit export yards will not allocate $10,000/yr to a standalone intake layer when full machinery CRMs (Machineric \u20ac300\u2013\u20ac500/mo, Machine Hub $250+/mo, Supreme Dealer $279\u2013$599/mo) sit below $6k/yr.; enduring (0.5) \u2014 Recurring monthly export-inquiry triage problem without DMS/accounting system-of-record lock-in (1.0), leaving accounts exposed to churn into Linkora, Supreme Dealer WhatsApp BDC, or native Sandhills Cloud expansion.; verdict (0.01 \u2014 NOT VIABLE) \u2014 Even after a 12.5x jump from Scenario A (0.0008 \u2192 0.01) by fixing Self-Aware (0.1\u21920.5), Eager-Identity (0.1\u21920.5), and Eager-Comparative (0.1\u21920.5), the narrowed export wedge still lands 100x below the 1.0 indie threshold; even if Liquid rose to 1.0, total score would only reach 0.1. Face-the-truth Phase D verdict: IDEA-3 is not a viable indie business in either Scenario A or Scenario B."
+    },
+    {
+      "id": "IDEA-4",
+      "title": "Multi-Portal Inventory Feed Pre-Validator, Silent-Drop Watchdog & Portal-ROI Ledger for Specialty Vehicle & Equipment Dealers",
+      "slug": "idea-4-multi-portal-inventory-feed-pre",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Challenged from below: the pitch's claim of 35,000-43,000 US rooftops is significantly inflated, completely ruling out 100,000. Official U.S. Census CBP/SUSB and ATD/NADA data show total US employer establishments across all four verticals BEFORE any ICP filtering sum to only ~15,200: Boat Dealers (NAICS 441222: 4,246 employer establishments via Census CBP, including parts/accessories stores; broader Vertical IQ estimate 9,508), RV Dealers (NAICS 441210: 2,700-2,970 employer establishments via Census SUSB), Heavy Equipment (NAICS 423810: 4,701 employer establishments via Census CBP; AED ~7,800 North American locations including OEM chains), and Commercial Truck Dealers (ATD/NADA: 2,104 dedicated medium/heavy-duty franchised rooftops + ~3,000-3,300 commercial truck dealer entities including independents). Applying the pitch's own filters \u2014 independent (excluding Camping World, MarineMax, OneWater, Cat/Deere/Komatsu/Freightliner groups), 25-500 active units (cutting <20-unit micro-lots), and paying $1,000+/mo across 2+ paid portals (excluding single-portal dealers and Sandhills closed-loop users) \u2014 yields roughly 4,000-10,000 qualified US accounts (or ~6,000-15,000 adding Canada/UK/Australia). What makes 1,000 wrong: even at a conservative 30-40% qualification rate across 4 North American/English-speaking verticals (~20k+ base rooftops), qualified accounts exceed 6,000 (well above the 3,162 log-midpoint between 1,000 and 10,000). Exact legal value: 10000.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.1,
+            "justification": "Challenged from below: 0.5 fails because dealers' loud, documented anger is aimed at portal monopoly rate hikes (Boats Group's 75%-100% increases and federal antitrust class action) and slow Dealer Spike support/auto-renew contracts \u2014 NOT at lacking a standalone $149-$249/mo XML feed pre-validator and ADF/XML parser. Most independent dealer principals and lot managers do not think in terms of XML schema validation or ADF/XML email parsing; when a listing vanishes, they treat it as a vendor bug and call Dealer Spike, Lightspeed, or their portal account rep. Moreover, BoatWizard already emails import-error reports and TraderTraxx surfaces Listing Health alerts, suppressing perceived urgency for an extra monitoring layer. What makes 0.01 wrong: documented troubleshooting guides ('What to Do If Your Inventory Isn't Updating', BoatWizard Managed Feed conflict docs), BBB complaints on Dealer Spike feed sync delays, and high-profile portal price-hike backlash show that roughly 10-15% of digitally savvy multi-portal managers consciously feel feed-drop and cross-portal ROI blind spots. Exact legal value: 0.1.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Proposed pricing of $149/mo ($1,788/yr) to $249/mo ($2,988/yr) sits squarely in the $1,000/yr order-of-magnitude bucket (geometric range ~$316-$3,162/yr). Live published specialty-dealer SaaS pricing confirms independent dealers routinely pay $1,200-$10,000/yr for vertical add-ons and platforms: BluSynq marine AI front-desk ($119-$649/mo = $1,428-$7,788/yr), CARVID inventory syndication ($249-$499/mo = $2,988-$5,988/yr), YachtOne ($500-$850/mo = $6,000-$10,200/yr), LotPoint ($599-$799/mo), AnyDealerOS ($697/mo), and EverLogic ($129/user/mo + $3,999 setup). What makes $100/yr wrong: no B2B dealership SaaS prices at ~$8/mo when a single unit carries $5,000-$30,000+ gross margin, and even with elevated 6-month churn ($894-$1,494 realized ACV), realized revenue remains firmly above the $316/yr log-midpoint. $10,000/yr is impossible for a read-only monitoring overlay. Therefore 1000 is strongly supported by primary pricing data.",
+            "evidence_class": "[data]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Challenged from below: the pitch's Liquid=1.0 claim does not survive scrutiny (DP9). While a read-only tool avoids a full DMS rip-and-replace (ruling out 0.01), buying triggers are NOT always-on: (1) The pitch's primary economic hook ('push back against 75%-100% portal rate hikes' / decide which portal tiers to cut or renew) occurs on annual 12-month contract renewal windows across Boats Group, Trader Interactive, Sandhills, and Dealer Spike; (2) Marine and RV dealerships are heavily seasonal, concentrating marketing audits before spring peak; (3) Silent feed breaks are episodic shocks (typically after a website migration, DMS switch, or schema change) rather than a continuous weekly emergency; (4) BoatWizard feed/notification changes require AM-gated technical setup (~3 weeks) and Sandhills external feeds require rep approval; and (5) Almost all specialty dealer software is sold via consultative demos/quotes rather than impulse self-serve credit-card checkout. Only ~10% of qualified accounts are in an active buying window at any point, making 0.1 accurate.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Challenged from below: 0.5 is too optimistic for an [UNVETTED] solo/2-person technical indie founder with zero dealership pedigree, no MRAA/RVDA/AED industry standing, and no certified DMS or marketplace partner badges. Independent marine, RV, heavy equipment, and commercial truck dealers are conservative, relationship-driven, phone/demo-first buyers spread across four distinct trade ecosystems (each with specialized terminology and closed-loop vendor norms \u2014 note BoatWizard requires AM-gated 3-week onboarding and Sandhills requires rep-configured feeds). Asking these dealers to grant an unknown indie SaaS ongoing access to outbound inventory feeds, portal error emails, and live inbound ADF/XML buyer leads (high-value customer PII) creates severe trust friction. While not a legal/regulatory impossibility (ruling out 0.0 per DP10), an unvetted outsider lacks the institutional or insider trust needed for easy adoption, pinning this at 0.1.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Challenged from below: 0.5 fails DP8 because this read-only overlay is squeezed on every side by native portal features, bundled vertical software, and horizontal tools. (1) Native portals already cover much of the surface area: BoatWizard validates incoming DataX XML/CSV against its Boat Directory and dispatches automated import-error report emails; TraderTraxx natively includes Listing Health alerts (missing price/photos), Lead Manager, Lead Enrichment, and multi-channel attribution; Sandhills Cloud Inventory Management is provided free as a closed-loop hub into MachineryTrader/TruckPaper (and actively restricts external third-party feeds). (2) Modern vertical specialists and incumbents bundle syndication + monitoring/attribution: LeadVenture (Dealer Spike + InteractRV, 40,000+ specialty dealers), Scout-RV (explicitly offers DMS feed sync with proactive built-in feed monitoring + ADF/XML routing), YachtOne ($500-$850/mo month-to-month, unifying YachtWorld, Boat Trader, and Rightboat leads), DealerPulse CRM (per-location CPL/cost-per-sale attribution), CARVID ($249-$499/mo), and existing DMS/CRMs (EverLogic, IDS Astra, DealerRock, Texada, DIS) that already parse the standard ADF/XML <provider> tag. (3) Structural product gaps vs alternatives: high-ticket marine/RV/equipment buyers heavily inquire by phone (where CallRail ~$45-$95/mo + CRM beats an ADF/XML-email-only ledger), a read-only watchdog still forces the dealer to open a ticket with Dealer Spike or Boats Group to actually fix errors, and knowing CPL does not unlock leverage against Boats Group's ~75% marine market monopoly. 0.1 is the exact fit.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.1,
+            "justification": "Challenged from below: 0.5 fails DP11 because a thin, read-only pre-validator and ADF/XML email ledger has no system-of-record lock-in and faces four compounding durability threats over 5 years: (1) Host-platform closure and absorption \u2014 Sandhills Cloud pushes a free closed-loop inventory app restricting third-party feeds, TraderTraxx continues expanding native Listing Health and attribution dashboards, and Boats Group controls private AM-gated feeds; (2) Modern vertical SaaS absorption \u2014 Scout-RV, YachtOne, Marine Logic, DealerPulse, and LeadVenture embed feed monitoring and lead attribution natively inside the website/CRM/DMS; (3) Maintenance fragility \u2014 reverse-engineering and maintaining private, undocumented make/model taxonomies and schemas across four separate verticals without official partner APIs creates brittle upkeep; and (4) Post-audit churn \u2014 once a dealer fixes initial mapping bugs and finishes their annual portal renewal review, ongoing $149-$249/mo value decays sharply. 0.01 is too harsh since legacy DMS fragmentation persists for years, making 0.1 the accurate score.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 100.0,
+        "score": 0.0002,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Intentional 10x drop from 10000 to 1000 to concentrate on the highest-pain, highest-WTP subset. Boats Group / YachtWorld reports ~2,400 yacht brokerage houses globally on BoatWizard, and RevenueBase tracks ~990+ registered yacht brokerage firms in the US (with IYBA representing ~2,000+ individual members and YBAA ~200+ endorsed firms). Filtering to independent mid-to-large multi-broker houses (50-500+ active listings, spending $3,000-$65,000/mo on Boats Group and testing alternative portals like YATCO, Rightboat, Yachtr, and YachtWay) yields roughly 800-1,500 global accounts \u2014 squarely in the 1000 legal bucket (below the 3,162 midpoint to 10,000).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Genuinely improved from 0.1 to 0.5 by narrowing strictly to mid-to-large yacht brokerages hit by Boats Group's 75%-100% rate hikes. Triangulated trade press (Business Insider, Trade Only Today, SuperYacht Times, 50 North Yachts) documents an active industry revolt\u2014including a federal antitrust class action and high-profile Boats Group exits by Galati and HMY\u2014making cross-portal lead/call ROI and alternative-channel attribution (YATCO, Rightboat, Yachtr, YachtWay, direct website) a top-of-mind managing-partner priority across roughly half of mid-to-large yacht brokerages. 1.0 fails because smaller or fully locked-in brokerages still treat Boats Group as an unavoidable tax and rely on broker gut feel rather than formal attribution tooling.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 10000,
+            "justification": "Genuinely improved from 1000 to 10000 via repricing and high-spend buyer concentration. Repricing to $499/mo ($5,988/yr) for up to 150 vessels and $799/mo ($9,588/yr) for up to 500 vessels places ACV squarely in the $10,000/yr order-of-magnitude bucket (geometric range $3,162-$31,622/yr). Primary pricing benchmarks confirm mid-to-large yacht brokerages spending $3,000-$65,000/mo ($36k-$780k/yr) on Boats Group routinely pay $6,000-$10,200/yr for vertical brokerage SaaS: YachtOne publishes $500-$850/mo ($6,000-$10,200/yr) month-to-month, BluSynq publishes $349-$649/mo ($4,188-$7,788/yr), and saving even 20% on a $5,000/mo Boats Group tier pays for the tool >1.5x over. What makes 1000 wrong: realized annual contract value ($5,988-$9,588/yr) sits well above the $3,162/yr log-midpoint.",
+            "evidence_class": "[data]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1 (DP9). Narrowing to mid-to-large yacht brokerages does NOT make buying always-on: Boats Group contracts are annual/12-month subscription agreements (with tier-downgrade or exit decisions concentrated ahead of renewal dates and seasonal boat-show cycles like FLIBS/Miami), BoatWizard inbound/outbound feed changes remain gated by Boats Group account managers (~3-week technical setup), and yacht brokerages buy $6k-$10k/yr tools through consultative demos rather than impulse credit-card signups. Only ~10% of the ~1,000 target brokerages are in an active renewal/migration window at any given time.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1. Concentrating into a single vertical (yacht brokerages) eliminates 4-vertical dilution, but does NOT solve the [UNVETTED] indie founder trust gap: yacht brokerage principals (IYBA/YBAA members transacting $500k-$10M+ vessels in tight-knit hubs like Fort Lauderdale/Miami and the Med) buy through industry-insider referrals and trade shows, and are highly protective of high-net-worth buyer PII, phone call leads, and negotiated Boats Group rate sheets. An unknown solo/2-person indie developer without marine brokerage pedigree or IYBA/YATCO credibility still faces severe trust friction.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1. Narrowing into yacht brokerages escaping Boats Group actually exposes an even sharper DP8 competitor ceiling: YachtOne ($500-$850/mo, month-to-month, zero setup fee) ALREADY unifies custom brokerage websites, marine CRM, AI lead capture, and cross-portal lead aggregation/attribution across YachtWorld, Boat Trader, and Rightboat for the exact same $500-$800/mo budget. Alongside YachtOne sit YATCO BOSS (the broker-owned official MLS operating system), Marine Logic (direct Boats Group XML sync + website OS), specialized marine agencies (Relevance Yacht, Yachting Agency), and CallRail ($50-$195/mo) + Foureyes for call-to-lead attribution. A standalone feed-health + attribution ledger without website/CRM ownership offers less scope at the same price as YachtOne and still cannot force Boats Group to open restricted feed exports.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1 (DP11). This narrowed wedge is structurally a transitional 'Boats Group downgrade audit' tool: once a brokerage measures 90-180 days of channel ROI, executes its tier cut or switches to YachtOne/YATCO BOSS, ongoing $499-$799/mo retention collapses. Meanwhile, Boats Group continues restricting external feed/data exports to defend its ~75% share, and all-in-one marine operating systems (YachtOne, YATCO BOSS, Marine Logic) absorb multi-portal attribution natively. 0.01 is too harsh since Boats Group unbundling will span several years, keeping Enduring at 0.1.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 500.0,
+        "score": 0.0008,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.0008 (EBI=0.657, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: eager_comparative (0.1): Unchanged \u2014 even inside the sharpest yacht-brokerage wedge, YachtOne ($500-$850/mo, month-to-month, zero setup fee) already bundles custom website + marine CRM + AI lead capture + unified lead attribution across YachtWorld, Boat Trader, and Rightboat; YATCO BOSS serves as the broker-owned MLS operating system; Marine Logic offers direct Boats Group XML sync; and CallRail ($50-$195/mo) + Foureyes handle call/lead attribution. A standalone feed-health + attribution overlay cannot beat an all-in-one modern vertical OS at the exact same $500-$850/mo price point.; liquid (0.1): Unchanged (DP9) \u2014 Boats Group subscription agreements run on 12-month annual cycles, brokerage marketing spend shifts around seasonal boat-show windows (FLIBS/Miami), BoatWizard feed modifications remain AM-gated (~3 weeks), and brokerages buy via consultative demos rather than impulse self-serve checkout.; plausible (1000): Intentional 10x narrowing from Scenario A \u2014 BoatWizard connects ~2,400 yacht brokerage houses globally (~990+ US registered yacht brokerages per RevenueBase), leaving ~1,000 mid-to-large multi-broker firms paying $3,000-$65,000/mo to Boats Group. Concentrating into 1,000 accounts leaves zero margin for weak Liquid or Eager multipliers (DP9).; eager_identity (0.1): Unchanged \u2014 an [UNVETTED] solo/2-person technical indie founder still lacks IYBA/YBAA membership pedigree, South Florida yacht-brokerage relationships, and institutional trust to ingest private $500k-$10M+ yacht buyer leads, call recordings, and Boats Group spend data.; enduring (0.1): Unchanged (DP11) \u2014 once a brokerage completes its Boats Group downgrade/exit audit or migrates onto YachtOne/YATCO BOSS, a transitional attribution watchdog faces severe post-decision churn, while Boats Group actively restricts external data exports and closed-loop feed access."
+    },
+    {
+      "id": "IDEA-2",
+      "title": "Zero-API-Toll Commercial Work-Order Intake, Field-Proof & On-Site NTE Closeout Desk for QuickBooks/Jobber Trade Shops",
+      "slug": "idea-2-zero-api-toll-commercial-work-or",
+      "stage": "Phase 4 \u2014 Rude Q&A + Dalio Panel",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "The pitch's 30,000-60,000+ claim fails cross-checking against primary CMMS network counts. US Census CBP/QCEW shows ~111,000-125,000 employer establishments in NAICS 238220 (Plumbing/HVAC/Refrigeration) and ~81,000-83,000 in NAICS 238210 (Electrical), overwhelmingly residential or new-construction. Crucially, ServiceChannel's entire global verified contractor network across hundreds of trades (janitorial, snow, landscaping, pest, signage, handyman, plus MEP) is ~70,000 providers, and CorrigoPro's overlapping network is ~60,000-70,000+ across 130+ trades. Narrowing to US commercial HVAC/refrigeration/plumbing/electrical/kitchen/door shops (~25-35% of those networks = ~15,000-25,000), then filtering to 2-25 technicians (~55%), actively juggling 3-8 CMMS portals (~50%), and running QBO/Jobber/HCP rather than QBD-only/ServiceTitan/BuildOps/Simpro/ServiceTrade (~60%), yields ~4,000-12,000 shops. That makes 100,000 an order of magnitude too high and 1,000 an order of magnitude too low, placing the true count squarely at 10,000.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Among contractors already filtered to those juggling 3-8 retail CMMS portals on QBO/Jobber/HCP, the pain of double-entry, tight NTE delays, missing field photos, and automated invoice rejections is acute and weekly. Triangulated across Reddit threads (r/FacilityManagement, r/QuickBooks, r/quickbooksonline), SoftwareAdvice, Fieldproxy, and ServiceChannel's own provider communications, contractors vocally complain about 'swivel-chair' re-keying, rejected-invoice backlogs, and NTE waits, and actively seek QuickBooks/Jobber/Zapier/Make parser workarounds. That makes 0.1 ('90% don't know they have this problem') too low. However, 1.0 fails because roughly half of small shops treat portal friction as an unavoidable cost of national accounts, rely on native portal apps, or assign a low-wage office clerk rather than actively seeking software.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Proposed pricing is $149-$249/mo ($1,788-$2,988/yr), squarely in the $1,000/yr Fermi bucket. Live market pricing confirms 2-to-25-tech trade shops routinely pay $900-$4,200/yr for operational and documentation software: CorrigoPro Unlimited Network ($99/mo = $1,188/yr), CompanyCam ($79-$299/mo + per-user), Jobber Connect ($129-$149/mo = $1,548-$1,788/yr), Housecall Pro Essentials ($149/mo = $1,788/yr), ServiceBox ($75/mo base or ~$35/user/mo), ServiceFusion ($208-$627/mo), and Konexall two-way middleware (~$350/mo = $4,200/yr). Even if competitive pressure from one-way limitations forces price compression down to $79-$99/mo ($948-$1,188/yr), $100/yr is far too low and $10,000/yr is impossible given ServiceChannel's official two-way API starts at $500/mo ($6,000/yr).",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 1.0,
+            "justification": "Buyers are 2-to-25-tech shop owners/office managers paying $149-$249/mo month-to-month on credit card with zero setup fee and no rip-and-replace of Jobber, Housecall Pro, or QuickBooks Online. Because they currently rely on manual portal copy-pasting rather than a locked-in middleware contract, and commercial portal work orders/rejections occur daily year-round (ServiceChannel alone processes 28M+ annual work orders), there is no annual procurement cycle or contract lock-in gating purchase (ruling out 0.1). Peak HVAC/refrigeration weather months slow onboarding temporarily, but liquidity remains effectively always-on (1.0).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Founder profile is [UNVETTED] (assumed 1-2 person technical indie founder with no trade brand, no official ServiceChannel/Corrigo partner certification, and low-touch support). Unlike enterprise SOC 2/indemnity procurement traps (0.1, DP10), 2-to-25-tech commercial trade shops do buy $100-$250/mo utilities on credit card from tiny software vendors after a free trial, making 0.1 too harsh. However, 1.0 fails because trade owners are skeptical of unknown software startups and face acute SLA risk: if an unaffiliated email parser silently breaks or drops an emergency refrigeration dispatch from a national retailer, the shop suffers Contractor Scorecard penalties or loses a major account. Without live phone support or ecosystem certification, roughly half of qualified prospects will decline an unknown indie vendor.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Primary portal documentation and live competitor pricing invalidate 0.5. Because IDEA-2 refuses official CMMS write-back APIs and cannot bypass mandatory GPS/IVR check-ins, it creates a 'one-way street': (1) Field techs STILL must open the free ServiceChannel Provider and CorrigoPro Mobile apps on-site \u2014 and both native apps ALREADY include offline check-in, before/after photos, AI asset nameplate scanning, electronic signatures, and direct-to-client NTE proposal submission; texting techs a third mobile web link adds friction and still forces the office to download and manually re-upload photos/proposals into the portal. (2) ServiceChannel mandates portal/API invoice submission and already runs automated NTE/rate-card/compliance validation on upload, so IDEA-2 does not eliminate outbound portal invoicing re-keying. (3) The remaining inbound email-to-Jobber/QBO parsing wedge is sandwiched (DP8/DP11) between $20-$70/mo AI email parsers (Parseur + Zapier/Make), CompanyCam ($63-$149/mo), and Intuit Field Service Management powered by Corrigo ($28-$35/user/mo active QBO sync) below, and true two-way sync above: Konexall (~$350/mo), ServiceChannel Provider API (from $500/mo), BuildOps' ServiceChannel partner offer ($500 one-time setup, $0 annual integration fee for <=250 annual WOs), and AI intake entrants like Build Concierge.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Multi-portal retail CMMS fragmentation (ServiceChannel, CorrigoPro, Officetrax, Verisae, FMX) has persisted for decades because enterprise brands choose separate platforms, and commercial HVAC/refrigeration demand is evergreen (supported by aging building stock and AIM Act retrofits), ruling out a 12-month fad (0.1). However, 1.0 is untenable for a zero-API email-parsing wedge: (1) growing shops graduate off Jobber/HCP onto BuildOps, ServiceTitan, or Simpro+Konexall; (2) ServiceChannel already restricts sensitive work-order details behind 'must log in' gates and is expanding ServiceChannel AI (native invoice audit & nameplate OCR) while lowering API entry barriers via volume tiers; (3) Jobber, Housecall Pro, QuickBooks, and DIY LLM/RPA agents steadily commoditize inbound email-to-job parsing, creating ongoing template-maintenance churn and capping durability at 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 125000.0,
+        "score": 0.2,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Drops 10x from Scenario A's 10,000 to 1,000 due to strict volume and portal-count narrowing. Primary anchor: CFESA (Commercial Food Equipment Service Association) totals ~400-450 member companies across all of North America (~3,000 certified techs). Adding non-CFESA US regional 8-to-35-tech commercial refrigeration, HVAC, electrical, plumbing, and multi-trade retail/QSR facilities contractors processing 150-1,000+ monthly work orders across 5-12 CMMS portals (and NOT already running full ServiceTitan/BuildOps/SAMPro native portal suites) narrows ServiceChannel/CorrigoPro's ~15,000-25,000 US MEP/kitchen network down to ~1,500-4,000 companies \u2014 squarely in the 1,000 legal bucket (10,000 is clearly too high at this 150+ monthly multi-portal WO threshold).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 1.0,
+            "justification": "Moves from 0.5 to 1.0 because narrowing to 8-to-35-tech contractors processing 150-1,000+ monthly work orders across 5-12 portals isolates shops where portal billing friction is no longer a background annoyance \u2014 it is a dedicated 1-to-3-person payroll line ($50k-$150k/yr) and a visible working-capital drain (tens of thousands in rolling Rejected/Disputed/Short-Pay queues). Triangulated across ServiceChannel's own rate-card/rejection/short-pay compliance docs, Reddit commercial billing discussions, and vertical AI billing entrants (Massmarket AI) targeting this exact workflow, virtually all owners and AR leads at this 150+ monthly multi-portal WO scale explicitly recognize the pain (ruling out 0.5).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 10000,
+            "justification": "Moves from 1,000 to 10,000 via repricing to $699/mo (up to 500 portal WOs/mo) or $999/mo (up to 1,500 WOs/mo) \u2014 $8,388-$11,988/yr \u2014 anchored against verified high-volume alternatives: 1-3 full-time commercial billing coordinators ($45k-$60k/yr each), Davisware FSM licensing ($150-$300/user/mo) + $5,000-$25,000 custom ERP/ServiceChannel integration setup, SAMPro ($35,000+ enterprise floor), ServiceChannel Provider API ($500+/mo = $6,000+/yr for just one portal), and Konexall (~$350/mo = $4,200/yr for Simpro). Even if price negotiation compresses ACV to $4,800-$8,400/yr ($399-$699/mo), it remains comfortably above the $3,162/yr geometric midpoint between $1,000 and $10,000. Believability is 0.7 (not 1.0) because buyer willingness-to-pay at $699-$999/mo for a Chrome-extension billing copilot is triangulated from adjacent software/labor benchmarks rather than a live identical-product pricing page.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 1.0,
+            "justification": "Unchanged at 1.0. Even at $699-$999/mo, 8-to-35-tech regional trade contractors are predominantly owner-operated ($2M-$15M revenue) without Fortune 500 annual procurement freezes; because this tool overlays QuickBooks/Davisware/Jobber/ServiceFusion without ripping out the core FSM or waiting out a multi-year middleware contract, owners/controllers can approve a month-to-month or 30-day PoC purchase any month of the year triggered by rejected-invoice backlogs, cash-flow crunches, or billing-clerk turnover (ruling out 0.1 annual-cycle illiquidity).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5 (do not inflate). While keeping a human billing coordinator in the loop (attended autofill, human clicks Submit) and proving accuracy on 20-30 historical invoices (mirroring Massmarket AI's PoC model) avoids catastrophic unattended billing liability (ruling out 0.1 / DP10), an [UNVETTED] 1-2 person indie founder still lacks trade reputation, ServiceChannel/Corrigo partner status, and a phone support desk. Convincing controllers at $2M-$15M trade contractors to install an unknown startup's Chrome extension on billing workstations at $699-$999/mo still carries ~50% identity trust friction.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Moves from 0.1 to 0.5 by directly eliminating Scenario A's fatal 'one-way street' flaw: Scenario B drops the redundant technician SMS photo/NTE link (letting techs stay in free ServiceChannel Provider / CorrigoPro Mobile apps) and attacks the unsolved back-office bottleneck across 5-12 portals \u2014 attended one-click Chrome-extension invoice/attachment autofill (zero API toll, human clicks Submit), multi-client rate-card/tax pre-validation, and unified rejected-invoice/short-pay AR recovery. Unlike Scenario A, $20-$70/mo inbound email parsers (Parseur/Zapier/Make) cannot do outbound portal form autofill, rate-card enforcement, or short-pay reconciliation, and per-portal official APIs (ServiceChannel $500+/mo + CorrigoPro Direct SOW + Officetrax NEXUS + Davisware $5k-$25k ERP setup) still leave long-tail portals (Verisae, FMX, Ecotrak) manual and lack cross-portal rejection recovery. Still capped at 0.5 (not 1.0) because top-portal native integrations (BuildOps, Simpro+Konexall), custom AI billing services (Massmarket AI), and buyer caution around browser extensions on client portals remain meaningful substitutes.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5 (do not inflate). Multi-portal retail/QSR fragmentation across 5-12 client CMMS portals is structurally durable (decades old), and client-specific rate cards, tax exemptions, and short-pay reconciliation create much higher workflow stickiness than an inbound email parser (ruling out 0.1). However, 1.0 remains unjustified: Chrome-extension autofill relies on brittle third-party portal DOM selectors and risks CMMS Terms-of-Service pushback, ServiceChannel continues expanding native AI validation and tiered APIs, general AI browser/computer-use agents threaten to commoditize portal form-filling within 2-4 years, and scaling contractors (>35 techs) graduate into BuildOps/ServiceTitan/SAMPro ERPs.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 1250000.0,
+        "score": 2.0,
+        "evidence_believability_index": 0.614,
+        "bottleneck_believability": 0.4,
+        "band": "STRONG (>= 2.0 \u2014 strong bootstrapped / scale-up potential)"
+      },
+      "post_rude_qa": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Defended at 1,000 (~1,500-4,000 US regional 8-to-35-tech commercial refrigeration, kitchen-equipment/CFESA, HVAC, electrical, and multi-trade contractors processing 150-1,000+ monthly WOs across 5-12 CMMS portals and not already locked into fully integrated commercial ERPs). CFESA totals only ~400-450 North American companies and mid-size shops heavily adopt Davisware, ServiceTrade, BuildOps, Simpro, or SAMPro. At plausible = 1,000, dropping lucrative to 1,000 makes the niche mathematically unviable.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 1.0,
+            "justification": "Defended at 1.0. Regional commercial contractors at 150-1,000+ monthly multi-portal work orders clearly recognize billing overhead and invoice-rejection delays as an active P&L pain (confirmed by active hiring of $50k/yr domestic billing clerks and $1,200-$2,300/mo specialized ServiceChannel VAs). The idea fails on legal/comparative viability and unit economics, not lack of buyer pain awareness.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Conceded from 10,000 to 1,000. Repricing from Scenario A's $149-$249/mo to $699-$999/mo ($8,388-$11,988/yr) had zero direct comparable Chrome-extension pricing proof and collapses on P&L economics: because an attended extension eliminates zero FTE headcount (the $50k/yr clerk still clicks Submit, chases techs for missing IVR/signatures, and disputes short-pays by phone), buyers will not pay $699-$999/mo when native ServiceChannel I.12 / CorrigoPro Bulk Import are $0/mo and dedicated full-time offshore ServiceChannel VAs cost $1,200-$2,300/mo and actually replace labor. Realistic WTP caps at $149-$249/mo ($1,788-$2,988/yr -> 1,000 bucket).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 1.0,
+            "justification": "Defended at 1.0. Owner-operated $2M-$15M regional commercial contractors do not face Fortune 500 annual procurement freezes and regularly approve monthly billing tools or VA retainers year-round. Liquidity is not what kills Scenario B.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Conceded from 0.5 to 0.1. ServiceChannel's Web Application Terms of Service explicitly ban unauthorized automated scripts, bots, scraping, and circumvention outside official Web Services Integration agreements. Asking controllers at $2M-$15M commercial contractors to install an uncertified, unaffiliated 1-2 person indie Chrome extension (no ServiceChannel/Corrigo partner status, no SOC 2, no E&O/cyber backing, no trade credibility) inside live billing portals representing 20%-60% of commercial revenue triggers a DP10 existential account-suspension trust wall.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Conceded from 0.5 to 0.1. Live web verification disproved the 'unsolved one-by-one keying vs. $500+/mo API toll' binary: ServiceChannel already provides free I.12 Excel Bulk Invoice Upload (with attachments@servicechannel.net for binary tickets/PDFs) and CorrigoPro provides free Bulk Invoice Import; Scenario B dropped the technician app and therefore cannot prevent the #1 field-originated causes of rejections/short-pays (missing IVR/GPS check-ins, unapproved NTE overages, missing store-manager signed work orders); and full-time offshore HVAC/ServiceChannel-trained VAs ($1,200-$2,300/mo) handle all portals including long-tail portals plus phone dispute resolution with zero ToS breach. General RPA Chrome extensions (UiPath, Power Automate) and AP-portal platforms (Billtrust, Esker, Tesorio, Massmarket AI) further squeeze the space.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.1,
+            "justification": "Conceded from 0.5 to 0.1. Although multi-portal retail CMMS fragmentation is durable, Scenario B's unofficial Chrome-extension DOM-autofill mechanism has zero durable moat: it faces immediate ServiceChannel/Corrigo ToS enforcement or anti-bot blocking, relentless selector breakage across 5-12 third-party UI releases, steady native encroachment from ServiceChannel AI / Action Hub / Atom invoice validation, and 18-24 month commoditization of web form-filling by general AI computer-use browser agents.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 1000.0,
+        "score": 0.0016,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "panel": {
+        "votes": {
+          "scorer": 1.0,
+          "attacker": -1.0,
+          "consequence_ev": -1.0
+        },
+        "weights": {
+          "scorer": 0.3,
+          "attacker": 0.4,
+          "consequence_ev": 0.3
+        },
+        "panel_weighted_score": -0.4,
+        "disagreement_flag": true
+      },
+      "ev_metrics": {
+        "p_viable_pct": 15.0,
+        "target_arr_usd": 180000.0,
+        "validation_hours": 30.0,
+        "expected_arr_usd": 27000.0,
+        "ev_per_validation_hour": 900.0
+      },
+      "reason": "Rude Q&A=BAD_IDEA | Consequence/EV=KILL | Post-Score=0.0016 (EBI=0.7, Min=0.7) | PanelWeighted=-0.4. KILL IDEA-2 (SCENARIO B). Live adversarial research and a clean Round-1 fatal concession by the Advocate proved an irreducible structural trilemma for a 1-2 person bootstrapped indie founder: narrowing into ~1,500-4,000 regional 8-to-35-tech multi-portal shops (plausible = 1,000) forced an artificial 4x price jump to $699-$999/mo (lucrative = 10,000) that collapses immediately against reality. An attended unofficial Chrome extension eliminates zero FTE headcount (the $50k/yr clerk still clicks Submit, chases techs for missing IVR check-ins and signed work orders after Scenario B dropped the field app, and disputes short-pays by phone), loses on price/completeness to free native bulk uploads (ServiceChannel I.12 + attachments@servicechannel.net; CorrigoPro Bulk Import) paired with $1,200-$2,300/mo full-time offshore ServiceChannel VAs, directly violates ServiceChannel's Web App Terms of Service ban on unauthorized scripts/scraping (DP10 existential retail-account suspension risk, pinning eager_identity = 0.1), and faces perpetual selector breakage plus 18-24 month AI browser-agent commoditization (enduring = 0.1). Meanwhile, going official across 5-12 CMMS APIs with bespoke 20-30 invoice PoCs turns this into a consulting-heavy vertical AI/BPO business (like Massmarket AI with $1k-$15k setup fees), violating low-touch indie constraints. Conceding lucrative (10,000 -> 1,000), eager_comparative (0.5 -> 0.1), eager_identity (0.5 -> 0.1), and enduring (0.5 -> 0.1) collapses the deterministic Problem Score from 2.0 to 0.0016 (0.04 on just the two Round-1 challenges). Verdict: BAD_IDEA \u2014 kill without another paper pivot."
+    }
+  ]
+}

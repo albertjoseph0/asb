@@ -1,0 +1,190 @@
+{
+  "run_id": "2026-11-23_1735-deepdive-stripesyncguard-woocommerce-stripe-p",
+  "run_type": "deep_dive",
+  "ambition": "indie",
+  "survivors": [],
+  "killed": [
+    {
+      "id": "IDEA-1",
+      "title": "StripeSyncGuard \u2014 WooCommerce + Stripe Payment-State Reconciler & Staging Killswitch",
+      "slug": "idea-1-stripesyncguard-deepdive",
+      "stage": "Deep Dive \u2014 Rude Q&A + Dalio Panel",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Above 1,000: official WooCommerce Stripe Payment Gateway has 700,000+ active installs (wordpress.org), WooPayments (Stripe-powered) has ~433,000 active stores (storeleads.app), and ~10-15% of live WooCommerce stores clear $250k+ GMV (~100k+ Woo+Stripe stores at $250k-$10M GMV; 85-90%+ are sub-$250k per Store Leads/Red Stag analysis). Fails 100,000 under Challenge From Below and DP14 (qualified behavioral TAM, not raw headcount): official WooCommerce Subscriptions has only ~41,000 active stores globally across ALL revenue tiers (~3k-6k at $250k+ GMV on Stripe), and adding non-subscription $250k-$10M Woo+Stripe stores with misconfigured Cloudflare/WP Rocket caching or stalled Action Scheduler queues lands at ~10,000\u201335,000 truly affected stores, not 100,000. (Separately, the unblended agency buyer segment of 2-25 staff shops managing 10+ Woo+Stripe retainers is only ~1,000 globally out of ~2,500-5,000 dedicated WooCommerce agencies.)",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.1,
+            "justification": "Above 0.01 because multiple firsthand threads across r/woocommerce, r/Wordpress, Cloudflare Community, and WordPress.org confirm stuck Pending Payment Stripe orders, Action Scheduler stalls, and staging token/charge incidents, and WP dev blogs publish triage guides. Fails 0.5 ('industry standard practice') under Challenge From Below: exact WordPress.org install counts for free plugins solving this exact problem are PaidRadar (<10 active installs), RenewScope (<10 active installs), and Failed Actions Monitor for Action Scheduler (~30+ active installs), while even broad automated checkout tester CheckView sits at ~1,000+ installs across 4.1M-4.3M live WooCommerce stores. Merchants reactively Google a one-time Cloudflare/cron fix after an incident rather than proactively buying continuous reconciliation software.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 100,
+            "justification": "Above $10 (stores at $250k-$10M GMV demonstrably pay hundreds/yr for core Woo extensions and monitoring), but fails $1,000 under Challenge From Below: the pitch's $49/mo ($588/yr) ask already sits below $1,000/yr and exceeds demonstrated market allocation. Official WooCommerce Subscriptions itself costs $279/yr (woocommerce.com); PaidRadar, RenewScope, Failed Actions Monitor, Hookvigil, and native Staging Mode cost $0/yr; ShopMonitor Starter is $14.50-$29/mo ($174-$348/yr); Hookdeck is $0-$39/mo; and CheckView Plus ($70/mo, $719.88/yr) covers unlimited sites for full checkout + form testing (while $29-$249/mo Robot Ninja shut down). Demonstrated single-store allocation is $100/yr order of magnitude, exposing a wide gap vs. the $588/yr sticker price.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Above 0.01 because there are no multi-year contracts or procurement gates blocking a technical WooCommerce owner from connecting API keys via credit card. Fails 1.0 under Challenge From Below because buyers are not continuously in-market: payment-state reconciliation is a priority-seven, incident-triggered decision \u2014 merchants assume Stripe + WooCommerce works until an outage hits, immediately apply a free Cloudflare/cron fix during triage, and only revisit monitoring during rare stack audits or migrations (confirmed by <10 active installs on free PaidRadar and RenewScope).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Not 0 (technical WooCommerce owners buy from indie shops like Metorik and CheckView without SOC 2 fiat), but fails 0.5 under Challenge From Below: unlike passive analytics, StripeSyncGuard asks $250k-$10M GMV merchants to hand an unvetted solo founder's external cloud SaaS live Stripe API credentials, WooCommerce order-state write permissions (payment_complete()), and a production-vs-staging billing killswitch where a false positive ships unpaid orders or halts real renewals (DP10). Direct competitor PaidRadar explicitly markets local-only WordPress execution with zero external cloud routing of order data or API keys (usepaidradar.com), confirming merchant sensitivity.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "No material differentiation (0.1) because a floor-and-ceiling audit (DP8) uncovers free direct equivalents for every claimed pillar: PaidRadar (free GPLv2 on wordpress.org / usepaidradar.com) already polls Stripe via Action Scheduler and auto-completes stuck Pending/On-Hold/Failed orders via payment_complete(); Failed Actions Monitor (~30+ installs, free), RenewScope (free), Hookvigil (free), and Hookdeck ($0-$39/mo) cover Action Scheduler and webhook monitoring; WooCommerce Subscriptions already ships built-in automatic Staging Mode (woocommerce.com) detecting URL mismatches and forcing manual renewals + disabling emails, paired with a free 30-line mu-plugin (wp-staging.com); and CheckView ($70/mo unlimited sites) / ShopMonitor ($14.50-$59/mo) test full live checkouts. Cannot justify 0.5 at $49/mo ($588/yr) when free fixes and plugins solve the same incidents.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.1,
+            "justification": "Above 0.01 (a merchant saved once might keep guardrails during migrations or refer peers), but fails 0.5 under Challenge From Below because the three stated failure modes are largely one-time configuration/infrastructure fixes dressed as recurring software (DP15): a Cloudflare Cache/WAF bypass rule for ?wc-api=wc_stripe fixes webhook caching; setting DISABLE_WP_CRON true with a server cron resolves ~90% of Action Scheduler stalls; and native WooCommerce Subscriptions Staging Mode plus a staging mu-plugin blocks accidental staging charges. After Month 1 triage, paying $49/mo (>2x WooCommerce Subscriptions) for months of silent zero-alert insurance drives high churn \u2014 consistent with WooCommerce checkout monitor Robot Ninja being discontinued/archived.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 10.0,
+        "score": 0.0,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Unchanged at 10,000: narrowing specifically to WooCommerce Subscriptions + Stripe stores while lowering the GMV floor to $50k+ (affordable at $149/yr) draws from ~41,000 live active WooCommerce Subscriptions stores globally (storeleads.app) x ~65% Stripe adoption (~26,650 stores); filtering out tiny/dormant sites (<50 active subscribers) lands cleanly at ~10,000 qualified stores (1,000 is too low; 100,000 exceeds the entire 41k WooCommerce Subscriptions install base). Avoids DP14's 1,000-account micro-niche collapse, unlike the separate agency segment (~1,000 agencies with 10+ Woo+Stripe retainers).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1: even inside the sharpest WooCommerce Subscriptions + Stripe bullseye, proactive renewal-queue reconciliation is NOT industry standard practice (0.5). Exact WordPress.org install data shows RenewScope (built specifically for WooCommerce Subscriptions + Stripe renewal diagnostics, $0) has <10 active installations out of ~41,000 WooCommerce Subscriptions stores, PaidRadar ($0) has <10 active installs, and Failed Actions Monitor ($0) has ~30+ active installs. Owners fix incidents reactively via Google/forums rather than proactively installing monitors.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 100,
+            "justification": "Unchanged at $100 power of ten, though repricing to $149/yr eliminates Scenario A's sticker-price mismatch: demonstrated annual spend for WooCommerce Subscriptions add-ons sits squarely in the $100 tier \u2014 Zorem Analytics for WC Subscriptions is $79-$149/yr (zorem.com), alternative subscription plugins (YITH/WPSubscription) run $90-$130/yr (wpsubscription.co), official WooCommerce Subscriptions itself is $279/yr (woocommerce.com), and direct diagnostics/reconcilers (PaidRadar, RenewScope, Failed Actions Monitor) are $0/yr. Cannot justify $1,000 under Challenge From Below.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1 under Challenge From Below: repricing to $149/yr removes price friction once a merchant is actively shopping, but does not make merchants continuously in-market (1.0). Payment-state and Action Scheduler monitoring remain priority-seven, incident-triggered purchases \u2014 confirmed by <10 active installs on free RenewScope and PaidRadar despite zero price barrier.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "CHANGED from Scenario A (0.1 -> 0.5): Re-architecting from an external cloud SaaS holding live Stripe API credentials to a local-only, GPL/open-source auditable WordPress plugin running inside the merchant's own server (matching PaidRadar's explicit local-only privacy posture on usepaidradar.com and asb-problem's open-source trust escape hatch) eliminates external cloud-custody red flags. Technical WooCommerce Subscriptions owners routinely buy $79-$279/yr indie GPL plugins (e.g., Zorem, YITH, WPSubscription) with indifference / no structural barriers (0.5). Fails 1.0 because an unvetted solo founder has no mission-level brand pull.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1 under Challenge From Below even after narrowing to WooCommerce Subscriptions and repricing to $149/yr: Automattic already bundles BOTH built-in automatic Staging Mode AND built-in automatic Failed Payment Retry directly inside WooCommerce Subscriptions ($279/yr, woocommerce.com). Meanwhile, free local WordPress plugins already cover every remaining gap: PaidRadar (free, local-only Stripe API stuck-order reconciler), RenewScope (free, local-only WooCommerce Subscriptions + Stripe renewal diagnostics), Failed Actions Monitor for Action Scheduler (free), Action Scheduler Cleaner / WP-CLI (free), and Hookvigil (free). Bundling free native + plugin capabilities into a $149/yr plugin still lacks decisive differentiation.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1 under Challenge From Below (even if annual auto-renewal inertia nudged this to 0.5, the total score would only reach 0.0004): although WooCommerce Subscriptions renewals run monthly, the three underlying failure modes remain primarily one-time configuration fixes \u2014 adding a Cloudflare Cache/WAF rule for ?wc-api=wc_stripe, setting DISABLE_WP_CRON true with a real server cron, and using native WooCommerce Subscriptions Staging Mode + a staging mu-plugin (woocommerce.com, wp-staging.com). Once fixed in Month 1, zero-alert months turn Year-2 renewal into disposable insurance (consistent with Robot Ninja's discontinuation).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 50.0,
+        "score": 0.0001,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "LOWERED from 10,000 -> 1,000 (conceded per DP14): Store Leads tracks ~40,700-41,700 active WooCommerce Subscriptions stores globally (~11,689 in the U.S.). Subtracting Automattic's default WooPayments (~10.5-10.8% of live WooCommerce stores, ~433k-436k stores) plus PayPal, Square, Authorize.net, Braintree, and Mollie cuts standalone WooCommerce Stripe Gateway share well below 65%. Further filtering for >=$50k recurring GMV / >=50 paying subscribers AND self-managed stacks lacking managed-host server crons (WP Engine, Kinsta, Pressable), native Staging Mode hygiene, or existing Cloudflare bypass rules compresses true qualified behavioral TAM to ~1,000-2,000 stores globally (order of magnitude 1,000).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1: WordPress.org install evidence confirms near-zero proactive awareness or demand \u2014 RenewScope ($0, built specifically for WooCommerce Subscriptions + Stripe renewal diagnostics) has <10 active installs and PaidRadar ($0, local Stripe/PayPal stuck-order webhook reconciler) has <10 active installs out of ~41,000 WooCommerce Subscriptions stores. Merchants fix incidents reactively via docs/forums/LLMs rather than proactively installing monitors.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 100,
+            "justification": "Unchanged at $100 power of ten: Demonstrated annual spend for WooCommerce Subscriptions add-ons sits at $79-$149/yr (with official WooCommerce Subscriptions at $239-$279/yr), while exact-match diagnostics/reconcilers (PaidRadar, RenewScope, Failed Actions Monitor) are $0/yr. Cannot clear $1,000/yr without expanding into broader multi-store checkout testing or B2B ERP reconciliation.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1: Payment-webhook and Action Scheduler monitoring is a rare, post-incident purchase rather than an always-in-market workflow. Zero-dollar alternatives with <10 active installs demonstrate that removing price friction entirely still fails to create continuous buying velocity.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "LOWERED from 0.5 -> 0.1 (conceded): Scenario B's local-only GPL WordPress plugin does not eliminate buyer trust barriers for an unvetted solo founder. A local PHP plugin inside wp-content/plugins/ holds full read access to live Stripe secret keys, root WordPress DB access, and write authority to invoke payment_complete() \u2014 creating severe supply-chain and fulfillment-error liability (DP10) without Woo.com marketplace auditing, multi-year WordPress.org track record, or E&O indemnity. Simultaneously, running locally breaks out-of-band alerting whenever WP-Cron or PHP workers stall, while GPL licensing exposes the code to $5/mo GPL club redistribution on Day 1.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1: Official WooCommerce Subscriptions ($239-$279/yr) natively ships automatic Staging Mode and Failed Payment Retry, WooCommerce Stripe Gateway (v8.6.1+) auto-configures and health-checks webhooks, and $0 plugins cover every remaining slice \u2014 PaidRadar (local Stripe stuck-order reconciler), RenewScope (WooCommerce Subscriptions + Stripe renewal diagnostic), Failed Actions Monitor (Action Scheduler failure alerts), and Automattic's Action Scheduler Disable Default Runner. Meanwhile, Stripe retries non-2xx webhooks for 3 days, Hookdeck offers 10k free events/mo, and CheckView ($70/mo) / WP Umbrella ($2.19/site/mo) / Metorik ($25-$150+/mo) own actual paid monitoring/ops budgets (DP8).",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1: All three target failure modes are permanently solved in under 30 minutes via one-time operational configuration \u2014 a Cloudflare WAF/Cache bypass rule and WP Rocket exclusion for wc_stripe, DISABLE_WP_CRON=true with a real system cron, and native WooCommerce Subscriptions Staging Mode plus a 6-line ActionScheduler::runner() staging snippet (or LLM-generated mu-plugin). Zero-alert months turn Year-2 renewal into disposable insurance with high structural churn.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 1.0,
+        "score": 0.0,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "panel": {
+        "votes": {
+          "scorer": -1.0,
+          "attacker": -1.0,
+          "consequence_ev": -1.0
+        },
+        "weights": {
+          "scorer": 0.3,
+          "attacker": 0.4,
+          "consequence_ev": 0.3
+        },
+        "panel_weighted_score": -1.0,
+        "disagreement_flag": false
+      },
+      "ev_metrics": {
+        "p_viable_pct": 3.0,
+        "target_arr_usd": 75000.0,
+        "validation_hours": 8.0,
+        "expected_arr_usd": 2250.0,
+        "ev_per_validation_hour": 281.25
+      },
+      "reason": "BAD_IDEA \u2014 KILL STRIPESYNCGUARD CLEANLY (BOTH SCENARIO A AND SCENARIO B). Following adversarial Rude Q&A, the Advocate delivered a complete, evidence-backed fatal concession across every threat, unfair question, and both Challenge From Below reductions (Eager-Identity 0.5 -> 0.1 and Plausible 10,000 -> 1,000). The adjusted Fermi Problem Score collapses 50x to 0.0000016 (1,000 x 0.1 x $100 x 0.1 x 0.1 x 0.1 x 0.1 / 625,000), with a Plausible x Lucrative ceiling of just $100,000 (100x below the DP16 $10M floor). Four independent structural defects kill the idea simultaneously: (1) $0 exact-match plugins (PaidRadar <10 installs, RenewScope <10 installs, Failed Actions Monitor, Action Scheduler Disable Default Runner) plus native WooCommerce Subscriptions Staging Mode / Failed Payment Retry and WooCommerce Stripe Gateway v8.6.1+ webhook auto-health prove there is no paid proactive pull; (2) an unsolvable architecture-trust deadlock for an unvetted solo founder (cloud SaaS fails on Stripe key custody, while a local GPL PHP plugin still accesses live Stripe keys + payment_complete() write liability without E&O/Woo.com trust AND dies inside the stalled WP-Cron/PHP process it is supposed to monitor); (3) all three failure modes resolve permanently in <30 minutes via one-time Cloudflare/cron/staging configuration fixes, guaranteeing brutal Year-2 churn; and (4) Automattic's native WooPayments (~10.5-10.8% of live WooCommerce stores) steadily erodes standalone Stripe Gateway TAM while CheckView, WP Umbrella, and Metorik already capture real paid monitoring/ops budgets. Do not build or spend field-validation cycles on this concept."
+    }
+  ]
+}

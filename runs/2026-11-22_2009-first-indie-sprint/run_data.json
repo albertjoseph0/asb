@@ -1,0 +1,480 @@
+{
+  "run_id": "2026-11-22_2009-first-indie-sprint",
+  "run_type": "discovery",
+  "ambition": "indie",
+  "lenses": [
+    {
+      "domain": "Small-to-Midsize Managed Service Providers (5\u201350 techs) on ConnectWise, HaloPSA, Autotask, or Syncro \u2014 Multi-Vendor SaaS/CSP License Billing Reconciliation & Tenant Drift Audits",
+      "search_hypothesis": "Scout r/msp, MSPGeek, HaloPSA/ConnectWise forums, and G2/Capterra reviews for recurring end-of-month revenue leakage and manual audit toil across fragmented vendor stacks (Microsoft 365/Pax8/Sherweb plus backup, EDR, email security, and VoIP SKUs) billed into PSA agreements. Look specifically for: (1) unbilled prorated license/seat additions and PSA proration misconfigurations beyond basic M365-only sync, (2) cross-vendor usage-to-invoice variance alerting that doesn't require Rewst-level custom workflow engineering, and (3) multi-tenant M365/Entra/backup configuration drift reports tied directly to client QBRs or cyber-insurance renewals. Verify live pricing of adjacent tools (Sync 365 License, CIPP, Rewst, Liongard, Gradient MSP) and identify underserved workflows for 5\u201325 tech shops.",
+      "why_indie_friendly": "MSPs are hyper-self-aware, high-liquidity B2B buyers with standing recurring software budgets ($150\u2013$600/mo per tool) purchased self-serve or low-touch via credit card, Pax8, or community referrals\u2014zero enterprise procurement and zero HIPAA clinical liability. Structural DP4 root cause: PE-owned legacy PSAs (ConnectWise, Kaseya/Autotask) suffer from bloated UX; distributors (Pax8, Sherweb) have no incentive to cleanly reconcile rival vendors' SKUs; and enterprise-grade automation suites (Rewst) demand dedicated scripting staff that small MSPs lack. Direct revenue-leakage recovery makes ROI immediate and recurring (high Eager & Enduring Problem Score potential >= 1.0). [UNVETTED founder-fit assumption: assumes solo/2-person technical founder is comfortable building reliable API integrations with Microsoft Graph, PSA APIs, and distributor CSV/API feeds and engaging directly in technical MSP communities.]"
+    },
+    {
+      "domain": "Scaling Multi-Channel E-Commerce & CPG Brands ($1M\u2013$25M GMV) Running Shopify + 3PL Warehouses + Amazon FBA/Wholesale \u2014 Independent 3PL Invoice Auditing & Read-Only Inventory/Deduction Reconciliation",
+      "search_hypothesis": "Scout r/ecommerce, r/logistics, r/FulfillmentByAmazon, Shopify Community, and CPG ops forums for recurring margin leakage where brands pay monthly 3PL invoices like 'utility bills' or lose cash to cross-channel inventory drift and marketplace/retail deductions. Focus specifically on: (1) automated line-item 3PL invoice auditing against contracted rate cards (peak-vs-average storage traps, dim-weight/carrier surcharge overbills, ghost pick-and-pack fees, month-end cutoff mismatches where operators report 2%\u201310% leakage), (2) independent read-only daily discrepancy monitors comparing Shopify Available-to-Sell vs. 3PL WMS/FBA reports (since ops teams distrust aggressive auto-sync connectors that corrupt stock counts), and (3) FBA inbound-shipment discrepancy or wholesale/retailer deduction recovery workflows currently run in Google Sheets by ops managers or offshore VAs. Verify competing pricing (e.g., Fulfil.io, ShipBob/3PL portals, Loop, specialized audit tools) to confirm the $1M\u2013$25M gap.",
+      "why_indie_friendly": "Ops leads, founders, and fractional e-comm CFOs at $1M\u2013$25M brands control discretionary SaaS budgets ($200\u2013$800/mo), buy self-serve/low-touch without enterprise procurement, and readily pay for recurring tools that directly recover 2%\u201310% fulfillment or deduction margin leakage. Structural DP4 root cause: 3PLs and marketplaces have a direct business-model conflict against exposing billing errors or lost-inventory claims transparently, while full ERPs (NetSuite, Fulfil.io) cost $30k\u2013$100k+/yr and require heavy implementations unsuitable below $25M GMV. A read-only audit/reconciliation wedge avoids brittle two-way write-sync support burdens while remaining sticky every billing cycle (strong Problem Score >= 1.0 candidate). [UNVETTED founder-fit assumption: assumes founder is comfortable handling messy PDF/CSV invoice extraction, SKU/rate-card normalization, and Shopify/Amazon/WMS data pipelines without building a full ERP.]"
+    },
+    {
+      "domain": "QuickBooks-Based Commercial Specialty Trade Subcontractors & Boutique GCs (5\u201350 staff, $2M\u2013$25M rev) \u2014 AIA G702/G703 Pay-App Billing, Retainage, Lien-Waiver/COI Compliance Gating & Certified Payroll",
+      "search_hypothesis": "Scout r/Construction, r/ConstructionManagers, r/GeneralContractor, r/quickbooksonline, r/AskAccounting, and G2/Capterra reviews of Procore, Siteline, Knowify, Planyard, Levelset, GCPay, and CertiSub for cash-flow-blocking paperwork bottlenecks in QuickBooks-centric construction offices. Probe specifically for: (1) specialty subs (electrical, HVAC, plumbing, millwork, drywall) stuck in fragile Excel AIA G702/G703 schedules of values where cent-off rounding/formula drift or retainage tracking errors cause GCs to reject pay apps and stall cash for 30\u201360 days, (2) small GCs and subs managing 20\u2013100 sub-tier vendors on '14-tab Smartsheet nightmares' where an expired COI, missing W-9, or wrong conditional-vs-unconditional lien waiver freezes payment or triggers audit liability, and (3) prevailing-wage subcontractors manually re-entering QuickBooks payroll into WH-347 / state certified-payroll portals. Check actual pricing ceilings and onboarding complaints for Siteline, Knowify, and Procore Pay to locate crisp, self-serve QBO bolt-on wedges.",
+      "why_indie_friendly": "Specialty trade subcontractors and boutique GCs experience acute, recurring monthly cash-flow pain (GCs routinely hold checks hostage over a single missing waiver, expired COI, or cent-off G702) and already pay $150\u2013$500/mo low-touch/self-serve for QuickBooks-adjacent tools\u2014with zero HIPAA or enterprise IT procurement. Structural DP4 root cause: Intuit optimizes QuickBooks Online/Desktop for horizontal SMBs and structurally refuses to build construction-specific AIA billing, retainage, or AP compliance hard-locks, while enterprise suites (Procore, Oracle Textura, Sage 300 CRE) price on high-ACV annual/volume contracts built for large GCs rather than $2M\u2013$25M trade subs. High switching friction once embedded in monthly AP/AR close yields durable indie retention (Problem Score >= 1.0 potential). [UNVETTED founder-fit assumption: assumes founder is willing to learn construction billing/compliance mechanics (G702/G703, retainage, state waiver rules) and tolerate occasional low-touch 15-minute onboarding calls with office managers/controllers.]"
+    }
+  ],
+  "signals_count": 14,
+  "candidates_count": 4,
+  "worker_errors": [],
+  "survivors": [],
+  "killed": [
+    {
+      "id": "IDEA-1",
+      "title": "Regional 3PL Rate-Card Variance & 30-Day Dispute Auditor for Shopify Brands",
+      "slug": "idea-1-regional-3pl-rate-card-variance",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Store Leads tracks ~55k-56k distinct Shopify Plus merchants globally (~83k-84k domains) and multi-source estimates place Shopify stores over $2M GMV at ~15,000-25,000 globally. Radial/Red Stag fulfillment surveys show ~60% of brands under $50M revenue still fulfill in-house (~40% outsource to a 3PL), yielding ~6,000-10,000 outsourced $2M-$25M Shopify brands; filtering further to the 4 specified WMS CSV schemas (Extensiv, ShipHero, Deposco, ShipBob, ~50-70% share) leaves ~4,000-9,000 brands. 100k exceeds total global Shopify Plus merchants; 1k is below ShipBob + Extensiv/ShipHero brand counts combined.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.1,
+            "justification": "Industry analyses (NStar Finance, FreightOptics, Shipware) and operator threads across r/ecommerce, r/shopify, and r/3PL confirm 3%-5%+ 3PL invoice error rates, yet explicitly note the vast majority of $2M-$25M brands only eyeball bottom-line totals rather than running line-item audits. Not industry-standard practice (0.5), but actively evangelized by ops thought-leaders, fractional CFOs, and competing vendors (0.1); organic Reddit threads and active search demand for ShipBob 30-day disputes rule out 0.01.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Stated price is $249/mo ($2,490/yr annual, $2,988/yr monthly), squarely in the $1,000/yr order of magnitude. Live competitor pricing confirms ~$900-$3,000/yr recurring budget in the SMB/mid-market band (WarehouseAudit ~$75/mo, FulfillAudit $99/mo Brand Watchdog, Implentio $1,000/mo for <=10k orders/mo at the upper end), though Audit3PL ($29/audit) and FulfillAudit ($29 one-off) signal real downward price compression at $2M-$5M GMV.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Not always in the market (1.0): lean $2M-$25M ops teams trigger 3PL audit buying episodically \u2014 after Q4 peak invoice shocks, annual 3PL contract renewals, warehouse switches, or CFO margin reviews \u2014 with setup inertia around locating signed MSAs, rate amendments, and SKU dims. Not multi-year lock-in (0.01) since incumbents like Implentio and FulfillAudit are month-to-month and most prospects use spreadsheets today; annual/episodic decision cadence fits 0.1.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "[UNVETTED] solo/2-person indie founder asking Finance Controllers and Ops Managers at $2M-$25M brands for Shopify Orders API access (customer PII), confidential signed 3PL rate cards, and trust in dispute packets whose false positives could damage warehouse relationships faces real structural trust friction. Market proof: direct indie rivals explicitly engineered around this barrier (FulfillAudit runs 100% browser-local with zero PII egress; Audit3PL requires no API/ERP access and purges files in 24h). Cannot justify 0.5 ('no red flags').",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Live pricing disproves the claimed white space: Audit3PL charges $29/audit (zero subscription, 0% commission, accepts CSV/Excel/PDF, 24h purge, Excel ledger + SLA claim letter); FulfillAudit charges $29 single-invoice or $99/mo unlimited with browser-local zero-PII execution and QuickBooks/Xero landed-COGS close; WarehouseAudit runs ~$75/mo natively in Shopify; BillSharp provides ROI-backed 3PL claim packages; Implentio starts at $1,000/mo month-to-month ($0 setup) with parcel + 3PL auditing; and Octup ($2,500/mo) is actually a 3PL-side billing platform, not a brand-side competitor. Charging $249/mo as 'Less for Less' while offering fewer workflow/privacy features than $29-$99/mo rivals leaves no material differentiation.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.1,
+            "justification": "High fix-and-cancel churn risk: once a brand audits 1-3 invoices and forces the 3PL to fix systemic rate-card/DIM/storage errors (or switches 3PLs), monthly variance drops toward $0 and Finance cancels a $249/mo flat fee. Market behavior confirms this episodic dynamic: Audit3PL ditched subscriptions entirely ($29/audit), FulfillAudit leads with a $29 one-off pack and bolted on monthly QBO/Xero landed-COGS closing to drive retention, and Implentio layers ongoing parcel carrier re-rating \u2014 all workflows IDEA-1 explicitly excludes.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 100.0,
+        "score": 0.0002,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Dropped 10x from 10,000 to 1,000: Store Leads and Shopify Plus data indicate ~15k-25k Shopify stores exceed $2M GMV globally and only several thousand (~3,000-8,000) operate in the $10M-$50M GMV band; filtering to physical CPG, Beverage, and Supplement brands outsourcing to 2+ independent regional 3PLs running Extensiv (3PL Central) or Deposco narrows the addressable buyer count to roughly 800-2,000 brands (1,000 order of magnitude; 10,000 is mathematically impossible for this slice).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Raised from 0.1 to 0.5: at $10M-$50M GMV spending $720k-$3.6M/yr across 2+ regional 3PLs, a 3%-5% overcharge equals $22k-$180k/yr in direct EBITDA loss, and brands at this scale employ a dedicated Finance Controller or VP of Supply Chain who actively reconciles monthly fulfillment COGS variance against budget. Tagged [fermi] (believability 0.4) because no primary survey isolates automated line-item audit adoption specifically in the $10M-$50M CPG tier.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "lucrative": {
+            "value": 10000,
+            "justification": "Raised 10x from 1,000 to 10,000: repriced to $799/mo flat ($7,990/yr annual, $9,588/yr monthly) for multi-warehouse volume. Live Implentio pricing ($1,500/mo for 10k-20k orders/mo and $2,000/mo for 20k-30k orders/mo, plus $1,000/mo add-ons) proves $10M-$50M multi-3PL brands demonstrably allocate $10,000+/yr to 3PL invoice auditing and margin recovery.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1: Finance Controllers and VPs of Supply Chain at $10M-$50M brands still adopt new ops/accounting reconciliation tools on an annual budget, Q4 margin-shock, ERP-close overhaul, or 3PL contract-renewal cadence rather than always being in the market (1.0).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1: switching to zero-PII CSV/SFTP ingestion removes customer-PII exposure, but moving up-market to Finance Controllers and VPs of Supply Chain at $10M-$50M brands increases vendor security review (SOC 2), audit-defensibility, and company-longevity scrutiny for an [UNVETTED] 1-2 person indie founder with no logistics track record. Cannot honestly claim 'no red flags' (0.5).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1 despite tighter focus: specializing in multi-node Extensiv/Deposco CPG billing + ERP accrual close avoids ShipBob-centric FulfillAudit ($99/mo) and single-file Audit3PL ($29/audit), but at $799/mo for $10M-$50M brands it collides directly with Implentio ($1,500/mo for 10k-20k orders, $2,000/mo for 20k-30k orders, month-to-month, $0 setup), which covers BOTH 3PL warehouse bills AND UPS/FedEx parcel carrier audits. Parcel spend typically dwarfs pick/pack fees at this scale, so excluding carrier auditing leaves no decisive reason to choose an indie tool to save ~$700-$1,200/mo.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Raised from 0.1 to 0.5: two structural shifts address Scenario A's fix-and-cancel churn \u2014 (1) operating 2+ regional CPG/lot-tracked 3PLs creates continuous monthly SKU, seasonal cold-chain, kitting, and rate-table drift rather than a one-time correction, and (2) generating monthly QBO/NetSuite landed-COGS and dispute-accrual CSV journals anchors the tool inside the Controller's mandatory monthly close cadence (mirroring why FulfillAudit bundled QBO/Xero closing).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 2500.0,
+        "score": 0.004,
+        "evidence_believability_index": 0.614,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.004 (EBI=0.614, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: plausible (1,000) + eager_comparative (0.1): Narrowing up-market to $10M-$50M multi-3PL CPG brands on Extensiv/Deposco lifts Lucrative 10x ($10k), Self-Aware 5x (0.5), and Enduring 5x (0.5) \u2014 raising the total 25x from 0.0002 to 0.004 \u2014 but shrinks Plausible 10x to ~1,000 brands while walking head-on into Implentio ($1,500-$2,000/mo month-to-month, $0 setup), which already audits both 3PL invoices AND UPS/FedEx parcel bills. At $10M-$50M GMV, saving ~$700/mo does not justify giving up parcel carrier auditing.; eager_identity (0.1) + liquid (0.1): Even with zero-PII CSV/SFTP ingestion (order-ID/SKU-count exports only), selling an $8k-$10k/yr finance/accrual tool to Finance Controllers and VPs of Supply Chain at $10M-$50M brands heightens SOC 2, audit-defensibility, and vendor-longevity scrutiny for an [UNVETTED] 1-2 person indie founder, while purchases remain gated by annual budget or 3PL renewal cycles (0.1).; Phase D Structural Verdict (Not Viable As Scored \u2014 0.004 vs. >= 1.0 indie bar): No brand-side narrowing rescues this idea because the market is structurally sandwiched \u2014 $29/audit (Audit3PL) and $75-$99/mo (WarehouseAudit, FulfillAudit with QBO/Xero close & browser-local zero-PII) already own the sub-$10M indie band, while Implentio ($1,000-$2,000/mo month-to-month) owns the $10M-$50M band with combined 3PL + parcel auditing."
+    },
+    {
+      "id": "IDEA-2",
+      "title": "Invoice-First NCE Proration & Multi-Vendor Billing Auditor for 5\u201325 Tech MSPs",
+      "slug": "idea-2-invoice-first-nce-proration-mult",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Absolute upper ceiling across all sizes and PSAs is ~54,500 global MSPs (Pax8 47,000+ partners plus Sherweb 7,500+ partners, with overlap), making 100k mathematically impossible. Industry benchmarks show 70%\u201380% of MSPs have <=10 employees; filtering Pax8/Sherweb partners to 5\u201325 techs ($1M\u2013$5M ARR, ~25%\u201335%) and ConnectWise Manage/Autotask/Syncro (~50%\u201365%) yields ~6,500\u201312,000 MSPs globally, ruling out 1k (Gradient MSP alone has 2,500+ customers) and landing squarely on 10k.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Monthly distributor-to-PSA billing reconciliation is standard industry practice for 5\u201325 tech MSPs, not an obscure thought-leader concern (ruling out 0.1): Gradient MSP alone has 2,500+ paying MSP customers, multiple independent r/msp threads document broken Pax8 14th\u201313th billing windows and July 1, 2026 M365 price hikes (+5% annual-billed-monthly surcharge), and MSPCFO reports 40%\u201350% of MSPs lack confidence in granular contract profitability. Not 1.0 because many smaller 5\u201310 tech shops still tolerate manual CSV spot-checks while prioritizing sales and ticket delivery.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Proposed sticker price is $1,790\u2013$2,148/yr ($179/mo flat), squarely on the $1k power of ten (far below $10k). Live published competitor pricing confirms allocated annual budget in this exact $1k\u2013$4k/yr band: Gradient MSP Launch is $199/mo ($2,388/yr for 1\u201330 accounts) and Grow is $299/mo ($3,588/yr for 31\u2013150 accounts), Sync 365 License is ~$7.35/tenant/mo ($2,640\u2013$5,292/yr for 30\u201360 clients), and BillingBot (HaloPSA) is $99/mo ($999/yr), ruling out $100.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Not 1.0 (always in market / easy switch): r/msp operators report that onboarding PSA billing reconciliation requires a dedicated 30-day agreement-mapping project, Kaseya/Datto benchmarks show sales and service delivery outrank back-office ops for <25-tech MSPs, and Pax8 native sync is already bundled free. Not 0.01 (multi-year lock-in): unlike 3-year PSA/RMM contracts, reconciliation tools sell month-to-month (Gradient MSP has no contracts) and are evaluated annually or after acute billing shocks such as the July 2026 M365 price increase.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Structural trust barriers rule out 0.5 (indifferent, no red flags): post-supply-chain-attack MSPs on r/msp treat ConnectWise/Autotask/Syncro write API keys as keys to the kingdom, cyber insurance and client audits increasingly expect SOC 2 or a 3rd-party pentest plus SIG Lite/CAIQ transparency, and the [UNVETTED] solo/2-person founder lacks MSP channel credentials while still planning to learn NCE proration accounting via design partners. Not 0.0 (structurally barred): MSPs do adopt indie channel tools (BillingBot, Sync 365 License) when least-privilege scopes, human approval queues, and clear security architecture are proven.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Primary vendor research refutes the pitch's core differentiation claim. CloudOlive is NOT enterprise-only ERP billing \u2014 it natively integrates with ConnectWise Manage and Autotask, specializes in universal vendor invoice/CSV ingestion across 140+ suppliers (explicitly including Pax8), flags margin drift, and ships a dedicated NCEasy module. Meanwhile Gradient MSP (2,500+ MSPs) already supports ConnectWise Manage, Autotask, AND Syncro with 80+ direct APIs plus unlimited CSV imports at $199/mo (1\u201330 accounts) or $299/mo (31\u2013150 accounts). Pricing at $179/mo removes live vendor APIs for only $20\u2013$120/mo savings on a $1M\u2013$5M ARR P&L (effectively 'Less for Slightly Less'), leaving no material differentiation over CloudOlive, Gradient MSP, and Sync 365 License.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Recurring monthly billing pain supports 0.5 (ruling out 0.1 one-off): client seat counts churn monthly, native Pax8 PSA syncs remain flawed 4+ years post-NCE rollout (compounded by 14th\u201313th billing windows and July 2026 M365 price hikes), MSPs reconcile 3\u20138 non-Microsoft vendors no single distributor controls, and Gradient MSP retains 2,500+ month-to-month customers. Not 1.0 (strong lock-in): the PSA stays the system of record, CSV-first workflows carry low switching cost back to CloudOlive/Gradient/native syncs, and future Pax8/ConnectWise/Kaseya native fixes create medium-term platform risk.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 2500.0,
+        "score": 0.004,
+        "evidence_believability_index": 0.786,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Drops 10x from Scenario A's 10,000 to 1,000 due to strict PSA narrowing: Atera publicly reports ~12,000 total customers globally (split across MSPs and internal IT departments, heavily skewed to 1\u20135 tech shops) and SuperOps serves a few thousand (~20% internal IT). Filtering to 3\u201320 tech MSPs ($500k\u2013$3M ARR) on Atera or SuperOps who resell M365 via Pax8 or Sherweb plus 3\u20138 security/backup vendors yields roughly 1,500\u20133,000 MSPs globally \u2014 ruling out 10,000 and landing squarely on 1,000.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5: r/msp threads document Atera and SuperOps operators explicitly disabling broken native Pax8 syncs and falling back to manual Excel audits every billing cycle due to dropped subscriptions and missing NCE prorated credits, alongside MSPCFO's 40\u201350% contract-profitability blind-spot data. Still not 1.0 because smaller 3\u20138 tech shops frequently absorb minor leakage while focusing on client acquisition and helpdesk delivery.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Unchanged at $1,000/yr: repriced to $149/mo flat ($1,490/yr annual) to fit budget-sensitive Atera ($129\u2013$209/tech/mo all-in-one) and SuperOps SMB MSPs while staying anchored between BillingBot ($99/mo / $999/yr) and Gradient MSP Launch ($199/mo / $2,388/yr). Squares cleanly on $1k (cannot justify $10k/yr for a read-only CSV variance auditor).",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1: dropping live PSA API integration avoids a 30-day API-mapping project, but MSPs still must normalize vendor SKU names to PSA contract line items, free native Pax8 sync creates status-quo inertia, and Kaseya/Datto data shows sales and ticket delivery dominate priorities at <25-tech MSPs \u2014 keeping purchases annual or shock-driven rather than always-in-market (1.0).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Improved from 0.1 to 0.5 via a structural security trade-off: Atera and SuperOps combine RMM and PSA in one platform, making live write API keys unacceptable for an unknown indie, so Scenario B takes zero live PSA/RMM API credentials \u2014 running read-only/local-first on user-exported contract CSVs and Pax8/Sherweb invoice CSVs (with optional anonymized client IDs). This removes the supply-chain RMM/PSA key and SOC 2 blocker for 3\u201320 tech shops, though commercial invoice privacy and [UNVETTED] indie NCE accounting expertise prevent 1.0 and keep believability at 0.4 until tested with real buyers.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Improved from 0.1 to 0.5 by shifting into verified incumbent whitespace: primary documentation confirms CloudOlive (CW/Autotask/HaloPSA), Sync 365 License (CW/Autotask/HaloPSA), BillingBot (HaloPSA), and Gradient MSP (CW/Autotask/HaloPSA/Syncro/BMS/Pulseway) ALL lack native Atera and SuperOps PSA billing destinations, while r/msp threads confirm SuperOps' native Pax8 sync drops subscriptions and NCE prorates. Capped at 0.5 (not 1.0) because technical MSP owners on r/msp already build DIY Python/Power BI or Claude-assisted CSV diff scripts against Pax8 exports and Gradient offers generic CSV/custom API workarounds.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5: monthly M365 seat churn, NCE proration/credit pairs, July 2026 SKU price hikes, and 3\u20138 non-Microsoft vendor bills remain a recurring monthly problem rather than a one-off cleanup (ruling out 0.1). Still cannot reach 1.0 because zero-API file-upload workflows carry minimal switching lock-in, DIY AI/Python scripts threaten retention, and Atera or SuperOps could eventually repair native Pax8 syncs.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 6250.0,
+        "score": 0.01,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.01 (EBI=0.7, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: Plausible (1,000) x Lucrative ($1,000) caps total gross addressable market at ~$1M/yr \u2014 narrowing to the exact PSA tier incumbents ignore (Atera & SuperOps) fixes Eager-Comparative (0.1 -> 0.5) but shrinks the market 10x, making indie viability (>= 1.0) mathematically unreachable (total = 0.01).; Liquid (0.1): Removing live API onboarding cuts setup friction, but SKU-to-contract name mapping, free native Pax8 sync inertia, and sales/delivery outranking back-office ops still restrict adoption to annual or billing-shock windows.; Structural Viability Trap (Phase D Verdict \u2014 Face the Truth): In ConnectWise/Autotask (Plausible = 10,000), CloudOlive and Gradient MSP already own CSV/invoice reconciliation; in unserved PSAs (Atera/SuperOps), Plausible drops to 1,000 while Lucrative stays $1,000/yr, and zero-API CSV diffing faces growing substitution by DIY Python/Claude scripts. Neither Scenario A (0.004) nor Scenario B (0.01) is viable as scored."
+    },
+    {
+      "id": "IDEA-3",
+      "title": "Read-Only M365/Entra Cyber-Insurance & QBR Drift Evidence Vault for Small MSPs",
+      "slug": "idea-3-read-only-m365-entra-cyber-insur",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Industry estimates place total US MSPs in the 6\u201325 employee tier at roughly 12,000\u201315,000 firms (~30% of the US MSP base), and global dedicated MSPs at ~150,000\u2013200,000 firms (~45,000\u201360,000 in the 5\u201325 employee band before filtering). Narrowing strictly to the defined buyer \u2014 5\u201325 tech MSPs managing 15\u201380 M365 tenants in markets with active cyber-insurance underwriting scrutiny (US/UK/CA/AU/Western EU) and formal QBR practices \u2014 yields roughly 20,000\u201330,000 matching firms, below the log10 midpoint (31,623) between 10,000 and 100,000. Challenging 100,000 from below fails because reaching 100k requires counting non-M365, non-QBR, or sub-15-tenant shops outside the stated buyer definition. Believability 0.4 reflects secondary market-sizing estimates rather than official census counts.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Triangulated r/msp threads and cyber-insurance underwriting analyses confirm Coalition, Travelers, and Chubb increasingly reject checkbox MFA attestations and demand technical proof of Conditional Access enforcement and privileged role hygiene, while official Microsoft Learn documentation confirms default Entra ID audit logs purge after 30 days (P1/P2) or 7 days (Free). Challenged 1.0 from below and rejected: many small MSPs refuse to sign client insurance questionnaires directly to avoid E&O liability, still rely on point-in-time pre-renewal exports, and view M365 as only one of four underwriting pillars alongside EDR, immutable backups, and patching. Held above 0.1 because MFA/CA verification and insurance evidence pressure are mainstream SMB MSP practice, not niche evangelism.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Proposed price is $149/mo flat ($1,788/yr monthly or $1,490/yr annual for up to 40 tenants), which aligns cleanly with demonstrated annual budget allocation on live MSP vendor pricing pages: CIPP Hosted is \u20ac99/mo (~$1,280/yr), CloudCapsule Analyze is $250/mo ($3,000/yr), Augmentt starts around $250/mo ($3,000/yr+), and Liongard/Inforcer run $3,500\u2013$12,000+/yr. Challenged $1,000 from below: $100/yr is clearly wrong given verified $1,200\u2013$3,000+/yr spend in this exact category; $10,000/yr is far above our $1,490\u2013$1,788/yr sticker price.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Challenged 1.0 ('always in the market, easy to switch') from below and rejected: MSPs on r/msp actively push back against tool sprawl ('another pane of glass') and consolidate stacks into CIPP, Kaseya 365 User (~$2.79/user/mo), or CloudCapsule; incumbents like Liongard and Augmentt lock buyers into 12-month agreements; and adding any new GDAP-connected vendor requires internal security vetting and annual stack-budget review. Held above 0.01 (multi-year core PSA/RMM migration) because read-only Graph/GDAP onboarding avoids endpoint agent deployment or ticket migration, making this a periodic/annual stack-review purchase (0.1).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Challenged 0.5 ('indifferent, no red flags') from below and rejected: MSPs are acutely hostile toward granting unvetted 1\u20132 person indie SaaS apps standing GDAP tokens across 15\u201380 client tenants, especially immediately after the Nov 7, 2026 MSP Process GDAP storage breach (affecting >1,000 MSPs) and the Oct 2026 ConnectWise Cloud Backup/SkyKick OAuth incident. Even read-only multi-tenant posture storage creates a high-value attacker reconnaissance blueprint listing every client's MFA exclusions and admin gaps, and r/msp threads routinely demand SOC 2 Type II and strict third-party app vetting. [UNVETTED] Founder-fit gap: unknown bootstrapped solo/2-person founder lacks SOC 2 Type II and established channel reputation. Held above 0.0 (not legally impossible) because small MSPs do adopt indie-origin tools when trust is mitigated structurally (e.g., CIPP succeeded by being open-source and self-hostable in the MSP's own Azure tenant).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Challenged 0.5 from below and failed: the pitch assumes small MSPs lack affordable client-facing M365 reporting, but live research shows CIPP (\u20ac99/mo hosted or ~$15\u2013$30/mo self-hosted) already includes Conditional Access standards drift detection and a built-in PDF Report Builder with a client-facing toggle ('Remove Remediation recommendations'); CloudCapsule ($250/mo flat for unlimited tenants <1,000 users) already delivers CIS/NIST/Essential 8 QBR and cyber-insurance readiness reports (+$250/mo adds continuous drift detection and fixes); Augmentt (~$250/mo entry) and ScalePad/Lifecycle Insights (with SeedPod Cyber integration) target the same QBR/insurance reporting job; and Microsoft native Unified Tenant Configuration Management (UTCM) now snapshots 200+ M365/Entra resource types with 6-hour drift checks. Furthermore, insurers (Coalition, Travelers, Chubb) require proof across four pillars (MFA/Identity, 100% EDR + 24/7 SOC, immutable tested backups, 14-day patching), so a read-only M365-only vault covers only one slice of the renewal packet and forces techs into another tool to fix any drift it flags. Nothing structural prevents CIPP or CloudCapsule from matching a 72-hour CA exclusion timer or 18-month historical export.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Challenged 1.0 from below and rejected: month-to-month billing and read-only architecture create zero operational lock-in (clients can export historical PDFs before canceling), and feature absorption by CIPP, CloudCapsule, or native Microsoft UTCM creates meaningful multi-year churn risk. Held above 0.1 because QBRs (quarterly) and staggered client cyber-insurance renewals (annual across 15\u201380 clients) recur year-round, and Microsoft's 30-day default Entra audit log retention forces continuous archiving rather than one-off pre-renewal bursts. Tagged [fermi] (believability 0.4) because no primary SaaS retention data exists for a standalone read-only M365 evidence vault.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 2500.0,
+        "score": 0.004,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Dropped 10x from 10,000 to 1,000: while the U.S. Defense Industrial Base includes ~300,000\u2013338,000 contractors, the official Cyber AB Marketplace lists only 387 Registered Provider Organizations (RPOs) and 103 C3PAOs, and industry analyses estimate only a specialized pool in the low hundreds to ~1,500\u20132,000 U.S. MSPs possess the U.S.-persons staffing and engineering depth to manage Microsoft 365 GCC High tenants. Challenging 10,000 from below fails decisively \u2014 1,000 is the honest power of ten. Believability 0.7 reflects triangulated Cyber AB registry counts (via secondary reporting) and DIB MSP ecosystem estimates.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 1.0,
+            "justification": "Improved from 0.5 to 1.0: among U.S. DIB MSPs and Cyber AB RPOs managing GCC High tenants for CMMC Level 2 certification, continuous NIST SP 800-171 audit evidence and GCC High multi-tenant tooling breakage are mandatory DoD contract-survival requirements \u2014 86% of vCISO MSPs already cite compliance readiness as their primary client demand driver, and r/msp DIB practitioners universally document GCC High API/boundary pain. Challenging 1.0 from below: it is effectively impossible to find a GCC High / CMMC Level 2 MSP that does not know and care about continuous identity evidence and sovereign tooling gaps.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 10000,
+            "justification": "Improved from $1,000 to $10,000: live pricing confirms DIB/vCISO compliance MSPs demonstrably allocate $10,000+/yr to compliance tooling \u2014 FutureFeed's Powered-by-FutureFeed MSP program runs $9,995/yr, Cynomi starts at $15,000\u2013$20,000+/yr, and ControlMap Pro runs $299/tenant/mo ($17,940/yr for 5 tenants). Repricing to $599/mo ($5,990/yr annual for up to 15 GCC High tenants) sits cleanly above the $3,162 log10 midpoint into the $10,000 tier while undercutting custom Microsoft365DSC engineering labor. Believability tempered to 0.7 (vs 1.0) because competitor anchors cover full-suite GRC, whereas willingness to pay $5,990/yr specifically for M365/Entra GCC High evidence remains to be field-tested.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged from Scenario A (0.1): narrowing to DIB/CMMC MSPs does not speed up purchase liquidity \u2014 buyers still evaluate compliance stack additions on annual budget cycles, audit third-party binaries/code against CUI boundary rules before deployment, and coordinate tooling changes around client C3PAO readiness schedules rather than impulse-buying (1.0 is clearly wrong). Held above 0.01 because a self-hosted read-only Azure Gov container avoids PSA/RMM migration or endpoint agent rollouts.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Improved from 0.1 to 0.5 via architectural re-design: shipping a source-available, self-hosted BYO-Azure Government appliance that runs strictly inside the MSP's or DIB client's own Azure Government subscription (zero vendor cloud, zero outbound telemetry, zero vendor-held GDAP tokens or CUI) directly neutralizes both the Nov 2026 MSP Process third-party breach vector and FedRAMP SaaS scope barriers \u2014 mirroring why r/msp practitioners trust self-hosted CIPP and Microsoft365DSC. [UNVETTED] Founder-fit condition: assumes a U.S.-person/U.S.-entity founder acceptable to DIB buyers and clean SBOM provenance; if DIB procurement still balks at a 1\u20132 person vendor, this reverts to 0.1 (dropping total score from 0.20 to 0.04).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Improved from 0.1 to 0.5: commercial multi-tenant SaaS competitors that crushed Scenario A (Inforcer, CloudCapsule, commercial Augmentt connectors, and standard CIPP commercial-to-sovereign tenant switching) structurally break or fall out of CUI/FedRAMP boundary inside Microsoft 365 GCC High (portal.azure.us / graph.microsoft.us). Commercial SaaS vendors cannot easily copy a zero-custody BYO-Azure-Gov appliance without cannibalizing their hosted SaaS model or spending $1M+ on FedRAMP Moderate/High authorization, while DIY Microsoft365DSC PowerShell scripts require brittle custom maintenance. Held at 0.5 rather than 1.0 because M365/Entra still covers only a subset (~35\u201345 of 110) of NIST SP 800-171 controls and DIB MSPs still need FutureFeed/ControlMap/Cynomi for full SSP/POA&M/endpoint compliance.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged from Scenario A (0.5): CMMC Level 2 requires continuous NIST SP 800-171 evidence across 3-year C3PAO recertification cycles and annual affirmations, while Entra ID audit logs still default to 30-day retention \u2014 making the underlying archiving need recurring rather than one-off (0.1 is wrong). Held below 1.0 because read-only WORM exports can be archived locally prior to cancellation and Microsoft native UTCM / Purview Compliance Manager inside Azure Government poses 2\u20133 year feature-absorption risk. Tagged [fermi] (believability 0.4) due to absence of primary retention metrics.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 125000.0,
+        "score": 0.2,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.2 (EBI=0.657, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: plausible (1,000): The exact sovereign-cloud wedge that rescues differentiation and pricing shrinks the addressable buyer pool 10x \u2014 Cyber AB lists only 387 official RPOs and 103 C3PAOs, and only an estimated ~500\u20132,000 specialized U.S. MSPs manage Microsoft 365 GCC High tenants for DIB contractors. Even with 50x higher viability than Scenario A (0.004 -> 0.20), the tiny denominator caps total score at 0.20 (NOT VIABLE for a scalable indie SaaS; at best a tiny boutique tool/consultancy play).; liquid (0.1) x enduring (0.5): Unchanged structural drags \u2014 DIB MSPs adopt new compliance tooling on slow annual budget and CUI-boundary review cycles (0.1), and read-only M365 evidence lacks permanent system-of-record lock-in (0.5) as Microsoft native UTCM/Purview Compliance Manager expands inside Azure Government.; [UNVETTED] founder-fit & scope ceiling: Even a zero-custody BYO-Azure Government binary requires a U.S.-person/U.S.-entity founder for DIB procurement acceptance and deep CMMC/NIST 800-171 fluency; if buyers still apply indie vendor caution (eager_identity = 0.1 instead of 0.5), Scenario B drops from 0.20 to 0.04."
+    },
+    {
+      "id": "IDEA-4",
+      "title": "QuickBooks Online Subcontractor COI-Endorsement & Lien-Waiver AP Payment Gate",
+      "slug": "idea-4-quickbooks-online-subcontractor",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "U.S. Census SUSB/CBP counts only ~35,000\u201339,500 employer firms nationwide in NAICS 236220 (Commercial & Institutional Building Construction) across ALL revenue sizes and accounting systems (>85% have <20 employees). Industry data (CFMA/JBKnowledge/Construction Coverage) shows $3M\u2013$25M commercial GCs disproportionately run QuickBooks Desktop Enterprise (explicitly EXEMPT from Intuit's Sept 30, 2024 stop-sell \u2014 NOT sunsetting), Sage 100 Contractor, or Foundation because QBO lacks native AIA billing, retainage, and WIP; roughly 15%\u201330% of $3M\u2013$25M commercial GCs run QBO (~2k\u20134.5k firms). Adding NAICS 238 specialty contractors (500,271 employer firms, of which 91.2% have <20 employees and most self-perform rather than managing 15\u201380 subs/draw) adds only ~1.5k\u20133.5k qualifying QBO firms. Total exact-match pool is ~5,000\u201312,000 businesses \u2014 squarely 10,000 (100,000 exceeds all U.S. commercial GCs by >2.5x; 1,000 is too low given combined commercial GC + Tier-1 trade overlap).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Industry-standard practice (0.5) among $3M\u2013$25M commercial GCs: commercial project owners, construction lenders, and annual workers'-comp/GL insurance audits routinely mandate valid sub COIs/endorsements and draw lien waivers prior to disbursement. Practitioner threads across r/ConstructionManagers, r/AskAccounting, and r/Accounting plus QuickBooks App Store reviews confirm accountants explicitly call manual COI/waiver spreadsheet chasing a 'complete nightmare' and actively buy QBO add-ons (ruling out 0.1). Does not reach 1.0 because many $3M\u2013$15M GCs tolerate Excel/Smartsheet + QBO memo workarounds as 'good enough' until hit with an audit back-charge or lien dispute.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Demonstrated annual market allocation for standalone QBO subcontractor COI + lien-waiver tools sits squarely in the $1,000/yr order of magnitude (geometric range $316\u2013$3,162/yr), matching IDEA-4's $1,890/yr ($189/mo) price. Verified live competitor pricing: PassCOI $149/mo ($1,788/yr for 75 subs), SubLien $199/mo ($1,990/yr for 25\u201350 subs), EazyWaiver $79\u2013$249/mo ($948\u2013$2,988/yr), CertiSub $39\u2013$79/mo ($468\u2013$948/yr), SubDoc $14\u2013$49/mo ($168\u2013$588/yr), TrustLayer $0 Starter (\u226450 vendors). Next value down ($100) is disproved by multiple live $1k\u2013$2k/yr QBO compliance subscriptions; next value up ($10,000) belongs to full construction ERPs/PM suites like Procore, not standalone QBO AP compliance gates.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Annual trigger-gated decision (0.1), not hyper-liquid (1.0) and not multi-year ERP lock-in (0.01). Commercial GCs rarely overhaul AP compliance workflows mid-year without a forcing event \u2014 typically an annual workers'-comp/GL insurance audit back-charge, a lien scare, or fiscal-year software budgeting/renewal. Adopting requires migrating 15\u201380 active subcontractor COI/W-9 files, controller review of statutory waiver templates, and connecting QBO OAuth, while entrenched Smartsheet/Excel workarounds and bundled PM suites (Procore, Buildertrend, RedTeam Go) create status-quo drag. [fermi] cadence to be validated in buyer interviews.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Structural trust challenges for a solo/2-person technical indie team ([UNVETTED] construction pedigree) selling to $3M\u2013$25M commercial GC controllers. The product handles high-liability workflows: legally binding statutory lien waivers (where outdated state language or broken e-sign audit trails expose GCs to double-payment claims), ISO CG 20 10/CG 20 37 insurance endorsement verification (false negatives trigger costly GL/workers'-comp audit back-charges), W-9 SSN/EIN PII, and QBO AP OAuth access. While not structurally barred (0.0 \u2014 SMB contractors do buy micro-SaaS via credit card), commercial controllers have serious red flags around longevity (3\u20135 yr lien/defect audit trails), SOC 2/security, and legal accuracy, ruling out 0.5 ('no red flags'). Note: even if raised to 0.5, the total Problem Score only moves from 0.004 to 0.02.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Zero material differentiation \u2014 live competitor pricing and feature pages shatter the white-space thesis. PassCOI ($149/mo for 75 active subs) already offers QBO OAuth integration, AI ACORD 25 + ISO CG 20 10/CG 20 37 endorsement inspection, zero-login magic links, 50-state statutory lien waivers, and an AP staging inbox hold \u2014 cheaper, higher-capacity, and broader than IDEA-4 ($189/mo, 60 subs, 12 states). SubLien ($199/mo, unlimited users) turns QBO bills into zero-login waivers + AI COI/W-9 checks; TrustLayer Starter is FREE up to 50 vendors; EazyWaiver ($79\u2013$149/mo) is on the QBO App Store; SubDoc ($14\u2013$49/mo) and CertiSub ($39\u2013$79/mo) cover lower-end COI/W-9s; Built, Billy, Beam, and Siteline also integrate with QBO. Worse, Intuit QBO API docs confirm no native Bill/Vendor payment-hold boolean exists, reducing IDEA-4's QBO hold to a soft memo/custom field that doesn't physically block check runs. Cannot justify 0.5 when cheaper direct clones already exist.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Recurring revenue from a genuinely recurring monthly draw/expiration problem (ruling out 0.1), but lacks strong lock-in (ruling out 1.0). By design, QBO remains the accounting system of record, subs have zero accounts (no network lock-in), and the GC stays on existing QBO check/ACH rails (zero payment-rail switching cost). Worse, CFMA and construction accounting research confirm that scaling $10M\u2013$25M commercial GCs regularly graduate off QBO onto Sage 100/Intacct, Foundation, or Viewpoint for native AIA billing, retainage, and WIP \u2014 causing structural graduation churn for a QBO-only bolt-on.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 2500.0,
+        "score": 0.004,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "CHANGED from Scenario A (10,000 \u2192 1,000): Narrowing geographically to New York State cuts the addressable pool by 10x. U.S. Census County Business Patterns (CBP) reports ~2,100+ employer establishments in New York under NAICS 236220 (~5.4%\u20136% of the U.S. market). Filtering to $5M\u2013$25M commercial GCs and Tier-1 commercial alteration contractors using QuickBooks Online OR QuickBooks Desktop Enterprise (expanded to capture QBDE Enterprise Contractor users) who pay 15\u201380 subs/draw yields ~600\u20131,500 qualifying firms \u2014 squarely 1,000 (10,000 is impossible since fewer than 2,500 commercial GC establishments exist in all of NY).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 1.0,
+            "justification": "CHANGED from Scenario A (0.5 \u2192 1.0): In New York commercial construction, Labor Law \u00a7\u00a7 240/241 strict liability and carrier Action-Over exclusions are existential \u2014 NY GL premiums run 1.5x\u20133x the national average and a single subcontractor employee fall with a buried CG 21 39 / Action-Over exclusion can bankrupt a $5M\u2013$25M GC or make it uninsurable. Virtually impossible to find a NY commercial GC owner or controller who does not actively recognize and care about Action-Over exclusion risk (corroborated across NY construction insurance brokers, Acolite, Kelly Insurance Group, and Jones Policy Review).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 10000,
+            "justification": "CHANGED from Scenario A (1,000 \u2192 10,000): Repriced from $189/mo Less-for-Less to $499/mo ($5,988/yr) More-for-More, crossing the $3,162 geometric midpoint into the $10k/yr Fermi band. Live market pricing validates $5k\u2013$10k+/yr allocation for high-stakes construction AP compliance & NY policy-exclusion review: Aequo Build starts at $599/mo ($7,188/yr) for QBO construction AP & lien-waiver payment holds, and NY-grade policy-review compliance platforms/managed tiers (Jones, bcs, CertFocus, TrustLayer Pro) routinely command $5k\u2013$15k+/yr where a single missed Action-Over claim costs $1M+ and NY GL premiums run 1.5x\u20133x the national average.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "UNCHANGED from Scenario A (0.1): Adopting full-policy exclusion auditing + AP staging holds happens on an annual insurance renewal/audit or fiscal-year budgeting cycle (0.1), not continuously (1.0). Collecting full 80\u2013150 page CGL/Umbrella policy packets and endorsement schedules from 15\u201380 subcontractors adds onboarding friction relative to 1-page ACORD 25 collection, reinforcing annual trigger-gated switching.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "UNCHANGED from Scenario A (0.1): Narrowing to NY Labor Law 240/241 does NOT reduce the indie trust barrier \u2014 it intensifies it. A false negative on a buried Action-Over or employee-injury exclusion exposes a $5M\u2013$25M NY commercial GC to $1M\u2013$10M+ strict-liability lawsuits and GL carrier non-renewal. Asking NY controllers/owners to rely on an unknown 1\u20132 person indie startup ([UNVETTED], no licensed insurance underwriting reviewers, no E&O backing, no SOC 2) while also holding W-9 SSNs and QuickBooks AP data remains a severe structural red flag (0.1).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "CHANGED from Scenario A (0.1 \u2192 0.5): Low-cost QBO compliance clones (PassCOI $149/mo, SubLien $199/mo, EazyWaiver $79\u2013$249/mo, SubDoc $14\u2013$49/mo, CertiSub $39\u2013$79/mo) focus on ACORD 25 certificates and basic ISO forms (CG 20 10/20 37), explicitly missing buried NY CGL/Umbrella Action-Over, Labor Law 240, height, and cross-suits exclusions. Aequo Build ($599/mo) handles QBO AP controls but lacks QuickBooks Desktop Enterprise support and NY Action-Over policy-exclusion auditing. Meanwhile, NY policy-exclusion specialists (Jones Policy Review, bcs, illumend) target enterprise Procore/Sage accounts via custom quotes without a flat-rate QuickBooks AP staging hold + NY statutory waiver bundle. Genuine differentiation for a subset of NY QuickBooks GCs (0.5), though NOT 1.0 because Jones, Acolite (broker-led policy grading), and insurance brokers still compete.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "UNCHANGED from Scenario A (0.5): Subcontractor CGL/Umbrella renewals, Action-Over policy verification, and draw waivers recur continuously every year and project (ruling out 0.1), but the bolt-on staging architecture still leaves QuickBooks as system of record with zero sub-account or payment-rail lock-in, and growing NY commercial GCs ($15M\u2013$25M+) still graduate off QuickBooks onto Sage 100/Intacct, Foundation, or Viewpoint/Procore (ruling out 1.0).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 25000.0,
+        "score": 0.04,
+        "evidence_believability_index": 0.614,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.04 (EBI=0.614, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: Plausible = 1,000 (10x narrower geographic micro-niche) \u2014 Narrowing to New York State commercial GCs ($5M\u2013$25M on QuickBooks Online or QuickBooks Desktop Enterprise) cuts the addressable pool to ~600\u20131,500 firms (Census CBP reports ~2,100+ total NY NAICS 236220 employer establishments across all revenue tiers and ERPs). Even at $5,988/yr, the entire NY QuickBooks sub-market is only ~$3.6M\u2013$9M TAM, capping indie growth well below 1.0 unless paired with enterprise ACVs.; Eager (Identity) = 0.1 (Unchanged \u2014 arguably harder in NY) \u2014 Under NY Labor Law \u00a7\u00a7 240/241 strict liability, a single missed Action-Over or height exclusion buried in a 120-page subcontractor CGL/Umbrella policy creates $1M\u2013$10M+ uninsured exposure. An unknown 1\u20132 person technical indie startup ([UNVETTED], no licensed insurance analysts, no E&O indemnity backing, no SOC 2, no NY construction pedigree) faces severe controller skepticism when asking to gate check runs and certify exclusion-free policies.; Liquid = 0.1 (Unchanged) \u2014 Buying remains gated by annual GL/workers'-comp policy renewals, carrier audits, and fiscal-year software budgets, with even higher onboarding friction than Scenario A because subs and brokers must supply full CGL/Umbrella policy packets and endorsement schedules rather than 1-page ACORD 25 certificates.; Verdict (Phase D Honest Reality Check): Scenario B lifts the Problem Score 10x from 0.004 to 0.04 (25,000 \u00f7 625,000), proving that NY Labor Law 240/241 narrowing genuinely concentrates Self-Aware (1.0), Lucrative ($10k), and Comparative Differentiation (0.5) \u2014 yet it STILL falls 25x short of the 1.0 indie viability threshold. Even if a domain-credentialed founder solved Eager-Identity to 0.5, the score would only reach 0.20. The underlying opportunity is structurally non-viable for a bootstrapped indie SaaS in both Scenario A and Scenario B."
+    }
+  ]
+}

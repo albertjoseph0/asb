@@ -1,0 +1,367 @@
+{
+  "run_id": "2026-11-24_1928-seventh-indie-sprint-b2b-liquid",
+  "run_type": "discovery",
+  "ambition": "indie",
+  "lenses": [
+    {
+      "domain": "Independent recruiting, executive search, and boutique staffing agencies (100k+ firms): client-facing candidate shortlist & interview-feedback portals, backdoor-hire/fee-leakage detection, and hiring-manager intake workflows adopted per job order without migrating Bullhorn/ATS",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Independent recruiting, executive search, and boutique staffing agencies (100k+ firms): client-facing candidate shortlist & interview-feedback portals, backdoor-hire/fee-leakage detection, and hiring-manager intake workflows adopted per job order without migrating Bullhorn/ATS",
+      "why_indie_friendly": "User-supplied domain lens"
+    },
+    {
+      "domain": "Independent B2B conferences, trade associations, corporate workshops, and virtual/hybrid event organizers (100k+ recurring organizers): sponsor & exhibitor deliverable/asset/booth onboarding portals, speaker/session collection, and post-event sponsor ROI proof packs without migrating Cvent/Bizzabo",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Independent B2B conferences, trade associations, corporate workshops, and virtual/hybrid event organizers (100k+ recurring organizers): sponsor & exhibitor deliverable/asset/booth onboarding portals, speaker/session collection, and post-event sponsor ROI proof packs without migrating Cvent/Bizzabo",
+      "why_indie_friendly": "User-supplied domain lens"
+    },
+    {
+      "domain": "Independent B2B marketing teams, webinar hosts, and customer-advocacy/case-study ops (100k+ B2B companies): zero-friction customer case-study video/interview capture, webinar-to-pipeline conversion & interactive replay rooms, and partner/co-marketing asset hubs replacing $500-$2,000/mo ON24/Goldcast/Vocal Video without solo creator churn",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Independent B2B marketing teams, webinar hosts, and customer-advocacy/case-study ops (100k+ B2B companies): zero-friction customer case-study video/interview capture, webinar-to-pipeline conversion & interactive replay rooms, and partner/co-marketing asset hubs replacing $500-$2,000/mo ON24/Goldcast/Vocal Video without solo creator churn",
+      "why_indie_friendly": "User-supplied domain lens"
+    }
+  ],
+  "signals_count": 11,
+  "candidates_count": 3,
+  "worker_errors": [],
+  "survivors": [],
+  "killed": [
+    {
+      "id": "IDEA-1",
+      "title": "BriefLock \u2014 Two-Sided Hiring-Manager Calibration & Feedback-SLA Charter Gate for Boutique Recruiting Agencies",
+      "slug": "idea-1-brieflock-two-sided-hiring-manag",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario A",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 100000,
+            "justification": "Scored 100,000 (post-filter active independent 1-15 person direct-hire and executive search desks globally running >=10 external client job orders/year). Primary government and industry benchmarks show: (1) US Census CBP counts ~7,600+ employer establishments in NAICS 561311 (Employment Placement Agencies) and 5,897 in NAICS 561312 (Executive Search Services), plus ~5,000-7,000 nonemployer sole proprietors in NAICS 56131 (and direct-hire desks inside SIA's 20,000-25,000 total US staffing firms), yielding ~10,000-14,000 active independent 1-15 seat direct-hire/search firms after filtering out casting/nanny bureaus, temp/VMS staffing, and dormant entities; (2) UK REC 2025 / ONS reports 31,345 recruitment enterprises (~27,000-28,800 active VAT/PAYE, ~78%-80% with 0-9 employees), yielding ~10,000-15,000 active perm/search boutiques; (3) Australia has ~3,000-5,000 agencies (not 8.4k-12k as claimed), yielding ~1,500-2,500 boutiques; and (4) Canada, Ireland, NZ, and Western Europe add ~15,000-25,000 independent desks. Total qualified global pool is ~36,500-56,500 agencies\u2014above the log10 midpoint (31,622) between 10,000 and 100,000, making 10,000 too low for the stated global buyer pool and 1,000,000 clearly too high.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Scored 0.5 (industry standard recognized pain). Across r/recruiting, ERE, Three Ears Media, Recruiters LineUp, and Candidately, uncalibrated purple-squirrel job orders, mid-search brief drift, and slow hiring-manager feedback (~37+ hours average, frequently 7-14 days) are universally recognized as top drivers of wasted agency sourcing hours and lost placements\u2014so 0.1 ('only thought-leaders evangelize') understates widespread awareness. However, 1.0 ('almost everyone actively buys/acts on it') is too high because many contingent recruiters still accept poor intake terms as a cost of competing for non-exclusive fees rather than actively budgeting for calibration software.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 100,
+            "justification": "Scored $100/yr rather than $1,000/yr for the stated 100,000-agency target buyer pool (aligned with canonical ASB anchors where $29-$249/mo WP Engine and $29-$79/mo ConvertKit both scored $100/yr). Primary ONS/REC UK data shows 64%-67% of recruitment agencies have 0-4 employees (85% of permanent-placement agencies have <10 employees, and >60% turn over <\u00a3250,000/yr), and US Census SUSB/NES data similarly clusters NAICS 561311/561312 in 0-4 employee micro-firms. Documented solo/micro recruiter budgets show lean desks spend $20-$70/mo TOTAL across all software and full-time solo stacks average $150-$220/mo total (ATS + sourcing + scheduling + free Metaview). For standalone pre-search intake forms and alignment checklists\u2014the exact narrow scope BriefLock keeps after stripping out ATS, VoIP, call transcription, and downstream shortlists\u2014demonstrated spend today is $0-$350/yr (Google Docs, Notion, Calendly $10/mo, Typeform/Tally $0-$29/mo, Jotform Workflows $39/mo), sitting below the $316/yr log10 midpoint. While 3-15 seat agencies do pay $1,000-$3,000+/yr for recruiting add-ons like Candidately ($39-$49/user/mo + $1/CV), Carv ($60-$65/user/mo), Metaview Pro ($60/user/mo), and CoRecruit ($64-$85/user/mo), those budgets buy full-lifecycle call capture, VoIP, ATS sync, or downstream shortlist portals\u2014not a disconnected 4-minute intake link; restricting the buyer pool solely to 5-15 seat agencies with $1,000/yr add-on budgets would simultaneously shrink Plausible to 10,000 (preserving the same $10M Plausible x Lucrative product).",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 1.0,
+            "justification": "Scored 1.0 (always in market / per-job adoption). Unlike core ATS replacements (Bullhorn, Crelate, Loxo, Invenias) trapped at Liquid = 0.1 or 0.01 by database migration, staff retraining, and annual contracts, BriefLock sits standalone in front of the existing stack as a per-job-order magic link with zero data migration, zero DNS/email-routing coupling, and no multi-month seasonal freeze window (clearing DP18, DP19, and DP24). Independent recruiter stack guides confirm that small desks actively favor month-to-month add-on tools they can test immediately on their next client search. (External client participation friction is captured under Eager-Comparative rather than double-counted here.)",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Scored 0.5 (indifferent / normal SMB credit-card swipe). Independent 1-15 person recruiting desks routinely adopt self-serve, month-to-month SaaS tools from small/indie vendors via corporate credit card (e.g., Giig Hire, Lattney, Juicebox, Metaview, Apollo, Calendly) without enterprise procurement, multi-year contracts, or SOC 2 gating. By refusing to store candidate contact PII, execute legally binding fee-indemnity contracts, or hold read/write OAuth tokens over regulated records, BriefLock clears DP10 and DP22 trust barriers\u2014so 0.1 (structural trust block) would be wrong. However, 1.0 (mission-level pull to buy specifically from an indie) is unwarranted; agencies are pragmatic buyers and client-facing magic links sent to external VPs still require clean custom-branded visual polish so the recruiter looks credible. [UNVETTED founder-fit assumption: distribution still requires cold outreach or community trust inside recruiter networks.]",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Scored 0.1 rather than 0.5 because BriefLock's proposed async pre-search voting and click-sign 48-hour SLA gate is squeezed by three stronger substitutes and fights the real buyer-client power dynamic. First, recruiting practitioners and coaches (Recruiters LineUp, ERE, Three Ears Media) run sample-profile calibration live on the 20-minute intake call by screen-sharing 2-3 public LinkedIn profiles\u2014which costs $0, achieves 100% hiring-manager participation, builds consultative rapport, and needs no PDF anonymization\u2014followed by a short recap email. Second, live evidence from contingent-recruiting practitioners (Three Ears Media, ERE, r/recruiting) shows contingent hiring managers treat non-retained agencies as interchangeable vendors and actively reject signing formal vendor SLAs or doing async homework ('I hired you to make my life easier, not assign me deadlines'), whereas retained executive search firms with leverage sell high-touch partner-led live kickoffs and already use Clockwork ($149/user/mo) or Ezekia (\u00a3120/$139+/user/mo) portals. Third, on the software floor/ceiling (DP8, DP20, DP23), Candidately (custom/~$39-$49/user/mo + $1/CV anonymizer, Bullhorn/Salesforce synced) already provides branded magic-link client portals, side-by-side candidate cards, structured decline reasons, and automated client feedback reminders tied to actual submitted candidates; Manatal ($15/user/mo) and Zoho Recruit ($25/user/mo) include client portals; and horizontal magic-link/workflow tools like Motion.io ($51/mo for 3 users), Jotform Workflows ($39/mo), and Typeform/Tally ($0-$29/mo) cover structured intake forms below $89/mo. Crucially, BriefLock's deliberate trade-off to stay strictly upstream and disconnected from the ATS creates a broken workflow seam: it cannot detect when real candidates are later submitted or track actual 48-hour submittal feedback delays without manual recruiter double-entry. No clear sub-segment buys for this disconnected async gate alone over live screen-sharing plus existing portals.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Scored 0.5 (recurring revenue from a recurring operational problem) because qualified agencies open 10-50+ external job orders every year, making intake alignment and feedback tracking a continuous weekly workflow billed as monthly/annual SaaS rather than a one-off event (ruling out 0.1). However, 1.0 (strong system-of-record lock-in) is ruled out by Trade-Off #1 (no ATS, no candidate database, no stored PII). High practical churn risk remains: with zero switching cost, agencies that discover contingent clients ignore the async link\u2014or that copy the calibration checklist and SLA wording into Notion/Google Docs\u2014can cancel in month two (DP11 template-extraction exposure).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 125000.0,
+        "score": 0.2,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Dropped 10x from 100,000 to 10,000 to match the strictly narrowed retained/engaged boutique niche (DP14). US Census CBP records 5,897 employer establishments in NAICS 561312 (Executive Search Services); filtering out 1-2 person soloists, >20-seat global retained majors (Korn Ferry, Spencer Stuart, Egon Zehnder, Russell Reynolds), and firms already on Clockwork/Ezekia/Thrive TRM leaves ~3,000-4,000 US boutiques. Adding UK, Western Europe, Canada, and Australia retained and container/engaged 3-20 person search firms running on legacy Invenias, FileFinder, Bullhorn, Crelate, or spreadsheets yields ~10,000-15,000 qualified firms globally\u2014squarely on the 10,000 order of magnitude.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Held at 0.5 (industry standard recognized pain; not inflated). Reddit r/recruiting threads and executive-search vendor analyses (Clockwork, Execue, RecruitMaxx) confirm that boutique retained firms widely recognize manual weekly Excel/PowerPoint client status reporting and client-committee feedback bottlenecks as persistent operational pain points. However, 1.0 would overstate urgency because many traditional partner-led retained firms still prefer high-touch curated weekly PDF/email briefs over putting C-suite hiring committees inside self-serve web portals.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Genuinely upgraded from $100/yr to $1,000/yr by cutting out soloists and micro-contingent desks and concentrating strictly on 3-20 person retained and container/engaged executive search boutiques. Live market pricing proves these firms bill $25k-$100k+ per retained assignment and already allocate $1,500-$20,000+/yr for executive-search client portals and reporting software: Clockwork Recruiting ($149/user/mo = $8,940/yr for 5 seats), Ezekia (\u00a3120/$139-$199/user/mo), Invenias ($129-$199+/user/mo plus paid client-portal tier upgrades), FileFinder (~$150/user/mo plus separate Client Portal add-ins), Thrive TRM ($30k-$50k/yr enterprise), CoRecruit ($64-$85/user/mo), and Candidately (~$39-$49/user/mo + $1/CV). BriefLock's repriced $149/mo flat workspace ($1,490-$1,788/yr for up to 10 seats) sits squarely inside this demonstrated $1,000/yr order-of-magnitude budget.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 1.0,
+            "justification": "Held at 1.0 (per-mandate adoption with zero core-ATS migration). Managing partners at 3-20 person retained boutiques have direct budget authority and can deploy a standalone, month-to-month Mandate Room on their next newly signed retained assignment without ripping out Invenias, FileFinder, Bullhorn, or Crelate or waiting for an annual renewal cycle (clearing DP18, DP19, and DP24).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Held at 0.5 (normal SMB/boutique credit-card adoption) contingent on preserving BriefLock's strictly anonymized, non-PII architecture (Candidate A/B/C cards with no candidate contact PII or confidential named executive records). Boutique 3-20 seat search firms routinely buy self-serve vertical SaaS from small vendors (Longlist.io, Stardex, Clockwork, CoRecruit) via corporate card without enterprise procurement. Caveat lowering believability to 0.4: if retained clients demand named C-suite executive profiles, off-limits conflict protection, and board-level confidentiality inside the room, an unvetted indie founder faces security/NDA scrutiny that risks dropping Eager-Identity to 0.1 (DP22).",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Remains 0.1 despite narrowing to retained/engaged search boutiques and expanding from an upstream-only intake link to an end-to-end Mandate Room (Search Charter + anonymized shortlist voting + automated feedback reminders). Live competitor research exposes three structural blockers that prevent earning 0.5: (1) Duplicate-entry trap: retained search firms hate Friday-afternoon Excel/PowerPoint status decks specifically because researchers must manually copy candidate statuses out of Invenias, FileFinder, or Bullhorn\u2014so an ATS-agnostic disconnected workspace preserves the exact manual double-entry pain that drives firms to live-synced native portals like Clockwork ($149/user/mo), Ezekia (\u00a3120/$139+/user/mo), and Stardex ($99/user/mo). (2) Tight price-and-feature bracketing (DP8, DP20, DP23): Longlist.io ($47/user/mo annual, i.e., $141/mo for a 3-seat boutique) already delivers a full executive-search mandate CRM plus branded client shortlists with free data migration\u2014cheaper than BriefLock's $149/mo standalone room; Formatix.AI already provides a decoupled, passwordless magic-link executive-search client portal with Advance/Hold/Decline voting and assessment sharing; Candidately (~$39-$49/user/mo + $1/CV) already syncs with Bullhorn and sends automated client feedback nudges; and horizontal white-label client portals (Motion.io $51/mo, Ahsuite, Onehub) occupy the standalone floor. (3) White-glove retained mismatch: retained partners charging $25k-$100k fees calibrate live with the CEO/board inside a formal Position Spec and will not alienate paying retainer clients with automated '48-hour SLA req-pause' enforcement gates. No uncopyable structural wedge survives the floor-and-ceiling sweep.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Held at 0.5 (recurring SaaS revenue from a recurring operational workflow). Retained and engaged 3-20 seat search boutiques run 10-40+ multi-month assignments per year, creating recurring monthly demand for client collaboration and weekly status updates (ruling out 0.1). However, 1.0 (system-of-record lock-in) remains unattainable because the ATS-agnostic design stores no master candidate database, off-limits graph, or historical CRM records\u2014leaving low switching friction whenever a firm upgrades to Clockwork, Ezekia, or Longlist.io.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          }
+        },
+        "raw_product": 125000.0,
+        "score": 0.2,
+        "evidence_believability_index": 0.657,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.2 (EBI=0.7, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: eager_comparative; lucrative"
+    },
+    {
+      "id": "IDEA-2",
+      "title": "SponsorProof \u2014 Zero-PII Target-Account Overlap & 14-Day Sponsor ROI Audit Pack for B2B Conferences",
+      "slug": "idea-2-sponsorproof-zero-pii-target-acc",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Applying DP14 strict post-filter counting against Census, IRS, and association data puts the qualified global buyer pool at ~15,000-35,000 organizations (10,000 order of magnitude, well below 100,000). Primary counts: US Census Economic Census / CBP reports only 6,270-6,671 employer establishments (~6,345 firms) under NAICS 561920 (Convention and Trade Show Organizers). IRS records ~57,000-60,500 501(c)(6) trade/business associations in the US (~23,000 employer establishments per First Research), plus ~2,000-3,000 in the UK, ~1,500-2,000 in Canada, ~1,000-1,500 in Australia, and ~15,000-25,000 formal national/regional trade bodies across the EU. Filtering for Scenario A's behavioral criteria removes: (a) local chambers of commerce, small county boards, and inactive/non-employer orgs that do not sell $2k-$50k+ B2B corporate sponsorships under ABM scrutiny; (b) associations running only 1 flagship annual conference (ASAE confirms 1 annual meeting is the industry norm, not 2+); and (c) corporate B2B field-event teams (Splash data shows 63% host <20-person dinners and 52% host <200-person self-funded field events rather than selling multi-vendor corporate sponsorships). Post-filter estimate: ~3k-10k independent B2B conference producers + ~10k-25k multi-event trade/professional associations + ~2k-5k B2B media/community conference hosts = ~15k-35k qualified buyers globally. What makes 100,000 wrong: even raw US establishments (23k associations + 6.3k trade-show firms = ~29.3k) sit far below 100k before applying any 2+ event or $2k-$50k corporate-sponsor filters. What makes 1,000 wrong: combining US and Western international associations and independent B2B producers comfortably exceeds 10,000 active multi-event organizers.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Triangulated live research confirms sponsor ROI defense and post-event recap assembly are industry-standard recognized pains (0.5): Outcomes Research's 2026 State of B2B Event Marketing report verifies that 68.9% of B2B pros report untrusted event ROI numbers to leadership and ~69% of orgs are cutting event volume under budget pressure; Bizzabo and Guidebook data show sponsorships drive 40-60% of conference revenue and data-backed ROI recaps materially drive renewals; and recurring Reddit threads (r/events, r/marketing, r/nonprofit) document manual spreadsheet breakdown for sponsor deliverables and post-event recap scrambling. Challenging from below (0.1): this is clearly not an obscure thought-leader theory \u2014 active competitor categories (Partner4Events, SponsorPact, SponsorFlo, SponsorHQ, Trak.io, Whova, Accelevents) already market directly to buyers actively searching for sponsor fulfillment and ROI recap tools. Challenging from above (1.0): many smaller associations still default to simple attendance headcount PDFs and photos rather than actively demanding blind TAL domain overlap or CFO audit packs.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Live published pricing across direct sponsor-management and event-reporting competitors proves that B2B conference organizers and trade associations actively allocate ~$1,000/year (order of magnitude) for this exact workflow: Partner4Events Pro costs $1,188/yr ($139/mo monthly), Eventify Advance costs $1,199+/yr ($999/event), Eventeny paid tiers run $720-$2,880/yr (+3-5% fees), SponsorPact Organization costs $2,988/yr ($249/mo), SponsorFlo Starter costs $3,588/yr ($299/mo), and Trak.io starts at $5,000/yr. SponsorProof's $129/mo or $1,290/yr price sits squarely in the $1,000/yr demonstrated-budget band. Challenging from below ($100): $100/yr only reflects tiny single-event community groups buying one $99 pass, not multi-event B2B organizers selling $2k-$50k+ sponsorships (40-60% of conference revenue). Challenging from above ($10,000): $10,000+/yr budgets go to full event OS suites (Swoogo $11,800+/yr, Bizzabo $15k-$18k+/yr, Cvent $20k-$79k+/yr), not a CSV sidecar priced at $1,290/yr.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Challenging Scenario A's claimed Liquid = 1.0 from below: although running as a CSV sidecar avoids multi-year ticketing/AMS rip-and-replace lock-in (avoiding 0.01), buying is NOT always-in-market. ASAE association research confirms that the vast majority of trade and professional associations run one flagship annual conference plus 1-2 smaller regional symposia on annual fiscal budgets. Sponsor deliverable portals, logo preflight, and comp-pass tracking must be adopted months ahead of sponsor onboarding (creating multi-month calendar freeze windows per DP24), and the post-event recap panic only strikes 1-2 times per year. Live competitor business models corroborate this episodic liquidity: both Partner4Events ($99/event) and SponsorPact ($149 one-time Event Pass) had to introduce per-event passes specifically because organizers do not buy continuously year-round. In addition, the blind TAL-overlap workflow requires multi-party participation from corporate sponsors to upload ABM lists. This is a textbook annual / 1-2x-per-year decision cycle (0.1).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "At $129/mo ($1,290/yr), independent US B2B conference producers and small-to-midsize regional trade associations running Eventbrite, Luma, or WildApricot routinely purchase sponsor-ops tools on a corporate credit card from small indie vendors, as proven by live self-serve adoption of Partner4Events ($99-$139/mo), SponsorPact ($149-$249/mo), and Eventeny ($60-$240/mo). Company domain lists for TAL matching are not statutory PII/PHI/NPI. Challenging from below (0.1): while enterprise Cvent/Bizzabo field-event teams and EU GDPR-regulated associations will resist loading raw attendee CSVs into an unvetted solo founder's browser app without a DPA/SOC 2 (DP22 stateless-washing friction) and some corporate sponsors hesitate to upload proprietary ABM target lists into an unfamiliar startup portal, those barriers do not structurally block the core independent US organizer and regional association slice. Challenging from above (1.0): an unvetted solo founder has zero mission-level pull or brand authority here. [UNVETTED founder-fit assumption: assumes founder can credibly reach association sponsorship directors without existing industry reputation.]",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Verified live 2026 competitors already own both the sidecar fulfillment floor and the ABM-overlap ceiling without any structural barrier stopping them from copying this wedge (DP8, DP11, DP20, DP23): (1) Sidecar fulfillment & recap portals already exist at or below $129/mo \u2014 Partner4Events offers free/2-sponsor tier, $99/event Starter, and $1,188/yr ($99/mo annual) Pro with sponsor portals, asset collection, deliverable checklists, signage photo proof, and branded recap reports; SponsorPact offers $149/event or $249/mo Org as a CRM/ticketing sidecar extracting contract obligations into versioned fulfillment reports; SponsorHQ targets associations/conferences specifically to replace fulfillment spreadsheets; and Eventify Advance ($1,199/yr) undercuts SponsorProof ($1,290/yr) while including a full event app, sponsor portal, and lead scanning. (2) Panelist.com ($299-$641/mo) already ships a native sponsor 'Targets' tab for uploading Target-Account Lists and viewing automated attendee overlap; Crossbeam ($0 Explorer up to 50 records; $4,800/yr Connector) handles blind hashed overlap; and Bizzabo, Cvent, Swapcard, Brella, Whova, Accelevents, and Swoogo provide native sponsor ROI analytics. (3) The zero-PII CSV TAL-matching and job-title seniority wedge is a thin stateless CSV transformation (DP11): under GDPR/CCPA, corporate company names and job titles are not personal data, so organizers already delete Name/Email columns in Excel and share anonymized 'Companies & Titles Attending' lists for sponsors to XLOOKUP against their CRM in minutes (or run a quick ChatGPT/Excel pass). (4) Exhibitor booth-scan reconciliation structurally fails on Eventbrite/Luma (which lack native badge scanning) because live research confirms exhibitors keep universal/third-party badge-scan leads private and do not export them back to organizers, while platforms with organizer-owned lead retrieval (Cvent, Whova, ExpoPass, Eventify) already output native scan reports. No incumbent-uncopyable trade-off survives for a clear sub-segment to pay $129/mo alone.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "For the stated target buyer running 2+ sponsored B2B conferences per year, the underlying sponsorship renewal and deliverable-proof problem recurs every event cycle across pre-event sales (3-6 months out), asset collection, event execution, and post-event 14-day renewal packs, supporting annual SaaS recurrence (as evidenced by annual subscription tiers at Partner4Events $1,188/yr, Eventify $1,199/yr, SponsorPact $249/mo Org, SponsorFlo $299/mo, and Trak.io $5,000/yr). Challenging from above (1.0): deliberate sidecar architecture stores zero ticketing, payment, attendee PII, or AMS member records, so there is zero system-of-record switching lock-in and high exposure to host-platform absorption (DP11). Challenging from below (0.1): offering a $129/mo monthly toggle creates real seasonal-churn risk for 2-event/yr buyers who could subscribe for 1-2 months per event and cancel (which is why Partner4Events and SponsorPact also sell one-off $99-$149 event passes), but multi-event B2B organizers billed annually ($1,290/yr) represent recurring annual revenue from a recurring operational problem (0.5).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 12500.0,
+        "score": 0.02,
+        "evidence_believability_index": 0.786,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Drops 10x from 10,000 to 1,000 by design of the niche concentration: AMC Institute data reports only ~500-600 Association Management Companies globally (~180-200 AMCI members managing 3,000+ associations). Adding dedicated outsourced B2B sponsorship sales/fulfillment agencies and high-frequency independent B2B media/conference producers running 10+ sponsored B2B conferences/year globally (subset of the 6,345 US NAICS 561920 firms and international equivalents) yields roughly ~2,000-3,500 qualified multi-client firms worldwide \u2014 squarely on the 1,000 order of magnitude. What makes 10,000 wrong: there are barely 600 AMCs worldwide and only a small fraction of independent conference producers/agencies manage 10+ multi-brand B2B sponsored conferences annually on non-enterprise registration stacks. What makes 100 wrong: combining global AMCs, B2B sponsorship agencies, and multi-event B2B media producers exceeds 1,000 firms.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 1.0,
+            "justification": "Genuinely concentrates from 0.5 to 1.0 in this narrowed niche: unlike general associations where an annual conference is one of many member functions, AMCs (managing $1.9B-$3.1B in association revenue where sponsorships represent 40-60% of conference revenue) and outsourced B2B sponsorship agencies exist specifically to sell, fulfill, and renew sponsorships across 10-30 client events/year. Delivering timely, branded proof-of-fulfillment and ROI recaps to protect client retainers is an existential, universally recognized operational priority across virtually all firms in this niche, evidenced by dedicated agency-tier positioning at SponsorPact, SponsorFlo, and Trak.io plus 2026 B2B event ROI scrutiny (68.9% untrusted ROI reporting). Challenging from below (0.5): almost every multi-client sponsorship agency/AMC actively feels and budgets against fulfillment-spreadsheet breakdown and client renewal proof rather than merely treating it as optional best practice.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 10000,
+            "justification": "Genuinely rises 10x from $1,000 to $10,000 order of magnitude based on verified live agency pricing pages: SponsorPact Agency costs $599/mo ($7,188/yr), SponsorFlo Growth/Pro costs $599-$799/mo ($7,188-$9,588/yr), and Trak.io Standard/Professional runs $5,000-$12,500/yr for multi-property fulfillment and automated recap reporting. Repricing SponsorProof as a white-label multi-client agency workspace at $599/mo ($6,000/yr annual) sits squarely inside demonstrated $5,000-$12,500/yr agency software budgets. Challenging from below ($1,000): agencies managing 10+ client events and hundreds of sponsorships already pay $6,000-$12,500/yr for multi-tenant white-label tooling rather than single-event $1,000/yr tools. Challenging from above ($100,000): enterprise six-figure spend belongs to Cvent/Bizzabo/KORE/Vendelux enterprise suites, not a $6,000/yr fulfillment sidecar.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Remains 0.1: although AMCs and multi-client B2B sponsorship agencies produce conferences every month, replacing or standardizing a multi-tenant white-label sponsorship portal across 10+ association/media client brands (custom domains, brand templates, account-manager workflows, and client-facing proof decks) is an annual agency operations and budget decision, not a frictionless per-event impulse purchase. Existing client event calendars create ongoing operational freeze windows (DP24) where agencies avoid mid-season portal switches.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Remains 0.5 (with elevated DPA sensitivity at the top end): boutique B2B sponsorship agencies and mid-sized AMCs routinely buy specialist multi-client SaaS at $599-$799/mo from small startups, as proven by live agency tiers from SponsorPact ($599/mo) and SponsorFlo ($599-$799/mo). However, the ~80-85 AMCI-accredited enterprise AMCs managing $1.9B-$3.1B in client association budgets face stricter client Data Processing Agreements and vendor security reviews before routing multi-client attendee CSVs through an unvetted solo founder's browser app (DP22), preventing any pull above 0.5. [UNVETTED founder-fit assumption: assumes founder can credibly sell $6,000+/yr agency infrastructure to AMC/agency principals.]",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Narrowing to AMCs and multi-client B2B sponsorship agencies does NOT rescue Eager-Comparative (stays 0.1). Live research confirms this exact agency niche is already served by dedicated multi-tenant white-label rivals at the same price tier: SponsorPact Agency ($599/mo for 20 concurrent events, 200 active sponsorships, 10 client brands, white-label proof-of-fulfillment reports), SponsorFlo Growth/Pro ($599-$799/mo built specifically for sponsorship agencies with single-login client switching, custom-domain white-label sponsor portals, decks, and recaps), Trak.io ($5,000-$12,500/yr multi-property fulfillment intelligence and automated recap decks), and association-focused platforms like Rhythm Software and SponsorHQ. Meanwhile, the zero-PII CSV TAL-overlap and seniority-bucketing feature remains a thin stateless CSV transformation (DP11) that agency analysts already substitute with anonymized company+title exports (non-PII under GDPR/CCPA) + Excel XLOOKUP/LLM scripts, and that SponsorPact or SponsorFlo can copy in one sprint with zero business-model conflict. Exhibitor booth-scan reconciliation still fails where client associations lack organizer-owned lead retrieval and is already native where clients run Cvent/Whova/Swoogo/Eventify.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Remains 0.5 (stronger within-band retention than Scenario A, still short of 1.0): multi-client AMCs and sponsorship agencies running 10-30 client conferences/year operate a continuous year-round fulfillment and renewal calendar, eliminating Scenario A's seasonal monthly-churn trap and supporting annual multi-client SaaS retention (corroborated by annual agency plans at SponsorPact, SponsorFlo, and Trak.io). However, because SponsorProof deliberately remains a zero-PII CSV sidecar without core AMS membership records, ticketing, or CRM pipeline ownership, switching to SponsorPact/SponsorFlo/Airtable at renewal remains feasible \u2014 keeping it below 1.0 system-of-record lock-in.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 25000.0,
+        "score": 0.04,
+        "evidence_believability_index": 0.786,
+        "bottleneck_believability": 0.7,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.04 (EBI=0.786, Min=0.7, NOT VIABLE (< 0.5 as scored)). Weak links: eager_comparative (0.1): Even inside the narrowed multi-client agency/AMC niche, direct live competitors ALREADY occupy the exact white-label sponsorship-fulfillment workspace slot \u2014 SponsorPact Agency ($599/mo for 20 concurrent events, 200 sponsorships, 10 white-label brands), SponsorFlo ($599-$799/mo built explicitly for multi-client agencies with single-login workspace switching and custom-domain sponsor portals), and Trak.io ($5,000-$12,500/yr AI fulfillment intelligence and presentation recaps). None face any structural or business-model barrier to adding CSV domain-overlap / job-title seniority matching, and agencies can still replicate blind TAL overlap via anonymized company+title spreadsheets or a 2-minute Excel/LLM script.; plausible (1000): Narrowing to Association Management Companies (500-600 AMCs globally per AMC Institute) plus multi-client B2B sponsorship fulfillment agencies and high-frequency independent B2B media/conference producers running 10+ sponsored events/year collapses global TAM 10x to ~2,000-3,500 firms (1,000 scale). Per DP9/DP14, a 1,000-account niche at Liquid = 0.1 cannot clear Problem Score >= 1.0 even at Lucrative = $10,000/yr.; liquid (0.1): While agencies/AMCs run 10+ client events year-round, standardizing a white-label, multi-tenant client portal across 10+ association brands, custom domains, and staff workflows is an annual platform-stack decision (0.1), not an impulsive per-project adoption (1.0)."
+    },
+    {
+      "id": "IDEA-3",
+      "title": "ReplayPipe \u2014 Non-Rip-and-Replace Post-Webinar Interactive Replay Rooms & Chapter-Intent CRM Sync",
+      "slug": "idea-3-replaypipe-non-rip-and-replace-p",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario A",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Strict DP14 post-filter behavioral count falls short of the brief's '100,000+' claim and lands in the 10,000 order of magnitude (~18,000-27,000 qualified firms globally). HubSpot reported 288,706 paying customers at YE 2025 and 306,000+ in mid-2026; Salesforce serves ~150,000-200,000 companies with heavy B2B overlap (HubSpot Marketing + Salesforce CRM), giving ~380,000-420,000 deduplicated orgs across ALL industries, B2C/B2B, and sizes. Global active SaaS companies total only 30,800-72,000. Restricting to the 3 named verticals (B2B SaaS, IT services, B2B consulting) with 1-15 person marketing teams (~30-35% of that CRM pool = ~120k-145k), then applying the 1+ monthly webinar cadence filter (~25-30% across SMB/mid-market SaaS/IT/consulting; even among larger B2B survey respondents, ~61-74% run any webinars and ~50% of those run 11+/yr = ~30-35% upper bound -> ~35k-42k), and finally filtering for Zoom/Teams/Riverside hosts excluding GoToWebinar/ON24/Goldcast/Demio/Livestorm/Contrast/Webex (~55-65%) yields ~18,000-27,000 qualified firms\u2014below the 31,622 log midpoint between 10,000 and 100,000. Believability set to 0.4 because while base CRM/SaaS/webinar counts are web-verified, the multi-factor intersection is Fermi-filtered.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Industry benchmarks confirm live B2B attendance hovers at 37-44% (Contrast, GoTo) while on-demand replays drive 40-50% of total views (ON24, Contrast). Syncing on-demand replay engagement to CRM for lead scoring and sales follow-up is standard B2B demand-gen practice\u2014evidenced by persistent HubSpot Community complaints over Zoom's missing on-demand registration/watch-time sync and core CRM-sync positioning across Wistia, Vidyard, Contrast, SproutVideo, Demio, and Livestorm. Capped at 0.5 (not 1.0) because many lean B2B teams remain content with basic form-gated replay downloads rather than granular chapter-level intent routing.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Primary pricing-page proof confirms $1,000/yr order-of-magnitude allocated annual spend for B2B video marketing / webinar replay + CRM attribution in this buyer segment: Zoom Webinars ($79-$89+/mo = ~$950-$1,070/yr), Contrast Pro ($79-$179+/mo = $948-$2,148+/yr), eWebinar ($99/mo = $1,188/yr + $249/mo Salesforce add-on), Demio Growth ($117+/mo = $1,404+/yr), Vidyard Teams ($99/user/mo = $1,188+/seat/yr), Wistia Business ($79/mo annual = $948/yr) to Business + Signals ($329/mo annual = $3,948/yr), and SproutVideo Tree ($72/mo = $864/yr). Challenges $100/yr cleanly: no B2B team running HubSpot Marketing Hub Pro ($800-$890/mo) and monthly Zoom Webinars operates on a $100/yr attribution budget.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 1.0,
+            "justification": "Non-rip-and-replace architecture deliberately avoids live-broadcast migration risk (buyers keep Zoom/Teams/Riverside for live events), avoids seasonal freeze windows (DP24 clean), and maps to monthly webinar publishing cycles (12x/year fresh adoption moments) for the primary target pool currently posting raw Zoom/YouTube links. Caveat: prospects currently under annual Wistia Signals, Goldcast, or ON24 contracts\u2014or Salesforce-governed orgs requiring RevOps/security sign-off\u2014exhibit slower 0.1 switching velocity, and real-world RevOps OAuth approval latency is untested [fermi, capped at 0.4].",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "DP22 clean: syncs only standard B2B marketing-contact engagement events (work email, watch time, CTA clicks) with zero regulated PII/PHI/financial data or production infrastructure coupling. Lean 1-15 person B2B marketing teams on HubSpot routinely adopt bootstrapped/indie Martech tools at ~$99/mo via corporate credit card, and HubSpot App Marketplace approval is indie-accessible (3 active unaffiliated installs with 2xx API activity in 30 days + scoped OAuth). Caveat: the Salesforce half carries meaningfully higher friction (Salesforce AppExchange charges $999/submission attempt for a 4-6 week security review requiring static scans and OWASP ZAP/Burp DAST, plus stricter mid-market Salesforce Admin vetting), but because HubSpot SMB/mid-market teams represent the core self-serve buyer pool and are largely vendor-size indifferent, 0.5 is earned.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Live 2026 floor sweep (DP8/DP20/DP23) confirms the upper ceiling (Wistia Business + Signals $329/mo annual / $412/mo monthly, Vimeo Studio $400/mo, Parmonic $399/mo, Mindstamp Pro $499/mo, Vidyard Teams $99/user/mo, WebinarGeek Enterprise \u20ac349/mo) BUT exposes four direct sub-$99/mo or $0-included substitutes that already cover ~80%+ of the HubSpot replay-attribution wedge: (1) SproutVideo ($12-$72/mo annual) includes native HubSpot integration on ALL tiers, syncing lead capture, videos watched, and watch percentage into HubSpot workflows + Media Bridge + timestamp chapters; (2) Spotlightr ($13-$49/mo) provides native HubSpot integration, chapter markers, interactive in-video CTAs/hotspots, and timestamp-based HubSpot triggers; (3) HubSpot Native Video (included at $0 incremental cost for Marketing Hub Pro buyers) already provides AI/manual video chapters, side-by-side chapter/transcript share pages, contact-level watch time, and Media Play workflow triggers (lacking only granular chapter/percentage workflow enrollment without Enterprise Custom Behavioral Events); and (4) Contrast ($79+/mo Pro, Free for <=30 registrants) DOES support uploading pre-recorded video files for on-demand replay hubs with 50+ HubSpot data points synced, contradicting the brief's claim that Contrast forces live hosting migration. Priced at $99/mo ('Less for Less'), ReplayPipe is actually MORE expensive than SproutVideo, Spotlightr, HubSpot Native Video, and Contrast's entry tier. Its remaining differentiator (Zoom Q&A/poll ingest + chapter-specific Slack/Salesforce intent sync) is an incremental feature incumbents can add in a sprint rather than an uncopyable structural trade-off, earning 0.1.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Nearly half of webinar-producing B2B organizations run 11+ webinars per year (Zoom benchmarks) and 40-50% of total webinar consumption occurs asynchronously on-demand (ON24, Contrast). Hosted replay rooms embedded across evergreen nurture emails, landing pages, and sales sequences create genuine recurring monthly SaaS retention (0.5). Capped below 1.0 because ReplayPipe is a bolt-on media/attribution layer rather than a core system-of-record (CRM remains HubSpot/Salesforce; live host remains Zoom/Teams) and remains exposed to native absorption as HubSpot Video expands workflow triggers and Zoom/Contrast improve on-demand hubs.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 125000.0,
+        "score": 0.2,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Remains in the 10,000 order of magnitude (~6,000-12,000 qualified North American organizations\u2014tighter than Scenario A's ~18k-27k, but still above the 3,162 log midpoint). Grounded in official/public registries: 2,000+ NASBA National Registry CPE sponsors (plus state-board CPA and IRS CE providers), thousands of SHRM recertification providers, thousands of State Bar CLE-accredited law firms/vendors across 40+ MCLE jurisdictions, and thousands of AIA CES approved providers (Credential Engine counts 50,000+ total U.S. education/training providers). Filtering out in-person-only sponsors and enterprises already locked into BeaconLive/Path LMS/CE21/ON24 leaves an estimated ~6,000-12,000 small-to-mid-size Zoom/Teams accredited webinar hosts. Believability set to 0.4 because multi-credential deduplication and Zoom/Teams on-demand intent are Fermi-filtered.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5. Every accredited CE/CPE/CLE/SHRM webinar sponsor immediately knows raw Zoom cloud recordings or YouTube embeds cannot legally grant self-study credit due to mandatory watch-time, attention-check, exam, and certificate-field rules (documented across NASBA, State Bar MCLE, and Zoom Webinars Plus docs). Capped below 1.0 because many accredited sponsors deliberately stick to live-only Group Internet-Based webinars to avoid extra self-study exam authoring and NASBA QAS Self-Study accreditation overhead.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Unchanged at 1,000 (repriced to $199/mo = $1,990-$2,388/yr). Live pricing pages verify demonstrated annual CE software spend in the $1,000-$5,000/yr band for small-to-mid-size sponsors: CLEHero ($1,188/yr Starter for 5 courses, $2,988/yr Pro for 15 courses, $5,988/yr Business for 40 courses), LearningCart ($4,788/yr Silver), CEZoom ($300+ provider plans), and Zoom Webinars Plus ($990-$3,490/yr). Challenging $10,000/yr from below: small/mid-size Zoom-hosted CPA/law/SHRM/AIA sponsors will not pay $10,000/yr ($833/mo) for a replay-only indie tool when full enterprise CE LMS/event suites (BigMarker, Path LMS, BeaconLive) sit in that budget tier.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Drops from 1.0 to 0.1 under the niche shift. Verified live pricing shows incumbent CE platforms lock buyers on annual contracts (CLEHero annual billing; LearningCart/BigMarker/Path LMS/CE21 annual agreements). Moreover, CPA firms experience a Jan-Apr tax-season operational freeze (DP24), law firms and professional associations procure compliance/L&D software on annual committee/budget cycles rather than impulsive per-webinar credit-card swipes, and live-only NASBA sponsors face multi-month QAS Self-Study approval lead times before monetizing on-demand replays.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Drops from 0.5 to 0.1 under the niche shift. While the platform stores no statutory SSNs or PHI (DP22 clean), CPA firms, law firms, and accredited associations carry real regulatory sponsor-revocation risk if an on-demand platform fails a NASBA QAS or State Bar compliance audit. These conservative institutional buyers demand vendor stability, audit-proof compliance track records, and institutional credibility that an [UNVETTED] solo indie founder lacks (unlike HubSpot growth marketers in Scenario A who routinely swipe cards for indie tools). Capped at [fermi] believability 0.4 pending live buyer discovery.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Genuinely improves from 0.1 to 0.5. Live 2026 floor sweep verifies that NO sub-$100/mo generic video host (SproutVideo, Spotlightr, HubSpot Native Video, Contrast, Wistia), NO standard consumer LMS (Thinkific, LearnDash, LearnWorlds\u2014all explicitly verified to lack native time-randomized mid-video attention checks and NASBA/State Bar subpoena-grade immutable audit trails without SCORM/custom code), and NOT EVEN Zoom Webinars Plus ($99-$1,999/mo, which covers live attendance certificates but explicitly lacks asynchronous NASBA self-study final exam + randomized attention-check replay compliance) solves this exact regulatory job cleanly. Existing compliant CE alternatives either restrict to a single vertical with tight course caps and annual billing (CLEHero $99/mo for 5 courses with $50/course overages, $249/mo for 15 courses, $499/mo for 40 courses\u2014legal CLE only), start at $399-$1,199/mo (LearningCart), or require $3,000-$20,000+/yr enterprise LMS/AMS contracts (BeaconLive, Path LMS/Freestone, CE21, BigMarker, ON24). Refusing live streaming and full AMS bloat to offer flat $199/mo compliance-audited on-demand replay rooms for Zoom/Teams recordings is a real structural trade-off generic video hosts refuse to copy, earning 0.5.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5. Recurring monthly/quarterly accredited webinars plus mandatory multi-year (e.g., 5-year NASBA) audit-log retention and ongoing learner certificate re-downloads create sticky recurring SaaS retention. Capped below 1.0 because live webinar hosting remains on Zoom/Teams, member/client systems-of-record remain in the buyer's AMS/CRM, and audit logs can be exported to CSV/PDF upon cancellation.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 12500.0,
+        "score": 0.02,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.2 (EBI=0.7, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: Eager-Comparative (0.1): DP8/DP20/DP23 floor sweep breaks the core pricing-cliff thesis. SproutVideo ($12-$72/mo annual) includes native HubSpot watch-% workflow sync on every tier; Spotlightr ($13-$49/mo) provides native HubSpot integration, chapter markers, interactive CTAs, and timestamp triggers; HubSpot Native Video ($0 incremental on Marketing Hub Pro) already includes built-in video chapters, side-by-side transcripts, contact-level watch time, and Media Play triggers; and Contrast ($79+/mo, Free tier for <=30 registrants) DOES allow uploading pre-recorded videos for on-demand replay hubs with 50+ HubSpot data points synced (refuting the brief's claim that it forces ripping out Zoom). At $99/mo, ReplayPipe is sandwiched above 3-4 established sub-$99/mo or $0-included substitutes, leaving only a thin, easily copied feature increment (Zoom Q&A import + chapter-specific Slack/Salesforce routing).; Plausible (10,000): DP14 post-filter behavioral TAM is ~18,000-27,000 companies globally, not 100,000+. HubSpot (~306k total paying customers) plus Salesforce (~150k-200k with heavy B2B overlap) yield ~380k-420k deduplicated organizations across all industries and sizes; applying the stated 4 filters (B2B SaaS/IT services/consulting with 1-15 marketers, 1+ monthly webinars, and Zoom/Teams/Riverside hosting) compresses the qualified pool below the 31,622 log midpoint, collapsing total Problem Score to 0.20 (125,000 / 625,000).; Secondary Execution Friction on Salesforce Half of Eager-Identity/Liquid: While HubSpot SMB teams credit-card swipe indie tools readily (App Marketplace requires 3 active beta installs + OAuth), Salesforce AppExchange charges $999/attempt for a 4-6 week security review (CRUD/FLS + OWASP ZAP/Burp DAST) and mid-market Salesforce orgs impose stricter CRM write-OAuth vetting on unvetted indie founders."
+    }
+  ]
+}

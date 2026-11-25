@@ -1,0 +1,78 @@
+[
+  {
+    "deliberate_trade_offs": [
+      "Never operates shared sending IPs or resells email transport; buyers bring their own AWS SES, Postmark, Resend, or Mailgun API keys, which disqualifies teams wanting a single all-in-one ESP vendor bill.",
+      "Refuses to build drag-and-drop email template designers, marketing broadcast campaigns, or SMS/push/in-app notification orchestration (leaving those to Courier, Knock, Novu, or Brevo) so engineering focus stays strictly on transactional send reliability and tenant blast-radius isolation.",
+      "Requires every tenant-triggered message to pass an explicit tenant_id header or route tag; teams unwilling to tag tenant context cannot use automatic per-tenant quarantine.",
+      "Enforces hard automatic circuit-breaking that pauses a single abusive workspace before it trips the upstream ESP limit, deliberately trading one noisy tenant's temporary queue hold to guarantee auth and OTP uptime for every other customer."
+    ],
+    "id": "IDEA-1",
+    "indie_feasibility": "High for a 1-2 person backend-oriented technical founder [UNVETTED: assumes strong Go/Rust/Node networking, SMTP/HTTP proxy, Redis sliding-window state, and AWS SES/Postmark/Resend webhook familiarity]. Core engine is a stateless SMTP + REST proxy with idempotency keys, Redis per-tenant bounce/complaint counters, automated AWS SNS feedback-loop provisioning, and a Postgres suppression/audit log. Low marginal infrastructure cost, zero shared-IP deliverability babysitting (buyers own upstream ESP accounts), self-serve credit-card onboarding in under 15 minutes, and zero enterprise sales or HIPAA/PCI compliance gates.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Hiring a dedicated deliverability/platform engineer, running self-hosted MTAs (Postal/Haraka) with dedicated IP warming, paying enterprise multi-channel notification suites (Courier $99+/mo, Knock) plus custom SNS/Lambda/Redis circuit breakers, or absorbing customer churn during auth outages.",
+      "obviated_below": "Hand-rolling AWS SES SNS/Lambda/DynamoDB bounce handlers to escape the SES sandbox, writing custom multi-provider retry/idempotency queues, manually suspending abusive customer workspaces after an outage, and paying 15x Resend/Postmark overages for low-trust tenant-triggered mail.",
+      "promise_one_up": "Keep password resets, OTPs, and billing receipts landing in inboxes even when a noisy customer workspace triggers spam complaints or an upstream ESP throws 429/5xx errors or account pauses.",
+      "your_level": "Route multi-tenant transactional email through a drop-in BYO-key reputation firewall with per-tenant bounce/complaint circuit breakers, split auth-vs-tenant lanes, and idempotent multi-ESP failover."
+    },
+    "one_liner": "Drop-in SMTP and REST reputation firewall over BYO AWS SES, Postmark, Resend, and Mailgun keys that isolates noisy customer workspaces with automatic per-tenant bounce circuit breakers and idempotent multi-ESP failover so one bad tenant never kills auth emails.",
+    "price": "$49/mo ($490/yr) Starter (500k proxied emails/mo, unlimited tenants, 2 BYO ESPs) and $99/mo ($990/yr) Growth (2.5M proxied emails/mo, 4 BYO ESPs, tenant custom-domain DKIM onboarding API); $0 per-email markup over BYO ESP rates",
+    "pricing_strategy": "More for More",
+    "signal_ids": [
+      "SIG-2"
+    ],
+    "specific_buyer": "Technical founders and lead backend engineers at 1-15 person multi-tenant B2B SaaS companies sending customer-triggered transactional emails (workspace invites, ticketing updates, form alerts) alongside mission-critical auth/OTP emails through BYO AWS SES, Postmark, Resend, or Mailgun accounts.",
+    "specific_problem": "In multi-tenant SaaS apps, a single misconfigured or abusive customer workspace sending to stale or scraped addresses triggers sudden entire-account suspensions on Postmark, Resend, or AWS SES (AccountSendingPausedException at 10% bounce / 0.5% complaint), instantly halting password resets, OTPs, and billing receipts for every legitimate customer. Meanwhile, AWS SES blocks production sandbox exits unless teams build bespoke SNS/Lambda/DynamoDB bounce pipelines, and neither single-vendor ESPs nor orchestration tools (Courier, Knock, Novu) ship turnkey per-tenant bounce circuit-breaking with cross-ESP failover on BYO keys.",
+    "title": "TenantMail Firewall: Multi-Tenant Transactional Email Circuit-Breaker & BYO-ESP Failover Proxy"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Refuses to act as a Merchant of Record, process payments, hold funds, or store customer credit cards; buyers plug in their own Stripe Managed Payments, Stripe, Paddle, Polar, Creem, Dodo, or PayPal accounts, disqualifying sellers who want one vendor to absorb global VAT/chargebacks without connecting a processor.",
+      "Built strictly for installable software (desktop apps, IDE/Figma/WordPress/Obsidian plugins, CLIs, and self-hosted packages) rather than ebooks, courses, coaching, or creator storefronts, deliberately skipping course players, newsletters, and social link-in-bio features (Payhip, Gumroad, Stan Store).",
+      "Charges flat monthly tiers with 0% revenue share rather than transaction percentages, disqualifying zero-revenue hobbyists who refuse a monthly subscription before their first $1,000 in sales (capped free sandbox only).",
+      "Mandates cryptographic license validation and authenticated release feeds over a developer-owned custom domain (portal.yourdomain.com) rather than hosting a consumer discovery marketplace, deliberately trading away Gumroad-style marketplace traffic for permanent payment-rail independence."
+    ],
+    "id": "IDEA-2",
+    "indie_feasibility": "High for a 1-2 person full-stack developer team [UNVETTED: assumes familiarity with Stripe/Paddle/Polar/Creem webhooks, Ed25519 cryptography, R2/S3 signed artifact distribution, and Sparkle/Tauri/Electron/WordPress update manifest formats]. Zero money-transmitter, PCI card-vault, or global sales-tax liability because payment rails stay strictly on the merchant's chosen MoR(s). Self-serve onboarding with a 1-click Lemon Squeezy key/customer importer before March 31, 2027, low support overhead (end-buyers self-manage machine deactivations and downloads via the branded portal), and durable stickiness once shipped app binaries validate against the developer's custom-domain endpoints.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Locking license keys, downloads, and customer portals inside a single 3.8%-6.1% revenue-share MoR (Freemius, Paddle, Creem, Polar) and risking another 4-8 week forced rewrite if it shuts down or changes terms, or stitching together 4 separate vendors (Stripe Managed Payments + Keygen/Keymint/LicenseSeat + custom S3/GitHub Releases + Dub/Rewardful) plus a custom-built customer portal.",
+      "obviated_below": "Writing custom Stripe webhook glue, building and securing a license-key and machine-activation database, maintaining authenticated Sparkle/Tauri/Electron/WordPress release update servers, answering 'lost key / reset my old MacBook' support emails, and rebuilding affiliate tracking every time a payment provider changes.",
+      "promise_one_up": "Migrate off Lemon Squeezy onto Stripe Managed Payments\u2014or add regional MoRs like Creem, Paddle, or PayPal\u2014without breaking shipped app license keys, auto-update feeds, customer portal URLs, or affiliate links ever again.",
+      "your_level": "Run a payment-agnostic software entitlement, Ed25519 license-key, signed binary/auto-update release feed, affiliate attribution, and branded end-customer portal layer on your own domain across one or multiple MoRs."
+    },
+    "one_liner": "Payment-agnostic fulfillment control plane for independent desktop, plugin, and CLI software vendors\u2014unifying multi-MoR webhooks (Stripe Managed Payments, Paddle, Polar, Creem, Dodo, PayPal) into one custom-domain customer hub with Ed25519 license keys, authenticated auto-update release feeds, and 0%-cut affiliate tracking.",
+    "price": "$39/mo ($390/yr) Indie (up to 2,500 active licensed customers, unlimited products, 0% revenue share) and $89/mo ($890/yr) Studio (up to 15,000 active licensed customers, custom-domain portal, signed release/auto-update CDN feeds, built-in affiliates, 0% revenue share)",
+    "pricing_strategy": "More for Less",
+    "signal_ids": [
+      "SIG-1"
+    ],
+    "specific_buyer": "Independent commercial software developers and 1-5 person product studios selling paid desktop apps (macOS/Windows/Linux via Swift, Electron, or Tauri), IDE/Figma/WordPress/Obsidian plugins, or CLI/self-hosted software on Stripe Managed Payments, Stripe, Paddle, Polar, Creem, or Dodo\u2014with an immediate beachhead migrating off Lemon Squeezy ahead of its March 31, 2027 shutdown.",
+    "specific_problem": "Lemon Squeezy's permanent March 31, 2027 shutdown is forcing tens of thousands of software vendors onto Stripe Managed Payments, which explicitly omits hosted storefronts, software license keys, signed binary/file delivery, affiliate tracking, and PayPal (and excludes merchants outside ~37 countries). Stitching together standalone key APIs (Keymint $12-$99/mo, LicenseSeat $9-$79/mo, Keygen $49-$99/mo), separate affiliate trackers (Dub/Rewardful), and custom release/update servers leaves end-buyers without a unified portal to manage activations and downloads\u2014while moving to another single MoR (Creem, Polar, Paddle, Freemius) repeats the exact 4-8 week vendor lock-in trap.",
+    "title": "KeystoneDock: MoR-Agnostic License, Signed Release & Branded Customer Hub for Software Vendors"
+  },
+  {
+    "deliberate_trade_offs": [
+      "Never stores client tax documents, W-2s, SSNs, or bank statements at rest on vendor servers; files stream directly over TLS into the firm's existing Google Workspace Drive or Microsoft 365 SharePoint/OneDrive folders and purge from ephemeral transit buffers within 60 seconds, disqualifying practices that want a vendor-hosted document management archive.",
+      "Refuses to build full practice management, tax e-filing, time tracking, or client billing/ACH rails (leaving those to TaxDome, Canopy, QBO, Xero, or Drake/UltraTax) so firms adopt it on their next prospect or tax return with zero software migration.",
+      "Uses passwordless email-OTP magic links and automated email reminders exclusively\u2014deliberately excluding SMS reminders on the core product to avoid U.S. A2P 10DLC carrier registration gates and TCPA compliance delays (DP15), which disqualifies firms requiring text-message client nudging.",
+      "Charges a flat per-firm subscription with unlimited simultaneous seasonal checklists and unlimited prospect triage links rather than per-return fees ($20-$40/return) or concurrent active-request caps (20/50/100 open requests), deliberately refusing usage-tax upsells during March tax-season surges."
+    ],
+    "id": "IDEA-3",
+    "indie_feasibility": "High for a 1-2 person full-stack founder [UNVETTED: assumes OAuth/API competence with Google Drive and Microsoft Graph/SharePoint, secure ephemeral streaming/auto-PDF image straightening, and discipline to publish a clean FTC Safeguards 16 CFR 314.4(f) WISP vendor due-diligence packet and signed DPA]. Because zero client files persist at rest on vendor infrastructure, storage costs stay negligible and multi-tenant PII data-lake breach exposure is eliminated\u2014avoiding heavy SOC 2 enterprise barriers while matching how small practices self-serve Content Snare and FileRequestPro. Self-serve annual/monthly credit-card checkout with strong word-of-mouth distribution in CPA/EA/bookkeeping communities right before peak tax season.",
+    "needs_stack_sketch": {
+      "alternatives_above": "Paying TaxDome's $1,500+/yr minimum plus $15 per extra active account (including unclosed prospect quotes), hitting Content Snare's $119-$215+/mo tax-season concurrency ceilings while adding another PII sub-processor, paying StanfordTax/Soraban $20-$40 per return ($3,000-$8,000/yr), or enduring non-compliant email attachments and portal password-reset tickets.",
+      "obviated_below": "Resetting forgotten client portal passwords during tax season, manually nagging clients over email for blurry or missing 1099s/bank statements, manually renaming and dragging email attachments into Google Drive/SharePoint folders, and paying TaxDome $15 per tire-kicker prospect who only wants a quote.",
+      "promise_one_up": "Collect complete, cleanly named client tax and monthly close documents straight into your existing Google Drive or SharePoint folders\u2014with zero client passwords, zero vendor PII storage, and zero per-return or seasonal active-request surcharges.",
+      "your_level": "Send passwordless email-OTP PBC checklists and pre-engagement prospect intake links that auto-convert phone photos to standardized PDFs, stream them directly into the firm's own Google Drive or OneDrive/SharePoint, and loop per-item reject/re-request reminders automatically."
+    },
+    "one_liner": "Zero-persistence, passwordless email-OTP PBC checklist and pre-engagement intake collector for solo and boutique accounting firms\u2014streaming client uploads straight into the firm's own Google Drive or SharePoint with per-item reject loops, auto-file naming, and unlimited tax-season concurrency.",
+    "price": "$59/mo ($590/yr) Solo/Boutique Firm (up to 5 staff, unlimited simultaneous PBC requests & prospect triage links) and $99/mo ($990/yr) Practice (up to 15 staff, custom domain, prior-year checklist cloning, FTC Safeguards WISP vendor due-diligence pack)",
+    "pricing_strategy": "Less for Less",
+    "signal_ids": [
+      "SIG-9",
+      "SIG-10"
+    ],
+    "specific_buyer": "Solo CPAs, Enrolled Agents (EAs), and 2-10 person independent tax preparation and bookkeeping practices in the US, Canada, UK, and Australia handling 100-600 annual tax returns or monthly bookkeeping closes and storing client workpapers in Google Workspace or Microsoft 365 SharePoint/OneDrive (especially practices squeezed by TaxDome's Nov 2026 $1,500/yr + $15/active-account floor).",
+    "specific_problem": "Tax and bookkeeping clients refuse to use password-and-MFA portals (TaxDome, SmartVault, Canopy), defaulting to unencrypted email attachments or blurry texts of W-2s, SSNs, and bank statements in violation of the FTC Safeguards Rule and IRS Pub 4557. Yet existing magic-link collectors penalize tax-season volume or split workflows: Content Snare caps concurrent active requests at 20-100 ($35-$215+/mo) and stores client PII on its own servers, FileRequestPro ($39-$149/mo) caps monthly workflows and lacks itemized PBC accept/reject loops, StanfordTax/Soraban charge $20-$40 per return ($3,000-$8,000/yr), and TaxDome's Nov 2026 pricing charges $15 per extra active account even for prospective leads uploading prior-year returns for a quote.",
+    "title": "PassThruPBC: Zero-Persistence BYO-Drive Magic-Link PBC & Prospect Intake Shield for Small Accounting Firms"
+  }
+]

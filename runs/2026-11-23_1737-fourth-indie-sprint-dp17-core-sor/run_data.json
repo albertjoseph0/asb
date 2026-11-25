@@ -1,0 +1,480 @@
+{
+  "run_id": "2026-11-23_1737-fourth-indie-sprint-dp17-core-sor",
+  "run_type": "discovery",
+  "ambition": "indie",
+  "lenses": [
+    {
+      "domain": "Core Booking, Client-Ops & Payment-Free Practice Systems for Solo & 1-5 Person Local Service Operators (salons/barbers/esthetics, pet groomers, mobile mechanics/detailers, cleaners, tutors/music schools, photographers) revolting against Mindbody/Fresha/Vagaro/HoneyBook/Dubsado/Jobber commission & price hikes",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Core Booking, Client-Ops & Payment-Free Practice Systems for Solo & 1-5 Person Local Service Operators (salons/barbers/esthetics, pet groomers, mobile mechanics/detailers, cleaners, tutors/music schools, photographers) revolting against Mindbody/Fresha/Vagaro/HoneyBook/Dubsado/Jobber commission & price hikes",
+      "why_indie_friendly": "User-supplied domain lens"
+    },
+    {
+      "domain": "Core Creator, Paid-Community, Course, Digital-Product & Membership Monetization Systems (flat-fee, zero-commission, audience-owned alternatives to Substack/Patreon/Kajabi/Skool/Circle/Gumroad/Kit pricing & rev-share revolts)",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Core Creator, Paid-Community, Course, Digital-Product & Membership Monetization Systems (flat-fee, zero-commission, audience-owned alternatives to Substack/Patreon/Kajabi/Skool/Circle/Gumroad/Kit pricing & rev-share revolts)",
+      "why_indie_friendly": "User-supplied domain lens"
+    },
+    {
+      "domain": "Core Lightweight Ops, Client Portals, Scheduling, Proposals & Property/Event Management Systems for 1-10 Person Small Operators (independent short-term/long-term landlords, boutique event/catering/venue operators, micro creative/video/web studios) revolting against AppFolio/Buildium/HoneyBook/Monday/ClickUp enterprise seat bloat",
+      "search_hypothesis": "Mine real complaints, ugly workarounds, incumbent pricing, and live inciting events in: Core Lightweight Ops, Client Portals, Scheduling, Proposals & Property/Event Management Systems for 1-10 Person Small Operators (independent short-term/long-term landlords, boutique event/catering/venue operators, micro creative/video/web studios) revolting against AppFolio/Buildium/HoneyBook/Monday/ClickUp enterprise seat bloat",
+      "why_indie_friendly": "User-supplied domain lens"
+    }
+  ],
+  "signals_count": 14,
+  "candidates_count": 4,
+  "worker_errors": [],
+  "survivors": [],
+  "killed": [
+    {
+      "id": "IDEA-1",
+      "title": "PatronRail \u2014 Web-Only, 0%-Commission Patronage, Private Podcast RSS & Discord Sync Ledger",
+      "slug": "idea-1-patronrail-web-only-0-commission",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Counting strictly qualified behavioral TAM per DP14 (not raw podcast/YouTube headcount): Graphtreon tracks ~349,000 total Patreon creators with >=1 paying member across ALL categories (including NSFW art, 3D mods, games, comics, writing, music, podcasts). Pareto analyses of Graphtreon datasets show ~9% (~31,400 across ALL categories) exceed 100 patrons, ~2%\u20133% (~7,000\u201310,500) exceed 300 patrons, and 0.8% (~2,800) exceed 1,000 patrons \u2014 placing ALL Patreon creators with 200+ patrons across every vertical at roughly ~14,000\u201317,500. Filtering specifically to podcasts (~18,000 total active Patreon podcast creators on Graphtreon; ~1,500\u20133,000 at 200+ patrons), YouTube video essayists, and Discord-centric creators yields ~6,000\u201310,000 qualified Patreon accounts. Adding non-Patreon podcasters and paid-Discord operators at 200+ monthly paying members across Supercast (thousands of shows total, heavily overlapping), Memberful, Fourthwall, Whop, and Discord Server Subscriptions brings the global qualified universe to roughly ~15,000\u201330,000 accounts. Reaching 100,000 is impossible (it would exceed 5x the entire global 200+ Patreon creator base across every vertical), while 1,000 is clearly too low given Graphtreon's 18k podcast creators plus YouTube/Discord hosts. Nearest legal order of magnitude is 10,000.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Creators with 200+ paying members see monthly platform fee deductions directly on payout statements, received extensive Patreon communications ahead of the Nov 1, 2026 legacy-billing/iOS IAP cutoff, and regularly field fan DMs from broken Patreon-Discord role syncs \u2014 making 0.1 clearly too low. However, 1.0 is overstated because many established creators are grandfathered on Patreon's legacy 5%\u20138% tiers (pre-Aug 4, 2025), bypass Apple's 30% fee via Patreon's U.S. mobile-web checkout or +43% international iOS auto-pricing, and consciously accept Patreon's fee as the cost of Merchant of Record tax compliance and audience trust rather than actively hunting for a replacement. Lands at 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Declared pricing of $79/mo flat ($948/yr up to 5,000 paying members; $149/mo = $1,788/yr above 5,000) maps directly to the $1,000/yr legal bucket (log midpoint between $100 and $1,000 is $316/yr). Live competitor pricing pages prove creators at 200\u20135,000 paying members already pay within or above this exact band: Transistor.fm ($49\u2013$99/mo = $588\u2013$1,188/yr for 500\u20133,000 private subs), Captivate.fm ($49\u2013$99/mo = $588\u2013$1,188/yr), Castos ($49\u2013$99/mo), Hello Audio Powerhouse ($97/mo = $1,164/yr), Subscord ($39\u2013$65/mo = $468\u2013$780/yr), Supercast ($0.59/sub/mo = $1,416\u2013$3,540/yr at 200\u2013500 subs), Memberful ($49/mo + 4.9% = $1,764\u2013$3,528/yr at $2k\u2013$5k/mo GMV), and Patreon (8%\u201310% = $960\u2013$6,000+/yr at $1k\u2013$5k/mo GMV). Cannot justify dropping to $100/yr (~$8/mo) for 200+ member creators; solidly 1000.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Despite no annual enterprise contract, established creators with 200+ paying members face an economic switching wall far harsher than an annual renewal cycle, disqualifying 1.0. First, Patreon does NOT transfer active subscriptions or payment tokens: every patron must manually cancel and re-enter a card on a new site, causing documented 20%\u201350% migration churn (even best-case 30\u201360 day parallel-run playbooks budget 15%\u201320% loss, and Apple IAP patrons often lack exportable emails). For a creator at $5,000/mo ($60k/yr), a 20%\u201330% churn hit destroys $12,000\u2013$18,000/yr in Year-1 revenue \u2014 2x to 3x MORE than Patreon's entire 8%\u201310% fee ($4,800\u2013$6,000/yr). Second, migrating from Patreon (Merchant of Record) to BYO Stripe shifts global EU/UK VAT & US sales-tax registration, filing, and remittance plus chargeback/account-freeze risk onto the creator (Stripe Tax Basic at 0.5% explicitly does NOT file or remit; automated filing requires annual Stripe Tax Complete contracts or third-party filers). Third, Patreon neutralized the Nov 1, 2026 iOS shock for most U.S. and incumbent creators: U.S. iOS users bypass Apple's 30% fee via Patreon's mobile-web flow, existing pledges are exempt, international iOS offers automatic +43% price passthrough, and pre-Aug 4, 2025 creators remain grandfathered at 5%\u20138%. Only a small minority (e.g., creators launching new shows, fleeing platform bans, or migrating off BYO-Stripe Memberful/Supercast where tokens are portable) are actively liquid in any given period \u2014 ruling out 0.01 and pinning liquid at 0.1.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Independent podcasters, YouTubers, and Discord admins are prosumer/SMB buyers who routinely adopt bootstrapped 1\u20132 person indie tools without enterprise procurement or SOC 2 (proven by Transistor.fm, Castos, Subscord, Upgrade.chat, and early Memberful). Using Stripe Connect Standard (creator owns their Stripe account directly; PatronRail never holds funds) mitigates existential payout-custody fear, ruling out 0.1. However, 1.0 fails because (a) mission-critical livelihood billing and fan-facing checkout conversion suffer a real trust discount on an unknown indie brand versus Patreon/Fourthwall/Substack, and (b) [UNVETTED] founder context lacks established podcast/creator community reputation or distribution authority. Lands at 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Direct DP8 floor-and-ceiling audit falsifies the claimed 'uncopyable 0%-fee gap.' Flat-fee 0%-commission competitors ALREADY exist on both halves of the bundle at or below $79/mo: (1) Private podcast RSS at 0% commission: Transistor.fm ($49/mo for 500 private subs; $99/mo for 3,000), Castos ($19/$49/$99/mo, 0% listener fee, direct Stripe), and Hello Audio Powerhouse ($97/mo, 0% application fee, unlimited listeners). (2) Discord role sync at 0% commission on direct Stripe: Whop ($0/mo, 0% platform commission, 2.7%+$0.30 domestic card processing \u2014 literally cheaper than PatronRail's $79/mo + Stripe's 2.9%+$0.30 at EVERY GMV level) and Subscord ($39\u2013$65/mo flat, 0% fee, BYO Stripe + crypto). (3) All-in-one bundled competitors: Fourthwall ($0/mo + 5% membership fee, native private podcast RSS + native Discord sync + merch/storefront \u2014 cheaper than $79/mo below $1,580/mo GMV), Ghost(Pro) (0% commission) + Transistor native integration, Memberful ($49/mo + 4.9%, BYO Stripe, private podcast + Discord), Supercast ($0.59/sub/mo, best-in-class 2-click Apple/Spotify private podcast onboarding), and Patreon itself (grandfathered 5%\u20138% for pre-Aug 2025 creators, U.S. mobile-web IAP bypass, MoR global VAT/sales-tax remittance, chargeback protection, and brand trust). Furthermore, PatronRail's headline 'keep 97%' claim fails unit math on typical $5\u2013$10 patron pledges: Stripe's 2.9%+$0.30 alone takes 5.9%\u20138.9%, before Stripe Billing (+0.7%), international card/FX (+1.5%\u20132.5%), Stripe Tax Basic (+0.5%, calculation only), and PatronRail's $79/mo (3.3%\u20137.9% at $1,000\u2013$2,400/mo GMV). Combining Transistor ($49) + Subscord ($39) or Whop ($0) matches PatronRail's price with mature, category-best tools. Cannot justify 0.5; solidly 0.1.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Once adopted, a patronage billing ledger tied to private podcast RSS URLs and Discord roles is an evergreen, monthly operational system of record with natural multi-year retention, ruling out 0.1. However, 1.0 is ruled out by three structural headwinds: (1) high natural creator churn/podfade in independent podcasting and YouTube channels over 1\u20133 year horizons; (2) the Nov 1, 2026 Apple IAP catalyst is partially transient and already dampened by Patreon's U.S. mobile-web checkout bypass and +43% international iOS auto-pricing; and (3) continuous competitive convergence as Whop (0% platform commission + Discord + digital content), Fourthwall (private RSS + Discord), and flat-fee podcast hosts (Transistor/Castos) absorb adjacent membership primitives. Lands at 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 12500.0,
+        "score": 0.02,
+        "evidence_believability_index": 0.743,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Narrows 10x from Scenario A's 10,000 to 1,000 after restricting strictly to high-volume independent podcast networks, podcast-newsletter hybrids, and media brands with 1,000\u201325,000+ active paid subscribers ($5,000\u2013$100,000+/mo GMV) already operating on BYO-Stripe Memberful, Supercast, or Supporting Cast. Industry data confirms Supercast and Memberful each power total show counts in the thousands (not tens of thousands), and Graphtreon's Pareto distribution shows only ~0.8% of paid creators cross 1,000+ paying members (~2,800 across all of Patreon across all verticals). Even summing all 1,000+ paid-subscriber audio/media shows across Supercast, Memberful, and Supporting Cast globally yields ~1,000\u20133,000 qualified organizations \u2014 squarely the 1,000 legal bucket (cannot justify 10,000).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Unchanged from Scenario A at 0.5 (not inflated). While 1,000\u201325,000-subscriber podcast operators see $600\u2013$6,000+/mo in Supercast or Memberful fees directly on their monthly P&L \u2014 and low-ARPU ($3\u2013$5/mo) Supercast shows actively complain on r/podcasting about losing 12%\u201320% before Stripe fees \u2014 high-ARPU ($10+/mo) networks often consider Supercast's 2-tap Apple/Spotify onboarding worth the fee or negotiate custom enterprise discounts rather than viewing fee reduction as an urgent migration priority. Cannot justify 1.0; remains 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 10000,
+            "justification": "Genuinely concentrates 10x from Scenario A's 1,000 to 10,000 via repricing to $399/mo flat ($4,788/yr up to 15,000 active paid subscribers; $599/mo = $7,188/yr up to 30,000; 0% commission, BYO Stripe). $4,788/yr clears the $3,162/yr logarithmic midpoint between $1,000 and $10,000 and is directly validated by live high-volume private-podcast pricing pages: Transistor.fm Enterprise 2\u20133 ($299\u2013$399/mo = $2,990\u2013$3,990/yr for 10k\u201320k private subs) and Castos Premium/Enterprise (starting at $499/mo = $4,990/yr), while still delivering $7,000\u2013$65,000+/yr in net savings against Supercast ($0.59/sub = $14,160\u2013$70,800/yr at 2k\u201310k subs) and Memberful ($49/mo + 4.9% = $12,348\u2013$59,388/yr at $20k\u2013$100k/mo GMV). Solidly 10,000.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged from Scenario A at 0.1 despite removing two major Scenario A blockers. Targeting existing BYO-Stripe Memberful and Supercast accounts genuinely eliminates (1) Patreon's 20%\u201350% credit-card re-entry churn (customers and payment tokens already reside in the creator's own Stripe account, so billing continues uninterrupted via Stripe API/Billing Migration Toolkit) and (2) Patreon's Merchant of Record tax cliff (these buyers already manage tax on their own Stripe account). HOWEVER, live migration guides and r/podcasting threads confirm a third persistent switching wall: private per-subscriber RSS feed URLs live on Supercast/Memberful domains and break upon cancellation unless the creator runs a 30\u201360 day parallel transition forcing 1,000\u201315,000 non-technical Apple Podcasts and Spotify listeners to manually install new private feed links \u2014 producing heavy support ticket waves and silent listener churn. Under DP14, real-world onboarding friction prevents assigning Liquid = 1.0; switching remains episodic (major fee-shock reviews, rebrands, or platform outages), holding Liquid at 0.1.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Unchanged from Scenario A at 0.5 (not inflated). Independent podcast networks and mid-size creator media businesses ($5k\u2013$100k/mo) do purchase infrastructure from small bootstrapped teams (proven by Transistor.fm and Castos Enterprise), and keeping funds directly inside the buyer's existing Stripe Standard account eliminates payout-custody risk. However, moving upmarket to 1,000\u201325,000-subscriber shows raises uptime, migration-SLA, and support-responsiveness stakes for an [UNVETTED] 1\u20132 person indie startup with no prior creator-economy brand authority, preventing 1.0. Lands at 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Genuinely improves from Scenario A's 0.1 to 0.5 by escaping the sub-$1,580/mo price floor where Whop ($0/mo, 0% fee), Subscord ($39\u2013$65/mo), and Fourthwall (5%) undercut PatronRail. At 2,000\u201315,000 paid podcast subscribers, Supercast ($0.59/sub) costs $14,160\u2013$106,200/yr, Memberful ($49/mo + 4.9%) costs $12,348\u2013$88,000+/yr, Fourthwall (5%) costs $12,000\u2013$90,000/yr, and Captivate's native membership takes 12% \u2014 making a flat $399/mo ($4,788/yr) turnkey off-ramp a 50%\u201395% direct cost reduction. Unlike generic podcast hosts (Transistor Enterprise at $199\u2013$399/mo or Castos at $499/mo, which require stitching external membership/WordPress/Discord tools), PatronRail differentiates via drop-in Memberful/Supercast Stripe-Customer/Subscription takeover + 1-click listener RSS re-onboarding portal + native Discord role sync. However, 1.0 is firmly ruled out because Supercast negotiates custom enterprise volume discounts for 5,000+ sub networks, Supercast retains superior 2-tap Apple/Spotify onboarding UX, and WordPress + Paid Memberships Pro/MemberPress + Transistor/Castos already allow 0%-commission Memberful Stripe-ID migration for teams willing to self-assemble. Lands at 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged from Scenario A at 0.5 (not inflated). Once a high-volume show migrates its Stripe subscription mapping, private RSS feeds, and Discord roles onto PatronRail, recurring operational lock-in is multi-year \u2014 and higher-revenue networks exhibit lower podfade than hobbyist shows. However, 1.0 remains ruled out by incumbent defense (Supercast offering custom enterprise rate-locks/discounts to retain 5,000+ sub accounts), host-platform convergence (Transistor/Castos/Captivate adding deeper Stripe & community integrations), and ongoing creator/show turnover. Lands at 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 62500.0,
+        "score": 0.1,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.1 (EBI=0.7, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: plausible (1000): Narrowing strictly to high-volume BYO-Stripe podcast networks and paid media brands with 1,000\u201325,000+ active paid subscribers on Memberful, Supercast, or Supporting Cast collapses qualified global TAM 10x to ~1,000\u20133,000 accounts (Supercast and Memberful each host thousands of total shows, and Pareto distributions show <1% of paid creators cross 1,000+ paying members). Per DP14, a 1,000-account niche cannot clear the 1.0 viability floor unless Liquid = 1.0.; liquid (0.1): Although targeting existing BYO-Stripe Memberful/Supercast accounts eliminates Patreon's fatal 20%\u201350% credit-card re-entry churn and Merchant of Record VAT cliff (cards and active subscriptions stay inside the creator's own Stripe account), private podcast RSS URLs on proprietary Supercast/Memberful domains do not port seamlessly without 30\u201360 day parallel runs and forcing 1,000\u201315,000 non-technical Apple Podcasts/Spotify listeners to re-subscribe to new RSS links \u2014 triggering heavy support tickets and silent listener churn that keeps switching episodic (Liquid = 0.1, not 1.0).; Score ceiling (0.10 even after narrowing): Even after repricing 5x higher to $399/mo ($4,788/yr -> Lucrative = 10,000) and escaping the Whop/Subscord/Fourthwall sub-$1,580/mo price floor (Eager-Comparative = 0.5), the 10x Plausible contraction paired with stubborn RSS-migration illiquidity (Liquid = 0.1) caps Scenario B at 0.10 \u2014 still 10x below the 1.0 indie viability threshold."
+    },
+    {
+      "id": "IDEA-2",
+      "title": "BanquetBook \u2014 $69/mo Zero-Commission Private-Dining & Boutique-Venue Inquiry-to-BEO System",
+      "slug": "idea-2-banquetbook-69-mo-zero-commissio",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario A",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 100000,
+            "justification": "Qualified behavioral TAM (DP14) lands cleanly at 100,000 (10,000 is ruled out because Tripleseat alone has >20,000 paying venues at $375+/mo and Perfect Venue has 2,000+; 1,000,000 is ruled out because even unfiltered US totals fall short). US baselines (2025): 412,498 independent restaurants (Technomic/NRN \u2014 roughly ~200k full-service, of which an estimated ~15-25% or ~30k-50k have PDRs running 15-100 events/yr), 33,817 employer catering firms (US Census/NAICS 72232, ~20k small/boutique), 9,578 craft breweries (Brewers Association) + ~8,800-11,100 active wineries (WineBusiness Analytics) (~6k-10k with rental spaces), and 62,638 dedicated event venues (xMap, ~25k-40k single-location boutique). Filtering to 15-100 events/yr single-location operators across US + English-speaking markets yields ~90k-220k qualified venues -> 100,000.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Private-dining CRMs and Banquet Event Orders (BEOs) are industry-standard hospitality practice (ruling out 0.1 evangelism): Tripleseat serves 20,000+ venues, Perfect Venue 2,000+, and active r/restaurantowners and r/restaurant threads explicitly hunt for 'Tripleseat alternatives' and BEO tools to protect high-margin buyout revenue. However, 1.0 is ruled out because Reddit operators hosting <5-10 events/month frequently argue dedicated software is unnecessary and stick with Google Docs + Google Calendar, so knowing-but-not-prioritizing caps the segment at 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Stickering at $69/mo ($828/yr) sits cleanly in the $1,000/yr order of magnitude (geometric midpoint vs $100/yr is $316/yr). Demonstrated market allocation in this exact low-to-mid-volume tier spans $588-$1,548/yr across live paid competitors: MyVenueHQ ($490/yr Venue), DocketBEO ($588-$1,548/yr), Planning Pod ($888+/yr), Better Cater ($996/yr annual), and Toast Catering ($1,200/yr), with single buyouts routinely generating $1,200-$5,000+ in F&B spend. Note downward realization risk from $0/mo free tiers (MyVenueHQ, Perfect Venue, HeyBEO) and SMB churn, keeping it at the lower edge of $1k rather than $10k.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Challenged down from 1.0 to 0.1: buyers are NOT always in the market or easy to switch. Incumbent Tripleseat users face 1-year auto-renewing contracts with strict 30-day written notice; ~171k-189k US Toast POS locations (15-20% market share, higher in full-service independents) already have $100/mo native Toast Catering bundled into their register; Peerspace hosts on r/PeerspaceHosts cannot abandon Peerspace for a zero-lead-gen BEO tool without losing inbound traffic; and hospitality research shows acute resistance to retraining high-turnover FOH/BOH staff mid-season, pushing adoption to annual renewal or pre-Q4/spring booking windows (0.1). Not 0.01 because no POS hardware swap is required.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "[UNVETTED founder profile] Single-location restaurants, breweries, caterers, and small venues have no SOC 2, HIPAA, or enterprise procurement gates (ruling out 0.0 and 0.1), and BYO Stripe/Square avoids payment-custody risk. Small self-serve hospitality tools (MyVenueHQ, DocketBEO, Better Cater) do acquire independent venues on month-to-month credit-card billing. However, an unknown 1-2 person indie team carries no hospitality brand, POS ecosystem trust, or peer-referral network, so buyers are at best indifferent (0.5), never mission-eager (1.0), and risk-averse about relying on an unproven vendor for weekend event execution.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Live pricing audits shatter the claimed $199-$375/mo pricing chasm (DP8 violation). BanquetBook ($69/mo, no floor plans, no POS sync, no lead gen) is undercut from below by MyVenueHQ ($0/mo up to 10 events/mo = 120/yr with BEOs, 2D/3D floor plans, and 0% Stripe commission; $49/mo unlimited with e-sign and POS sync), Perfect Venue's $0/mo Free plan (BEOs/CRM/calendar, 4.8%+$0.30 card fee), HeyBEO (100% free BEO builder with live links & PDF export), and BentoBox (~$49/mo + $0.99/order), AND squeezed from above by Planning Pod (~$74/mo), Better Cater ($83/mo annual with food costing), Toast Catering & Events ($100/mo, 0% commission, native POS/KDS across 171k-189k locations), and DocketBEO ($49-$129/mo with kitchen screens & QuickBooks sync, 0% Stripe markup). Moreover, refusing lead-gen means BanquetBook cannot replace Peerspace/Tagvenue, where venues pay 15-20% for demand acquisition rather than BEO formatting. Zero defensible differentiation to win deals alone -> 0.1.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Private dining and catering are recurring year-round operational workflows (ruling out 0.1 one-off), so 0.5 fits. However, 1.0 (strong lock-in) is disproved by market data: standalone <$100/mo SMB restaurant point-solution SaaS suffers 3-6%/mo logo churn (30-50% annual, ChartMogul/Stripe benchmarks) driven by month-to-month seasonal pausing by 15-30 event/yr operators, -2.6% YoY independent full-service restaurant closures (Technomic 2025), high event-manager turnover, and active POS ecosystem consolidation into Toast/Square/Clover (which BanquetBook's Day-1 zero-POS-integration trade-off worsens).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 125000.0,
+        "score": 0.2,
+        "evidence_believability_index": 0.743,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Drops 10x from Scenario A (100,000 -> 10,000) due to vertical narrowing: U.S. baselines show 9,578 operating craft breweries (Brewers Association 2025, -2.9% YoY) and ~8,800-11,150 active wineries (WineBusiness Analytics 2025, -3-4% YoY), plus ~3,000-5,000 UK/Canada/Australia craft taprooms/cideries. Filtering to single-location non-Toast taprooms/tasting rooms actively hosting 20-100 private events/year leaves ~8,000-15,000 qualified venues -> 10,000.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Unchanged from Scenario A: taproom operators hosting 20-100 private events/yr recognize private buyouts and F&B minimums ($1,000-$3,500+/event) as high-margin revenue, and r/TheBrewery threads show active comparison of Tripleseat vs Perfect Venue at 50-75+ events/yr (ruling out 0.1). However, 1.0 is ruled out because many 20-40 event/yr taprooms prioritize beer production, distribution, and daily taproom traffic over dedicated event software and tolerate Google Forms/Calendar.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Unchanged from Scenario A at $1,000/yr order of magnitude: repricing slightly to $79/mo ($948/yr) matches verified taproom software budgets \u2014 VenueSprocket Pro ($79/mo), RestauRent ($99/mo), Arryved core POS ($99.99/mo), Commerce7 Lite ($59/mo), and MyVenueHQ ($49/mo). A contracting craft-brewery sector (-2.9% YoY closures) cannot support $10,000/yr ($833/mo) standalone event software.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged from Scenario A: narrowing to breweries/taprooms does not make buying always-on (1.0). Higher-volume taprooms on Tripleseat remain locked in 1-year auto-renewing contracts; Arryved POS users wait on native space-management modules bundled into their existing taproom system; private taproom demand clusters around summer patio and Q4 holiday peaks; and staff retraining friction limits adoption to annual planning windows (0.1).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Unchanged from Scenario A: [UNVETTED] 1-2 person technical indie founder has no craft-brewing guild relationships, brewery-owner track record, or Arryved/Commerce7 partner status. Single-location taprooms lack enterprise SOC 2 gates (ruling out 0.0/0.1) and BYO Stripe/Square avoids deposit custody, leaving buyers indifferent (0.5) rather than mission-eager (1.0).",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Even after narrowing away from Toast-dominated restaurants to craft breweries/taprooms with beverage-minimum and food-truck/caterer COI workflows, live DP8 research refutes any meaningful differentiation. Purpose-built incumbents already occupy the $0-$99/mo taproom band: VenueSprocket targets small hospitality venues and taprooms at $0 Free / $29 Starter / $79 Pro (F&B minimums, e-sign contracts, Stripe deposits, staff BEOs); RestauRent charges $99/mo for taprooms/pubs AND includes consumer lead-gen; Bizwise automates COI uploads and deposits; MyVenueHQ offers $0 up to 10 events/mo and $49/mo unlimited with 2D/3D floor plans and POS sync; Perfect Venue ($0 Free / $199 Pro) is widely recommended on r/TheBrewery; and Arryved ($99.99/mo POS) and VinesOS are expanding native taproom/winery event modules. Without an exclusive native Arryved/Commerce7 integration or lead-gen engine, Eager (comparative) stays pinned at 0.1.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged from Scenario A: taproom private events are recurring (0.5), but 1.0 strong lock-in is disproved by three structural churn drivers \u2014 month-to-month seasonal pausing during slow winter months for patio-dependent breweries, -2.9% YoY U.S. craft brewery net closures (Brewers Association 2025) and -3-4% winery contraction (WineBusiness 2025), and vendor consolidation into core taproom POS stacks (Arryved, VinesOS, Square).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 12500.0,
+        "score": 0.02,
+        "evidence_believability_index": 0.743,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.2 (EBI=0.743, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: Eager (comparative) = 0.1 (DP8 floor-and-ceiling sandwich: the claimed $199-$375/mo pricing chasm does not exist \u2014 MyVenueHQ offers $0/mo up to 10 events/mo [120/yr, covering BanquetBook's entire target buyer] and $49/mo unlimited with e-sign, 2D/3D floor plans, and POS sync; Perfect Venue offers a $0/mo free tier; HeyBEO is 100% free; DocketBEO is $49-$129/mo with kitchen screens & QuickBooks; Planning Pod is $74/mo; Better Cater is $83/mo with food costing; Toast Catering & Events is $100/mo natively inside 171k-189k Toast POS locations; and BanquetBook cannot replace Peerspace because Peerspace sells consumer lead generation, not BEO templates).; Liquid = 0.1 (Annual/seasonal switching friction: Tripleseat locks venues into 1-year auto-renewing contracts with 30-day notice; Toast/Clover-BentoBox bundle private events inside existing POS stacks; high-turnover FOH/BOH staff retraining and seasonal Q4/spring adoption windows plus low-volume Gmail/Google Docs inertia make switching at best an annual decision, not always-on)."
+    },
+    {
+      "id": "IDEA-3",
+      "title": "MatLedger \u2014 $59/mo Contract-Free Class-Pack & Waitlist Ops for 2-5 Instructor Movement Studios",
+      "slug": "idea-3-matledger-59-mo-contract-free-cl",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario B",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Applying DP14 behavioral filtering: IBISWorld counts 37,317 total US Pilates & Yoga studios across all sizes (0.2%/yr growth), and Mindbody's entire global customer base across 140 countries \u2014 including salons, spas, gyms, and franchises \u2014 is ~65,000 businesses. Across Tier-1 Stripe markets (US ~47k incl. barre/aerial, UK ~2.8k, Canada ~3.5k, Australia ~2k, Western Europe ~15k-25k), excluding solo 1-person nonemployer teachers, multi-location franchises (e.g., Club Pilates 1,500+), large 6+ staff studios, and those already on sub-$100 tools leaves ~15,000-25,000 qualified 2-5 instructor studios paying $120-$600+/mo \u2014 squarely in the 10,000 order of magnitude (below the 31.6k midpoint to 100k).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Class-booking software is universal industry-standard practice, and Reddit studio-owner forums (r/pilates, r/yoga, r/mindbody) show constant unsolicited frustration over Mindbody price hikes, auto-renewals, 20% marketplace fees, and Vagaro add-on creep. Challenging 1.0 from below: many owners still tolerate $150-$250/mo for Mindbody's 2.8M-user consumer discovery network, branded apps, or Reformer spot maps rather than urgently seeking a bare-bones $59/mo web ledger \u2014 landing solidly at 0.5.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Target studios demonstrably allocate $1,200-$3,600+/yr to booking software today (Mindbody $79-$300+/mo, WellnessLiving Business $199/mo = $2,388/yr, OfferingTree Studio $100-$225/mo = $1,200-$2,700/yr, Momence $149-$300+/mo), and direct indie peers collect $528-$1,188/yr (Punchpass $59-$99/mo, Momoyoga $44-$89/mo, Vibefam $89-$109/mo). MatLedger's $59/mo ($708/yr) base price sits well above the $316/yr geometric midpoint between $100 and $1,000, cleanly earning $1,000/yr.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.01,
+            "justification": "Switching a studio's system-of-record is a multi-year event (typical tenure 3-5+ years; vertical studio SaaS annual churn is 5-15%), matching ASB calibration anchors for painful migrations (WP hosting 0.01, creator ESP 0.01). Mindbody and WellnessLiving enforce 12-24 month auto-renewing contracts with 30-day written notice, early buyouts, and data-export fees, while avoiding member churn requires complex processor-to-processor PCI PAN credit-card token transfers plus re-onboarding hundreds of students. US studio count growth is near-flat at 0.2%/yr (IBISWorld), limiting greenfield openings.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Non-technical brick-and-mortar owners are entrusting live 6 AM check-ins, 100% of studio revenue, prepaid class-pack liabilities, and sensitive PCI credit-card token migrations to an [UNVETTED] solo/2-person technical founder with zero studio-community track record, zero reviews, and no native mobile app (which Reddit threads show Millennial/Gen Z regulars expect for retention). Compared against 10+ year indie-friendly incumbents praised for live human support (Punchpass, Momoyoga, OfferingTree), a brand-new unknown vendor faces acute structural trust and survivability red flags (0.1 rather than 0.5).",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Direct DP8 floor collision: at least seven mature, contract-free, 0%-marketplace-fee vertical studio SaaS competitors already serve 2-5 instructor studios at $18-$59/mo with class packs, automated waitlists, and instructor payroll \u2014 Punchpass ($59/mo, unlimited instructors, BYO Stripe, late-cancel deductions, pay calculator), Momoyoga ($34-$44/mo, unlimited teachers, waitlists, mobile app), Zenamu ($42/mo Expert, unlimited teachers, FIFO auto-waitlists, teacher payroll), ScheduleBliss ($39-$49/mo, unlimited staff, tiered/per-head payroll), Fitli ($49/mo, sliding-scale payroll), Bookwhen ($29-$59/mo), and Gymcatch ($18/mo, unlimited staff). MatLedger actually imposes a 5-instructor cap at $59/mo and drops mobile apps, SMS alerts, and Reformer bed maps, offering no buyer-winning differentiation.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Class-pack ledgers, schedules, and recurring billing are a permanent daily operational problem, and vertical studio SaaS enjoys 5-15% annual churn (~3-5+ yr tenure). However, challenging 1.0 from below: MatLedger's deliberate exclusions (5-instructor ceiling, no native member app, no SMS waitlist texts, no website hosting, no Reformer bed maps, BYO Stripe) weaken lock-in and create graduation churn as studios grow or demand member apps, on top of small-studio business mortality \u2014 supporting recurring 0.5 rather than 1.0 lock-in.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 250.0,
+        "score": 0.0004,
+        "evidence_believability_index": 0.743,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 1000,
+            "justification": "Changed (10,000 -> 1,000): narrowing strictly to newly launching (greenfield) independent single-location Reformer Pilates & apparatus studios (4-12 machines, 2-5 instructors) drops qualified TAM ~10x. While Reformer Pilates revenue is booming (8-14% CAGR), net US yoga/Pilates studio count growth is only 0.2%/yr (IBISWorld), and heavy unit expansion is dominated by franchises with mandated corporate tech stacks (Club Pilates alone adds 150-200/yr, plus JetSet and STRONG Pilates). Gross annual independent Reformer/apparatus studio launches across US/UK/CA/AU/Western Europe sit in the ~1,500-3,000/yr range \u2014 solidly 1,000.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 1.0,
+            "justification": "Changed (0.5 -> 1.0): every newly launching Reformer Pilates or apparatus studio must select and configure booking, spot-cap, waiver, and payment software prior to opening day. Reddit r/pilates and r/FitnessStudioOwner threads show 100% of launching owners actively searching, comparing, and warning peers to choose the right booking platform from Day 1 \u2014 virtually impossible to find a launching studio that does not know and care.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Unchanged at 1,000: repricing up from $59/mo to $99/mo flat ($1,188/yr, unlimited staff) lifts ARPU ~68% and aligns with published Reformer studio budgets (Bookify Pilates $100/mo, Vibefam $89-$109/mo, OfferingTree Studio $100-$225/mo, Walla $190+/mo), but stays firmly in the $1,000/yr order of magnitude \u2014 nowhere near the $10,000/yr (~$833/mo) needed under DP14 to sustain a 1,000-buyer niche.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Changed (0.01 -> 0.1): narrowing to newly launching greenfield studios eliminates Mindbody/WellnessLiving 12-24 month contracts and PCI PAN card-token migration lock-in, improving Liquidity 10x. Challenging 1.0 from below: launching a studio is a narrow ~60-90 day moment-in-time buying window between lease signing and grand opening; once a studio launches on any rival platform, it locks in for 3-5+ years, keeping category Liquidity at 0.1 rather than always-on 1.0.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1: targeting Day-0 greenfield launches eliminates PCI PAN card-token migration risk, but a founder sinking $80k-$250k into lease buildout and Pilates reformers has acute opening-day reliability anxiety. Reddit studio-owner threads confirm Millennial/Gen Z Reformer regulars expect a polished native mobile app (Apple Pay, one-tap reformer booking) for retention; an [UNVETTED] solo/2-person technical founder with zero reviews, no mobile app, and no studio track record still faces severe structural trust challenges against Bookify Pilates, Vibefam, OfferingTree, Punchpass, and Walla.",
+            "evidence_class": "[research]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1: live floor audit disproves any sub-$100/mo Reformer spot-booking vacuum. Bookify Pilates ($50/mo solo, $100/mo unlimited staff, no contracts, 0% fees) includes visual reformer room/grid spot selection and favorite-spot memory on every tier; Fit Viz offers a $0 free tier (Stripe fees only) with native reformer spot selection, privates/duets, and automated waitlists; Vibefam ($89/mo annual) includes Reformer Spot Maps, automated teacher payroll, and a mobile app; My Best Studio ($55/mo flat) and Bobclass (<$35/mo with native app) also undercut $99/mo. Adding Reformer spot maps and raising price to $99/mo still yields zero buyer-winning differentiation.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5: class-pack/reformer booking and instructor payouts remain a recurring daily system-of-record (vertical studio SaaS averages 5-15% annual churn), but new-studio Year-1 business mortality plus graduation churn toward branded mobile apps and retention/CRM suites (Walla, Momence, Mariana Tek) prevent 1.0 lock-in.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 500.0,
+        "score": 0.0008,
+        "evidence_believability_index": 0.743,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.0008 (EBI=0.743, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: Phase D 'Face the Truth' Verdict (0.0008 \u2014 Not Viable in Any Realistic Narrowing): Even after targeting the sharpest greenfield wedge to remove incumbent migration lock-in (boosting Self-Aware to 1.0 and Liquid 10x to 0.1), Scenario B still scores 0.0008 (and only 0.008 even if Liquid were generously scored 1.0) \u2014 failing by three orders of magnitude. Under DP14, a 1,000-buyer niche mathematically cannot reach 1.0 without Lucrative >= $10,000/yr, which independent studios will never pay for booking software.; Eager (Comparative) = 0.1 \u2014 DP8 Floor Collision Persists Inside Reformer Spot-Mapping: Even narrowed specifically to Reformer Pilates visual spot-booking under $100/mo, the floor is already occupied by established vertical specialists: Bookify Pilates ($50-$100/mo, unlimited staff, visual reformer grid map + favorite-spot memory, 0% fees, no contracts), Fit Viz (free Stripe-only tier with native reformer spot selection, privates/duets, and waitlists), Vibefam ($89/mo annual with Reformer Spot Maps + automated teacher payroll + mobile app), My Best Studio ($55/mo flat), and Bobclass (<$35/mo with native app).; Plausible = 1,000 & Eager (Identity) = 0.1 \u2014 Tiny Greenfield Annual Flow + High Launch Risk Aversion: Restricting to newly launching independent (non-franchise) Reformer/apparatus studios shrinks annual Plausible 10x to ~1,500-3,000/yr across Tier-1 Western markets (major growth like Club Pilates 150-200/yr, JetSet, and STRONG Pilates is franchised with mandated corporate software). Meanwhile, founders investing $80k-$250k in studio buildout and reformers will not gamble opening day on an [UNVETTED] solo developer lacking peer reviews and a native mobile app."
+    },
+    {
+      "id": "IDEA-4",
+      "title": "VanVoice \u2014 Voice-First, Route-Clustered Field Ops for 1-5 Person Mobile Driveway Crews",
+      "slug": "idea-4-vanvoice-voice-first-route-clust",
+      "stage": "Phase 3 \u2014 Problem Score",
+      "best_scenario_label": "Scenario A",
+      "scenario_a": {
+        "criteria": {
+          "plausible": {
+            "value": 100000,
+            "justification": "Scored 100,000 across US/CA/UK/AU active 1-5 person mobile detailing, mobile pet grooming, and mobile mechanic crews (including solos on Google Calendar + Apple Notes + Zelle per Scenario A). US benchmarks show ~55k-60k car wash/detailing businesses (~10k-19.8k employer establishments under NAICS 811192 plus tens of thousands of solo mobile detailers), 13,295 indexed US mobile mechanic operations (MechanicRank), and ~25.5k employer / ~200k total NAICS 812910 pet care businesses with a growing mobile van segment (1,450+ tracked corporate entities plus ~10k-25k independent vans). Filtering out part-timers and fixed shops yields ~45k-75k qualified Anglosphere operators\u2014geometrically above the 31.6k midpoint from 10k, though restricting strictly to 2+ van multi-crew operators or excluding mechanics (due to missing PartsTech/VIN/labor guides) would push toward 10,000.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Scored 0.5 (industry standard practice). Triangulated Reddit discussions (r/AutoDetailing, r/doggrooming, r/Contractor) and dense vertical SaaS adoption show mobile detailers, groomers, and mechanics actively recognize scheduling, route-density, no-show reminders, and CRM subscription pricing as core operational problems and routinely shop alternatives. Scored below 1.0 because a large share of solo driveway operators happily stick with free Square/Google Calendar and prioritize lead generation over evening note-typing friction.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Scored $1,000/yr ($59/mo flat = $708/yr net revenue with 0% payment pass-through, geometrically above the $316/yr log midpoint between $100 and $1,000). Live competitor pricing pages prove this exact buyer segment allocates $480-$2,400/yr to booking/CRM/routing software (ARI $480-$720/yr, Markate $540-$840/yr, ServiceM8 $348-$948/yr, Urable $840-$1,440/yr, OrbisX $1,200/yr, MoeGo $588-$1,908+/yr per van, Jobber $588-$3,588/yr).",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Scored 0.1 (annual/milestone-gated decision, down from 1.0). Field-service CRM switching research and Reddit migration threads show low year-over-year switching frequency due to client/vehicle/pet data migration, live booking links on websites and Google Business Profiles, crew retraining, A2P 10DLC re-registration disruptions, and annual prepaid billing on Jobber/Housecall Pro. Buying concentrates at annual renewals, seasonal spring ramp-ups, or 2nd-user/2nd-van expansion milestones rather than always-on impulse switching, though month-to-month plans and steady new-operator formation keep it above 0.01.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Scored 0.5 (not 0.1) because 1-5 person mobile trade operators routinely buy self-serve $30-$100/mo software on credit cards from small bootstrapped teams (e.g., PetRoute, DetailBookie, StrataCRM, ARI, OrbisX) with zero SOC 2, legal indemnity, or enterprise procurement gates. However, 1.0 is ruled out and [UNVETTED] founder-fit risk is material: winning indie tools in these trades (QuoteIQ, OrbisX, Urable) relied on insider trade credibility and YouTube/Facebook community trust that an unvetted outside technical founder lacks, alongside uptime/data-loss anxiety for a daily dispatch tool.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.1,
+            "justification": "Scored 0.1 (down from optimistic 0.5) after auditing both the <$60/mo floor and $70-$100/mo vertical ceiling (DP8). The premise of a universal $100-$239/mo 2-user cliff cherry-picks Jobber ($139+/mo), Housecall Pro ($149+/mo), and 2-van MoeGo Growth ($198/mo) while ignoring direct low-cost and unlimited-user rivals in every target trade: PetRoute ($29/mo route-optimized mobile grooming), Groomify ($39/mo/van AI mobile grooming with offline app + routing), Teddy ($49/mo flat + unlimited SMS), ARI ($39.99-$59.99/mo multi-user mobile mechanic with VIN/OBD/PartsTech/labor guides), DetailerOS ($50/mo flat whole team), StrataCRM ($39+/mo), ServiceM8 ($29-$79/mo unlimited users), and Markate ($40-$50/mo + $5/tech), plus Urable ($70-$110/mo unlimited users, built-in SMS\u2014not a $35 add-on) and OrbisX ($100/mo flat unlimited users). Combining detailers, groomers, and mechanics into one thin voice ledger sacrifices vertical must-haves (PartsTech/labor guides, rabies vaccine/temperament waivers, CARFAX), native OS dictation + incumbent AI copilots erode the voice-memo wedge, BYO Stripe still incurs ~2.9% card fees, and personal-phone sms: links break multi-crew customer-list ownership and automated no-show reminders.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Scored 0.5 (recurring revenue from a recurring daily scheduling/routing problem, down from 1.0). SMB SaaS monthly churn averages 3%-5%/mo and vertical CRM/FSM averages 2.4%-3.5%/mo (~25%-45% annual logo churn) due to high micro-operator mortality, winter seasonality in detailing, involuntary card failures, and growing crews graduating to full vertical suites (OrbisX, MoeGo, Shopmonkey). Moreover, VanVoice deliberately strips out the exact anchors that create 1.0 lock-in (no captive business SMS number, no QuickBooks/accounting sync, no card-on-file vault, no supplier/parts integrations), making departure trivial.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 125000.0,
+        "score": 0.2,
+        "evidence_believability_index": 0.743,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "scenario_b": {
+        "criteria": {
+          "plausible": {
+            "value": 10000,
+            "justification": "Dropped 10x from 100,000 to 10,000 after cutting mobile detailers, mobile mechanics, and hobbyist solo groomers to focus strictly on independent 2-5 van mobile pet grooming fleets (plus 1-van operators actively scaling to van #2) across US/CA/UK/AU. RevenueBase tracks ~1,450+ registered US mobile pet grooming corporate entities (including 1-van LLCs and franchise operators), within ~25.5k employer / ~200k total NAICS 812910 pet care businesses. Filtering out single-van permanent solos and franchise fleets (which use proprietary franchise software) yields roughly ~3,500-8,000 qualified scaling/multi-van operators across the Anglosphere\u2014geometrically 10,000 (and closer to 1,000 if strictly limited to existing 2-5 van fleets).",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "self_aware": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5 from Scenario A. Multi-van mobile groomers actively complain on Reddit (r/doggrooming) and grooming forums about MoeGo's per-van pricing tiers, SMS limits, and van offline dead-zone crashes, making route/fleet CRM optimization industry standard practice. Scored 0.5 rather than 1.0 because at ~$10k-$15k/mo gross revenue per van, $198-$318/mo for MoeGo is ~1%-2% of revenue\u2014annoying, not a universal existential top-3 crisis forcing every fleet to switch.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "lucrative": {
+            "value": 1000,
+            "justification": "Unchanged at $1,000/yr ($99/mo flat fleet price = $1,188/yr net revenue). Live competitor pricing pages prove 2-5 van mobile grooming fleets demonstrably allocate $1,000-$4,000+/yr to fleet software (MoeGo $198-$795/mo for 2-5 vans; Groomify $78-$395/mo for 2-5 vans; Teddy $99-$199/mo; DaySmart Pet $69-$199/mo), while remaining far below the $10,000/yr ($833/mo) tier.",
+            "evidence_class": "[research]",
+            "believability": 1.0
+          },
+          "liquid": {
+            "value": 0.1,
+            "justification": "Unchanged at 0.1 from Scenario A. Narrowing to multi-van mobile pet grooming fleets does NOT improve buying liquidity\u2014it reinforces migration friction (exporting hundreds of pet/temperament/rabies-vaccine cards, moving recurring 4-to-6-week schedules, re-capturing card-on-file no-show deposits, re-verifying A2P 10DLC SMS, and retraining employed groomers). Buying remains concentrated at van-addition milestones or annual software audits rather than always-in-market switching.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "eager_identity": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5 from Scenario A. Independent mobile pet grooming fleet owners buy self-serve $50-$150/mo software on credit cards from small vertical vendors (Teddy, Groomify, PetRoute, GroomBoard) with no SOC 2 or enterprise procurement gate, though an [UNVETTED] non-groomer technical founder still faces community trust skepticism and operational uptime scrutiny from multi-van operators.",
+            "evidence_class": "[fermi]",
+            "believability": 0.4
+          },
+          "eager_comparative": {
+            "value": 0.5,
+            "justification": "Improved from 0.1 to 0.5 (steel-manned) by dropping mobile detailers, mobile mechanics, and broken personal-phone sms: links to attack the ONE sub-vertical where the dominant leader (MoeGo) enforces a steep per-van cliff ($99-$159/van = $198-$795/mo for 2-5 vans) alongside van cellular dead-zone failures. Flat $99/mo for up to 5 vans with offline-first van caching, voice-logged breed/coat/matting notes, zone-day zip booking, and built-in SMS gives 3-5 van fleets a concrete cost-and-workflow wedge. However, 0.5 is fragile (far from 1.0) because Groomify ($39/van) already ships an offline mobile van app + AI routing (beating $99/mo at 2 vans), Teddy already offers $49-$99/mo flat per location with unlimited SMS, and GroomBoard ($19-$39/mo), Groomsoft ($39.90/mo), Menutize ($29-$49/mo), and PetRoute ($29/mo) already cover low-cost mobile grooming routing.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          },
+          "enduring": {
+            "value": 0.5,
+            "justification": "Unchanged at 0.5 from Scenario A. Multi-van fleets have slightly lower business mortality than solo side-hustlers, and built-in vaccine/pet/4-week-rebook records improve stickiness over Scenario A, but vertical SMB CRM/FSM benchmarks still average 2.4%-3.5%/mo churn (~25%-35% annual logo churn) and fleets can switch back to MoeGo or Groomify once revenue scales. Without retention data, 1.0 lock-in is unearned.",
+            "evidence_class": "[research]",
+            "believability": 0.7
+          }
+        },
+        "raw_product": 62500.0,
+        "score": 0.1,
+        "evidence_believability_index": 0.7,
+        "bottleneck_believability": 0.4,
+        "band": "NOT VIABLE (< 0.5 as scored)"
+      },
+      "post_rude_qa": null,
+      "panel": null,
+      "ev_metrics": null,
+      "reason": "Best Problem Score = 0.2 (EBI=0.743, Min=0.4, NOT VIABLE (< 0.5 as scored)). Weak links: Eager (Comparative) = 0.1: DP8 floor-and-ceiling sandwich. Live pricing audits disprove the claimed '$100-$239/mo 2-user cliff' across the market: sub-$60/mo vertical and flat-rate competitors already cover all three trades (PetRoute $29/mo route-optimized mobile grooming; Groomify $39/van AI-native mobile grooming with offline van app; Teddy $49/mo flat with unlimited SMS; ARI $39.99-$59.99/mo multi-user mobile mechanic with VIN/OBD/PartsTech/labor guides; ServiceM8 $29-$79/mo unlimited users; Markate $40-$50/mo + $5/tech; DetailerOS $50/mo flat whole team; StrataCRM $39+/mo), while Urable ($70-$110/mo) and OrbisX ($100/mo) already include unlimited users plus deep vertical tooling. Lumping three distinct trades into one thin horizontal ledger drops trade-critical workflows (PartsTech/labor guides, vaccine/pet waivers, CARFAX), and personal-phone sms: links actively break multi-crew control and automated no-show reminders.; Liquid = 0.1: Operational field-service CRMs have real migration friction (customer/vehicle/pet records, embedded website & Google Business Profile booking widgets, recurring 4-to-6-week maintenance calendars, saved deposit cards, crew retraining, and annual billing terms on Jobber/HCP). Operators switch mainly at annual renewals, seasonal spring ramp-ups, or hiring/van-expansion milestones rather than continuously."
+    }
+  ]
+}

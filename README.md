@@ -15,7 +15,7 @@ A multi-agent entrepreneurial idea discovery and decision system uniting Jason C
 | **Strategy & Pre-Flight Simulation** | `asb-needs-stack`, `asb-carol-*`, `asb-positioning`, `asb-interview-goals/hypotheses/questions` | **1st / 2nd / 3rd-Order Consequences**, EV & **Pre-Committed Kill Triggers**, + **4-Persona Blind Synthetic Pre-Test** (quarantined in `synthetic-interviews/`, capped at Believability **`0.35`**) |
 | **Human Field Validation & Reflection** | Real human interviews (`asb-interview-debrief` → `learning` → `report`) | Step 3–5 (**Pain + Reflection = Progress**): Proximate vs. Root-Cause diagnosis of killed ideas → Candidate Principles promoted to `principles/LEARNED-PRINCIPLES.md` |
 
-*(Full references: [asb-framework-map.md](file:///Users/albertjoseph/projects/asb/.agents/skills/asb-indie-ideation/references/asb-framework-map.md) · [dalio-decision-principles.md](file:///Users/albertjoseph/projects/asb/.agents/skills/asb-indie-ideation/references/dalio-decision-principles.md) · [synthetic-interview-protocol.md](file:///Users/albertjoseph/projects/asb/.agents/skills/asb-indie-ideation/references/synthetic-interview-protocol.md).)*
+*(Full references: [asb-framework-map.md](.agents/skills/asb-indie-ideation/references/asb-framework-map.md) · [dalio-decision-principles.md](.agents/skills/asb-indie-ideation/references/dalio-decision-principles.md) · [synthetic-interview-protocol.md](.agents/skills/asb-indie-ideation/references/synthetic-interview-protocol.md).)*
 
 ---
 
@@ -47,7 +47,7 @@ flowchart TD
 
 ### 1. (Optional, Recommended) Add Founder Context
 - Run `asb-who-me` and `asb-voters` into `founder/WHO-ME.md` and `founder/VOTERS.md`, **or** copy `founder/FOUNDER-PROFILE.template.md` to `founder/FOUNDER-PROFILE.md`.
-- Review [principles/LEARNED-PRINCIPLES.md](file:///Users/albertjoseph/projects/asb/principles/LEARNED-PRINCIPLES.md).
+- Review [principles/LEARNED-PRINCIPLES.md](principles/LEARNED-PRINCIPLES.md).
 
 ### 2. Run Multi-Agent Discovery, Deep Dive, or Standalone Synthetic Interviews
 Ask the assistant in this workspace:
@@ -59,4 +59,7 @@ Ask the assistant in this workspace:
 ```bash
 python3 scripts/validate_scorecard.py --self-test
 python3 scripts/validate_scorecard.py runs/<run-id>/
+python3 scripts/validate_scorecard.py runs/   # every run; lists runs that stopped early
 ```
+
+`--self-test` also loads each workflow's own scoring code (without running any agents) and checks it against the ASB anchors, the anti-inflation clamps, and the validator's math, so the copies can't drift apart.

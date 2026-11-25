@@ -121,7 +121,7 @@ def compute_problem_score(scores: dict) -> dict:
         if ev_class == "[fermi]" and bel > 0.4:
             bel = 0.4
             clamp_note = " [clamped from " + str(raw_bel) + " -> 0.4: fermi cap]"
-        elif bel >= 0.7 and not has_sources and ev_class != "[data]":
+        elif bel >= 0.7 and not has_sources:
             bel = 0.4
             clamp_note = " [clamped from " + str(raw_bel) + " -> 0.4: no source URLs]"
         clean[key] = {
@@ -152,7 +152,35 @@ def compute_problem_score(scores: dict) -> dict:
         "evidence_believability_index": ebi,
         "bottleneck_believability": bottleneck,
         "band": band,
+        "sources": list(scores.get("sources") or []),
     }
+
+
+def reconcile_rude_qa_scorecard(baseline_raw: dict, adjusted_raw: dict) -> tuple:
+    """DP2 (weight evidence by believability): keep a Rude Q&A score change only when it rests on
+    evidence at least as believable as the Phase-3 evidence it overturns.
+
+    Returns (merged_raw_scorecard, list_of_reverted_change_notes). Changes in either direction are
+    treated the same way, so this cannot inflate a score: it only refuses to let a weaker claim
+    overwrite a stronger one. Sources from both scorecards are kept.
+    """
+    base = compute_problem_score(baseline_raw)["criteria"]
+    adj = compute_problem_score(adjusted_raw)["criteria"]
+    merged = dict(adjusted_raw)
+    merged["sources"] = list(dict.fromkeys(list(baseline_raw.get("sources") or []) + list(adjusted_raw.get("sources") or [])))
+    reverted = []
+    for key in LEGAL_SCALES:
+        if adj[key]["value"] != base[key]["value"] and adj[key]["believability"] < base[key]["believability"]:
+            note = (
+                f"{key}: Rude Q&A proposed {adj[key]['value']} (believability {adj[key]['believability']}) "
+                f"but Phase-3 value {base[key]['value']} rests on stronger evidence "
+                f"(believability {base[key]['believability']}); kept Phase-3 value"
+            )
+            restored = dict(baseline_raw[key])
+            restored["justification"] = (str(restored.get("justification", "")).strip() + f" [{note}]").strip()
+            merged[key] = restored
+            reverted.append(note)
+    return merged, reverted
 
 
 def compute_panel_decision(
@@ -929,6 +957,11 @@ def write_rude_qa_md(target_path: Path, pr: dict) -> None:
         "",
         f"> {v['verdict_summary']}",
         "",
+        *(
+            ["## Score Changes Not Applied (Weaker Evidence Than Phase 3, DP2)",
+             *[f"- {n}" for n in rq.get("reverted_changes", [])], ""]
+            if rq.get("reverted_changes") else []
+        ),
         "## Attack Findings (Round 1)",
         "### Opposite Test Failures",
         *([f"- {x}" for x in a1["opposite_test_failures"]] or ["- None flagged."]),
@@ -1236,6 +1269,64 @@ architect_out = await agent(
 
 candidates = architect_out["ideas"]
 (run_dir / "candidates.json").write_text(json.dumps(candidates, indent=2), encoding="utf-8")
+
+
+def write_run_data(status: str, survivors_list: list, killed_list: list, enriched_slugs=(), synth_by_slug=None) -> None:
+    """Write run_data.json. Called as a checkpoint after Phases 3 and 4 (status "partial") and again
+    at the end (status "complete"), so a crash late in the run no longer loses the machine-readable
+    record that scripts/validate_scorecard.py checks."""
+    synth_by_slug = synth_by_slug or {}
+    run_data = {
+        "status": status,
+        "run_id": run_dir.name,
+        "run_type": "discovery",
+        "ambition": ambition,
+        "lenses": lenses,
+        "signals_count": len(all_signals),
+        "candidates_count": len(candidates),
+        "worker_errors": worker_errors,
+        "survivors": [
+            {
+                "id": pr["item"]["idea"]["id"],
+                "title": pr["item"]["idea"]["title"],
+                "slug": pr["item"]["slug"],
+                "verdict": pr["rude_qa"]["verdict_out"]["verdict"],
+                "consequence_recommendation": pr["consequence_ev"]["recommendation"],
+                "ev_metrics": pr["ev_metrics"],
+                "panel": pr["panel"],
+                "best_scenario_label": pr["item"]["best_label"],
+                "scenario_a": pr["item"]["scenario_a_calc"],
+                "scenario_b": pr["item"]["scenario_b_calc"],
+                "post_rude_qa": pr["rude_qa"]["post_calc"],
+                "has_full_dossier": pr["item"]["slug"] in enriched_slugs,
+                "synthetic_pretest": (
+                    synth_by_slug[pr["item"]["slug"]]["meta"]
+                    if pr["item"]["slug"] in synth_by_slug
+                    else None
+                ),
+            }
+            for pr in survivors_list
+        ],
+        "killed": [
+            {
+                "id": k["item"]["idea"]["id"],
+                "title": k["item"]["idea"]["title"],
+                "slug": k["item"]["slug"],
+                "stage": k["stage"],
+                "best_scenario_label": k["item"]["best_label"],
+                "scenario_a": k["item"]["scenario_a_calc"],
+                "scenario_b": k["item"]["scenario_b_calc"],
+                "post_rude_qa": k["panel_result"]["rude_qa"]["post_calc"] if "panel_result" in k else None,
+                "panel": k["panel_result"]["panel"] if "panel_result" in k else None,
+                "ev_metrics": k["panel_result"]["ev_metrics"] if "panel_result" in k else None,
+                "reason": k["reason"],
+            }
+            for k in killed_list
+        ],
+    }
+    (run_dir / "run_data.json").write_text(json.dumps(run_data, indent=2), encoding="utf-8")
+
+
 log(f"Synthesized & checkpointed {len(candidates)} candidate ideas: {[c['title'] for c in candidates]}")
 
 
@@ -1300,7 +1391,7 @@ async def score_candidate_safe(idea: dict) -> dict:
                 "Score Scenario A using live web research:\n\n"
                 f"{idea_json}\n\n"
                 f"Ambition: {ambition}\n"
-                f"Founder context (for Eager-Identity):\n{founder_context[:2500]}\n\n"
+                f"Founder context (for Eager-Identity):\n{founder_context}\n\n"
                 f"Standing Decision Principles:\n{learned_principles}\n\n"
                 "Return the complete Scenario A scorecard via finish."
             ),
@@ -1406,6 +1497,7 @@ for item in scored_results:
         })
 
 log(f"Passing to Triangulation Panel: {len(passing_to_panel)} | Killed at Problem Score: {len(killed_ideas)}")
+write_run_data("partial", [], killed_ideas)  # checkpoint after Phase 3
 
 
 # ---------------------------------------------------------------------------
@@ -1427,7 +1519,7 @@ async def run_rude_qa_court(item: dict, brief: str) -> dict:
             "incumbents, native platform launches, compliance walls, failed indies).\n"
             "Run Opposite Test, fluff audit, >=70% present-tense threats, scars/founder-fit probe, "
             "unfair questions, and challenge the 2 softest Problem Score criteria from below.\n\n"
-            f"Founder context (for scars & Eager-Identity probes):\n{founder_context[:3000]}\n\n"
+            f"Founder context (for scars & Eager-Identity probes):\n{founder_context}\n\n"
             f"Standing Decision Principles:\n{learned_principles}"
         ),
         role=f"Rude Q&A Attacker — {title[:24]}",
@@ -1445,7 +1537,7 @@ async def run_rude_qa_court(item: dict, brief: str) -> dict:
             "You are the Idea Advocate in Rude Q&A. Practice Dalio's open-mindedness: defend with "
             "concrete trade-offs and evidence where strong, CONCEDE honestly where weak, and state "
             "plainly 'how_could_i_be_wrong'. Never use fluff or 'we'll figure it out later'.\n\n"
-            f"Founder context:\n{founder_context[:2500]}"
+            f"Founder context:\n{founder_context}"
         ),
         role=f"Idea Advocate — {title[:26]}",
         type_name="self",
@@ -1499,8 +1591,12 @@ async def run_rude_qa_court(item: dict, brief: str) -> dict:
     verdict_out = await attacker(prompt=verdict_prompt, schema=VERDICT_SCHEMA)
     del attacker
 
-    post_calc = compute_problem_score(verdict_out["adjusted_scorecard"])
+    reconciled_scorecard, reverted_changes = reconcile_rude_qa_scorecard(
+        item["best_raw"], verdict_out["adjusted_scorecard"]
+    )
+    post_calc = compute_problem_score(reconciled_scorecard)
     return {
+        "reverted_changes": reverted_changes,
         "attack_1": attack_1,
         "defense_1": defense_1,
         "dwell_triggered": dwell_triggered,
@@ -1518,7 +1614,7 @@ async def run_consequence_ev_analyst(item: dict, brief: str) -> dict:
             f"{NO_BUILD_BANNER}\n\n"
             "You are the Ray Dalio Consequence & Expected-Value Analyst (Systems Thinker, Panel Weight 0.30).\n"
             "You run INDEPENDENTLY of Rude Q&A to provide genuine triangulation.\n\n"
-            f"Founder context:\n{founder_context[:2500]}\n\n"
+            f"Founder context:\n{founder_context}\n\n"
             f"Standing Decision Principles (ALL):\n{learned_principles}\n\n"
             f"Candidate & active market scorecard:\n{brief}\n\n"
             "Use `search_web` where helpful to check platform bundling history and adjacent indie unit economics.\n"
@@ -1657,6 +1753,7 @@ survivors.sort(
     reverse=True,
 )
 top_survivors = survivors[:max_survivors_for_strategy]
+write_run_data("partial", survivors, killed_ideas)  # checkpoint after Phase 4
 log(f"Survivors: {len(survivors)} | Deep strategy & validation kit for top {len(top_survivors)}.")
 
 
@@ -2201,26 +2298,37 @@ reflection_input = {
     ],
 }
 
-reflection = await agent(
-    prompt=(
-        f"{NO_BUILD_BANNER}\n\n"
-        "You are the Dalio Reflection Analyst applying 'Pain + Reflection = Progress' and the "
-        "5-Step Process.\n\n"
-        f"Existing standing principles (ALL — do not duplicate these):\n{learned_principles}\n\n"
-        f"This run's outcomes (including killed Rude Q&A threats and synthetic red flags):\n"
-        f"{json.dumps(reflection_input, indent=2)}\n\n"
-        "Deliver:\n"
-        "1. For EVERY killed idea, separate PROXIMATE CAUSE (symptom) from ROOT CAUSE (scouting, "
-        "targeting, or market-structure error) and name the concrete `machine_fix`.\n"
-        "2. Propose 2-4 crisp, non-generic Candidate Learned Principles distinct from existing DP# rules.\n"
-        "3. A blunt 1-paragraph `portfolio_synthesis` weighing Panel Score, Expected ARR, Bottleneck "
-        "Believability, panel disagreements, and synthetic red flags."
-    ),
-    schema=REFLECTION_SCHEMA,
-    role="Dalio Reflection Analyst",
-    type_name="self",
-    model=model_tier,
-)
+try:
+    reflection = await agent(
+        prompt=(
+            f"{NO_BUILD_BANNER}\n\n"
+            "You are the Dalio Reflection Analyst applying 'Pain + Reflection = Progress' and the "
+            "5-Step Process.\n\n"
+            f"Existing standing principles (ALL — do not duplicate these):\n{learned_principles}\n\n"
+            f"This run's outcomes (including killed Rude Q&A threats and synthetic red flags):\n"
+            f"{json.dumps(reflection_input, indent=2)}\n\n"
+            "Deliver:\n"
+            "1. For EVERY killed idea, separate PROXIMATE CAUSE (symptom) from ROOT CAUSE (scouting, "
+            "targeting, or market-structure error) and name the concrete `machine_fix`.\n"
+            "2. Propose 2-4 crisp, non-generic Candidate Learned Principles distinct from existing DP# rules.\n"
+            "3. A blunt 1-paragraph `portfolio_synthesis` weighing Panel Score, Expected ARR, Bottleneck "
+            "Believability, panel disagreements, and synthetic red flags."
+        ),
+        schema=REFLECTION_SCHEMA,
+        role="Dalio Reflection Analyst",
+        type_name="self",
+        model=model_tier,
+    )
+except Exception as exc:
+    # Reflection is the last LLM call; never let it discard the scored, killed and surviving ideas.
+    msg = f"Phase 7 reflection failed: {exc}"
+    log(f"WARNING: {msg}")
+    worker_errors.append(msg)
+    reflection = {
+        "killed_root_causes": [],
+        "candidate_principles": [],
+        "portfolio_synthesis": "Reflection step failed; see worker_errors in run_data.json. Scores, panels and dossiers above are complete.",
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -2395,55 +2503,8 @@ shortlist_lines.extend([
 ])
 (run_dir / "SHORTLIST.md").write_text("\n".join(shortlist_lines), encoding="utf-8")
 
-# run_data.json
-run_data = {
-    "run_id": run_dir.name,
-    "run_type": "discovery",
-    "ambition": ambition,
-    "lenses": lenses,
-    "signals_count": len(all_signals),
-    "candidates_count": len(candidates),
-    "worker_errors": worker_errors,
-    "survivors": [
-        {
-            "id": pr["item"]["idea"]["id"],
-            "title": pr["item"]["idea"]["title"],
-            "slug": pr["item"]["slug"],
-            "verdict": pr["rude_qa"]["verdict_out"]["verdict"],
-            "consequence_recommendation": pr["consequence_ev"]["recommendation"],
-            "ev_metrics": pr["ev_metrics"],
-            "panel": pr["panel"],
-            "best_scenario_label": pr["item"]["best_label"],
-            "scenario_a": pr["item"]["scenario_a_calc"],
-            "scenario_b": pr["item"]["scenario_b_calc"],
-            "post_rude_qa": pr["rude_qa"]["post_calc"],
-            "has_full_dossier": pr["item"]["slug"] in enriched_by_slug,
-            "synthetic_pretest": (
-                synthetic_by_slug[pr["item"]["slug"]]["meta"]
-                if pr["item"]["slug"] in synthetic_by_slug
-                else None
-            ),
-        }
-        for pr in survivors
-    ],
-    "killed": [
-        {
-            "id": k["item"]["idea"]["id"],
-            "title": k["item"]["idea"]["title"],
-            "slug": k["item"]["slug"],
-            "stage": k["stage"],
-            "best_scenario_label": k["item"]["best_label"],
-            "scenario_a": k["item"]["scenario_a_calc"],
-            "scenario_b": k["item"]["scenario_b_calc"],
-            "post_rude_qa": k["panel_result"]["rude_qa"]["post_calc"] if "panel_result" in k else None,
-            "panel": k["panel_result"]["panel"] if "panel_result" in k else None,
-            "ev_metrics": k["panel_result"]["ev_metrics"] if "panel_result" in k else None,
-            "reason": k["reason"],
-        }
-        for k in killed_ideas
-    ],
-}
-(run_dir / "run_data.json").write_text(json.dumps(run_data, indent=2), encoding="utf-8")
+# run_data.json (final)
+write_run_data("complete", survivors, killed_ideas, set(enriched_by_slug), synthetic_by_slug)
 
 print(json.dumps({
     "run_dir": str(run_dir),

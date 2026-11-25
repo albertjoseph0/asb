@@ -92,7 +92,7 @@ def compute_problem_score(scores: dict) -> dict:
         if ev_class == "[fermi]" and bel > 0.4:
             bel = 0.4
             note = f" [clamped from {raw_bel} -> 0.4: fermi cap]"
-        elif bel >= 0.7 and not has_sources and ev_class != "[data]":
+        elif bel >= 0.7 and not has_sources:
             bel = 0.4
             note = f" [clamped from {raw_bel} -> 0.4: no source URLs]"
         clean[key] = {
@@ -123,7 +123,35 @@ def compute_problem_score(scores: dict) -> dict:
         "evidence_believability_index": ebi,
         "bottleneck_believability": bottleneck,
         "band": band,
+        "sources": list(scores.get("sources") or []),
     }
+
+
+def reconcile_rude_qa_scorecard(baseline_raw: dict, adjusted_raw: dict) -> tuple:
+    """DP2 (weight evidence by believability): keep a Rude Q&A score change only when it rests on
+    evidence at least as believable as the Phase-3 evidence it overturns.
+
+    Returns (merged_raw_scorecard, list_of_reverted_change_notes). Changes in either direction are
+    treated the same way, so this cannot inflate a score: it only refuses to let a weaker claim
+    overwrite a stronger one. Sources from both scorecards are kept.
+    """
+    base = compute_problem_score(baseline_raw)["criteria"]
+    adj = compute_problem_score(adjusted_raw)["criteria"]
+    merged = dict(adjusted_raw)
+    merged["sources"] = list(dict.fromkeys(list(baseline_raw.get("sources") or []) + list(adjusted_raw.get("sources") or [])))
+    reverted = []
+    for key in LEGAL_SCALES:
+        if adj[key]["value"] != base[key]["value"] and adj[key]["believability"] < base[key]["believability"]:
+            note = (
+                f"{key}: Rude Q&A proposed {adj[key]['value']} (believability {adj[key]['believability']}) "
+                f"but Phase-3 value {base[key]['value']} rests on stronger evidence "
+                f"(believability {base[key]['believability']}); kept Phase-3 value"
+            )
+            restored = dict(baseline_raw[key])
+            restored["justification"] = (str(restored.get("justification", "")).strip() + f" [{note}]").strip()
+            merged[key] = restored
+            reverted.append(note)
+    return merged, reverted
 
 
 def compute_panel_decision(scorer_calc: dict, attacker_verdict: str, consequence_rec: str) -> dict:
@@ -638,7 +666,7 @@ scorer = agent(
 scen_a_raw = await scorer(
     prompt=(
         f"Idea: {idea_title}\nPitch: {idea_pitch}\nAmbition: {ambition}\n"
-        f"Founder context:\n{founder_context[:3000]}\n\n"
+        f"Founder context:\n{founder_context}\n\n"
         f"Standing Decision Principles (ALL):\n{learned_principles}\n\n"
         "Score Scenario A honestly using exact legal scales and believability weights."
     ),
@@ -695,7 +723,7 @@ async def run_rude_qa() -> dict:
             "to find real competitors, free alternatives, platform bundling, and structural deal-breakers. "
             "Run Opposite Test, fluff audit, >=70% present-tense threats, scars/founder-fit probe, "
             "unfair questions, and challenge-from-below on the 2 softest Problem Score criteria.\n\n"
-            f"Founder context:\n{founder_context[:3000]}\n\n"
+            f"Founder context:\n{founder_context}\n\n"
             f"Standing Decision Principles (ALL):\n{learned_principles}"
         ),
         role=f"Rude Q&A Attacker — {idea_title[:24]}",
@@ -706,7 +734,7 @@ async def run_rude_qa() -> dict:
     advocate = agent(
         prompt=(
             f"{NO_BUILD}\n\nYou are the Idea Advocate in Rude Q&A. Defend with concrete trade-offs "
-            f"or concede honestly, and state 'how_could_i_be_wrong'.\n\nFounder context:\n{founder_context[:2500]}"
+            f"or concede honestly, and state 'how_could_i_be_wrong'.\n\nFounder context:\n{founder_context}"
         ),
         role=f"Idea Advocate — {idea_title[:26]}",
         type_name="self",
@@ -738,10 +766,12 @@ async def run_rude_qa() -> dict:
         schema=VERDICT_SCHEMA,
     )
     del attacker
+    reconciled_scorecard, reverted_changes = reconcile_rude_qa_scorecard(best_raw, v_out["adjusted_scorecard"])
     return {
         "attack_1": a1, "defense_1": d1, "dwell_triggered": bool(dc["needs_dwell"]),
         "dwell_check": dc, "defense_2": d2, "verdict_out": v_out,
-        "post_calc": compute_problem_score(v_out["adjusted_scorecard"]),
+        "reverted_changes": reverted_changes,
+        "post_calc": compute_problem_score(reconciled_scorecard),
     }
 
 
@@ -751,7 +781,7 @@ async def run_conseq_ev() -> dict:
             f"{NO_BUILD}\n\n"
             "You are the Ray Dalio Consequence & EV Analyst (Panel Weight 0.30). Run independently "
             "of Rude Q&A.\n\n"
-            f"Founder context:\n{founder_context[:2500]}\n\n"
+            f"Founder context:\n{founder_context}\n\n"
             f"Standing Decision Principles (ALL):\n{learned_principles}\n\n"
             f"Brief:\n{brief}\n\n"
             "Deliver root-cause persistence, 1st/2nd/3rd-order consequences, numeric `p_viable_pct`, "
@@ -1036,6 +1066,11 @@ rq_lines = [
     f"# Rude Q&A — {idea_title}", "",
     f"**Verdict:** `{verdict_out['verdict']}` · **Score:** `{best_calc['score']}` → `{post_calc['score']}` · **Dwell Triggered:** `{'Yes' if rq_res['dwell_triggered'] else 'No'}`", "",
     f"> {verdict_out['verdict_summary']}", "",
+    *(
+        ["## Score Changes Not Applied (Weaker Evidence Than Phase 1, DP2)",
+         *[f"- {n}" for n in rq_res.get("reverted_changes", [])], ""]
+        if rq_res.get("reverted_changes") else []
+    ),
     "## Attack (Round 1)",
     *([f"- Opposite Test: {x}" for x in a1["opposite_test_failures"]]),
     *([f"- Threat: {x}" for x in a1["present_tense_threats"]]),
@@ -1114,6 +1149,7 @@ if vkit_data:
 )
 
 run_data = {
+    "status": "complete",
     "run_id": run_dir.name,
     "run_type": "deep_dive",
     "ambition": ambition,

@@ -6,6 +6,7 @@ Usage:
     python3 scripts/validate_scorecard.py --calc 100000 0.5 1000 0.1 0.5 0.5 0.5
     python3 scripts/validate_scorecard.py runs/<run-id>/
     python3 scripts/validate_scorecard.py runs/<run-id>/ideas/<slug>/
+    python3 scripts/validate_scorecard.py runs/          # every run; incomplete runs are listed, not failed
 """
 
 import argparse
@@ -103,6 +104,9 @@ def verify_scorecard_dict(label: str, sc: dict) -> list:
                 errors.append(f"{label}: illegal believability weight for '{k}': {b}")
             if c.get("evidence_class") == "[fermi]" and b > 0.4 + 1e-9:
                 errors.append(f"{label}: [fermi] criterion '{k}' exceeds 0.4 believability cap ({b})")
+            # Only scorecards written after this check was added carry "sources"; older runs are skipped.
+            if "sources" in sc and not sc["sources"] and b >= 0.7 - 1e-9:
+                errors.append(f"{label}: '{k}' has believability {b} (>= 0.7) but the scorecard cites no source URLs")
             bels.append(b)
     if len(vals) == len(ORDERED_KEYS):
         expected = compute_score(vals)
@@ -188,11 +192,23 @@ def validate_path(target: Path) -> int:
                 return 1
             print(f"OK: Standalone synthetic pre-test '{target.name}' verified (cap <= {SYNTHETIC_BELIEVABILITY_CAP}, 4 archetypes, quarantined).")
             return 0
-        print(f"ERROR: Neither {data_path} nor {synth_meta_path} found.")
+        if (target / "candidates.json").exists():
+            print(
+                f"ERROR: {target.name} is an INCOMPLETE run — candidates.json exists but run_data.json does not, "
+                "so the workflow stopped before writing its results. Re-run it, or delete the folder."
+            )
+        else:
+            print(f"ERROR: Neither {data_path} nor {synth_meta_path} found.")
         return 1
 
     data = json.loads(data_path.read_text(encoding="utf-8"))
-    if data.get("run_type") in ("discovery", "deep_dive") and not (target / "DECISION-MEMO.md").exists():
+    partial = data.get("status") == "partial"
+    if partial:
+        warnings.append(
+            "run_data.json is a mid-run checkpoint (status: partial) — the workflow stopped before Phase 8; "
+            "checking the phases that finished."
+        )
+    if data.get("run_type") in ("discovery", "deep_dive") and not partial and not (target / "DECISION-MEMO.md").exists():
         errors.append(f"Missing required artifact: {target / 'DECISION-MEMO.md'}")
 
     for s in data.get("survivors", []):
@@ -254,11 +270,101 @@ def validate_path(target: Path) -> int:
         return 1
 
     print(
-        f"OK: {target.name} verified — "
+        f"OK{' (PARTIAL)' if partial else ''}: {target.name} verified — "
         f"{len(data.get('survivors', []))} survivors, {len(data.get('killed', []))} killed, "
         f"all ASB Fermi math, Dalio believability/bottleneck, panel weighting, EV & synthetic quarantine valid."
     )
     return 0
+
+
+def validate_runs_dir(runs_dir: Path) -> int:
+    """Validate every run folder under runs/. Incomplete runs (no run_data.json) are listed but do not fail."""
+    run_dirs = sorted(d for d in runs_dir.iterdir() if d.is_dir())
+    failed, incomplete, ok = [], [], 0
+    for d in run_dirs:
+        if not (d / "run_data.json").exists() and (d / "candidates.json").exists():
+            incomplete.append(d.name)
+            continue
+        print(f"== {d.name}")
+        if validate_path(d) == 0:
+            ok += 1
+        else:
+            failed.append(d.name)
+    print("")
+    print(f"SUMMARY: {ok} valid, {len(failed)} failed, {len(incomplete)} incomplete (stopped before run_data.json).")
+    for name in incomplete:
+        print(f"  - INCOMPLETE: {name}")
+    for name in failed:
+        print(f"  - FAILED: {name}")
+    return 1 if failed else 0
+
+
+def load_workflow_math(wf_path: Path) -> dict:
+    """Load a workflow's constants and plain (non-async) helper functions without running it.
+
+    Workflows use top-level `await` and runtime globals (agent, parallel, args), so they cannot be
+    imported. This keeps only imports, ALL-CAPS constants and `def` functions, so their deterministic
+    math can be unit-tested directly instead of trusting a hand-copied duplicate here.
+    """
+    tree = ast.parse(wf_path.read_text(encoding="utf-8"))
+    keep = [
+        n for n in tree.body
+        if isinstance(n, (ast.Import, ast.ImportFrom, ast.FunctionDef))
+        or (isinstance(n, ast.Assign) and all(isinstance(t, ast.Name) and t.id.isupper() for t in n.targets))
+    ]
+    ns: dict = {}
+    exec(compile(ast.Module(body=keep, type_ignores=[]), str(wf_path), "exec"), ns)
+    return ns
+
+
+def _card(values: list, bels: list, classes: list = None, sources: list = None) -> dict:
+    classes = classes or ["[research]"] * 7
+    card = {k: {"value": v, "believability": b, "evidence_class": c, "justification": "t"}
+            for k, v, b, c in zip(ORDERED_KEYS, values, bels, classes)}
+    card["sources"] = list(sources or [])
+    return card
+
+
+def self_test_workflow_math(repo_root: Path) -> None:
+    for wf in ("workflows/discover_ideas.py", "workflows/deep_dive_idea.py"):
+        ns = load_workflow_math(repo_root / wf)
+        # (a) constants must match this validator, or runs and validation silently disagree
+        assert ns["LEGAL_SCALES"] == LEGAL_SCALES, f"{wf}: LEGAL_SCALES drifted from validator"
+        assert ns["DIVISOR"] == DIVISOR, f"{wf}: DIVISOR drifted"
+        assert ns["PANEL_WEIGHTS"] == PANEL_WEIGHTS, f"{wf}: PANEL_WEIGHTS drifted"
+        assert ns["SYNTHETIC_BELIEVABILITY_CAP"] == SYNTHETIC_BELIEVABILITY_CAP, f"{wf}: synthetic cap drifted"
+        cps = ns["compute_problem_score"]
+        # (b) the workflow's own scorer reproduces the ASB anchors
+        wp = cps(_card([100_000_000, 0.1, 100, 0.01, 0.5, 0.5, 1.0], [0.7] * 7, sources=["https://example.com"]))
+        assert wp["score"] == 4.0, f"{wf}: WP Engine anchor gave {wp['score']}"
+        # (c) anti-inflation: [fermi] capped at 0.4; >= 0.7 without sources is clamped for EVERY class
+        fermi = cps(_card([100_000] * 1 + [0.5, 1000, 0.1, 0.5, 0.5, 0.5], [1.0] * 7, ["[fermi]"] * 7, ["https://x"]))
+        assert all(c["believability"] == 0.4 for c in fermi["criteria"].values()), f"{wf}: fermi cap broken"
+        data_no_src = cps(_card([100_000, 0.5, 1000, 0.1, 0.5, 0.5, 0.5], [1.0] * 7, ["[data]"] * 7, []))
+        assert all(c["believability"] == 0.4 for c in data_no_src["criteria"].values()), (
+            f"{wf}: [data] evidence with no source URLs kept >= 0.7 believability"
+        )
+        assert not verify_scorecard_dict("t", data_no_src), f"{wf}: validator rejects workflow's own output"
+        # (d) DP2 reconciliation: weaker-evidence change reverted, equal-or-stronger change kept
+        rec = ns["reconcile_rude_qa_scorecard"]
+        base = _card([100_000, 0.5, 1000, 0.1, 0.5, 0.5, 0.5], [0.7, 0.7, 0.7, 0.7, 0.4, 0.7, 0.4], sources=["https://a"])
+        adj = _card([100_000, 0.5, 1000, 0.1, 0.1, 0.1, 0.1], [0.7, 0.7, 0.7, 0.7, 0.7, 0.4, 0.4], sources=["https://b"])
+        merged, reverted = rec(base, adj)
+        post = cps(merged)["criteria"]
+        assert post["eager_identity"]["value"] == 0.1, f"{wf}: stronger-evidence downgrade was dropped"
+        assert post["eager_comparative"]["value"] == 0.5, f"{wf}: weaker-evidence downgrade was applied"
+        assert post["enduring"]["value"] == 0.1, f"{wf}: equal-evidence downgrade was dropped"
+        assert post["eager_comparative"]["believability"] == 0.7, f"{wf}: restored criterion lost its sources"
+        assert len(reverted) == 1 and "eager_comparative" in reverted[0], f"{wf}: reverted notes wrong: {reverted}"
+        assert merged["sources"] == ["https://a", "https://b"], f"{wf}: sources not merged"
+        # (e) workflow panel math == validator panel math
+        cpd = ns["compute_panel_decision"]
+        for verdict, rec_ev in (("SHARPENED", "PURSUE_VALIDATION"), ("BAD_IDEA", "PURSUE_VALIDATION"), ("NOT_YET_READY", "KILL")):
+            pd = cpd(wp, verdict, rec_ev)
+            v = pd["votes"]
+            exp, split = compute_panel(v["scorer"], v["attacker"], v["consequence_ev"])
+            assert pd["panel_weighted_score"] == exp and pd["disagreement_flag"] == split, f"{wf}: panel drift"
+        print(f"  [PASS] Workflow math (constants, anchors, anti-inflation, DP2 reconciliation, panel): {wf}")
 
 
 def run_self_test() -> int:
@@ -310,9 +416,20 @@ def run_self_test() -> int:
 
     # 5. Learned principles check
     lp = repo_root / "principles" / "LEARNED-PRINCIPLES.md"
+    assert lp.exists(), f"Missing {lp}"
     lp_text = lp.read_text(encoding="utf-8")
-    assert lp.exists() and "DP1" in lp_text and "DP7" in lp_text
+    assert "DP1" in lp_text and "DP7" in lp_text
     print("  [PASS] Dalio learned principles (DP1-DP7) present")
+
+    # 6. The workflows' own deterministic math (not just this file's copy of it)
+    self_test_workflow_math(repo_root)
+
+    # 7. Validator catches a >= 0.7 believability with no sources (new-format scorecards only)
+    bad = {"criteria": {k: {"value": v, "believability": 0.7, "evidence_class": "[data]"}
+                        for k, v in zip(ORDERED_KEYS, [100_000, 0.5, 1000, 0.1, 0.5, 0.5, 0.5])},
+           "score": 1.0, "sources": []}
+    assert verify_scorecard_dict("t", bad), "validator missed >= 0.7 believability without sources"
+    print("  [PASS] Validator flags >= 0.7 believability without cited sources")
 
     print("ALL SELF-TESTS PASSED.")
     return 0
@@ -352,7 +469,12 @@ def main() -> int:
         return 0
 
     if ns.target:
-        return validate_path(Path(ns.target))
+        target = Path(ns.target)
+        if not (target / "run_data.json").exists() and not (target / "candidates.json").exists() \
+                and not (target / "synthetic-interviews").exists() and target.is_dir() \
+                and any((d / "run_data.json").exists() or (d / "candidates.json").exists() for d in target.iterdir() if d.is_dir()):
+            return validate_runs_dir(target)
+        return validate_path(target)
 
     parser.print_help()
     return 0

@@ -129,7 +129,7 @@ actual_founder_ctx = "\n\n".join(founder_chunks) or "No actual founder profile o
 targets = []
 run_dir_arg = str(args.get("run_dir", "")).strip()
 idea_dir_arg = str(args.get("idea_dir", "")).strip()
-include_killed = bool(args.get("include_killed", False))
+include_killed = str(args.get("include_killed", False)).strip().lower() in ("true", "1", "yes", "on")  # bool("false") is True
 
 if idea_dir_arg:
     p = Path(idea_dir_arg)

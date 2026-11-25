@@ -37,7 +37,9 @@ Legal per-criterion believability weights: **`0.2`**, **`0.35`** (synthetic cap)
 EBI = round(sum(believability_weights of all 7 criteria) / 7, 3)
 Bottleneck_Believability = min(believability_weights of all 7 criteria)
 ```
-Anti-inflation clamps (enforced in Python): `[fermi]` entries are clamped `<= 0.4`; `>= 0.7` requires cited source URLs.
+Anti-inflation clamps (enforced in Python): `[fermi]` entries are clamped `<= 0.4`; `>= 0.7` requires cited source URLs (for every evidence class, including `[data]`).
+
+**Post-Rude-Q&A reconciliation (DP2, enforced in Python):** the Attacker's `adjusted_scorecard` replaces a Phase-3 criterion value only when the new value's believability is `>=` the Phase-3 believability it overturns. Weaker-evidence changes (in either direction) are not applied and are listed under *Score Changes Not Applied* in `RUDE-QA.md`. The Attacker's verdict vote is unaffected.
 
 ### 2. Independent Believability-Weighted Specialist Panel Score & Numeric EV
 Fixed domain-believability weights:
